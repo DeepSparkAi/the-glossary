@@ -1151,3 +1151,157 @@ footer{
   .dc-q strong{font-size:1.5rem}
   .dc-capitol{width:68px;height:68px}
 }
+
+
+/* Inline teaching maps */
+.teaching-map{
+  margin:24px 0;
+  padding:12px;
+  border:1px solid #cbb995;
+  background:#f8f2e7;
+  border-radius:8px;
+}
+.teaching-map svg{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:6px;
+}
+.teaching-map figcaption{
+  margin-top:9px;
+  font-family:Arial,sans-serif;
+  font-size:.73rem;
+  line-height:1.45;
+  color:#6d6558;
+}
+.compact-map{
+  max-width:680px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.map-water{fill:#e5edf0}
+.map-paper{fill:#fbf7ee}
+.map-land{stroke:#6f624f;stroke-width:2}
+.map-scotland{fill:#dce8dc}
+.map-england{fill:#eee0c5}
+.map-wales{fill:#e7d7bc}
+.map-ireland{fill:#f0dfbf}
+.map-ni{fill:#d8e4d6}
+.map-west-sussex{fill:#dfebdc}
+.map-east-sussex{fill:#efe0c5}
+.sussex-neighbor{fill:#eee9dc;stroke:#9e9079;stroke-width:1.5}
+.map-label{
+  font-family:Arial,sans-serif;
+  font-size:14px;
+  fill:#4d473e;
+  text-anchor:middle;
+}
+.map-label.strong{font-weight:800;fill:#30483a}
+.map-label.small{font-size:11px}
+.map-water-label{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:16px;
+  font-style:italic;
+  fill:#78909a;
+  text-anchor:middle;
+}
+.map-water-label.dark{fill:#677b82}
+.map-city-dot{fill:#5b4330;stroke:#fff7e8;stroke-width:2}
+.map-landmark-dot{fill:#9a7447;stroke:#fff7e8;stroke-width:2}
+.map-city-label{
+  font-family:Arial,sans-serif;
+  font-size:12px;
+  fill:#4b453c;
+}
+.map-city-label.strong{font-weight:800;fill:#2f4437}
+.map-note{
+  font-family:Arial,sans-serif;
+  font-size:11px;
+  fill:#6d655a;
+}
+.map-note.strong{font-weight:800;fill:#4a433a}
+.map-key{fill:#fffaf0;stroke:#c6b492;stroke-width:1}
+.map-key-title{
+  font-family:Arial,sans-serif;
+  font-size:12px;
+  font-weight:800;
+  fill:#3f493f;
+}
+.map-key-text{
+  font-family:Arial,sans-serif;
+  font-size:11px;
+  fill:#5f594f;
+}
+.key-uk{fill:#dce8dc;stroke:#6f624f;stroke-width:1}
+.key-ireland{fill:#f0dfbf;stroke:#6f624f;stroke-width:1}
+.map-guide{
+  fill:none;
+  stroke:#8c7656;
+  stroke-width:1.5;
+  stroke-dasharray:5 4;
+}
+.map-boundary{
+  stroke:#5c4934;
+  stroke-width:2;
+  stroke-dasharray:6 4;
+}
+.map-coast-accent{
+  fill:none;
+  stroke:#8e7654;
+  stroke-width:2;
+}
+.dc-current-shape{
+  fill:#efe7d6;
+  stroke:#6f604c;
+  stroke-width:2.5;
+}
+.dc-axis{
+  stroke:#6e624f;
+  stroke-width:1.5;
+  stroke-dasharray:7 5;
+}
+.map-label.quadrant{
+  font-size:24px;
+  font-weight:800;
+  fill:#75806f;
+}
+.dc-mall{
+  fill:#dfe8d9;
+  stroke:#819078;
+  stroke-width:1;
+}
+.dc-avenue{
+  stroke:#b18a55;
+  stroke-width:7;
+  stroke-linecap:round;
+  opacity:.7;
+}
+.avenue-label{
+  fill:#775d3e;
+  font-weight:800;
+}
+.dc-original-diamond{
+  fill:#eee6d7;
+  stroke:#6e604d;
+  stroke-width:3;
+}
+.dc-retroceded{
+  fill:#e8d6c5;
+  stroke:#8d6c55;
+  stroke-width:2;
+}
+.map-water-line{
+  fill:none;
+  stroke:#8fb0bd;
+  stroke-width:11;
+  stroke-linecap:round;
+  opacity:.8;
+}
+@media (max-width:620px){
+  .map-label{font-size:11px}
+  .map-label.small{font-size:9px}
+  .map-water-label{font-size:12px}
+  .map-city-label{font-size:9px}
+  .map-note{font-size:9px}
+  .map-label.quadrant{font-size:18px}
+}
