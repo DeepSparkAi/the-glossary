@@ -379,6 +379,76 @@ function buildGrammarEntries(){
 
 entries.push(...buildGrammarEntries());
 
+
+entries.push({
+  slug:"collocation",
+  title:"Collocation",
+  category:"Language & History",
+  short:"A pair or group of words that naturally and habitually occur together in a language.",
+  keywords:"collocation colocations word combinations strong coffee heavy rain make a decision natural language vocabulary phrase co-occurrence",
+  body:`
+    <section class="entry-section"><h3>In plain English</h3>
+      <p>A <strong>collocation</strong> is a combination of words that native speakers regularly put together because the combination has become conventional.</p>
+      <p>The words are individually ordinary. What matters is that <strong>this particular combination sounds natural</strong>.</p>
+    </section>
+
+    <section class="entry-section"><h3>Examples</h3>
+      <div class="definition-grid">
+        <div class="definition-card"><h3>strong coffee</h3><p>Natural English.</p></div>
+        <div class="definition-card"><h3>powerful coffee</h3><p>Understandable, but not the usual collocation.</p></div>
+        <div class="definition-card"><h3>heavy rain</h3><p>Natural English.</p></div>
+        <div class="definition-card"><h3>strong rain</h3><p>Grammatically possible, but not the normal pairing.</p></div>
+        <div class="definition-card"><h3>make a decision</h3><p>Natural English.</p></div>
+        <div class="definition-card"><h3>do a decision</h3><p>Not the conventional English pairing.</p></div>
+      </div>
+    </section>
+
+    <section class="entry-section"><h3>What makes it different from grammar?</h3>
+      <p>Grammar tells you what combinations are structurally possible. <strong>Collocation tells you which possible combinations people actually prefer.</strong></p>
+      <p><em>Powerful coffee</em> is grammatical. <em>Strong coffee</em> is the established collocation.</p>
+      <div class="memory"><strong>Grammar asks:</strong> Is this construction allowed?<br><strong>Collocation asks:</strong> Is this the combination speakers normally use?</div>
+    </section>
+
+    <section class="entry-section"><h3>Common types</h3>
+      <table>
+        <thead><tr><th>Pattern</th><th>Examples</th></tr></thead>
+        <tbody>
+          <tr><td>Adjective + noun</td><td>heavy rain, strong coffee, deep sleep</td></tr>
+          <tr><td>Verb + noun</td><td>make a decision, pay attention, raise a question</td></tr>
+          <tr><td>Noun + noun</td><td>traffic jam, language barrier, data analysis</td></tr>
+          <tr><td>Adverb + adjective</td><td>deeply concerned, highly unlikely, perfectly clear</td></tr>
+          <tr><td>Verb + adverb</td><td>apologize sincerely, whisper softly, argue strongly</td></tr>
+          <tr><td>Verb + preposition</td><td>depend on, belong to, suffer from</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="entry-section"><h3>Why collocations matter</h3>
+      <p>They are one of the main reasons a sentence can be grammatically correct but still sound foreign or unnatural.</p>
+      <p>Fluent speakers do not build every sentence one word at a time. They also retrieve familiar word combinations as ready-made chunks.</p>
+    </section>
+
+    <section class="entry-section"><h3>Collocation vs. idiom</h3>
+      <div class="compare-grid">
+        <div class="compare-card green"><h3>Collocation</h3><p>The combined meaning is normally transparent.</p><p><strong>heavy rain</strong> still means rain that is heavy.</p></div>
+        <div class="compare-card"><h3>Idiom</h3><p>The whole expression has a meaning that cannot be reliably predicted from the individual words.</p><p><strong>eat crow</strong> does not literally mean eating a bird.</p></div>
+      </div>
+    </section>
+
+    <section class="entry-section"><h3>Word history</h3>
+      <p><strong>Collocation</strong> comes from Latin elements meaning roughly <strong>“placing together.”</strong> In linguistics, that basic idea becomes: words that are regularly <strong>placed together</strong> in actual usage.</p>
+      <div class="flow"><span>co- / together</span><b>+</b><span>location / placing</span><b>→</b><span>collocation = habitual word pairing</span></div>
+    </section>
+
+    <section class="entry-section"><h3>Spelling distinction</h3>
+      <p><strong>Collocation</strong> — the linguistic term for words that characteristically occur together.</p>
+      <p><strong>Colocation</strong> — sharing the same physical location; especially used in computing for equipment housed in the same data center.</p>
+    </section>
+
+    <div class="memory"><strong>Memory aid:</strong> Collocation = words that like to live next door to each other.</div>
+  `
+});
+
 const sectionConfig = {
   Glossary: {
     categories: ["All","Words","Idioms","Religion & Meaning","One-Sheet Primers"],
