@@ -1350,7 +1350,8 @@ function ukIrelandPrimerBody(){
         <div class="definition-card"><h3>East Sussex</h3><p>A present-day county whose county council area includes districts such as Lewes, Wealden, Rother, Hastings, and Eastbourne.</p></div>
         <div class="definition-card"><h3>Brighton & Hove</h3><p>A separate unitary authority for local government, while remaining within the ceremonial geography of East Sussex.</p></div>
        </div>
-       <p>So <strong>Sussex</strong> still makes sense historically and culturally, while <strong>East Sussex</strong> and <strong>West Sussex</strong> are the main modern county names used for administration and ceremony.</p>`)}
+       <p>So <strong>Sussex</strong> still makes sense historically and culturally, while <strong>East Sussex</strong> and <strong>West Sussex</strong> are the main modern county names used for administration and ceremony.</p>
+       <p><strong>Current 2026 note:</strong> a Sussex & Brighton strategic authority began operating in April 2026 across East Sussex, West Sussex, and Brighton & Hove. Further local-government reorganisation is planned for 2028. That new strategic layer does not erase the older Sussex identities underneath it.</p>`)}
 
     ${primerStep(19,"One final geographic habit: ask what kind of name you are looking at.",
       `<div class="history-summary-chain">
