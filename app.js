@@ -684,6 +684,13 @@ const sectionConfig = {
     emptyTitle: "Choose an economic or political system.",
     emptyText: "Open a baby-step primer on major economic and political ideologies.",
     searchPlaceholder: "Try “capitalism,” “socialism,” “communism,” or “fascism”…"
+  },
+  Geography: {
+    categories: ["All","Political Geography","Cities & Maps"],
+    indexTitle: "Geography Topics",
+    emptyTitle: "Choose a geography topic.",
+    emptyText: "Open a baby-step primer on political geography, regions, or city layouts.",
+    searchPlaceholder: "Try “Great Britain,” “Ireland,” “Sussex,” or “Washington”…"
   }
 };
 
@@ -691,6 +698,7 @@ const grammarCategories = new Set(["Grammar","Grammar Terms","Grammar Practice",
 const languageCategories = new Set(["Language & History","Sounds & Phonetics","French","Latin","English History"]);
 const historyCategories = new Set(["Modern History"]);
 const economicIsmCategories = new Set(["Economic Systems & Ideologies"]);
+const geographyCategories = new Set(["Political Geography","Cities & Maps"]);
 
 const listEl = document.querySelector("#term-list");
 const panelEl = document.querySelector("#entry-panel");
@@ -713,6 +721,7 @@ function sectionForEntry(entry){
   if(languageCategories.has(entry.category)) return "Languages";
   if(historyCategories.has(entry.category)) return "History";
   if(economicIsmCategories.has(entry.category)) return "Economic Isms";
+  if(geographyCategories.has(entry.category)) return "Geography";
   return "Glossary";
 }
 
@@ -1231,6 +1240,294 @@ entries.push({
   body:economicIsmsPrimerBody()
 });
 
+
+function ukIrelandPrimerBody(){
+  return `
+    ${primerStep(1,"Start with the simplest distinction: islands are not countries.",
+      `<p>The names <strong>United Kingdom, Great Britain, Britain, Ireland, England, Scotland, Wales,</strong> and <strong>Northern Ireland</strong> overlap—but they do not name the same thing.</p>
+       ${primerTerm("ISLAND","A piece of land completely surrounded by water.")}
+       ${primerTerm("STATE","A sovereign political entity with its own government and international legal identity.")}
+       <p>The confusion begins because one large island, several historic nations, and two present-day sovereign states occupy the same small part of northwestern Europe.</p>`)}
+
+    ${primerStep(2,"Great Britain is an island.",
+      `${primerTerm("GREAT BRITAIN","The large island containing England, Scotland, and Wales.")}
+       <div class="geo-island-card">
+         <div class="geo-gb">
+           <div class="geo-scotland">Scotland</div>
+           <div class="geo-wales">Wales</div>
+           <div class="geo-england">England</div>
+         </div>
+         <p><strong>Great Britain = England + Scotland + Wales.</strong></p>
+       </div>
+       <p>Great Britain does <strong>not</strong> include Northern Ireland, because Northern Ireland is on the separate island of Ireland.</p>`)}
+
+    ${primerStep(3,"The United Kingdom is the sovereign state.",
+      `${primerTerm("UNITED KINGDOM","The sovereign state whose full name is the United Kingdom of Great Britain and Northern Ireland.")}
+       <div class="primer-chain"><span>England</span><b>+</b><span>Scotland</span><b>+</b><span>Wales</span><b>+</b><span>Northern Ireland</span><b>→</b><span>United Kingdom</span></div>
+       <p>The common abbreviation is <strong>UK</strong>.</p>
+       <div class="memory"><strong>Easy rule:</strong> Great Britain is the big island. The United Kingdom is the political state that includes Great Britain <em>plus Northern Ireland</em>.</div>`)}
+
+    ${primerStep(4,"England is not the same thing as Britain or the UK.",
+      `${primerTerm("ENGLAND","One of the four constituent countries of the United Kingdom, occupying most of the southern and central part of Great Britain.")}
+       <p>Calling the whole UK “England” is inaccurate. Scotland, Wales, and Northern Ireland are not parts of England.</p>
+       <p>London is both the capital of England and the capital of the United Kingdom.</p>`)}
+
+    ${primerStep(5,"Scotland and Wales are also countries within the UK.",
+      `${primerTerm("SCOTLAND","A constituent country of the United Kingdom occupying the northern part of Great Britain.")}
+       ${primerTerm("WALES","A constituent country of the United Kingdom on the western side of Great Britain.")}
+       <p>England, Scotland, and Wales together make up the island of Great Britain.</p>`)}
+
+    ${primerStep(6,"Ireland is both an island-name and the name of a sovereign state.",
+      `${primerTerm("IRELAND — THE ISLAND","The island lying west of Great Britain. It contains both Ireland and Northern Ireland.")}
+       ${primerTerm("IRELAND — THE STATE","The sovereign state officially named Ireland (Irish: Éire), occupying most of the island of Ireland. It is often informally called the Republic of Ireland to distinguish it from the island.")}
+       <p>This double use of <strong>Ireland</strong> is one of the biggest sources of confusion.</p>`)}
+
+    ${primerStep(7,"Northern Ireland is the part of the island of Ireland that is in the UK.",
+      `${primerTerm("NORTHERN IRELAND","The northeastern part of the island of Ireland that forms one of the four constituent countries of the United Kingdom.")}
+       <div class="geo-ireland-card">
+         <div class="geo-ni">Northern Ireland<br><small>part of the UK</small></div>
+         <div class="geo-ireland">Ireland<br><small>sovereign state</small></div>
+       </div>
+       <p>So the island of Ireland contains territory belonging to <strong>two different sovereign states</strong>: the United Kingdom and Ireland.</p>`)}
+
+    ${primerStep(8,"What does Britain mean?",
+      `${primerTerm("BRITAIN","A flexible everyday term. It can mean Great Britain geographically, and it is also commonly used informally for the United Kingdom as a whole.")}
+       <p>This is why “Britain” can be slippery. In a geographic sentence it may mean the island of Great Britain. In politics or news it often means the UK.</p>
+       <p><strong>Great Britain</strong> is the more precise geographic term for England + Scotland + Wales.</p>`)}
+
+    ${primerStep(9,"A useful warning about the term British Isles.",
+      `${primerTerm("BRITISH ISLES","A traditional geographic term for Great Britain, Ireland, and many surrounding islands. The term is politically sensitive and is not universally accepted, especially in Ireland.")}
+       <p>If precision matters, it is often clearer simply to name <strong>Great Britain and Ireland</strong>, or the specific countries involved, rather than rely on the umbrella term.</p>`)}
+
+    ${primerStep(10,"How did Great Britain become one political kingdom?",
+      `<p>England and Scotland had separate kingdoms for centuries. In 1603 they came under the same monarch when James VI of Scotland also became James I of England, but they still had separate parliaments.</p>
+       ${primerTerm("ACTS OF UNION 1707","The legislation by which the kingdoms of England and Scotland were politically united into the Kingdom of Great Britain.")}
+       <div class="primer-chain"><span>Kingdom of England</span><b>+</b><span>Kingdom of Scotland</span><b>→ 1707 →</b><span>Kingdom of Great Britain</span></div>
+       <p>Wales had already been politically incorporated into the English state during the earlier Tudor period.</p>`)}
+
+    ${primerStep(11,"Ireland then entered—and later mostly left—the union.",
+      `${primerTerm("UNITED KINGDOM OF GREAT BRITAIN AND IRELAND","The state created in 1801 when Great Britain and Ireland were joined under one parliament.")}
+       <p>Most of Ireland left the United Kingdom in the early 1920s and became the Irish Free State, which developed into the present sovereign state of Ireland.</p>
+       <p>Northern Ireland remained in the United Kingdom. The state's present name—<strong>United Kingdom of Great Britain and Northern Ireland</strong>—was adopted in 1927.</p>`)}
+
+    ${primerStep(12,"The fastest possible map.",
+      `<div class="geo-equation-grid">
+         <div><strong>Great Britain</strong><span>England + Scotland + Wales</span></div>
+         <div><strong>United Kingdom</strong><span>Great Britain + Northern Ireland</span></div>
+         <div><strong>Island of Ireland</strong><span>Ireland + Northern Ireland</span></div>
+         <div><strong>Ireland</strong><span>The sovereign state occupying most of that island</span></div>
+       </div>`)}
+
+    ${primerStep(13,"Now zoom in: where is Sussex?",
+      `<p><strong>Sussex</strong> lies along the English Channel on the south coast of England, south of London.</p>
+       ${primerTerm("HISTORIC COUNTY","A traditional territorial county with a long historical identity, which may not match today's local-government boundaries exactly.")}
+       <p>Sussex is still a strong historical and cultural region even though modern local government divides it principally into <strong>East Sussex</strong> and <strong>West Sussex</strong>.</p>`)}
+
+    ${primerStep(14,"The name Sussex means South Saxons.",
+      `<p>The name <strong>Sussex</strong> comes from Old English <em>Sūþseaxe</em>: the <strong>South Saxons</strong>.</p>
+       ${primerTerm("SAXONS","One of the Germanic peoples whose settlements in post-Roman Britain contributed to the formation of Anglo-Saxon England.")}
+       <p>A kingdom associated with the South Saxons emerged in the early medieval period. Tradition gives a foundation date of 477, although the early history is partly legendary and reconstructed from later sources.</p>
+       <div class="primer-chain"><span>South Saxons</span><b>→</b><span>Sūþseaxe</span><b>→</b><span>Sussex</span></div>`)}
+
+    ${primerStep(15,"Sussex was once a small Anglo-Saxon kingdom.",
+      `${primerTerm("KINGDOM OF SUSSEX","An early Anglo-Saxon kingdom in southern England associated with the South Saxons.")}
+       <p>Its political independence was uneven, and it was eventually absorbed into the expanding kingdom of Wessex. The name survived as a territorial identity long after the kingdom disappeared.</p>
+       <p>That is common in English geography: an ancient political name can survive for more than a thousand years even though the institutions underneath it change repeatedly.</p>`)}
+
+    ${primerStep(16,"Medieval Sussex was divided into six 'rapes.'",
+      `${primerTerm("RAPE — SUSSEX","A historic territorial subdivision peculiar to Sussex. Each rape stretched roughly north–south and contained smaller units called hundreds. The origin of the term itself is uncertain.")}
+       <p>The traditional six rapes were <strong>Chichester, Arundel, Bramber, Lewes, Pevensey,</strong> and <strong>Hastings</strong>.</p>
+       <p>The western three and eastern three eventually helped form a practical east/west administrative division.</p>`)}
+
+    ${primerStep(17,"East Sussex and West Sussex are not a brand-new split.",
+      `<p>Sussex's long east–west shape made separate administration useful. Separate eastern and western Quarter Sessions developed by the early 1500s, and the division received statutory recognition in the 19th century.</p>
+       ${primerTerm("QUARTER SESSIONS","Local courts and administrative meetings historically held several times a year by county justices of the peace. Before modern elected county councils, they handled many local-government functions.")}
+       <p>Under the <strong>Local Government Act 1888</strong>, East Sussex and West Sussex became separate administrative counties with elected county councils from 1889.</p>`)}
+
+    ${primerStep(18,"What does Sussex look like administratively today?",
+      `<div class="definition-grid">
+        <div class="definition-card"><h3>West Sussex</h3><p>A present-day ceremonial and local-government county west of East Sussex.</p></div>
+        <div class="definition-card"><h3>East Sussex</h3><p>A present-day county whose county council area includes districts such as Lewes, Wealden, Rother, Hastings, and Eastbourne.</p></div>
+        <div class="definition-card"><h3>Brighton & Hove</h3><p>A separate unitary authority for local government, while remaining within the ceremonial geography of East Sussex.</p></div>
+       </div>
+       <p>So <strong>Sussex</strong> still makes sense historically and culturally, while <strong>East Sussex</strong> and <strong>West Sussex</strong> are the main modern county names used for administration and ceremony.</p>`)}
+
+    ${primerStep(19,"One final geographic habit: ask what kind of name you are looking at.",
+      `<div class="history-summary-chain">
+        <div><b>Great Britain</b><span>Geographic island.</span></div>
+        <div><b>United Kingdom</b><span>Sovereign state.</span></div>
+        <div><b>Britain</b><span>Flexible informal term; context matters.</span></div>
+        <div><b>Ireland</b><span>Can mean the island or the sovereign state.</span></div>
+        <div><b>Sussex</b><span>Historic county and cultural region.</span></div>
+        <div><b>East / West Sussex</b><span>Modern county divisions rooted in a much older east–west split.</span></div>
+       </div>
+       <div class="memory"><strong>The trick:</strong> before deciding whether two names conflict, ask whether each name is geographic, political, historical, or administrative.</div>`)}
+
+    <section class="primer-finish">
+      <p class="kicker">Geography primer</p>
+      <h3>The names overlap because history overlaps.</h3>
+      <p>The United Kingdom is easiest to understand once islands, sovereign states, constituent countries, historic counties, and modern administrative counties are kept as separate categories.</p>
+    </section>
+
+    <section class="entry-section history-sources">
+      <h3>Sources and further reading</h3>
+      <p><a href="https://www.britannica.com/place/United-Kingdom" target="_blank" rel="noopener">Encyclopaedia Britannica — United Kingdom</a><br>
+      <a href="https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/act-of-union-1707/" target="_blank" rel="noopener">UK Parliament — Union of 1707</a><br>
+      <a href="https://www.eastsussex.gov.uk/" target="_blank" rel="noopener">East Sussex County Council</a><br>
+      <a href="https://www.westsussex.gov.uk/" target="_blank" rel="noopener">West Sussex County Council</a></p>
+    </section>
+  `;
+}
+
+function washingtonDCPrimerBody(){
+  return `
+    ${primerStep(1,"Start with the unusual fact: Washington is not in a state.",
+      `${primerTerm("DISTRICT OF COLUMBIA","The federal district that contains Washington, the capital of the United States. It is not one of the 50 states.")}
+       <p>The Constitution allowed Congress to create a federal district for the national capital so that the federal government would not depend on any single state for its seat of government.</p>`)}
+
+    ${primerStep(2,"The capital was deliberately placed on the Potomac.",
+      `<p>The <strong>Residence Act of 1790</strong> authorized a permanent national capital along the Potomac River.</p>
+       <p>President George Washington selected the area. The original federal district formed a square of roughly 100 square miles from land ceded by Maryland and Virginia.</p>
+       <p>It included existing communities such as <strong>Georgetown</strong> and <strong>Alexandria</strong>, as well as the new federal city.</p>`)}
+
+    ${primerStep(3,"Pierre L’Enfant designed a capital, not just a street grid.",
+      `${primerTerm("L’ENFANT PLAN","Pierre Charles L’Enfant's 1791 plan for the new federal city of Washington. It combined a rectangular street grid with broad diagonal avenues, ceremonial vistas, public squares, and prominent sites for national buildings.")}
+       <p>The grid made land easy to divide into blocks. The diagonals created grand routes and dramatic views through the city.</p>
+       <p>Andrew Ellicott later revised and mapped the plan after L’Enfant left the project, but the basic structure still shapes central Washington today.</p>`)}
+
+    ${primerStep(4,"The U.S. Capitol is the street-address origin.",
+      `<p>This is the key to the entire system.</p>
+       <div class="dc-quadrant-map" role="img" aria-label="Schematic of Washington DC quadrants centered on the United States Capitol">
+         <div class="dc-q dc-nw"><strong>NW</strong><span>Northwest</span></div>
+         <div class="dc-q dc-ne"><strong>NE</strong><span>Northeast</span></div>
+         <div class="dc-q dc-sw"><strong>SW</strong><span>Southwest</span></div>
+         <div class="dc-q dc-se"><strong>SE</strong><span>Southeast</span></div>
+         <div class="dc-capitol">U.S.<br>CAPITOL</div>
+       </div>
+       <p>The Capitol sits at the conceptual center. Every normal D.C. address includes a quadrant: <strong>NW, NE, SW,</strong> or <strong>SE</strong>.</p>`)}
+
+    ${primerStep(5,"The four quadrants are not equal-sized pie slices.",
+      `<p>The quadrants are defined by axes extending from the Capitol, but the city's geography and later boundaries make the four areas very unequal in size.</p>
+       <p><strong>North Capitol Street</strong> forms much of the north–south dividing line north of the Capitol. <strong>South Capitol Street</strong> continues south. <strong>East Capitol Street</strong> runs east. West of the Capitol, the National Mall occupies the axis—so there is no ordinary <strong>West Capitol Street</strong>.</p>`)}
+
+    ${primerStep(6,"Numbered streets generally run north–south.",
+      `<p>Moving away from the Capitol to the east or west, the north–south grid streets are numbered:</p>
+       <div class="primer-chain"><span>1st Street</span><b>→</b><span>2nd Street</span><b>→</b><span>3rd Street</span><b>→</b><span>4th Street</span></div>
+       <p>The numbering starts again on the other side of the Capitol axis. This is why <strong>4th Street NW</strong> and <strong>4th Street NE</strong> are different streets in different places.</p>`)}
+
+    ${primerStep(7,"Lettered streets generally run east–west.",
+      `<p>Moving north or south away from the Capitol's east–west axis, east–west streets use letters:</p>
+       <div class="primer-chain"><span>A Street</span><b>→</b><span>B Street</span><b>→</b><span>C Street</span><b>→</b><span>D Street</span></div>
+       <p>The same letter can therefore appear in multiple quadrants: <strong>C Street NW, C Street NE, C Street SW,</strong> and <strong>C Street SE</strong> are distinct locations where the grid exists.</p>
+       <p>There is no regular J Street in the central alphabetic sequence; after the lettered system is exhausted, later extensions use alphabetically ordered names.</p>`)}
+
+    ${primerStep(8,"This is what 'duplicated street names' really means.",
+      `<div class="dc-duplicate-grid">
+        <div><strong>4th Street NW</strong><span>northwest of the Capitol</span></div>
+        <div><strong>4th Street NE</strong><span>northeast of the Capitol</span></div>
+        <div><strong>4th Street SW</strong><span>southwest of the Capitol</span></div>
+        <div><strong>4th Street SE</strong><span>southeast of the Capitol</span></div>
+       </div>
+       <p>The street name alone is incomplete. <strong>The quadrant is part of the address.</strong></p>
+       <div class="memory"><strong>In Washington, “4th Street” is not enough information.</strong> You need 4th Street <em>NW, NE, SW, or SE</em>.</div>`)}
+
+    ${primerStep(9,"A single intersection can have several cousins.",
+      `<p>Because numbered streets and lettered streets repeat from the Capitol in different quadrants, intersections can repeat too.</p>
+       <div class="dc-intersections">
+         <span>3rd & L NW</span><span>3rd & L NE</span><span>3rd & L SW</span><span>3rd & L SE</span>
+       </div>
+       <p>Not every theoretical intersection physically exists—parks, rivers, railways, later development, and irregular roads interrupt the grid—but the addressing logic allows the names to repeat.</p>`)}
+
+    ${primerStep(10,"Addresses themselves tell you roughly how far you are from the Capitol.",
+      `<p>D.C. block numbers generally correspond to the cross-street grid. An address in the <strong>1200 block</strong> of an east–west street is roughly around 12th Street.</p>
+       <p>For example, the White House address <strong>1600 Pennsylvania Avenue NW</strong> places it near 16th Street on Pennsylvania Avenue in the Northwest quadrant.</p>
+       <p>The system is not perfect everywhere, but once you know the grid, an address carries a surprising amount of location information.</p>`)}
+
+    ${primerStep(11,"The diagonal avenues are a second system laid across the grid.",
+      `${primerTerm("STATE AVENUES","Broad diagonal avenues in Washington's plan, many named for U.S. states, such as Pennsylvania Avenue, Massachusetts Avenue, and Connecticut Avenue.")}
+       <div class="dc-grid-demo">
+         <div class="grid-h h1"></div><div class="grid-h h2"></div><div class="grid-h h3"></div>
+         <div class="grid-v v1"></div><div class="grid-v v2"></div><div class="grid-v v3"></div>
+         <div class="grid-diagonal"></div>
+         <span class="grid-label">STATE AVENUE</span>
+       </div>
+       <p>The diagonals create the famous circles and irregular intersections that make Washington simultaneously logical and confusing.</p>`)}
+
+    ${primerStep(12,"Why circles appear everywhere.",
+      `<p>L’Enfant placed open spaces at important intersections. Where major diagonal avenues cross the rectangular grid, circles and squares often become focal points.</p>
+       <p>Familiar examples include <strong>Dupont Circle, Washington Circle, Scott Circle,</strong> and <strong>Logan Circle</strong>.</p>
+       <p>The circles were part traffic device, part public space, and part monumental city design.</p>`)}
+
+    ${primerStep(13,"Georgetown is older than the federal street plan.",
+      `<p><strong>Georgetown</strong> existed before Washington, D.C. was planned. Because it developed independently, its streets do not perfectly obey the Capitol-centered grid.</p>
+       <p>This is a good reminder that the famous D.C. system is a plan laid over a landscape that already contained towns, roads, terrain, waterways, and property boundaries.</p>`)}
+
+    ${primerStep(14,"The original District also included Alexandria.",
+      `${primerTerm("RETROCESSION","The return of territory previously ceded to another government.")}
+       <p>The original District of Columbia included land west of the Potomac that had been ceded by Virginia, including Alexandria.</p>
+       <p>Congress approved the return of that Virginia portion in 1846, with the transfer completed in 1847. Today's District therefore consists of the former Maryland side of the original federal district.</p>`)}
+
+    ${primerStep(15,"Washington city and the District were once overlapping but distinct jurisdictions.",
+      `<p>For much of the 19th century, the federal territory contained the incorporated City of Washington, Georgetown, and a more rural Washington County.</p>
+       <p>The <strong>Organic Act of 1871</strong> created a single territorial government for the whole District of Columbia. Over time, “Washington” and “District of Columbia” became effectively coextensive for ordinary use.</p>`)}
+
+    ${primerStep(16,"The McMillan Plan revived the monumental vision.",
+      `${primerTerm("MCMILLAN PLAN","The 1901–1902 plan that reshaped Washington's monumental core, especially the National Mall, using City Beautiful principles while reviving and extending important ideas from L’Enfant's plan.")}
+       <p>It helped establish the broad formal Mall and monumental arrangement associated with the capital today.</p>`)}
+
+    ${primerStep(17,"How to decode an address in five seconds.",
+      `<div class="history-summary-chain">
+        <div><b>Read the quadrant first.</b><span>NW, NE, SW, or SE tells you which copy of the grid.</span></div>
+        <div><b>Numbered street?</b><span>Think north–south.</span></div>
+        <div><b>Lettered street?</b><span>Think east–west in the central grid.</span></div>
+        <div><b>State avenue?</b><span>Expect a diagonal that cuts across the grid.</span></div>
+        <div><b>Address number?</b><span>It often hints at the nearby cross street.</span></div>
+       </div>`)}
+
+    ${primerStep(18,"The shortest possible explanation.",
+      `<div class="dc-quadrant-map compact" role="img" aria-label="Simplified Washington DC addressing system">
+         <div class="dc-q dc-nw"><strong>NW</strong></div>
+         <div class="dc-q dc-ne"><strong>NE</strong></div>
+         <div class="dc-q dc-sw"><strong>SW</strong></div>
+         <div class="dc-q dc-se"><strong>SE</strong></div>
+         <div class="dc-capitol">CAPITOL</div>
+       </div>
+       <div class="memory"><strong>Washington's trick:</strong> the Capitol is zero. Numbers march east and west, letters march north and south, diagonal state avenues slash across both, and the quadrant suffix tells you which repeated copy of a street name you mean.</div>`)}
+
+    <section class="primer-finish">
+      <p class="kicker">City geography primer</p>
+      <h3>The apparent chaos has a machine underneath it.</h3>
+      <p>Once you treat the Capitol as the origin and the quadrant letters as part of the street name, Washington's address system becomes much easier to read.</p>
+    </section>
+
+    <section class="entry-section history-sources">
+      <h3>Sources and further reading</h3>
+      <p><a href="https://centennial.ncpc.gov/library.html" target="_blank" rel="noopener">National Capital Planning Commission — L’Enfant Plan and planning history</a><br>
+      <a href="https://code.dccouncil.gov/us/dc/council/code/sections/9-204.02" target="_blank" rel="noopener">D.C. Code — street designation system</a><br>
+      <a href="https://dcrules.elaws.us/dcmr/12-a202" target="_blank" rel="noopener">D.C. regulations — quadrant addressing</a><br>
+      <a href="https://www.loc.gov/" target="_blank" rel="noopener">Library of Congress — Washington maps and plans</a></p>
+    </section>
+  `;
+}
+
+entries.push({
+  slug:"uk-great-britain-ireland",
+  title:"UK, Great Britain, Britain & Ireland",
+  category:"Political Geography",
+  short:"A baby-step guide to the islands, countries, sovereign states, and the historical geography of Sussex.",
+  keywords:"United Kingdom UK Great Britain Britain England Scotland Wales Ireland Northern Ireland British Isles Sussex East Sussex West Sussex South Saxons geography",
+  body:ukIrelandPrimerBody()
+});
+
+entries.push({
+  slug:"washington-dc-street-plan",
+  title:"Washington, D.C. — History & Street Layout",
+  category:"Cities & Maps",
+  short:"Why the Capitol is the origin, why streets repeat in four quadrants, and how the L’Enfant grid actually works.",
+  keywords:"Washington DC District Columbia L'Enfant Ellicott street grid quadrants NW NE SW SE numbered lettered streets state avenues Capitol duplicate street names addresses",
+  body:washingtonDCPrimerBody()
+});
+
 function resetPanel(){
   const config=sectionConfig[activeSection];
   if(activeSection==="Grammar"){
@@ -1269,6 +1566,25 @@ function resetPanel(){
       </div>`;
     return;
   }
+  if(activeSection==="Geography"){
+    const slug=activeCategory==="Cities & Maps" ? "washington-dc-street-plan" : "uk-great-britain-ireland";
+    const entry=entries.find(e=>e.slug===slug);
+    panelEl.innerHTML=`
+      <div class="entry-inner primer">
+        <header class="primer-hero">
+          <p class="kicker">Start here · baby steps</p>
+          <h2>${slug==="washington-dc-street-plan" ? "Washington, D.C." : "UK, Great Britain, Britain & Ireland"}</h2>
+          <p class="lede">${escapeHtml(entry.short)}</p>
+          ${slug==="washington-dc-street-plan"
+            ? '<div class="primer-chain"><span>Capitol</span><b>→</b><span>grid</span><b>→</b><span>quadrants</span><b>→</b><span>repeated streets</span><b>→</b><span>addresses</span></div>'
+            : '<div class="primer-chain"><span>islands</span><b>→</b><span>countries</span><b>→</b><span>states</span><b>→</b><span>Ireland</span><b>→</b><span>Sussex</span></div>'}
+        </header>
+        ${entry.body}
+      </div>`;
+    activeSlug=slug;
+    renderTerms();
+    return;
+  }
   panelEl.innerHTML=`
     <div class="empty-state">
       <div class="empty-monogram" aria-hidden="true">G</div>
@@ -1290,7 +1606,7 @@ function switchSection(section){
   if(!sectionConfig[section]) return;
   activeSection=section;
   activeCategory="All";
-  activeSlug=section==="History" ? "vietnam-war-primer" : section==="Economic Isms" ? "economic-isms-primer" : null;
+  activeSlug=section==="History" ? "vietnam-war-primer" : section==="Economic Isms" ? "economic-isms-primer" : section==="Geography" ? "uk-great-britain-ireland" : null;
   searchEl.value="";
   searchEl.placeholder=sectionConfig[section].searchPlaceholder;
   indexTitleEl.textContent=sectionConfig[section].indexTitle;
