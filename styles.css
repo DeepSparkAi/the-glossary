@@ -650,6 +650,7 @@ footer{
 /* Top-level library tabs */
 .content-tabs{
   display:flex;
+  flex-wrap:wrap;
   gap:8px;
   margin:0 0 18px;
   padding:8px;
@@ -659,7 +660,7 @@ footer{
   box-shadow:inset 0 1px 0 rgba(255,255,255,.35);
 }
 .content-tab{
-  flex:1 1 0;
+  flex:1 1 145px;
   cursor:pointer;
   border:1px solid #8c6039;
   border-radius:5px;
@@ -689,7 +690,7 @@ footer{
 
 @media (max-width:560px){
   .content-tabs{gap:5px;padding:6px}
-  .content-tab{padding:10px 7px;font-size:.92rem}
+  .content-tab{flex:1 1 30%;padding:9px 6px;font-size:.84rem}
 }
 
 
