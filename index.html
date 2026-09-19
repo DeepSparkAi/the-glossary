@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#405b48" />
+  <meta name="description" content="The Glossary — words, phrases, distinctions, and things worth knowing." />
+  <title>The Glossary</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="masthead">
+    <div class="brand-wrap">
+      <div class="book-mark" aria-hidden="true">G</div>
+      <div>
+        <p class="eyebrow">THEGLOSSARY.ONLINE</p>
+        <h1>The Glossary</h1>
+        <p class="subtitle">Words, phrases, distinctions, and things worth knowing.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="controls" aria-label="Glossary controls">
+      <label class="search-wrap" for="search">
+        <span>Search</span>
+        <input id="search" type="search" placeholder="Try “promise,” “wild,” “church,” or “triangle”…" autocomplete="off" />
+      </label>
+      <div id="filters" class="filters" aria-label="Filter by category"></div>
+    </section>
+
+    <section class="workspace">
+      <aside class="index-panel" aria-label="Glossary index">
+        <div class="panel-heading">
+          <div>
+            <p class="kicker">Oak index</p>
+            <h2>Terms</h2>
+          </div>
+          <span id="count" class="count-badge"></span>
+        </div>
+        <div id="term-list" class="term-list"></div>
+      </aside>
+
+      <article id="entry-panel" class="entry-panel" aria-live="polite">
+        <div class="empty-state">
+          <div class="empty-monogram" aria-hidden="true">G</div>
+          <p class="kicker">Reference cabinet</p>
+          <h2>Choose a term.</h2>
+          <p>Each oak tab opens its definition, history, examples, or diagram here.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>The Glossary · A personal reference library</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
