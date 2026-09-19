@@ -915,3 +915,40 @@ footer{
   .primer-tree-branches>div:before{display:none}
   .primer-step{padding:30px 0 32px}
 }
+
+
+/* History primer */
+.history-summary-chain{
+  display:grid;
+  gap:8px;
+  margin:22px 0;
+}
+.history-summary-chain>div{
+  display:grid;
+  grid-template-columns:minmax(120px,170px) 1fr;
+  gap:14px;
+  align-items:start;
+  padding:10px 12px;
+  border:1px solid #d4c4a7;
+  background:#faf5e9;
+  border-radius:5px;
+}
+.history-summary-chain b{
+  color:var(--forest-dark);
+}
+.history-summary-chain span{
+  color:#4f493f;
+}
+.history-sources{
+  margin-top:30px;
+  font-size:.88rem;
+  line-height:1.55;
+}
+.history-sources a{
+  color:var(--forest-dark);
+  text-decoration-thickness:1px;
+  text-underline-offset:2px;
+}
+@media (max-width:620px){
+  .history-summary-chain>div{grid-template-columns:1fr;gap:4px}
+}
