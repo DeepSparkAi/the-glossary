@@ -952,3 +952,201 @@ footer{
 @media (max-width:620px){
   .history-summary-chain>div{grid-template-columns:1fr;gap:4px}
 }
+
+
+/* Geography primers */
+.geo-island-card{
+  display:grid;
+  justify-items:center;
+  gap:14px;
+  margin:22px 0;
+  padding:20px;
+  border:1px solid #d4c4a7;
+  background:#f7f1e5;
+  border-radius:7px;
+}
+.geo-gb{
+  width:min(280px,80%);
+  display:grid;
+  grid-template-columns:.36fr .64fr;
+  grid-template-rows:.36fr .25fr .39fr;
+  gap:4px;
+  transform:rotate(-2deg);
+}
+.geo-gb>div{
+  display:grid;
+  place-items:center;
+  min-height:72px;
+  padding:10px;
+  border:1px solid #8b7657;
+  background:#eef1e8;
+  font-weight:800;
+  color:#33483b;
+  border-radius:42% 55% 45% 50%;
+}
+.geo-scotland{grid-column:1/3;grid-row:1}
+.geo-wales{grid-column:1;grid-row:2/4}
+.geo-england{grid-column:2;grid-row:2/4}
+.geo-ireland-card{
+  display:grid;
+  grid-template-rows:.3fr .7fr;
+  width:min(260px,75%);
+  margin:22px auto;
+  overflow:hidden;
+  border:2px solid #786347;
+  border-radius:48% 52% 46% 54%;
+  transform:rotate(-2deg);
+}
+.geo-ireland-card>div{
+  display:grid;
+  place-items:center;
+  min-height:80px;
+  padding:12px;
+  text-align:center;
+}
+.geo-ni{background:#e4eadf;border-bottom:1px solid #8e7b5e}
+.geo-ireland{background:#f4ead7}
+.geo-ireland-card small{font-weight:400;color:#625d53}
+.geo-equation-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+  margin:20px 0;
+}
+.geo-equation-grid>div{
+  padding:14px;
+  border:1px solid #cfbd9b;
+  background:#faf5e9;
+  border-radius:5px;
+}
+.geo-equation-grid strong,.geo-equation-grid span{display:block}
+.geo-equation-grid strong{color:var(--forest-dark);margin-bottom:4px}
+
+.dc-quadrant-map{
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:1fr 1fr;
+  width:min(520px,100%);
+  aspect-ratio:1.25/1;
+  margin:24px auto;
+  border:2px solid #6f604c;
+  background:#f8f2e6;
+}
+.dc-q{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:4px;
+  min-height:130px;
+  font-family:Arial,sans-serif;
+}
+.dc-q strong{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:2rem;
+  color:var(--forest-dark);
+}
+.dc-q span{font-size:.75rem;color:#6c655a}
+.dc-nw{border-right:1px solid #8b7a62;border-bottom:1px solid #8b7a62;background:#edf1e7}
+.dc-ne{border-bottom:1px solid #8b7a62;background:#f6ecd9}
+.dc-sw{border-right:1px solid #8b7a62;background:#f5eadc}
+.dc-se{background:#e8eee4}
+.dc-capitol{
+  position:absolute;
+  left:50%;top:50%;
+  transform:translate(-50%,-50%);
+  display:grid;
+  place-items:center;
+  width:82px;height:82px;
+  border:3px double #6e593d;
+  border-radius:50%;
+  background:#fffaf0;
+  text-align:center;
+  font-family:Arial,sans-serif;
+  font-size:.68rem;
+  font-weight:900;
+  letter-spacing:.04em;
+  color:#3f382e;
+  box-shadow:0 2px 8px rgba(73,57,40,.18);
+}
+.dc-quadrant-map.compact{max-width:380px}
+.dc-quadrant-map.compact .dc-q{min-height:92px}
+.dc-quadrant-map.compact .dc-capitol{width:70px;height:70px}
+
+.dc-duplicate-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+  margin:20px 0;
+}
+.dc-duplicate-grid>div{
+  display:grid;
+  gap:3px;
+  padding:15px;
+  border:1px solid #cdbb98;
+  background:#faf5e9;
+  border-radius:5px;
+}
+.dc-duplicate-grid strong{color:#30483a}
+.dc-duplicate-grid span{font-size:.82rem;color:#6d6558}
+.dc-intersections{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px;
+  margin:18px 0;
+}
+.dc-intersections span{
+  padding:10px 12px;
+  border:1px solid #cdbb98;
+  background:#fffaf1;
+  text-align:center;
+  font-weight:700;
+  border-radius:4px;
+}
+.dc-grid-demo{
+  position:relative;
+  width:min(480px,100%);
+  height:270px;
+  margin:24px auto;
+  overflow:hidden;
+  border:1px solid #bfa985;
+  background:#fbf7ee;
+}
+.dc-grid-demo .grid-h,
+.dc-grid-demo .grid-v,
+.dc-grid-demo .grid-diagonal{
+  position:absolute;
+  background:#8e826e;
+}
+.dc-grid-demo .grid-h{left:0;right:0;height:2px}
+.dc-grid-demo .h1{top:25%}.dc-grid-demo .h2{top:50%}.dc-grid-demo .h3{top:75%}
+.dc-grid-demo .grid-v{top:0;bottom:0;width:2px}
+.dc-grid-demo .v1{left:25%}.dc-grid-demo .v2{left:50%}.dc-grid-demo .v3{left:75%}
+.dc-grid-demo .grid-diagonal{
+  width:120%;
+  height:14px;
+  left:-10%;
+  top:48%;
+  transform:rotate(-28deg);
+  background:#b2945f;
+  box-shadow:0 0 0 1px #816840;
+}
+.dc-grid-demo .grid-label{
+  position:absolute;
+  left:50%;top:48%;
+  transform:translate(-50%,-50%) rotate(-28deg);
+  padding:3px 8px;
+  background:#fff8e9;
+  border:1px solid #91754b;
+  font-family:Arial,sans-serif;
+  font-size:.65rem;
+  font-weight:900;
+  letter-spacing:.06em;
+}
+
+@media (max-width:620px){
+  .geo-equation-grid,.dc-duplicate-grid,.dc-intersections{grid-template-columns:1fr}
+  .dc-q strong{font-size:1.5rem}
+  .dc-capitol{width:68px;height:68px}
+}
