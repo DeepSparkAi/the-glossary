@@ -379,29 +379,100 @@ function buildGrammarEntries(){
 
 entries.push(...buildGrammarEntries());
 
-const categoryOrder = ["All","Words","Idioms","Religion & Meaning","Language & History","One-Sheet Primers","Grammar","Grammar Terms","Grammar Practice","Word Structure","Verbs","Sounds & Phonetics","French","Latin","English History"];
+const sectionConfig = {
+  Glossary: {
+    categories: ["All","Words","Idioms","Religion & Meaning","One-Sheet Primers"],
+    indexTitle: "Glossary Terms",
+    emptyTitle: "Choose a term.",
+    emptyText: "Each oak tab opens its definition, history, examples, or diagram here.",
+    searchPlaceholder: "Try “promise,” “wild,” “church,” or “triangle”…"
+  },
+  Grammar: {
+    categories: ["All","Grammar","Grammar Terms","Grammar Practice","Word Structure","Verbs"],
+    indexTitle: "Grammar Topics",
+    emptyTitle: "Choose a grammar topic.",
+    emptyText: "Open a lesson, definition, tense chart, morphology guide, or practice set.",
+    searchPlaceholder: "Try “gerund,” “mood,” “pluperfect,” or “uncountable”…"
+  },
+  Languages: {
+    categories: ["All","Language & History","Sounds & Phonetics","French","Latin","English History"],
+    indexTitle: "Language Topics",
+    emptyTitle: "Choose a language topic.",
+    emptyText: "Open language history, phonetics, French, Latin, or linguistic reference material.",
+    searchPlaceholder: "Try “Teutonic,” “phoneme,” “French,” “Latin,” or “Old English”…"
+  }
+};
+
+const grammarCategories = new Set(["Grammar","Grammar Terms","Grammar Practice","Word Structure","Verbs"]);
+const languageCategories = new Set(["Language & History","Sounds & Phonetics","French","Latin","English History"]);
+
 const listEl = document.querySelector("#term-list");
 const panelEl = document.querySelector("#entry-panel");
 const searchEl = document.querySelector("#search");
 const filtersEl = document.querySelector("#filters");
 const countEl = document.querySelector("#count");
+const tabsEl = document.querySelector("#content-tabs");
+const indexTitleEl = document.querySelector("#index-title");
 
+let activeSection = "Glossary";
 let activeCategory = "All";
 let activeSlug = null;
 
 function escapeHtml(value){
-  return value.replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[c]));
+  return String(value).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[c]));
+}
+
+function sectionForEntry(entry){
+  if(grammarCategories.has(entry.category)) return "Grammar";
+  if(languageCategories.has(entry.category)) return "Languages";
+  return "Glossary";
+}
+
+function resetPanel(){
+  const config=sectionConfig[activeSection];
+  panelEl.innerHTML=`
+    <div class="empty-state">
+      <div class="empty-monogram" aria-hidden="true">${activeSection==="Languages" ? "L" : "G"}</div>
+      <p class="kicker">${escapeHtml(activeSection)} cabinet</p>
+      <h2>${escapeHtml(config.emptyTitle)}</h2>
+      <p>${escapeHtml(config.emptyText)}</p>
+    </div>`;
+}
+
+function renderTabs(){
+  tabsEl.querySelectorAll(".content-tab").forEach(btn=>{
+    const isActive=btn.dataset.section===activeSection;
+    btn.classList.toggle("active",isActive);
+    btn.setAttribute("aria-selected",String(isActive));
+  });
+}
+
+function switchSection(section){
+  if(!sectionConfig[section]) return;
+  activeSection=section;
+  activeCategory="All";
+  activeSlug=null;
+  searchEl.value="";
+  searchEl.placeholder=sectionConfig[section].searchPlaceholder;
+  indexTitleEl.textContent=sectionConfig[section].indexTitle;
+  renderTabs();
+  renderFilters();
+  renderTerms();
+  resetPanel();
 }
 
 function renderFilters(){
-  filtersEl.innerHTML = categoryOrder.map(cat =>
+  const categories=sectionConfig[activeSection].categories;
+  filtersEl.innerHTML = categories.map(cat =>
     `<button class="filter-btn ${cat===activeCategory?"active":""}" data-category="${cat}" type="button">${cat}</button>`
   ).join("");
   filtersEl.querySelectorAll("button").forEach(btn=>{
     btn.addEventListener("click",()=>{
       activeCategory=btn.dataset.category;
+      activeSlug=null;
       renderFilters();
       renderTerms();
+      resetPanel();
     });
   });
 }
@@ -409,6 +480,7 @@ function renderFilters(){
 function filteredEntries(){
   const q=searchEl.value.trim().toLowerCase();
   return entries
+    .filter(e=>sectionForEntry(e)===activeSection)
     .filter(e=>activeCategory==="All" || e.category===activeCategory)
     .filter(e=>!q || [e.title,e.short,e.keywords,e.category].join(" ").toLowerCase().includes(q))
     .sort((a,b)=>a.title.localeCompare(b.title));
@@ -450,6 +522,18 @@ function openEntry(slug){
   }
 }
 
-searchEl.addEventListener("input",renderTerms);
+tabsEl.querySelectorAll(".content-tab").forEach(btn=>{
+  btn.addEventListener("click",()=>switchSection(btn.dataset.section));
+});
+
+searchEl.addEventListener("input",()=>{
+  activeSlug=null;
+  renderTerms();
+});
+
+searchEl.placeholder=sectionConfig[activeSection].searchPlaceholder;
+indexTitleEl.textContent=sectionConfig[activeSection].indexTitle;
+renderTabs();
 renderFilters();
 renderTerms();
+resetPanel();
