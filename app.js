@@ -102,8 +102,15 @@ const entries = [
       </section>
       <div class="memory"><strong>Bottom line:</strong> In an older book, <em>Teutonic languages</em> can mean essentially the same language family now called <em>Germanic languages</em>. In modern linguistics, use <strong>Germanic</strong>. Do not treat <strong>Teutonic</strong> as a fully interchangeable modern technical synonym.</div>
 
+      <section class="entry-section"><h3>Who were the Teutones?</h3>
+        <p><strong>The Teutones (also Teutoni) were a specific ancient northern European people known to Greek and Roman writers.</strong> They were closely associated with the Cimbri and took part in the great southward migrations and wars against Rome in the late 2nd century BCE. Roman forces under Gaius Marius defeated the Teutones at the Battle of Aquae Sextiae in 102 BCE.</p>
+        <p><strong>Teutones is the people-name; Teuton is the singular form.</strong> The name did <strong>not originally mean “all Germanic peoples.”</strong> It named this particular group. Later writers broadened <em>Teuton/Teutonic</em> and used it for Germans or Germanic peoples generally.</p>
+        <p>Their exact ancient ethnic and linguistic classification has been debated. They are commonly placed among the Germanic peoples, while some ancient and later sources connected them with Celtic populations. For this glossary, the important point is the naming history: <strong>specific people first → broader “Germanic” use later.</strong></p>
+        <div class="flow"><span><strong>Teutones</strong><br>specific ancient people</span><b>→ later semantic broadening →</b><span><strong>Teuton / Teutonic</strong><br>German or Germanic in older usage</span></div>
+      </section>
+
       <section class="entry-section"><h3>Why the words are only partly interchangeable</h3>
-        <p><strong>Teutonic started narrower.</strong> It comes from the name of the <strong>Teutones</strong>, a particular ancient people known to Roman writers. English later broadened the word and used it for the larger Germanic family. That broad linguistic use is now largely obsolete.</p>
+        <p><strong>Teutonic started narrower.</strong> It comes from the name of the <strong>Teutones</strong>, the specific ancient people defined above. English later broadened the word and used it for the larger Germanic family. That broad linguistic use is now largely obsolete.</p>
         <p><strong>Germanic became the standard umbrella.</strong> It now names the historical and linguistic family that includes English, German, Dutch, Frisian, the Scandinavian languages, and extinct East Germanic languages such as Gothic.</p>
         <div class="flow"><span>Teutones = one named ancient people</span><b>→ semantic broadening →</b><span>older “Teutonic” = Germanic family</span><b>→ modern terminology →</b><span>Germanic</span></div>
       </section>
