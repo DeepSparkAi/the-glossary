@@ -677,12 +677,20 @@ const sectionConfig = {
     emptyTitle: "Choose a history topic.",
     emptyText: "Open a guided historical primer.",
     searchPlaceholder: "Try “Vietnam,” “Dien Bien Phu,” “Tet,” or “China”…"
+  },
+  "Economic Isms": {
+    categories: ["All","Economic Systems & Ideologies"],
+    indexTitle: "Economic Isms",
+    emptyTitle: "Choose an economic or political system.",
+    emptyText: "Open a baby-step primer on major economic and political ideologies.",
+    searchPlaceholder: "Try “capitalism,” “socialism,” “communism,” or “fascism”…"
   }
 };
 
 const grammarCategories = new Set(["Grammar","Grammar Terms","Grammar Practice","Word Structure","Verbs"]);
 const languageCategories = new Set(["Language & History","Sounds & Phonetics","French","Latin","English History"]);
 const historyCategories = new Set(["Modern History"]);
+const economicIsmCategories = new Set(["Economic Systems & Ideologies"]);
 
 const listEl = document.querySelector("#term-list");
 const panelEl = document.querySelector("#entry-panel");
@@ -704,6 +712,7 @@ function sectionForEntry(entry){
   if(grammarCategories.has(entry.category)) return "Grammar";
   if(languageCategories.has(entry.category)) return "Languages";
   if(historyCategories.has(entry.category)) return "History";
+  if(economicIsmCategories.has(entry.category)) return "Economic Isms";
   return "Glossary";
 }
 
@@ -1059,6 +1068,169 @@ function languagesPrimer(){
   </div>`;
 }
 
+
+function economicIsmsPrimerBody(){
+  return `
+    ${primerStep(1,"Start before the isms: what is an economy?",
+      `${primerTerm("ECONOMY","The system through which a society produces, distributes, exchanges, and consumes goods and services.")}
+       <p>Every economic system has to answer some basic questions: <strong>What gets produced? Who controls productive resources? Who does the work? How are prices or quantities decided? Who receives the income and output?</strong></p>
+       <p>The “isms” differ mainly in how they answer those questions—and in the political ideas they attach to those answers.</p>`)}
+
+    ${primerStep(2,"What are the means of production?",
+      `${primerTerm("MEANS OF PRODUCTION","The resources and productive assets used to make goods and services: land, factories, machines, mines, infrastructure, and other productive equipment.")}
+       <p>This term does <strong>not</strong> normally mean your toothbrush, shirt, or kitchen chair. The argument is about productive property: assets used to organize production on a larger scale.</p>`)}
+
+    ${primerStep(3,"What is capital?",
+      `${primerTerm("CAPITAL","Assets used to produce more goods or services or to generate income: for example machinery, buildings, equipment, and invested financial resources.")}
+       <p>A factory can be capital. A delivery truck used by a business can be capital. Money invested to finance production can function as capital.</p>
+       <p><strong>Capitalism</strong> gets its name from the central role of privately controlled capital.</p>`)}
+
+    ${primerStep(4,"Ownership and control are separate questions.",
+      `${primerTerm("PRIVATE OWNERSHIP","Ownership by individuals, families, or private organizations rather than by the state or the public collectively.")}
+       ${primerTerm("SOCIAL OWNERSHIP","An umbrella term for productive assets controlled collectively or socially rather than by a separate private owning class. The exact form can vary: worker ownership, cooperative ownership, public ownership, community ownership, and others.")}
+       ${primerTerm("STATE OWNERSHIP","Ownership by a government. State ownership can exist in many kinds of political and economic systems; by itself it does not settle whether an economy is socialist.")}
+       <p>One of the biggest sources of confusion is treating <strong>social ownership</strong> and <strong>state ownership</strong> as automatic synonyms. Some socialist theories accept state ownership; others emphasize worker or cooperative control instead.</p>`)}
+
+    ${primerStep(5,"How can an economy decide what gets produced?",
+      `${primerTerm("MARKET","A system of exchange in which buyers and sellers interact, and prices help coordinate what is produced and consumed.")}
+       ${primerTerm("ECONOMIC PLANNING","Deliberate coordination of production, investment, or distribution through institutions rather than relying primarily on decentralized market prices.")}
+       <p>Markets and planning are not always all-or-nothing opposites. Real economies often use both.</p>`)}
+
+    ${primerStep(6,"Profit and wages are two more pieces.",
+      `${primerTerm("PROFIT","Revenue left after the relevant costs of producing and selling a good or service are paid.")}
+       ${primerTerm("WAGE LABOR","Work performed in exchange for wages or salary.")}
+       <p>In a typical capitalist firm, owners supply or control capital, employees sell their labor for wages, and the owners have a claim on profits after costs.</p>`)}
+
+    ${primerStep(7,"A crucial warning: these labels describe different kinds of things.",
+      `<p><strong>Capitalism</strong> and <strong>socialism</strong> are primarily ways of talking about economic ownership and control.</p>
+       <p><strong>Communism</strong> is both a political-economic theory and the name historically attached to movements and states claiming that tradition.</p>
+       <p><strong>Democratic socialism</strong> explicitly combines socialist economic aims with democratic political commitments.</p>
+       <p><strong>Fascism</strong> is primarily a political ideology and form of authoritarian nationalism. It has economic doctrines and practices, but it is not simply another ownership formula sitting on the same line as capitalism and socialism.</p>`)}
+
+    ${primerStep(8,"Capitalism: private control of most productive property.",
+      `${primerTerm("CAPITALISM","An economic system in which most productive assets are privately owned or controlled, markets play a major role in allocating resources, wage labor is common, and private owners may earn profits from investment.")}
+       <p>Capitalism does <strong>not</strong> require the government to own nothing or regulate nothing. Modern capitalist economies have taxes, public schools, central banks, regulations, social insurance, and government-owned services to varying degrees.</p>
+       <div class="memory"><strong>Core idea:</strong> most productive capital remains privately owned, and market exchange remains a central coordinating mechanism.</div>`)}
+
+    ${primerStep(9,"Capitalism is not the same thing as democracy.",
+      `${primerTerm("POLITICAL DEMOCRACY","A political system in which citizens have meaningful mechanisms for choosing and replacing rulers and participating in public decision-making, usually through elections, rights, institutions, and political competition.")}
+       <p>A country can have a largely capitalist economy and democratic government. A country can also have a largely capitalist economy under authoritarian government.</p>
+       <p>So <strong>capitalism answers an economic question; democracy answers a political question.</strong> They often coexist, but one does not logically define the other.</p>`)}
+
+    ${primerStep(10,"Socialism is a broad family, not one single blueprint.",
+      `${primerTerm("SOCIALISM","A broad tradition arguing that the major means of production should be under social or collective control rather than predominantly controlled by a separate class of private capital owners.")}
+       <p>There are many socialist traditions. They disagree over markets, planning, the role of the state, worker cooperatives, elections, revolution, reform, and how much private enterprise should remain.</p>
+       <p>That breadth is why the sentence <strong>“socialism means the government owns everything”</strong> is too crude to serve as a general definition.</p>`)}
+
+    ${primerStep(11,"Social ownership can take several forms.",
+      `<div class="definition-grid">
+        <div class="definition-card"><h3>Public ownership</h3><p>A government owns an enterprise on behalf of the public.</p></div>
+        <div class="definition-card"><h3>Worker cooperative</h3><p>The workers jointly own or govern the enterprise.</p></div>
+        <div class="definition-card"><h3>Community ownership</h3><p>A local or broader community controls an asset.</p></div>
+        <div class="definition-card"><h3>Social funds</h3><p>Investment assets can be held collectively through public or social institutions.</p></div>
+       </div>
+       <p>Different socialist schools prefer different combinations. Some retain substantial markets; others prefer much more planning.</p>`)}
+
+    ${primerStep(12,"Socialism is not automatically the same as central planning.",
+      `${primerTerm("MARKET SOCIALISM","A family of socialist proposals in which firms or productive assets are socially or cooperatively owned while markets still help set prices and allocate many goods.")}
+       <p>Other socialist models rely much more heavily on planning. The point is that <strong>socialism is fundamentally about social control of productive assets</strong>; the exact mechanism of coordination is a separate question.</p>`)}
+
+    ${primerStep(13,"Communism is a specific branch of the broader socialist tradition.",
+      `${primerTerm("COMMUNISM","A political-economic tradition associated especially with Marx and later movements that seeks to overcome capitalist class ownership and ultimately establish a classless social order based on common or social control of productive resources.")}
+       <p>In classical Marxist theory, the final communist society is not merely “a very large government.” The theoretical endpoint is a society in which class divisions have disappeared and the coercive state, as a separate class power, is expected eventually to disappear as well.</p>
+       <p>That theoretical endpoint is different from the governments historically called <strong>communist states</strong>.</p>`)}
+
+    ${primerStep(14,"Communist theory and 20th-century communist states are not the same definition.",
+      `${primerTerm("COMMUNIST STATE","A conventional historical label for a state governed by a communist party, usually within the Marxist-Leninist tradition, claiming to be building socialism and ultimately communism.")}
+       <p>The Soviet Union, Mao-era China, and other communist-party states generally used extensive state ownership and economic planning and were governed by one-party political systems.</p>
+       <p>Supporters and critics disagree over how those states should be related to the theoretical communist endpoint. A clean primer therefore keeps two ideas separate: <strong>communism as a theory/goal</strong> and <strong>communist-party states as historical political systems</strong>.</p>`)}
+
+    ${primerStep(15,"Democratic socialism is absolutely an established term.",
+      `${primerTerm("DEMOCRATIC SOCIALISM","A socialist tradition that insists socialist economic change should be combined with political democracy and, in many versions, with democratic control inside economic institutions as well.")}
+       <p>The term has been used for generations and remains current in political science and active political organizations. It is not merely a temporary campaign slogan.</p>
+       <p>Its exact meaning is not perfectly fixed. Some democratic socialists emphasize worker ownership, some public ownership, some market socialism, and some a mixture. What joins them is the attempt to distinguish democratic forms of socialism from authoritarian one-party models.</p>`)}
+
+    ${primerStep(16,"Democratic socialism does not simply mean “capitalism plus elections.”",
+      `<p>Political democracy alone does not make an economy socialist. A democratic socialist position normally argues that democracy should extend farther into economic ownership or decision-making.</p>
+       ${primerTerm("ECONOMIC DEMOCRACY","The idea that workers, citizens, communities, or the public should have meaningful democratic control over major economic decisions and productive institutions.")}
+       <p>Different democratic socialists propose different institutional designs, so the label tells you a direction of thought—not one universal policy checklist.</p>`)}
+
+    ${primerStep(17,"Now distinguish democratic socialism from social democracy.",
+      `${primerTerm("SOCIAL DEMOCRACY","In common modern usage, a political tradition that generally accepts a predominantly capitalist market economy while using democratic government, regulation, public services, labor protections, and social insurance to shape its outcomes.")}
+       <div class="compare-grid">
+        <div class="compare-card"><h3>Democratic socialism</h3><p>Usually seeks some deeper move toward social or democratic ownership/control of major productive assets.</p></div>
+        <div class="compare-card green"><h3>Modern social democracy</h3><p>Usually retains a predominantly capitalist ownership structure while regulating markets and building a larger welfare state.</p></div>
+       </div>
+       <p><strong>But the boundary is historically messy.</strong> Scholars and political movements have sometimes used the two terms interchangeably, and their meanings have shifted over time.</p>`)}
+
+    ${primerStep(18,"Fascism belongs in the lesson—but with a warning label.",
+      `${primerTerm("FASCISM","An authoritarian, ultranationalist political ideology that emerged in early-20th-century Europe and places the nation above individual political rights, rejects liberal democratic pluralism, and historically opposed both socialism/communism and liberal democracy.")}
+       <p>Fascism is therefore <strong>not best defined as an economic ownership system</strong>. Its central claims concern nation, authority, political unity, leadership, hierarchy, and the suppression of opposition.</p>
+       <p>Economic organization under fascist regimes was made subordinate to those political goals.</p>`)}
+
+    ${primerStep(19,"What happened to private property under historical fascism?",
+      `<p>Historical fascist regimes did <strong>not generally abolish private business ownership in the communist sense</strong>. Private firms and profits could continue.</p>
+       <p>At the same time, fascist governments intervened heavily: they directed priorities, controlled labor organizations, restricted strikes, promoted rearmament and economic self-sufficiency, and expected private economic actors to serve state and national objectives.</p>
+       <div class="memory"><strong>So “fascism = capitalism” and “fascism = socialism” are both inadequate shortcuts.</strong> The historical pattern combined private ownership with authoritarian state direction in service of nationalist political goals.</div>`)}
+
+    ${primerStep(20,"Corporatism does not mean rule by modern corporations.",
+      `${primerTerm("CORPORATISM","A political-economic arrangement that organizes society into officially recognized occupational or sectoral groups—such as employers and workers in an industry—and gives those groups roles in state-supervised decision-making.")}
+       <p>Italian Fascism promoted a <strong>corporatist</strong> model intended to replace independent class conflict with state-supervised organizations representing employers and workers.</p>
+       <p>The word comes from the idea of society as a <em>body</em> made of organized parts. It does not simply mean “big companies control the government,” which is a different modern use of the word <em>corporate</em>.</p>`)}
+
+    ${primerStep(21,"Most actual economies are mixed.",
+      `${primerTerm("MIXED ECONOMY","An economy combining private enterprise and markets with government regulation, taxation, public spending, social programs, and sometimes public ownership.")}
+       <p>Nearly every modern national economy mixes mechanisms. The useful question is therefore often not <strong>“Is there any government involvement?”</strong> but rather <strong>who owns what, who controls what, how prices and investment are coordinated, and how political power is organized.</strong></p>`)}
+
+    ${primerStep(22,"Put the five labels on separate questions.",
+      `<div class="table-scroll"><table><thead><tr><th>Term</th><th>Core economic idea</th><th>Political structure built into the definition?</th></tr></thead><tbody>
+       <tr><td><strong>Capitalism</strong></td><td>Predominantly private productive ownership; markets and profit play central roles.</td><td>No single political regime follows automatically.</td></tr>
+       <tr><td><strong>Socialism</strong></td><td>Major productive resources under social/collective control.</td><td>Varies greatly by socialist tradition.</td></tr>
+       <tr><td><strong>Communism</strong></td><td>Common/social control aimed ultimately at a classless order; historical communist states used extensive state ownership/planning.</td><td>The theory and historical one-party communist states must be distinguished.</td></tr>
+       <tr><td><strong>Democratic socialism</strong></td><td>Socialist economic aims combined with democratic economic control.</td><td>Yes: political democracy is central to the label.</td></tr>
+       <tr><td><strong>Fascism</strong></td><td>No single ownership formula; historically private ownership often remained under strong state direction.</td><td>Yes: authoritarian ultranationalism is central.</td></tr>
+       </tbody></table></div>`)}
+
+    ${primerStep(23,"The fastest memory test.",
+      `<div class="history-summary-chain">
+        <div><b>Capitalism</b><span>Who owns productive capital? Mostly private owners.</span></div>
+        <div><b>Socialism</b><span>Who should control major productive assets? Society collectively, in one form or another.</span></div>
+        <div><b>Communism</b><span>What is the ultimate Marxist horizon? A classless order based on common control; historical communist states are a separate empirical category.</span></div>
+        <div><b>Democratic socialism</b><span>How should socialism be governed? Democratically, politically and often economically.</span></div>
+        <div><b>Fascism</b><span>What is supreme? The authoritarian nationalist state or national community—not an abstract ownership formula.</span></div>
+       </div>
+       <div class="memory"><strong>Best habit:</strong> when someone uses one of these labels, ask what they mean by <em>ownership, markets, planning, political power, and democracy</em>. The label alone often hides important differences.</div>`)}
+
+    <section class="primer-finish">
+      <p class="kicker">Economic & political systems primer</p>
+      <h3>Now the “isms” are separate concepts instead of interchangeable insults.</h3>
+      <p>The key is to distinguish economic ownership, economic coordination, and political authority. They overlap, but they are not the same axis.</p>
+    </section>
+
+    <section class="entry-section history-sources">
+      <h3>Sources and further reading</h3>
+      <p>The definitions here use neutral reference sources and distinguish theoretical ideals from historical regimes.</p>
+      <p>
+        <a href="https://www.imf.org/en/publications/fandd/issues/series/back-to-basics/capitalism" target="_blank" rel="noopener">IMF — What Is Capitalism?</a><br>
+        <a href="https://plato.stanford.edu/entries/socialism/" target="_blank" rel="noopener">Stanford Encyclopedia of Philosophy — Socialism</a><br>
+        <a href="https://www.rep.routledge.com/articles/thematic/communism/v-1" target="_blank" rel="noopener">Routledge Encyclopedia of Philosophy — Communism</a><br>
+        <a href="https://encyclopedia.ushmm.org/content/en/article/fascism-1" target="_blank" rel="noopener">U.S. Holocaust Memorial Museum — Fascism</a><br>
+        <a href="https://sk.sagepub.com/ency/edvol/embed/the-encyclopedia-of-political-science/chpt/democratic-socialism" target="_blank" rel="noopener">SAGE Encyclopedia of Political Science — Democratic Socialism</a><br>
+        <a href="https://www.rep.routledge.com/articles/thematic/social-democracy/v-1" target="_blank" rel="noopener">Routledge Encyclopedia of Philosophy — Social Democracy</a>
+      </p>
+    </section>
+  `;
+}
+
+entries.push({
+  slug:"economic-isms-primer",
+  title:"Capitalism, Socialism, Communism, Democratic Socialism & Fascism",
+  category:"Economic Systems & Ideologies",
+  short:"A baby-step primer on what these terms actually describe, where they overlap, and where they do not.",
+  keywords:"capitalism socialism communism democratic socialism social democracy fascism corporatism markets private property social ownership state ownership means production capital profit planning democracy ideology economics isms",
+  body:economicIsmsPrimerBody()
+});
+
 function resetPanel(){
   const config=sectionConfig[activeSection];
   if(activeSection==="Grammar"){
@@ -1078,6 +1250,20 @@ function resetPanel(){
           <h2>The Viet Nam War</h2>
           <p class="lede">${escapeHtml(entry.short)}</p>
           <div class="primer-chain"><span>French empire</span><b>→</b><span>independence war</span><b>→</b><span>U.S. war</span><b>→</b><span>regional wars</span><b>→</b><span>partnership</span></div>
+        </header>
+        ${entry.body}
+      </div>`;
+    return;
+  }
+  if(activeSection==="Economic Isms"){
+    const entry=entries.find(e=>e.slug==="economic-isms-primer");
+    panelEl.innerHTML=`
+      <div class="entry-inner primer">
+        <header class="primer-hero">
+          <p class="kicker">Start here · baby steps</p>
+          <h2>Economic “Isms”</h2>
+          <p class="lede">${escapeHtml(entry.short)}</p>
+          <div class="primer-chain"><span>ownership</span><b>→</b><span>markets</span><b>→</b><span>planning</span><b>→</b><span>political power</span><b>→</b><span>the isms</span></div>
         </header>
         ${entry.body}
       </div>`;
@@ -1104,7 +1290,7 @@ function switchSection(section){
   if(!sectionConfig[section]) return;
   activeSection=section;
   activeCategory="All";
-  activeSlug=section==="History" ? "vietnam-war-primer" : null;
+  activeSlug=section==="History" ? "vietnam-war-primer" : section==="Economic Isms" ? "economic-isms-primer" : null;
   searchEl.value="";
   searchEl.placeholder=sectionConfig[section].searchPlaceholder;
   indexTitleEl.textContent=sectionConfig[section].indexTitle;
