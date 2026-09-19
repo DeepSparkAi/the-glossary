@@ -262,7 +262,124 @@ const entries = [
   }
 ];
 
-const categoryOrder = ["All","Words","Idioms","Religion & Meaning","Language & History","One-Sheet Primers"];
+
+const grammarSubjectLabels = {
+  grammar: "Grammar",
+  words: "Word Structure",
+  verbs: "Verbs",
+  sounds: "Sounds & Phonetics",
+  french: "French",
+  latin: "Latin",
+  "english-history": "English History"
+};
+
+function renderGrammarBlock(block){
+  const h = escapeHtml;
+  if(block.kind === "definition"){
+    return `<section class="entry-section grammar-definition"><h3>${h(block.term)}</h3><p>${h(block.text)}</p></section>`;
+  }
+  if(block.kind === "prose"){
+    return `<section class="entry-section">${block.title ? `<h3>${h(block.title)}</h3>` : ""}${block.body.map(p=>`<p>${h(p)}</p>`).join("")}</section>`;
+  }
+  if(block.kind === "examples"){
+    return `<section class="entry-section"><h3>${h(block.title || "Examples")}</h3><div class="grammar-example-list">${block.items.map(item=>`<div class="example"><strong>${h(item.text)}</strong>${item.note ? `<br><span class="example-note">${h(item.note)}</span>` : ""}</div>`).join("")}</div></section>`;
+  }
+  if(block.kind === "annotated"){
+    return `<section class="entry-section"><h3>Sentence anatomy</h3>${block.instruction ? `<p>${h(block.instruction.replace("Click each word to see its job.","Each word is labelled with its job.").replace("Click the words to see how the sentence divides.","Each word is labelled by its role.").replace("Click to see which unit each word belongs to.","Each word is labelled by its role.").replace("Click a word to see what marks the mood.","Each word is labelled by its role.").replace("Click each word to identify the verb form.","Each word is labelled by its verb form."))}</p>` : ""}<div class="grammar-tokens">${block.tokens.map(t=>`<span class="grammar-token"><strong>${h(t.w)}</strong><small>${h(t.role || "")}${t.note ? ` — ${h(t.note)}` : ""}</small></span>`).join("")}</div></section>`;
+  }
+  if(block.kind === "why"){
+    return `<section class="entry-section"><div class="grammar-why"><strong>Why it matters</strong><p>${h(block.body)}</p></div></section>`;
+  }
+  if(block.kind === "mistake"){
+    return `<section class="entry-section"><h3>Common mistake</h3><div class="compare-grid"><div class="compare-card grammar-wrong"><h3>Not this</h3><p>${h(block.wrong)}</p></div><div class="compare-card green"><h3>Use this</h3><p>${h(block.right)}</p></div></div><p class="grammar-note">${h(block.note)}</p></section>`;
+  }
+  if(block.kind === "compare"){
+    return `<section class="entry-section"><div class="compare-grid">${block.columns.map(col=>`<div class="compare-card"><h3>${h(col.heading)}</h3><ul>${col.items.map(item=>`<li>${h(item)}</li>`).join("")}</ul></div>`).join("")}</div></section>`;
+  }
+  if(block.kind === "timeline"){
+    return `<section class="entry-section"><h3>Timeline</h3>${block.note ? `<p>${h(block.note.replace("Click an era to see its language, its influences, and what was happening around it.","Open an era to see its language, influences, and historical setting.").replace("Click an era to open it.","Open an era for details."))}</p>` : ""}<div class="grammar-timeline">${block.eras.map(era=>`<details class="timeline-era"><summary><strong>${h(era.name)}</strong><span>${h(era.range)}</span></summary><div class="timeline-body"><p>${h(era.blurb)}</p><ul>${era.bullets.map(b=>`<li>${h(b)}</li>`).join("")}</ul>${era.sample ? `<div class="example"><strong>${h(era.sample.text)}</strong><br><span class="example-note">${h(era.sample.gloss)}</span></div>` : ""}</div></details>`).join("")}</div></section>`;
+  }
+  if(block.kind === "tenseline"){
+    return `<section class="entry-section"><h3>${h(block.caption)}</h3><div class="tense-track"><div class="tense-line"></div>${block.points.map(p=>`<div class="tense-point" style="left:${Math.max(3,Math.min(97,p.at))}%"><span></span><b>${h(p.label)}</b></div>`).join("")}</div>${block.note ? `<p class="grammar-note">${h(block.note)}</p>` : ""}</section>`;
+  }
+  if(block.kind === "cards"){
+    return `<section class="entry-section"><div class="definition-grid">${block.items.map(item=>`<div class="definition-card grammar-card"><div class="grammar-big">${h(item.big)}</div><h3>${h(item.title)}</h3><p>${h(item.body)}</p>${item.examples ? `<ul>${item.examples.map(ex=>`<li>${h(ex)}</li>`).join("")}</ul>` : ""}</div>`).join("")}</div></section>`;
+  }
+  if(block.kind === "table"){
+    return `<section class="entry-section"><div class="table-scroll"><table><thead><tr>${block.headers.map(x=>`<th>${h(x)}</th>`).join("")}</tr></thead><tbody>${block.rows.map(row=>`<tr>${row.map(x=>`<td>${h(x)}</td>`).join("")}</tr>`).join("")}</tbody></table></div></section>`;
+  }
+  if(block.kind === "morph"){
+    return `<section class="entry-section"><h3>${h(block.word)}</h3><div class="morph-row">${block.parts.map(p=>`<span class="morph-part"><strong>${h(p.text)}</strong><small>${h(p.kind)}</small></span>`).join('<b class="morph-plus">+</b>')}</div></section>`;
+  }
+  if(block.kind === "evolution"){
+    return `<section class="entry-section"><h3>${h(block.title)}</h3><div class="evolution-list">${block.chains.map(chain=>`<div class="evolution-chain"><div class="flow">${chain.steps.map((s,i)=>`${i ? "<b>→</b>" : ""}<span>${h(s)}</span>`).join("")}</div><p class="grammar-note">${h(chain.gloss)}</p></div>`).join("")}</div></section>`;
+  }
+  if(block.kind === "pairs"){
+    return `<section class="entry-section"><h3>Minimal pairs</h3><div class="pair-list">${block.items.map(item=>`<div class="pair-row"><strong>${h(item.a)} / ${h(item.b)}</strong><span>${h(item.note)}</span></div>`).join("")}</div></section>`;
+  }
+  return "";
+}
+
+function renderGrammarQuestions(title, questions){
+  if(!questions || !questions.length) return "";
+  return `<section class="entry-section grammar-check"><h3>${escapeHtml(title)}</h3><div class="question-list">${questions.map((q,i)=>renderGrammarQuestion(q,i)).join("")}</div></section>`;
+}
+
+function renderGrammarQuestion(q,i){
+  const h=escapeHtml;
+  const answer=q.options && q.answer >= 0 ? q.options[q.answer] : "";
+  return `<div class="question-card"><p class="question-number">${i+1}</p><p><strong>${h(q.prompt)}</strong></p>${q.sentence ? `<p class="question-sentence">${h(q.sentence)}</p>` : ""}${q.options ? `<ol type="A">${q.options.map(o=>`<li>${h(o)}</li>`).join("")}</ol>` : ""}<details class="answer-reveal"><summary>Show answer</summary><p><strong>Answer:</strong> ${h(answer)}</p><p>${h(q.explain || "")}</p></details></div>`;
+}
+
+function renderPracticeModes(modes){
+  const h=escapeHtml;
+  return modes.map(mode=>`<section class="entry-section"><h3>${h(mode.title)}</h3><p>${h(mode.description)}</p><div class="question-list">${mode.items.map((item,i)=>{
+    if(mode.type==="mcq") return renderGrammarQuestion(item,i);
+    if(mode.type==="fix"){
+      return `<div class="question-card"><p class="question-number">${i+1}</p><p><strong>${h(item.prompt)}</strong></p><p class="question-sentence grammar-wrong-text">${h(item.wrong)}</p><details class="answer-reveal"><summary>Show correction</summary><p><strong>${h(item.answer)}</strong></p><p>${h(item.explain)}</p>${item.accept && item.accept.length ? `<p class="grammar-note"><strong>Accepted forms:</strong> ${item.accept.map(h).join(" · ")}</p>` : ""}</details></div>`;
+    }
+    if(mode.type==="build"){
+      return `<div class="question-card"><p class="question-number">${i+1}</p><p><strong>${h(item.prompt)}</strong></p><div class="morph-row">${item.pieces.map(p=>`<span class="morph-part"><strong>${h(p)}</strong></span>`).join("")}</div><details class="answer-reveal"><summary>Show answer</summary><p><strong>${item.answer.map(h).join(" + ")}</strong></p><p>${h(item.explain)}</p></details></div>`;
+    }
+    return "";
+  }).join("")}</div></section>`).join("");
+}
+
+function buildGrammarEntries(){
+  const data=window.GRAMMAR_CONTENT;
+  if(!data) return [];
+  const lessonEntries=data.lessons.map(lesson=>({
+    slug:`grammar-${lesson.id}`,
+    title:lesson.title,
+    category:grammarSubjectLabels[lesson.subject] || "Grammar",
+    short:lesson.blurb,
+    keywords:[lesson.title,lesson.blurb,lesson.subject,"grammar lesson"].join(" "),
+    body:lesson.blocks.map(renderGrammarBlock).join("")+
+      renderGrammarQuestions("Practice",lesson.practice)+
+      renderGrammarQuestions("Quiz",lesson.quiz)
+  }));
+  const glossaryEntries=data.glossary.map(g=>({
+    slug:`grammar-term-${g.term.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")}`,
+    title:g.term,
+    category:"Grammar Terms",
+    short:g.plain,
+    keywords:[g.term,g.definition,g.plain,g.example,(g.related||[]).join(" ")].join(" "),
+    body:`<section class="entry-section"><h3>Definition</h3><p>${escapeHtml(g.definition)}</p></section><section class="entry-section"><h3>In plain English</h3><p>${escapeHtml(g.plain)}</p></section><section class="entry-section"><h3>Example</h3><p class="example">${escapeHtml(g.example)}</p></section>${g.related && g.related.length ? `<section class="entry-section"><h3>Related terms</h3><div class="flow">${g.related.map(x=>`<span>${escapeHtml(x)}</span>`).join("")}</div></section>` : ""}`
+  }));
+  const practiceEntry={
+    slug:"grammar-practice",
+    title:"Grammar Practice",
+    category:"Grammar Practice",
+    short:"All of the original Grammar Guide practice modes, with answers and explanations.",
+    keywords:"grammar practice quiz identify tense mood timeline fix sentence build word",
+    body:renderPracticeModes(data.practiceModes)
+  };
+  return [...lessonEntries,...glossaryEntries,practiceEntry];
+}
+
+entries.push(...buildGrammarEntries());
+
+const categoryOrder = ["All","Words","Idioms","Religion & Meaning","Language & History","One-Sheet Primers","Grammar","Grammar Terms","Grammar Practice","Word Structure","Verbs","Sounds & Phonetics","French","Latin","English History"];
 const listEl = document.querySelector("#term-list");
 const panelEl = document.querySelector("#entry-panel");
 const searchEl = document.querySelector("#search");
