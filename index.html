@@ -21,6 +21,12 @@
   </header>
 
   <main class="shell">
+    <nav id="content-tabs" class="content-tabs" aria-label="Reference sections">
+      <button type="button" class="content-tab active" data-section="Glossary" aria-selected="true">Glossary</button>
+      <button type="button" class="content-tab" data-section="Grammar" aria-selected="false">Grammar</button>
+      <button type="button" class="content-tab" data-section="Languages" aria-selected="false">Languages</button>
+    </nav>
+
     <section class="controls" aria-label="Glossary controls">
       <label class="search-wrap" for="search">
         <span>Search</span>
@@ -34,7 +40,7 @@
         <div class="panel-heading">
           <div>
             <p class="kicker">Oak index</p>
-            <h2>Terms</h2>
+            <h2 id="index-title">Terms</h2>
           </div>
           <span id="count" class="count-badge"></span>
         </div>
