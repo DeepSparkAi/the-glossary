@@ -691,3 +691,227 @@ footer{
   .content-tabs{gap:5px;padding:6px}
   .content-tab{padding:10px 7px;font-size:.92rem}
 }
+
+
+/* Baby-step primers */
+.primer{
+  max-width:900px;
+}
+.primer-hero{
+  padding-bottom:28px;
+  margin-bottom:10px;
+  border-bottom:2px solid var(--walnut);
+}
+.primer-hero h2{
+  margin:.35rem 0 .75rem;
+  font-size:clamp(2.3rem,5vw,4.6rem);
+  line-height:.98;
+  color:var(--walnut);
+}
+.primer-chain{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  margin:24px 0 4px;
+  padding:18px;
+  border:1px solid #d6c6a7;
+  background:#f5eedf;
+  border-radius:6px;
+}
+.primer-chain span{
+  padding:8px 12px;
+  background:#fffaf0;
+  border:1px solid #cdb996;
+  border-radius:4px;
+  font-weight:700;
+}
+.primer-chain b{
+  color:var(--forest-dark);
+  font-family:Arial,sans-serif;
+}
+.primer-step{
+  position:relative;
+  margin:0;
+  padding:38px 0 40px;
+  border-bottom:1px solid #d7cbb7;
+}
+.primer-step-number{
+  margin-bottom:8px;
+  font-family:Arial,sans-serif;
+  font-size:.7rem;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--forest-dark);
+}
+.primer-step>h3{
+  margin:0 0 16px;
+  font-size:clamp(1.75rem,3vw,2.6rem);
+  line-height:1.05;
+  color:var(--walnut);
+}
+.primer-step-body{
+  font-size:1.02rem;
+  line-height:1.75;
+}
+.primer-step-body>p{
+  max-width:760px;
+}
+.primer-term{
+  margin:22px 0;
+  padding:18px 20px;
+  border-left:4px solid var(--brass);
+  background:#f6efe0;
+  box-shadow:inset 0 0 0 1px rgba(151,119,72,.16);
+}
+.primer-label{
+  margin:0 0 3px!important;
+  font-family:Arial,sans-serif;
+  font-size:.66rem!important;
+  line-height:1.2!important;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:#8a6a38;
+}
+.primer-term h3{
+  margin:0 0 5px;
+  font-size:1.65rem;
+  color:var(--walnut);
+}
+.primer-term p:last-child{
+  margin:0;
+  max-width:720px;
+}
+.primer-sentence{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:22px 0;
+  padding:18px;
+  border:1px solid #d3c2a1;
+  background:#f8f1e4;
+  border-radius:6px;
+}
+.pword{
+  display:grid;
+  gap:3px;
+  padding:8px 10px;
+  border:1px solid #cbb58f;
+  background:#fffaf1;
+  border-radius:4px;
+}
+.pword b{font-size:1.05rem}
+.pword small{
+  font-family:Arial,sans-serif;
+  font-size:.66rem;
+  color:#6d6558;
+}
+.primer-tree{
+  margin:24px 0;
+  text-align:center;
+}
+.primer-tree-root{
+  display:inline-block;
+  padding:12px 18px;
+  border:2px solid var(--forest-dark);
+  background:#e7ede2;
+  border-radius:5px;
+  font-weight:800;
+  color:#314638;
+}
+.primer-tree-branches{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  margin-top:30px;
+  position:relative;
+}
+.primer-tree-branches:before{
+  content:"";
+  position:absolute;
+  left:25%;
+  right:25%;
+  top:-15px;
+  height:1px;
+  background:#8d7657;
+}
+.primer-tree-branches>div{
+  position:relative;
+  padding:14px;
+  border:1px solid #ccb892;
+  background:#faf5e9;
+  border-radius:5px;
+}
+.primer-tree-branches>div:before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:-15px;
+  height:15px;
+  width:1px;
+  background:#8d7657;
+}
+.primer-tree-branches strong,
+.primer-tree-branches span{
+  display:block;
+}
+.primer-tree-branches span{
+  margin-top:5px;
+  color:#665f55;
+}
+.language-road-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  margin:24px 0;
+}
+.language-road{
+  padding:16px;
+  border:1px solid #ccb892;
+  background:#faf5e9;
+  border-radius:6px;
+  text-align:center;
+}
+.language-road h3{
+  margin:0 0 12px;
+  color:var(--forest-dark);
+  font-size:1.35rem;
+}
+.language-road p{
+  margin:6px 0;
+  padding:7px 6px;
+  background:#fffaf1;
+  border:1px solid #e0d2b9;
+  border-radius:4px;
+  font-size:.9rem;
+}
+.language-road b{
+  display:block;
+  color:#8c6b3e;
+}
+.primer-finish{
+  margin-top:34px;
+  padding:26px 28px;
+  border:2px solid var(--forest-dark);
+  background:#e7ede2;
+  border-radius:6px;
+}
+.primer-finish h3{
+  margin:4px 0 8px;
+  color:#314638;
+  font-size:2rem;
+}
+.primer-finish p:last-child{
+  margin-bottom:0;
+}
+
+@media (max-width:720px){
+  .language-road-grid{grid-template-columns:1fr}
+  .primer-tree-branches{grid-template-columns:1fr}
+  .primer-tree-branches:before{display:none}
+  .primer-tree-branches>div:before{display:none}
+  .primer-step{padding:30px 0 32px}
+}
