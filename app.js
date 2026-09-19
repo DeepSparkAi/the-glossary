@@ -1241,6 +1241,149 @@ entries.push({
 });
 
 
+
+function ukIrelandTeachingMap(){
+  return `
+    <figure class="teaching-map">
+      <svg viewBox="0 0 720 520" role="img" aria-labelledby="ukmap-title ukmap-desc">
+        <title id="ukmap-title">Great Britain and Ireland political geography</title>
+        <desc id="ukmap-desc">A schematic map showing Scotland, England and Wales on Great Britain, Northern Ireland and Ireland on the island of Ireland, and the surrounding seas.</desc>
+        <rect x="0" y="0" width="720" height="520" rx="16" class="map-water"/>
+        <text x="358" y="70" class="map-water-label">North Atlantic</text>
+        <text x="505" y="210" class="map-water-label">North Sea</text>
+        <text x="330" y="455" class="map-water-label">English Channel</text>
+        <text x="255" y="280" class="map-water-label">Irish Sea</text>
+
+        <path d="M432 64 L474 82 L503 118 L495 151 L516 180 L504 213 L520 244 L501 278 L509 313 L487 350 L470 390 L435 421 L397 410 L382 374 L366 346 L374 312 L353 286 L368 257 L360 224 L380 196 L373 165 L399 139 L394 103 Z" class="map-land map-scotland"/>
+        <path d="M399 139 L432 150 L466 173 L504 213 L520 244 L501 278 L509 313 L487 350 L470 390 L435 421 L397 410 L382 374 L366 346 L374 312 L353 286 L368 257 L360 224 L380 196 L373 165 Z" class="map-land map-england"/>
+        <path d="M349 267 L371 259 L384 282 L374 312 L350 330 L326 318 L330 290 Z" class="map-land map-wales"/>
+
+        <path d="M207 150 L246 133 L279 145 L298 178 L289 211 L303 239 L288 272 L277 309 L249 340 L214 334 L183 314 L170 282 L178 250 L163 219 L174 185 Z" class="map-land map-ireland"/>
+        <path d="M207 150 L246 133 L279 145 L298 178 L289 211 L262 220 L233 209 L206 216 L174 185 Z" class="map-land map-ni"/>
+
+        <text x="436" y="118" class="map-label strong">SCOTLAND</text>
+        <text x="423" y="302" class="map-label strong">ENGLAND</text>
+        <text x="345" y="302" class="map-label strong small">WALES</text>
+        <text x="213" y="190" class="map-label strong small">N. IRELAND</text>
+        <text x="212" y="277" class="map-label strong">IRELAND</text>
+
+        <path d="M416 424 C430 431 446 434 462 433" class="map-coast-accent"/>
+        <circle cx="449" cy="365" r="5" class="map-city-dot"/>
+        <text x="458" y="369" class="map-city-label">London</text>
+
+        <rect x="36" y="365" width="238" height="112" rx="8" class="map-key"/>
+        <text x="54" y="391" class="map-key-title">What this map shows</text>
+        <circle cx="58" cy="416" r="8" class="key-uk"/><text x="76" y="421" class="map-key-text">United Kingdom territory</text>
+        <circle cx="58" cy="443" r="8" class="key-ireland"/><text x="76" y="448" class="map-key-text">Ireland — sovereign state</text>
+      </svg>
+      <figcaption>Schematic teaching map — not to scale. Great Britain is the island containing Scotland, England, and Wales. The island of Ireland contains both Northern Ireland and the sovereign state of Ireland.</figcaption>
+    </figure>`;
+}
+
+function sussexTeachingMap(){
+  return `
+    <figure class="teaching-map">
+      <svg viewBox="0 0 760 360" role="img" aria-labelledby="sussexmap-title sussexmap-desc">
+        <title id="sussexmap-title">Sussex on the south coast of England</title>
+        <desc id="sussexmap-desc">A schematic regional map showing West Sussex and East Sussex south of London between Hampshire and Kent, with Brighton and Hove on the coast.</desc>
+        <rect x="0" y="0" width="760" height="360" rx="16" class="map-paper"/>
+        <path d="M40 250 C140 235 225 252 310 239 C400 225 480 248 575 228 C650 212 700 218 735 228 L735 335 L40 335 Z" class="map-water"/>
+        <text x="300" y="324" class="map-water-label dark">English Channel</text>
+
+        <path d="M68 126 L230 102 L271 149 L249 259 L66 270 L40 210 Z" class="sussex-neighbor"/>
+        <path d="M230 102 L414 95 L446 142 L421 256 L249 259 L271 149 Z" class="map-land map-west-sussex"/>
+        <path d="M414 95 L615 110 L698 166 L674 245 L421 256 L446 142 Z" class="map-land map-east-sussex"/>
+        <path d="M615 110 L728 105 L742 217 L674 245 L698 166 Z" class="sussex-neighbor"/>
+
+        <text x="111" y="180" class="map-label">HAMPSHIRE</text>
+        <text x="305" y="178" class="map-label strong">WEST SUSSEX</text>
+        <text x="505" y="177" class="map-label strong">EAST SUSSEX</text>
+        <text x="676" y="166" class="map-label">KENT</text>
+
+        <circle cx="398" cy="48" r="6" class="map-city-dot"/>
+        <text x="410" y="53" class="map-city-label strong">London</text>
+        <path d="M400 56 L397 87" class="map-guide"/>
+        <text x="410" y="78" class="map-note">Sussex is south of London</text>
+
+        <circle cx="435" cy="251" r="6" class="map-city-dot"/>
+        <text x="447" y="249" class="map-city-label strong">Brighton & Hove</text>
+        <circle cx="211" cy="248" r="5" class="map-city-dot"/>
+        <text x="128" y="242" class="map-city-label">Chichester</text>
+        <circle cx="533" cy="241" r="5" class="map-city-dot"/>
+        <text x="544" y="240" class="map-city-label">Eastbourne</text>
+
+        <line x1="421" y1="256" x2="414" y2="95" class="map-boundary"/>
+      </svg>
+      <figcaption>Schematic Sussex zoom — not to scale. The historic county runs along England's south coast; today's principal county division is West Sussex and East Sussex, with Brighton & Hove administered separately at the local-government level.</figcaption>
+    </figure>`;
+}
+
+function dcTeachingMap(){
+  return `
+    <figure class="teaching-map">
+      <svg viewBox="0 0 760 520" role="img" aria-labelledby="dcmap-title dcmap-desc">
+        <title id="dcmap-title">Washington DC landmarks, rivers and quadrants</title>
+        <desc id="dcmap-desc">A schematic map of the District of Columbia showing the Potomac and Anacostia rivers, Georgetown, the White House, the Capitol, the National Mall and the four quadrants.</desc>
+        <rect x="0" y="0" width="760" height="520" rx="16" class="map-paper"/>
+        <text x="650" y="45" class="map-note">Maryland</text>
+
+        <path d="M72 290 C145 263 193 252 240 267 C292 284 324 333 366 366 C418 407 462 425 505 449 L448 520 L80 520 Z" class="map-water"/>
+        <text x="120" y="438" class="map-water-label dark">Potomac River</text>
+        <text x="30" y="495" class="map-note">Virginia</text>
+
+        <path d="M470 260 C500 290 534 312 584 327 C628 340 671 357 724 389 L724 430 C665 397 624 382 577 369 C526 353 486 330 452 294 Z" class="map-water"/>
+        <text x="563" y="346" class="map-water-label dark">Anacostia River</text>
+
+        <path d="M175 85 L510 85 L694 268 L562 422 L492 389 L444 346 L390 300 L333 255 L275 245 L216 257 L142 278 L105 220 Z" class="dc-current-shape"/>
+        <line x1="392" y1="190" x2="392" y2="407" class="dc-axis"/>
+        <line x1="222" y1="260" x2="635" y2="260" class="dc-axis"/>
+
+        <text x="275" y="155" class="map-label quadrant">NW</text>
+        <text x="505" y="155" class="map-label quadrant">NE</text>
+        <text x="300" y="338" class="map-label quadrant">SW</text>
+        <text x="510" y="338" class="map-label quadrant">SE</text>
+
+        <rect x="248" y="245" width="145" height="30" class="dc-mall"/>
+        <text x="274" y="265" class="map-note strong">National Mall</text>
+
+        <circle cx="392" cy="260" r="8" class="map-city-dot"/>
+        <text x="405" y="250" class="map-city-label strong">U.S. Capitol</text>
+
+        <circle cx="285" cy="224" r="7" class="map-landmark-dot"/>
+        <text x="215" y="211" class="map-city-label strong">White House</text>
+
+        <circle cx="173" cy="218" r="6" class="map-landmark-dot"/>
+        <text x="112" y="202" class="map-city-label strong">Georgetown</text>
+
+        <path d="M173 218 L285 224 L392 260" class="map-guide"/>
+        <path d="M190 110 L595 406" class="dc-avenue"/>
+        <text x="475" y="365" class="map-note avenue-label">diagonal avenue pattern</text>
+      </svg>
+      <figcaption>Schematic city map — not to scale. The Capitol is the addressing origin; the Potomac and Anacostia rivers and the District's irregular present boundary help explain why the four quadrants are very different sizes.</figcaption>
+    </figure>`;
+}
+
+function dcOriginalDistrictMap(){
+  return `
+    <figure class="teaching-map compact-map">
+      <svg viewBox="0 0 620 430" role="img" aria-labelledby="dcoriginal-title dcoriginal-desc">
+        <title id="dcoriginal-title">Original District of Columbia and Virginia retrocession</title>
+        <desc id="dcoriginal-desc">A schematic diamond showing the original federal district, with the Virginia portion distinguished from the territory that remains the District of Columbia.</desc>
+        <rect x="0" y="0" width="620" height="430" rx="16" class="map-paper"/>
+        <polygon points="310,30 575,215 310,400 45,215" class="dc-original-diamond"/>
+        <path d="M45 215 L310 400 L329 343 L289 309 L245 274 L188 252 L119 248 Z" class="dc-retroceded"/>
+        <path d="M80 245 C160 226 223 230 276 255 C331 281 370 330 424 361" class="map-water-line"/>
+        <text x="90" y="315" class="map-label strong">Returned to Virginia</text>
+        <text x="90" y="335" class="map-note">Alexandria area · retrocession 1846–47</text>
+        <text x="330" y="130" class="map-label strong">Present D.C. side</text>
+        <circle cx="347" cy="225" r="7" class="map-city-dot"/>
+        <text x="360" y="229" class="map-city-label">Capitol</text>
+        <text x="252" y="416" class="map-note">Original district: roughly a 10-mile square</text>
+      </svg>
+      <figcaption>Schematic historical map — not to scale. The original federal district included land ceded by both Maryland and Virginia; the Virginia portion was returned in the 1840s.</figcaption>
+    </figure>`;
+}
+
 function ukIrelandPrimerBody(){
   return `
     ${primerStep(1,"Start with the simplest distinction: islands are not countries.",
@@ -1251,6 +1394,7 @@ function ukIrelandPrimerBody(){
 
     ${primerStep(2,"Great Britain is an island.",
       `${primerTerm("GREAT BRITAIN","The large island containing England, Scotland, and Wales.")}
+       ${ukIrelandTeachingMap()}
        <div class="geo-island-card">
          <div class="geo-gb">
            <div class="geo-scotland">Scotland</div>
@@ -1320,6 +1464,7 @@ function ukIrelandPrimerBody(){
 
     ${primerStep(13,"Now zoom in: where is Sussex?",
       `<p><strong>Sussex</strong> lies along the English Channel on the south coast of England, south of London.</p>
+       ${sussexTeachingMap()}
        ${primerTerm("HISTORIC COUNTY","A traditional territorial county with a long historical identity, which may not match today's local-government boundaries exactly.")}
        <p>Sussex is still a strong historical and cultural region even though modern local government divides it principally into <strong>East Sussex</strong> and <strong>West Sussex</strong>.</p>`)}
 
@@ -1389,6 +1534,7 @@ function washingtonDCPrimerBody(){
     ${primerStep(2,"The capital was deliberately placed on the Potomac.",
       `<p>The <strong>Residence Act of 1790</strong> authorized a permanent national capital along the Potomac River.</p>
        <p>President George Washington selected the area. The original federal district formed a square of roughly 100 square miles from land ceded by Maryland and Virginia.</p>
+       ${dcTeachingMap()}
        <p>It included existing communities such as <strong>Georgetown</strong> and <strong>Alexandria</strong>, as well as the new federal city.</p>`)}
 
     ${primerStep(3,"Pierre L’Enfant designed a capital, not just a street grid.",
@@ -1466,6 +1612,7 @@ function washingtonDCPrimerBody(){
     ${primerStep(14,"The original District also included Alexandria.",
       `${primerTerm("RETROCESSION","The return of territory previously ceded to another government.")}
        <p>The original District of Columbia included land west of the Potomac that had been ceded by Virginia, including Alexandria.</p>
+       ${dcOriginalDistrictMap()}
        <p>Congress approved the return of that Virginia portion in 1846, with the transfer completed in 1847. Today's District therefore consists of the former Maryland side of the original federal district.</p>`)}
 
     ${primerStep(15,"Washington city and the District were once overlapping but distinct jurisdictions.",
