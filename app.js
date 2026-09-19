@@ -449,6 +449,206 @@ entries.push({
   `
 });
 
+
+function historyPrimerBody(){
+  return `
+    ${primerStep(1,"Start with the map, not the war.",
+      `<p><strong>Vietnam</strong> is a long, narrow country on the eastern edge of mainland Southeast Asia. It borders China to the north, Laos and Cambodia to the west, and the South China Sea to the east.</p>
+       ${primerTerm("INDOCHINA","A historical geographic term for the mainland Southeast Asian region containing Vietnam, Laos, and Cambodia. Under French rule, these territories were administered together as French Indochina.")}
+       <p>The American war in Vietnam did not begin from nothing. It grew out of a much older struggle over colonial rule, Vietnamese independence, civil conflict, and the global Cold War.</p>`)}
+
+    ${primerStep(2,"Before the United States, France ruled colonial Indochina.",
+      `${primerTerm("COLONY","A territory controlled by another country, often politically and economically, without equal sovereignty.")}
+       <p>France established colonial control over Vietnam in the 19th century and later administered Vietnam, Laos, and Cambodia as <strong>French Indochina</strong>.</p>
+       <p>French rule brought roads, schools, plantations, mines, and a colonial bureaucracy, but political power remained in French hands. Vietnamese opposition to foreign rule took many forms, including monarchist, nationalist, and communist movements.</p>`)}
+
+    ${primerStep(3,"Vietnamese nationalism came before the U.S.–Soviet Cold War.",
+      `${primerTerm("NATIONALISM","The belief that a people who see themselves as a nation should control their own political future.")}
+       <p>Vietnamese resistance to French rule was not simply a later extension of the Cold War. The desire for independence had deep local roots.</p>
+       <p><strong>Ho Chi Minh</strong> became the best-known leader of a movement that joined Vietnamese nationalism with communism.</p>
+       ${primerTerm("COMMUNISM","A political and economic tradition seeking collective ownership of major productive resources and, in its Marxist-Leninist form, rule through a revolutionary communist party.")}
+       <p>That combination matters: Ho's movement was both <strong>anti-colonial</strong> and <strong>communist</strong>.</p>`)}
+
+    ${primerStep(4,"World War II weakens French control.",
+      `<p>During World War II, Japan occupied French Indochina while the French colonial administration remained in a reduced role for much of the war.</p>
+       ${primerTerm("VIET MINH","The League for the Independence of Vietnam, led by Ho Chi Minh. It fought Japanese occupation and later French efforts to restore colonial control.")}
+       <p>After Japan surrendered in 1945, the Viet Minh seized power in Hanoi during the <strong>August Revolution</strong>. Ho Chi Minh proclaimed the independence of the Democratic Republic of Vietnam on September 2, 1945.</p>`)}
+
+    ${primerStep(5,"France returns, and the First Indochina War begins.",
+      `${primerTerm("FIRST INDOCHINA WAR","The 1946–1954 war between French-led forces and the Viet Minh over control and independence in Indochina, especially Vietnam.")}
+       <p>France attempted to restore its position after World War II. Fighting between France and the Viet Minh became a full-scale war.</p>
+       <p>At first the United States was wary of openly supporting the restoration of colonial rule. As the Cold War hardened—especially after the communist victory in China in 1949 and the Korean War in 1950—the United States increasingly viewed the conflict through the lens of containing communism and supplied major assistance to the French war effort.</p>`)}
+
+    ${primerStep(6,"1954: Dien Bien Phu breaks the French position.",
+      `${primerTerm("DIEN BIEN PHU","A French fortified position in northwestern Vietnam captured by Viet Minh forces in May 1954 after a long siege.")}
+       <p>The defeat ended France's ability and political willingness to continue the war on the same basis.</p>
+       <p>Negotiations at Geneva followed.</p>`)}
+
+    ${primerStep(7,"The 1954 division was supposed to be temporary.",
+      `${primerTerm("GENEVA ACCORDS","The agreements and declarations emerging from the 1954 Geneva Conference that ended the First Indochina War and temporarily divided Vietnam near the 17th parallel.")}
+       <p>Viet Minh forces regrouped in the North. French-associated forces regrouped in the South. The division was described as a military demarcation, not a permanent international border.</p>
+       <p>National elections intended to address reunification were contemplated for 1956, but they did not take place. The United States did not sign the principal Geneva settlement documents, though it said it would not use force to disturb the agreements.</p>`)}
+
+    ${primerStep(8,"Two rival governments emerge.",
+      `<div class="compare-grid">
+        <div class="compare-card"><h3>North Vietnam</h3><p><strong>Democratic Republic of Vietnam</strong>, led by Ho Chi Minh and the communist Workers' Party.</p></div>
+        <div class="compare-card green"><h3>South Vietnam</h3><p><strong>Republic of Vietnam</strong>, created in 1955 under President Ngo Dinh Diem and backed by the United States.</p></div>
+       </div>
+       <p>Each side claimed political legitimacy over Vietnam. The conflict was therefore simultaneously about <strong>national reunification, revolution, political control, and the Cold War</strong>.</p>`)}
+
+    ${primerStep(9,"Why did the United States care so much?",
+      `${primerTerm("CONTAINMENT","The U.S. Cold War policy of trying to prevent the further spread of communist governments or Soviet- and Chinese-aligned power.")}
+       ${primerTerm("DOMINO THEORY","The belief, influential among U.S. policymakers, that if one country in a region became communist, nearby countries might follow.")}
+       <p>U.S. leaders feared that the collapse of South Vietnam could weaken noncommunist governments elsewhere in Southeast Asia and damage U.S. credibility with allies.</p>
+       <p>Vietnamese communists, by contrast, presented their struggle as one for reunification and national liberation, while also participating in the wider communist bloc.</p>`)}
+
+    ${primerStep(10,"The war in the South becomes an insurgency.",
+      `${primerTerm("INSURGENCY","An organized armed rebellion against an established government.")}
+       ${primerTerm("VIET CONG","The common U.S. and South Vietnamese name for communist-led guerrilla and political forces fighting the South Vietnamese government. The movement's formal political organization was the National Liberation Front.")}
+       <p>By the late 1950s and early 1960s, armed communist activity in South Vietnam expanded. North Vietnam increasingly supported the struggle with personnel, weapons, organization, and supply routes.</p>
+       <p>The South Vietnamese state also faced internal political weakness, repression, factional conflict, and disputes over legitimacy.</p>`)}
+
+    ${primerStep(11,"Kennedy greatly expands the American advisory role.",
+      `${primerTerm("MILITARY ADVISER","A military specialist sent to train, organize, plan with, or otherwise assist another country's armed forces.")}
+       <p>The United States had advisers in South Vietnam before John F. Kennedy became president, but Kennedy sharply increased American military personnel, equipment, aviation support, and counterinsurgency assistance.</p>
+       <p>American personnel were increasingly involved in combat conditions even though the United States had not yet deployed the large conventional ground force that would arrive under Lyndon Johnson.</p>`)}
+
+    ${primerStep(12,"1963: the Diem government falls.",
+      `<p>President Ngo Dinh Diem's government faced mounting political opposition, including the Buddhist crisis of 1963. South Vietnamese generals overthrew Diem in November 1963; Diem and his brother Ngo Dinh Nhu were killed.</p>
+       <p>The United States knew a coup was being organized and had signaled that it would not oppose a change in leadership, though the killing of Diem was not the stated U.S. plan.</p>
+       <p>Political instability in South Vietnam continued after the coup.</p>`)}
+
+    ${primerStep(13,"1964: the Gulf of Tonkin becomes the legal-political turning point.",
+      `${primerTerm("GULF OF TONKIN INCIDENT","A pair of reported naval encounters in August 1964 involving U.S. destroyers and North Vietnamese patrol boats. The first attack on August 2 occurred; whether a second attack occurred on August 4 became disputed and later evidence cast serious doubt on it.")}
+       ${primerTerm("GULF OF TONKIN RESOLUTION","A resolution passed by Congress in August 1964 giving President Lyndon Johnson broad authority to use military force in Southeast Asia without a formal declaration of war.")}
+       <p>The resolution became the principal congressional authorization used for the major U.S. escalation that followed.</p>`)}
+
+    ${primerStep(14,"1965: the United States becomes a large-scale combatant.",
+      `<p>In March 1965, U.S. Marines landed at Da Nang. Hundreds of thousands of American troops followed.</p>
+       ${primerTerm("OPERATION ROLLING THUNDER","The sustained U.S. bombing campaign against North Vietnam begun in 1965.")}
+       <p>The United States now fought with large ground, air, and naval forces while continuing to support the armed forces of South Vietnam.</p>
+       <p>By 1967, nearly 500,000 U.S. troops were in Vietnam.</p>`)}
+
+    ${primerStep(15,"The battlefield had no simple front line.",
+      `${primerTerm("GUERRILLA WARFARE","Fighting by smaller, mobile forces that avoid depending on conventional front lines and often operate among the civilian population.")}
+       ${primerTerm("HO CHI MINH TRAIL","A network of roads, paths, and supply routes through Laos and Cambodia used by North Vietnam to move personnel and material toward the war in South Vietnam.")}
+       <p>U.S. forces possessed enormous firepower and mobility, but communist forces could often choose when to engage, withdraw across difficult terrain, rebuild units, and use sanctuaries and supply corridors outside South Vietnam.</p>
+       <p>The war therefore mixed conventional battles, guerrilla warfare, bombing, pacification programs, intelligence operations, and political struggle.</p>`)}
+
+    ${primerStep(16,"What was the U.S. military trying to accomplish?",
+      `<p>At the broadest level, Washington sought to keep South Vietnam from being defeated and absorbed by the communist North.</p>
+       ${primerTerm("WAR OF ATTRITION","A strategy that seeks to wear down an opponent by inflicting losses faster than the opponent can replace them.")}
+       <p>Under General William Westmoreland, U.S. strategy placed heavy emphasis on finding and destroying enemy forces and using superior firepower to impose unsustainable losses.</p>
+       <p>The central problem was that battlefield losses did not automatically translate into political control, while North Vietnam and its allies were willing to sustain very high costs.</p>`)}
+
+    ${primerStep(17,"The war was also a contest over villages and political loyalty.",
+      `${primerTerm("PACIFICATION","Programs intended to establish government security and political control in contested rural areas while weakening insurgent influence.")}
+       <p>South Vietnamese and U.S. forces tried to protect villages, build local government, gather intelligence, and separate guerrillas from civilian support networks.</p>
+       <p>These programs existed alongside destructive combat, forced displacement, corruption, political repression, and civilian casualties—all of which could undermine the same political goals the programs were meant to advance.</p>`)}
+
+    ${primerStep(18,"1968: Tet changes the American political meaning of the war.",
+      `${primerTerm("TET OFFENSIVE","The large coordinated offensive launched by North Vietnamese and Viet Cong forces across South Vietnam during the Tet holiday in early 1968.")}
+       <p>U.S. and South Vietnamese forces eventually repelled the attacks and inflicted severe losses on communist forces. In that military sense, Tet did not produce the battlefield victory Hanoi had sought.</p>
+       <p>But the scale of the offensive contradicted optimistic claims that the enemy was near defeat. Tet therefore became a major political and psychological turning point in the United States and weakened public confidence in the war.</p>`)}
+
+    ${primerStep(19,"The war at home mattered.",
+      `<p>American public opinion was never one single thing. Support, doubt, and opposition changed over time.</p>
+       <p>The antiwar movement grew as casualties mounted, the draft affected more families, television brought images of the war into homes, official claims were challenged, and the war's aims and costs were debated.</p>
+       <p>The conflict also produced a lasting argument over presidential war powers, congressional authority, credibility, the draft, veterans' treatment, and the relationship between military success and political goals.</p>`)}
+
+    ${primerStep(20,"Nixon tries to withdraw Americans without abandoning South Vietnam.",
+      `${primerTerm("VIETNAMIZATION","President Richard Nixon's policy of withdrawing U.S. ground forces while expanding the equipment, training, and responsibilities of South Vietnam's armed forces.")}
+       <p>U.S. troop numbers steadily declined after 1969, but the United States continued major air operations and military aid.</p>
+       <p>Nixon also expanded operations into Cambodia and Laos in an effort to disrupt communist bases and supply routes. These actions intensified controversy in the United States and widened the geographic scope of U.S. combat.</p>`)}
+
+    ${primerStep(21,"1973: the United States leaves the direct ground war.",
+      `${primerTerm("PARIS PEACE ACCORDS","The January 1973 agreement intended to end U.S. military involvement and create a political framework for peace in Vietnam.")}
+       <p>The agreement provided for a cease-fire and the withdrawal of remaining U.S. forces. American prisoners of war were returned, and the last U.S. combat troops left Vietnam in March 1973.</p>
+       <p>The agreement did <strong>not</strong> end the fighting between North and South Vietnam. Both Vietnamese sides continued the war.</p>`)}
+
+    ${primerStep(22,"1975: South Vietnam collapses.",
+      `<p>North Vietnamese forces launched a major offensive in 1975. South Vietnamese defenses collapsed rapidly.</p>
+       ${primerTerm("FALL OF SAIGON","The capture of Saigon by North Vietnamese forces on April 30, 1975, ending the Republic of Vietnam and the long war between North and South.")}
+       <p>The United States evacuated its embassy and many Americans and Vietnamese during the final days.</p>
+       <p>In 1976 the country was formally reunified as the <strong>Socialist Republic of Vietnam</strong>.</p>`)}
+
+    ${primerStep(23,"The human cost was enormous.",
+      `<p>The war killed and wounded millions of Vietnamese civilians and combatants and devastated large areas of Vietnam, Laos, and Cambodia. The National Archives records <strong>58,220 U.S. military fatal casualties</strong> in its Vietnam Conflict data file.</p>
+       <p>The effects continued after the fighting: unexploded ordnance, land mines, displacement, Agent Orange/dioxin contamination, missing personnel, physical disability, and psychological trauma.</p>
+       <p>After 1975, large numbers of Vietnamese also fled the country, including the refugees often called the <strong>boat people</strong>.</p>`)}
+
+    ${primerStep(24,"The story does not end with U.S. withdrawal.",
+      `<p>Vietnam's relations with neighboring communist states deteriorated sharply after reunification.</p>
+       <p>Relations with Cambodia's Khmer Rouge government became openly violent along the border. China backed Cambodia, while Vietnam moved closer to the Soviet Union.</p>
+       <p>In late 1978 Vietnam invaded Cambodia, overthrew the Khmer Rouge government, and installed a new Cambodian government aligned with Hanoi. Vietnamese forces remained in Cambodia for years.</p>`)}
+
+    ${primerStep(25,"1979: China invades northern Vietnam.",
+      `${primerTerm("SINO-VIETNAMESE WAR","The brief but intense war that began when China invaded northern Vietnam in February 1979.")}
+       <p>China said it intended to punish Vietnam after Vietnam's invasion of Cambodia and amid wider disputes over the border, ethnic Chinese in Vietnam, Hanoi's alliance with the Soviet Union, and regional influence.</p>
+       <p>Chinese forces withdrew after several weeks. Both governments claimed success. The war did not settle the underlying rivalry.</p>`)}
+
+    ${primerStep(26,"China and Vietnam continued fighting after 1979.",
+      `<p>The land border remained heavily militarized, with recurring clashes through much of the 1980s.</p>
+       <p>There were also maritime confrontations. In 1988, Chinese and Vietnamese forces clashed at <strong>Johnson South Reef</strong> in the Spratly Islands; Chinese forces sank Vietnamese vessels and took control of the reef.</p>
+       <p>China and Vietnam later normalized relations, but they still have competing claims in parts of the South China Sea.</p>`)}
+
+    ${primerStep(27,"The former U.S. enemy gradually becomes a U.S. partner.",
+      `<p>The United States and Vietnam spent years resolving issues involving prisoners of war, missing personnel, refugees, sanctions, and the political legacy of the conflict.</p>
+       <div class="primer-chain"><span>1975 · relations broken</span><b>→</b><span>1994 · U.S. trade embargo lifted</span><b>→</b><span>1995 · diplomatic relations normalized</span><b>→</b><span>2023 · Comprehensive Strategic Partnership</span></div>
+       <p>Since normalization, economic, educational, diplomatic, and security ties have expanded dramatically.</p>`)}
+
+    ${primerStep(28,"Are the United States and Vietnam allies now?",
+      `<p><strong>They are close strategic partners, but not formal treaty allies.</strong></p>
+       ${primerTerm("TREATY ALLY","A country connected to another by a formal defense treaty that creates specific mutual security commitments.")}
+       ${primerTerm("COMPREHENSIVE STRATEGIC PARTNERSHIP","The name Vietnam and the United States use for the high-level bilateral framework established in 2023 to deepen cooperation across diplomacy, trade, technology, education, defense, security, climate, and other areas.")}
+       <p>So it is reasonable in casual speech to say the former enemies now cooperate closely, but <strong>“alliance” can overstate the legal relationship</strong>. The precise term is <strong>Comprehensive Strategic Partnership</strong>.</p>`)}
+
+    ${primerStep(29,"Why does China matter to the U.S.–Vietnam relationship today?",
+      `<p>Vietnam has a long, complicated relationship with China: deep cultural and economic ties, communist party-to-party relations, a shared land border—and recurring strategic distrust.</p>
+       <p>Vietnam seeks to protect its independence while avoiding dependence on any single great power. Its foreign policy therefore maintains important ties with China, Russia, the United States, Japan, India, ASEAN states, and others.</p>
+       <p>Cooperation with the United States—especially maritime security, trade, technology, and defense contacts—gives Vietnam another important relationship as it manages pressure and disputes in the South China Sea.</p>`)}
+
+    ${primerStep(30,"The shortest possible version.",
+      `<div class="history-summary-chain">
+        <div><b>French colonial rule</b><span>Vietnamese independence movements grow.</span></div>
+        <div><b>1946–1954</b><span>Viet Minh defeats France in the First Indochina War.</span></div>
+        <div><b>1954</b><span>Vietnam is temporarily divided North and South.</span></div>
+        <div><b>1950s–1964</b><span>The U.S. increasingly backs South Vietnam against communist revolution and Northern support.</span></div>
+        <div><b>1965–1968</b><span>The U.S. commits large combat forces and conducts a major air war.</span></div>
+        <div><b>1968–1973</b><span>Tet reshapes U.S. politics; Nixon withdraws troops while continuing the war by other means.</span></div>
+        <div><b>1973</b><span>Paris Peace Accords; direct U.S. military role largely ends.</span></div>
+        <div><b>1975–1976</b><span>Saigon falls; Vietnam is reunified under the communist government.</span></div>
+        <div><b>1978–1980s</b><span>Vietnam fights in Cambodia and then fights China on land and at sea.</span></div>
+        <div><b>1995–today</b><span>U.S.–Vietnam relations normalize and deepen into a Comprehensive Strategic Partnership.</span></div>
+       </div>
+       <div class="memory"><strong>The central lesson:</strong> the Vietnam War was not one isolated American intervention. It sat inside a much longer Vietnamese history of colonialism, independence, civil and revolutionary conflict, Cold War rivalry, regional wars, and eventually diplomatic realignment.</div>`)}
+
+    <section class="primer-finish">
+      <p class="kicker">History primer</p>
+      <h3>From colony, to war, to partnership.</h3>
+      <p>This primer is deliberately U.S.-centered in its path through the story, but it keeps the Vietnamese, French, Chinese, Soviet, Cambodian, and regional context visible so the American involvement is not treated as if it began in a vacuum.</p>
+    </section>
+
+    <section class="entry-section history-sources">
+      <h3>Sources and further reading</h3>
+      <p>This primer is grounded primarily in the U.S. Department of State's Office of the Historian, the U.S. National Archives, and current State Department material on U.S.–Vietnam relations. The China–Vietnam maritime section also draws on the Council on Foreign Relations.</p>
+      <p><a href="https://history.state.gov/countries/vietnam" target="_blank" rel="noopener">U.S. Office of the Historian — Vietnam relations</a><br>
+      <a href="https://history.state.gov/milestones/1953-1960/dien-bien-phu" target="_blank" rel="noopener">Dien Bien Phu and the end of French Indochina</a><br>
+      <a href="https://www.archives.gov/research/vietnam-war" target="_blank" rel="noopener">U.S. National Archives — Vietnam War resources</a><br>
+      <a href="https://2021-2025.state.gov/bureau-of-east-asian-and-pacific-affairs/releases/2025/01/u-s-relations-with-vietnam" target="_blank" rel="noopener">State Department — U.S. relations with Vietnam</a></p>
+    </section>
+  `;
+}
+
+entries.push({
+  slug:"vietnam-war-primer",
+  title:"The Viet Nam War — A U.S.-Centered Primer",
+  category:"Modern History",
+  short:"French colonial rule, the American intervention, the fall of Saigon, Vietnam's later wars with China, and today's U.S.–Vietnam partnership.",
+  keywords:"Vietnam Viet Nam war French colonial Indochina Ho Chi Minh Viet Minh Dien Bien Phu Geneva South Vietnam North Vietnam Diem Kennedy Johnson Gulf Tonkin Tet Nixon Vietnamization Paris Peace Accords Saigon China Sino-Vietnamese Cambodia Khmer Rouge United States partnership",
+  body:historyPrimerBody()
+});
+
 const sectionConfig = {
   Glossary: {
     categories: ["All","Words","Idioms","Religion & Meaning","One-Sheet Primers"],
@@ -470,11 +670,19 @@ const sectionConfig = {
     emptyTitle: "Choose a language topic.",
     emptyText: "Open language history, phonetics, French, Latin, or linguistic reference material.",
     searchPlaceholder: "Try “Teutonic,” “phoneme,” “French,” “Latin,” or “Old English”…"
+  },
+  History: {
+    categories: ["All","Modern History"],
+    indexTitle: "History Topics",
+    emptyTitle: "Choose a history topic.",
+    emptyText: "Open a guided historical primer.",
+    searchPlaceholder: "Try “Vietnam,” “Dien Bien Phu,” “Tet,” or “China”…"
   }
 };
 
 const grammarCategories = new Set(["Grammar","Grammar Terms","Grammar Practice","Word Structure","Verbs"]);
 const languageCategories = new Set(["Language & History","Sounds & Phonetics","French","Latin","English History"]);
+const historyCategories = new Set(["Modern History"]);
 
 const listEl = document.querySelector("#term-list");
 const panelEl = document.querySelector("#entry-panel");
@@ -495,6 +703,7 @@ function escapeHtml(value){
 function sectionForEntry(entry){
   if(grammarCategories.has(entry.category)) return "Grammar";
   if(languageCategories.has(entry.category)) return "Languages";
+  if(historyCategories.has(entry.category)) return "History";
   return "Glossary";
 }
 
@@ -860,6 +1069,20 @@ function resetPanel(){
     panelEl.innerHTML=languagesPrimer();
     return;
   }
+  if(activeSection==="History"){
+    const entry=entries.find(e=>e.slug==="vietnam-war-primer");
+    panelEl.innerHTML=`
+      <div class="entry-inner primer">
+        <header class="primer-hero">
+          <p class="kicker">Start here · baby steps</p>
+          <h2>The Viet Nam War</h2>
+          <p class="lede">${escapeHtml(entry.short)}</p>
+          <div class="primer-chain"><span>French empire</span><b>→</b><span>independence war</span><b>→</b><span>U.S. war</span><b>→</b><span>regional wars</span><b>→</b><span>partnership</span></div>
+        </header>
+        ${entry.body}
+      </div>`;
+    return;
+  }
   panelEl.innerHTML=`
     <div class="empty-state">
       <div class="empty-monogram" aria-hidden="true">G</div>
@@ -881,7 +1104,7 @@ function switchSection(section){
   if(!sectionConfig[section]) return;
   activeSection=section;
   activeCategory="All";
-  activeSlug=null;
+  activeSlug=section==="History" ? "vietnam-war-primer" : null;
   searchEl.value="";
   searchEl.placeholder=sectionConfig[section].searchPlaceholder;
   indexTitleEl.textContent=sectionConfig[section].indexTitle;
