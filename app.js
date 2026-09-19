@@ -1,0 +1,289 @@
+const entries = [
+  {
+    slug:"pantywaist", title:"Pantywaist", category:"Words",
+    short:"A weak, timid, ineffectual, or excessively delicate man or boy; a dated insult.",
+    keywords:"weak timid coward delicate effeminate child garment",
+    body:`
+      <section class="entry-section"><h3>In plain English</h3><p>A weak, timid, ineffectual, or excessively delicate man or boy. The word is a dated insult.</p></section>
+      <section class="entry-section"><h3>Example</h3><p class="example">“Quit being such a pantywaist and climb the ladder.”</p></section>
+      <section class="entry-section"><h3>Where it came from</h3><p><em>Panty-waist</em> was the name of a child’s garment in which short pants or undergarments fastened to a waist-like upper garment. By the 1930s the garment name had become an insult for a male regarded as weak, childish, timid, or effeminate.</p></section>
+      <div class="memory"><strong>Memory aid:</strong> child’s garment → childish weakness → pantywaist.</div>`
+  },
+  {
+    slug:"namby-pamby", title:"Namby-Pamby", category:"Words",
+    short:"Weakly sentimental, timid, insipid, or affectedly delicate.",
+    keywords:"weak sentimental timid delicate Ambrose Philips poetry",
+    body:`
+      <section class="entry-section"><h3>In plain English</h3><p>Weak, overly sentimental, timid, indecisive, or affectedly delicate.</p></section>
+      <section class="entry-section"><h3>Example</h3><p class="example">“He gave a namby-pamby answer instead of saying what he actually believed.”</p></section>
+      <section class="entry-section"><h3>Where it came from</h3><p>The expression grew from a satirical nickname for English poet <strong>Ambrose Philips (1674–1749)</strong>. Critics mocked the sentimental style of some of his verse by turning Ambrose into the babyish-sounding <em>Namby</em>, producing <em>Namby-Pamby</em>.</p>
+      <div class="flow"><span>Ambrose Philips</span><b>→</b><span>Namby</span><b>→</b><span>Namby-Pamby</span><b>→</b><span>weakly sentimental</span></div></section>`
+  },
+  {
+    slug:"eat-crow", title:"Eat Crow", category:"Idioms",
+    short:"To admit you were wrong after confidently insisting you were right, usually with humiliation.",
+    keywords:"wrong admit humiliation claim mistake crow",
+    body:`
+      <section class="entry-section"><h3>In plain English</h3><p>To admit that you were wrong after confidently insisting that you were right. The expression usually carries the additional idea that the admission is humiliating.</p></section>
+      <section class="entry-section"><h3>Example</h3><p class="example">“He predicted the company would fail within six months. Five years later, he had to eat crow.”</p></section>
+      <section class="entry-section"><h3>Where it came from</h3><p>The American expression is documented in the 19th century. A widely reprinted joke involved a man who boasted that he could eat anything and was challenged to eat crow. Crow was imagined as technically edible but distinctly unpleasant.</p>
+      <div class="flow"><span>strong claim</span><b>→</b><span>proved wrong</span><b>→</b><span>reluctant admission</span><b>→</b><span>eat crow</span></div></section>`
+  },
+  {
+    slug:"keep-your-own-counsel", title:"Keep Your Own Counsel", category:"Idioms",
+    short:"Keep your business, plans, affairs, opinions, and secrets to yourself.",
+    keywords:"secret private business plans affairs discreet counsel",
+    body:`
+      <section class="entry-section"><h3>In plain English</h3><p><strong>Keep your business, plans, affairs, opinions, and secrets to yourself.</strong> Do not unnecessarily tell other people what you are thinking or doing.</p></section>
+      <section class="entry-section"><h3>Traditional form</h3><p><strong>Keep one’s own counsel.</strong></p></section>
+      <section class="entry-section"><h3>Important distinction</h3><p>It does not primarily mean “give yourself advice.” Here <em>counsel</em> carries an older sense connected with private deliberation, thoughts, plans, or secrets.</p></section>
+      <section class="entry-section"><h3>Example</h3><p class="example">“She had already decided what she was going to do, but she kept her own counsel.”</p></section>
+      <div class="memory"><strong>Memory aid:</strong> your counsel is your private thinking; keeping it means keeping it private.</div>`
+  },
+  {
+    slug:"gossamer", title:"Gossamer", category:"Words",
+    short:"Extremely fine, light, delicate, airy, or almost weightless.",
+    keywords:"spider silk thin delicate goose summer autumn",
+    body:`
+      <section class="entry-section"><h3>In plain English</h3><p>Something extremely fine, light, delicate, and almost weightless.</p></section>
+      <section class="entry-section"><h3>Literal meaning</h3><p>Originally, the extremely fine strands of spider silk seen floating through the air or stretched across fields, especially in late autumn.</p></section>
+      <section class="entry-section"><h3>Figurative uses</h3><p><em>Gossamer wings</em>, <em>a gossamer veil</em>, <em>gossamer threads</em>: anything remarkably thin, airy, delicate, or insubstantial.</p></section>
+      <section class="entry-section"><h3>Where it came from</h3><p>Middle English <em>gossamer</em> appears around 1300 and is apparently built from words for <strong>goose + summer</strong>. The expression seems to have referred to warm late-autumn weather, when floating spider threads were especially noticeable, and then shifted to the threads themselves.</p>
+      <div class="flow"><span>goose + summer</span><b>→</b><span>late-autumn warm spell</span><b>→</b><span>floating spider silk</span><b>→</b><span>delicate / airy</span></div></section>`
+  },
+  {
+    slug:"troth", title:"Troth", category:"Words",
+    short:"Faithfulness, fidelity, or one’s solemnly pledged word.",
+    keywords:"truth pledge promise honor fidelity betroth marriage",
+    body:`
+      <section class="entry-section"><h3>In plain English</h3><p>A solemn pledge of faithfulness: <strong>your word, honor, or fidelity given to another person.</strong></p></section>
+      <section class="entry-section"><h3>Plight one’s troth</h3><p>To solemnly pledge one’s faithfulness, especially in betrothal or marriage.</p></section>
+      <section class="entry-section"><h3>Where it came from</h3><p><strong>Troth and truth are historical doublets.</strong> Both descend from Old English forms carrying ideas of truth, faithfulness, fidelity, pledge, and covenant. Over time <em>truth</em> became the ordinary word for what is true, while <em>troth</em> survived chiefly in the sense of pledged faithfulness.</p>
+      <div class="flow"><span>Old English: truth / faithfulness / pledge</span><b>→</b><span>truth</span><span>troth</span><b>→</b><span>betroth</span></div></section>
+      <div class="memory"><strong>Memory aid:</strong> troth = truth given as your word.</div>`
+  },
+  {
+    slug:"holy-sacred", title:"Holy vs. Sacred", category:"Religion & Meaning",
+    short:"Holy emphasizes divinity and spiritual purity; sacred emphasizes what is set apart, consecrated, or inviolable.",
+    keywords:"church god divine consecrated religion set apart whole heal health",
+    body:`
+      <section class="entry-section">
+        <h3>The practical distinction</h3>
+        <div class="compare-grid">
+          <div class="compare-card green"><h3>Holy</h3><p><strong>Core idea:</strong> connected with God, divinity, religious devotion, spiritual purity, or godliness.</p><p>Examples: Holy Spirit, holy person, holy life, holy scripture, holy ground.</p></div>
+          <div class="compare-card"><h3>Sacred</h3><p><strong>Core idea:</strong> set apart, dedicated, consecrated, protected from violation, or entitled to special reverence.</p><p>Examples: sacred ground, sacred church, sacred object, sacred music, sacred trust.</p></div>
+        </div>
+      </section>
+      <section class="entry-section"><h3>Why they overlap</h3><p>Things connected with God are commonly regarded as both holy and sacred. But <em>sacred</em> extends very naturally to buildings, objects, duties, promises, burial grounds, traditions, and even secular values regarded as inviolable.</p></section>
+      <section class="entry-section"><h3>Word history: holy</h3><p>Old English <em>hālig</em>, from a Germanic word family reconstructed around the idea of being whole, intact, uninjured, or inviolate. It is historically related to the family containing <em>whole</em>, <em>hale</em>, <em>health</em>, and <em>heal</em>.</p>
+      <div class="flow"><span>whole / intact</span><b>→</b><span>hale / health / heal</span><b>→</b><span>holy</span></div></section>
+      <section class="entry-section"><h3>Word history: sacred</h3><p>From Latin <em>sacrare</em>, “to consecrate, dedicate, make sacred, set apart,” from <em>sacer</em>, “sacred, dedicated, holy.”</p>
+      <div class="flow"><span>sacer</span><b>→</b><span>sacrare</span><b>→</b><span>sacred</span></div></section>
+      <table><thead><tr><th>Idea</th><th>Holy</th><th>Sacred</th></tr></thead><tbody>
+        <tr><td>Directly connected with God/divinity</td><td>Strong emphasis</td><td>Common</td></tr>
+        <tr><td>Spiritual purity / godliness</td><td>Strong emphasis</td><td>Less central</td></tr>
+        <tr><td>Set apart for religious use</td><td>Yes</td><td>Strong emphasis</td></tr>
+        <tr><td>Church building or religious object</td><td>Possible</td><td>Very natural</td></tr>
+        <tr><td>Protected / inviolable</td><td>Possible</td><td>Strong emphasis</td></tr>
+        <tr><td>Secular metaphor</td><td>Less common</td><td>Very common: “sacred trust”</td></tr>
+      </tbody></table>
+      <div class="memory"><strong>Memory aid:</strong> HOLY → divinity and spiritual purity. SACRED → set apart and not to be violated.</div>`
+  },
+  {
+    slug:"germanic-teutonic", title:"Germanic vs. Teutonic", category:"Language & History",
+    short:"Germanic is the normal modern family term; Teutonic is an older term plus several specific historical uses.",
+    keywords:"German Germany English language Indo-European Teutones Teutonic Knights",
+    body:`
+      <section class="entry-section"><h3>The simplest distinction</h3><p><strong>Germanic</strong> is the normal modern term for the peoples and language family. <strong>Teutonic</strong> is an older historical term and also survives in specific names such as the Teutonic Knights.</p></section>
+      <section class="entry-section"><h3>Germanic</h3><p><strong>Peoples:</strong> ancient peoples of northern and central Europe whose cultures and languages belonged to the Germanic family.</p><p><strong>Languages:</strong> the Germanic branch of the Indo-European language family. Germanic does not simply mean “German.” English is a Germanic language.</p>
+        <div class="language-tree">
+          <div class="tree-node root">Proto-Indo-European</div>
+          <div>↓</div>
+          <div class="tree-node root">Proto-Germanic</div>
+          <div class="tree-row">
+            <div class="tree-node"><strong>West Germanic</strong><br>English · German · Dutch · Frisian</div>
+            <div class="tree-node"><strong>North Germanic</strong><br>Danish · Swedish · Norwegian · Icelandic · Faroese</div>
+            <div class="tree-node"><strong>East Germanic</strong><br>Gothic and other extinct languages</div>
+          </div>
+        </div>
+      </section>
+      <section class="entry-section"><h3>Teutonic</h3><p>From Latin <em>Teutonicus</em>, from <em>Teutones/Teutoni</em>, the name of an ancient people known to Roman writers. In older English linguistic writing, <em>Teutonic</em> was used broadly for what is now normally called <em>Germanic</em>.</p><p>The word also survives prominently in <strong>Teutonic Order / Teutonic Knights</strong>, the medieval German military religious order.</p></section>
+      <section class="entry-section"><h3>Derivation</h3><p><em>Teutonic</em> is linked through ancient forms to an Indo-European root meaning <strong>people, tribe, or nation</strong>. The modern term <em>Germanic</em> comes through Latin <em>Germanicus</em> from <em>Germani</em>, the Roman name for peoples north of the Roman world; the ultimate origin of that name is uncertain.</p></section>
+      <div class="memory"><strong>Memory aid:</strong> Germanic = the big modern linguistic/historical family. Teutonic = an older label plus specific historical meanings.</div>`
+  },
+  {
+    slug:"sine-cosine", title:"Sine & Cosine", category:"One-Sheet Primers",
+    short:"A one-sheet refresher: sine is vertical/opposite; cosine is horizontal/adjacent.",
+    keywords:"trigonometry trig triangle unit circle soh cah toa x y angle",
+    body:`
+      <section class="entry-section"><h3>The one-sheet refresher</h3>
+        <div class="diagram-grid">
+          <div class="diagram-card">
+            <h3>Right triangle</h3>
+            <svg viewBox="0 0 360 230" role="img" aria-label="Right triangle showing opposite, adjacent, and hypotenuse">
+              <path d="M55 190 L305 190 L55 45 Z" class="diagram-line"/>
+              <path d="M55 170 L75 170 L75 190" class="diagram-accent"/>
+              <path d="M268 190 A38 38 0 0 0 285 168" class="diagram-accent"/>
+              <text x="274" y="181" class="diagram-label">θ</text>
+              <text x="142" y="213" class="diagram-label">adjacent</text>
+              <text x="8" y="120" class="diagram-label">opposite</text>
+              <text x="162" y="105" class="diagram-label" transform="rotate(-30 162 105)">hypotenuse</text>
+            </svg>
+            <div class="math"><span class="formula">sin θ = opposite / hypotenuse</span><span class="formula">cos θ = adjacent / hypotenuse</span></div>
+            <p><strong>SOH</strong>: Sine = Opposite / Hypotenuse<br><strong>CAH</strong>: Cosine = Adjacent / Hypotenuse<br><strong>TOA</strong>: Tangent = Opposite / Adjacent</p>
+          </div>
+          <div class="diagram-card">
+            <h3>Unit circle</h3>
+            <svg viewBox="0 0 360 260" role="img" aria-label="Unit circle showing cosine as x and sine as y">
+              <line x1="35" y1="130" x2="325" y2="130" class="diagram-line"/>
+              <line x1="180" y1="20" x2="180" y2="240" class="diagram-line"/>
+              <circle cx="180" cy="130" r="90" class="diagram-line"/>
+              <line x1="180" y1="130" x2="247" y2="70" class="diagram-accent"/>
+              <line x1="247" y1="70" x2="247" y2="130" class="diagram-accent"/>
+              <line x1="180" y1="130" x2="247" y2="130" class="diagram-accent"/>
+              <circle cx="247" cy="70" r="5" fill="#9c6b3f"/>
+              <text x="252" y="67" class="diagram-label">(cos θ, sin θ)</text>
+              <text x="208" y="150" class="diagram-label">cos θ = x</text>
+              <text x="252" y="102" class="diagram-label">sin θ = y</text>
+              <text x="205" y="118" class="diagram-label">θ</text>
+            </svg>
+            <p>On a circle of radius 1, the point at angle θ is <strong>(cos θ, sin θ)</strong>. Cosine is the horizontal coordinate; sine is the vertical coordinate.</p>
+          </div>
+        </div>
+      </section>
+      <section class="entry-section"><h3>Common angles</h3>
+        <table><thead><tr><th>Angle</th><th>sin</th><th>cos</th></tr></thead><tbody>
+          <tr><td>0°</td><td>0</td><td>1</td></tr><tr><td>30°</td><td>1/2</td><td>√3/2</td></tr>
+          <tr><td>45°</td><td>√2/2</td><td>√2/2</td></tr><tr><td>60°</td><td>√3/2</td><td>1/2</td></tr>
+          <tr><td>90°</td><td>1</td><td>0</td></tr>
+        </tbody></table>
+      </section>
+      <section class="entry-section"><h3>The core identity</h3><div class="math"><span class="formula">sin² θ + cos² θ = 1</span></div><p>Why? The unit circle obeys <strong>x² + y² = 1</strong>. Since x = cos θ and y = sin θ, the identity follows directly.</p></section>
+      <section class="entry-section"><h3>What they actually do</h3><p>Sine and cosine turn an <strong>angle</strong> into a <strong>ratio or coordinate</strong>. For a vector of length 10 at angle θ:</p><div class="math"><span class="formula">horizontal = 10 cos θ</span><span class="formula">vertical = 10 sin θ</span></div><p>That is why they appear throughout triangles, circles, rotation, waves, sound, light, oscillation, engineering, and physics.</p></section>
+      <div class="memory"><strong>Memory aid:</strong> cosine = x = horizontal. Sine = y = vertical.</div>`
+  },
+  {
+    slug:"wild", title:"Wild", category:"Words",
+    short:"Outside the expected boundary of control, cultivation, restraint, order, predictability, convention, or civilization.",
+    keywords:"uncontrolled uncultivated animal strawberry field ideas stories plans shirt west motions criminal child weather guess",
+    body:`
+      <section class="entry-section"><h3>The unifying idea</h3><p><strong>Wild</strong> describes something that departs from the normal state of control, cultivation, restraint, order, predictability, reasonableness, convention, or civilization. The noun tells you <em>which kind of control</em>.</p>
+      <div class="wild-map"><div class="wild-core">WILD = outside the expected boundary of control</div>
+        <div class="wild-branch"><b>domesticated</b>→ undomesticated</div>
+        <div class="wild-branch"><b>cultivated</b>→ uncultivated</div>
+        <div class="wild-branch"><b>restrained</b>→ unrestrained</div>
+        <div class="wild-branch"><b>orderly</b>→ disorderly</div>
+        <div class="wild-branch"><b>predictable</b>→ unpredictable</div>
+        <div class="wild-branch"><b>sensible</b>→ extreme / unreasonable</div>
+        <div class="wild-branch"><b>conventional</b>→ flamboyant / unusual</div>
+        <div class="wild-branch"><b>governed</b>→ outside social control</div>
+        <div class="wild-branch"><b>evidence-bound</b>→ unconstrained guess</div>
+      </div></section>
+      <section class="entry-section"><h3>The main senses</h3><div class="sense-list">
+        <div class="sense"><h4>Not domesticated</h4><p>A wild horse, wild wolf, wild birds.</p><small>Deviation: outside domestication.</small></div>
+        <div class="sense"><h4>Not cultivated</h4><p>Wild strawberries, wildflowers, wild grapes.</p><small>Deviation: outside deliberate human cultivation.</small></div>
+        <div class="sense"><h4>Uncultivated land</h4><p>A wild field, wild countryside, wild country.</p><small>Deviation: outside agricultural or human management.</small></div>
+        <div class="sense"><h4>Uncontrolled motion or activity</h4><p>Wild motions, arms swinging wildly, wild dancing, a crowd going wild.</p><small>Deviation: outside physical control.</small></div>
+        <div class="sense"><h4>Violent or dangerous</h4><p>A wild criminal, wild attack, wild fighting.</p><small>Deviation: outside ordinary restraints on violence.</small></div>
+        <div class="sense"><h4>Unruly or highly excited</h4><p>A wild child, wild fans, wild excitement.</p><small>Deviation: outside calm behavioral restraint.</small></div>
+        <div class="sense"><h4>Extreme, reckless, or impractical idea</h4><p>A wild idea, wild plan, wild scheme.</p><small>Deviation: outside conventional practical thinking.</small></div>
+        <div class="sense"><h4>Incredible or implausible story</h4><p>A wild story, wild claim, wild accusation.</p><small>Deviation: outside ordinary plausibility.</small></div>
+        <div class="sense"><h4>Flamboyant or visually extreme</h4><p>A wild shirt, wild tie, wild hair, wild colors.</p><small>Deviation: outside visual convention or restraint.</small></div>
+        <div class="sense"><h4>Lawless or uncivilized</h4><p>The Wild West.</p><small>Deviation: outside established governmental or social control.</small></div>
+        <div class="sense"><h4>Uncontrolled natural conditions</h4><p>Wild weather, wild seas, wild winds, a wild river.</p><small>Deviation: outside calm or contained conditions.</small></div>
+        <div class="sense"><h4>Unfounded or highly uncertain</h4><p>A wild guess, wild speculation, wild estimate.</p><small>Deviation: outside evidentiary constraint.</small></div>
+        <div class="sense"><h4>Emotionally intense or extreme</h4><p>Wild enthusiasm, wild applause, wild laughter.</p><small>Deviation: beyond ordinary emotional restraint.</small></div>
+        <div class="sense"><h4>Erratic or unpredictable</h4><p>Wild fluctuations, wild price swings, a wild turn.</p><small>Deviation: outside predictable or stable behavior.</small></div>
+      </div></section>
+      <section class="entry-section"><h3>Word history</h3><p><em>Wild</em> is an ancient Germanic word. Old English <em>wilde</em> covered things living in a natural state, uncultivated, undomesticated, or untamed. Those physical senses expanded naturally into metaphorical senses for behavior, ideas, appearance, claims, and motion.</p>
+      <div class="flow"><span>untamed animal / uncultivated land</span><b>→</b><span>uncontrolled</span><b>→</b><span>unrestrained</span><b>→</b><span>unconventional / extreme / unpredictable</span></div></section>
+      <div class="memory"><strong>Memory aid:</strong> Wild = outside the expected boundary of control. The noun tells you which kind of control.</div>`
+  },
+  {
+    slug:"stultify", title:"Stultify", category:"Words",
+    short:"To make foolish, ineffective, mentally dull, or unable to think and act effectively.",
+    keywords:"stupid dull thought thinking ineffective pointless suppress mind stultifying",
+    body:`
+      <section class="entry-section"><h3>In plain English</h3><p><strong>To make someone unable to think, develop, or act effectively — to mentally deaden them.</strong> More broadly, to make something foolish, ineffective, or incapable of accomplishing what it is supposed to accomplish.</p></section>
+      <section class="entry-section"><h3>Intellectually stultifying</h3><p>Something so dull, repetitive, restrictive, or oppressive that it deadens active thought, initiative, or intellectual development.</p><p class="example">“The job was financially secure but intellectually stultifying.”</p></section>
+      <section class="entry-section"><h3>Another use: make ineffective</h3><p class="example">“Rules intended to improve efficiency ended up stultifying the entire process.”</p><p>The rules have frustrated or neutralized the process rather than literally reducing anyone’s intelligence.</p></section>
+      <section class="entry-section"><h3>Where it came from</h3><p>From Late Latin <em>stultificare</em>, “turn into foolishness,” built from Latin <em>stultus</em>, “foolish,” plus a form of <em>facere</em>, “to make or do.” English <em>stultify</em> first appears in the 18th century.</p>
+      <div class="flow"><span>stultus = foolish</span><b>+</b><span>facere = make</span><b>→</b><span>stultify = make foolish</span></div></section>
+      <div class="memory"><strong>Memory aid:</strong> STULTIFY = make foolish, dull, or ineffective.</div>`
+  }
+];
+
+const categoryOrder = ["All","Words","Idioms","Religion & Meaning","Language & History","One-Sheet Primers"];
+const listEl = document.querySelector("#term-list");
+const panelEl = document.querySelector("#entry-panel");
+const searchEl = document.querySelector("#search");
+const filtersEl = document.querySelector("#filters");
+const countEl = document.querySelector("#count");
+
+let activeCategory = "All";
+let activeSlug = null;
+
+function escapeHtml(value){
+  return value.replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[c]));
+}
+
+function renderFilters(){
+  filtersEl.innerHTML = categoryOrder.map(cat =>
+    `<button class="filter-btn ${cat===activeCategory?"active":""}" data-category="${cat}" type="button">${cat}</button>`
+  ).join("");
+  filtersEl.querySelectorAll("button").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      activeCategory=btn.dataset.category;
+      renderFilters();
+      renderTerms();
+    });
+  });
+}
+
+function filteredEntries(){
+  const q=searchEl.value.trim().toLowerCase();
+  return entries
+    .filter(e=>activeCategory==="All" || e.category===activeCategory)
+    .filter(e=>!q || [e.title,e.short,e.keywords,e.category].join(" ").toLowerCase().includes(q))
+    .sort((a,b)=>a.title.localeCompare(b.title));
+}
+
+function renderTerms(){
+  const shown=filteredEntries();
+  countEl.textContent=`${shown.length} ${shown.length===1?"term":"terms"}`;
+  if(!shown.length){
+    listEl.innerHTML='<div class="no-results">No matching terms.</div>';
+    return;
+  }
+  listEl.innerHTML=shown.map(e=>`
+    <button type="button" class="term-btn ${e.slug===activeSlug?"active":""}" data-slug="${e.slug}" aria-expanded="${e.slug===activeSlug}">
+      <span class="term-name">${escapeHtml(e.title)}</span>
+      <span class="term-cat">${escapeHtml(e.category)}</span>
+    </button>`).join("");
+  listEl.querySelectorAll(".term-btn").forEach(btn=>{
+    btn.addEventListener("click",()=>openEntry(btn.dataset.slug));
+  });
+}
+
+function openEntry(slug){
+  const entry=entries.find(e=>e.slug===slug);
+  if(!entry)return;
+  activeSlug=slug;
+  renderTerms();
+  panelEl.innerHTML=`
+    <div class="entry-inner">
+      <header class="entry-header">
+        <div class="category">${escapeHtml(entry.category)}</div>
+        <h2>${escapeHtml(entry.title)}</h2>
+        <p class="lede">${escapeHtml(entry.short)}</p>
+      </header>
+      ${entry.body}
+    </div>`;
+  if(window.matchMedia("(max-width: 820px)").matches){
+    panelEl.scrollIntoView({behavior:"smooth",block:"start"});
+  }
+}
+
+searchEl.addEventListener("input",renderTerms);
+renderFilters();
+renderTerms();
