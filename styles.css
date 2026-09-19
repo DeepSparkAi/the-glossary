@@ -703,9 +703,9 @@ footer{
   border-bottom:2px solid var(--walnut);
 }
 .primer-hero h2{
-  margin:.35rem 0 .75rem;
-  font-size:clamp(2.3rem,5vw,4.6rem);
-  line-height:.98;
+  margin:.35rem 0 .7rem;
+  font-size:clamp(1.9rem,3.6vw,3.2rem);
+  line-height:1.02;
   color:var(--walnut);
 }
 .primer-chain{
@@ -747,21 +747,21 @@ footer{
   color:var(--forest-dark);
 }
 .primer-step>h3{
-  margin:0 0 16px;
-  font-size:clamp(1.75rem,3vw,2.6rem);
-  line-height:1.05;
+  margin:0 0 14px;
+  font-size:clamp(1.4rem,2.2vw,1.9rem);
+  line-height:1.12;
   color:var(--walnut);
 }
 .primer-step-body{
-  font-size:1.02rem;
-  line-height:1.75;
+  font-size:.94rem;
+  line-height:1.62;
 }
 .primer-step-body>p{
   max-width:760px;
 }
 .primer-term{
-  margin:22px 0;
-  padding:18px 20px;
+  margin:18px 0;
+  padding:14px 16px;
   border-left:4px solid var(--brass);
   background:#f6efe0;
   box-shadow:inset 0 0 0 1px rgba(151,119,72,.16);
@@ -777,8 +777,8 @@ footer{
   color:#8a6a38;
 }
 .primer-term h3{
-  margin:0 0 5px;
-  font-size:1.65rem;
+  margin:0 0 4px;
+  font-size:1.3rem;
   color:var(--walnut);
 }
 .primer-term p:last-child{
@@ -876,9 +876,9 @@ footer{
   text-align:center;
 }
 .language-road h3{
-  margin:0 0 12px;
+  margin:0 0 10px;
   color:var(--forest-dark);
-  font-size:1.35rem;
+  font-size:1.15rem;
 }
 .language-road p{
   margin:6px 0;
@@ -902,7 +902,7 @@ footer{
 .primer-finish h3{
   margin:4px 0 8px;
   color:#314638;
-  font-size:2rem;
+  font-size:1.55rem;
 }
 .primer-finish p:last-child{
   margin-bottom:0;
