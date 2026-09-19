@@ -498,11 +498,371 @@ function sectionForEntry(entry){
   return "Glossary";
 }
 
+
+function primerTerm(word, text){
+  return `<div class="primer-term"><p class="primer-label">A new word</p><h3>${escapeHtml(word)}</h3><p>${escapeHtml(text)}</p></div>`;
+}
+
+function primerStep(number, title, body){
+  return `<section class="primer-step"><div class="primer-step-number">Step ${String(number).padStart(2,"0")}</div><h3>${title}</h3><div class="primer-step-body">${body}</div></section>`;
+}
+
+function grammarPrimer(){
+  return `
+  <div class="entry-inner primer">
+    <header class="primer-hero">
+      <p class="kicker">Start here · baby steps</p>
+      <h2>Grammar from zero</h2>
+      <p class="lede">No unexplained terminology. We will build a sentence from the ground up, then add the names grammarians use for each part.</p>
+      <div class="primer-chain"><span>words</span><b>→</b><span>sentences</span><b>→</b><span>parts</span><b>→</b><span>time</span><b>→</b><span>meaning</span></div>
+    </header>
+
+    ${primerStep(1,"What is grammar?",
+      `<p>People use language to communicate ideas. <strong>Grammar</strong> is the system that tells us how the pieces of a language fit together.</p>
+       ${primerTerm("GRAMMAR","The patterns a language uses to combine words and show how those words relate to one another.")}
+       <p>Grammar is not mainly a list of schoolroom rules. It is the machinery that lets <em>dog bites man</em> mean something different from <em>man bites dog</em>.</p>`)}
+
+    ${primerStep(2,"Start with a word.",
+      `<p>A sentence is made from smaller pieces. The most obvious piece is a <strong>word</strong>.</p>
+       ${primerTerm("WORD","A unit of language that speakers treat as one item, such as dog, quickly, under, or ran.")}
+       <p>Words do different jobs. Grammar gives names to those jobs.</p>`)}
+
+    ${primerStep(3,"A sentence says something complete.",
+      `${primerTerm("SENTENCE","A complete grammatical unit containing at least one independent clause.")}
+       <p>For now, use the simpler idea: a sentence gives you a complete statement, question, command, or exclamation.</p>
+       <div class="example"><strong>The dog barked.</strong><br><span class="example-note">A complete statement.</span></div>
+       <p>We will define <strong>clause</strong> later, before we need it.</p>`)}
+
+    ${primerStep(4,"Nouns name things.",
+      `${primerTerm("NOUN","A word that names a person, place, thing, or idea.")}
+       <div class="definition-grid">
+         <div class="definition-card"><h3>person</h3><p>teacher, Maria, child</p></div>
+         <div class="definition-card"><h3>place</h3><p>London, kitchen, park</p></div>
+         <div class="definition-card"><h3>thing</h3><p>dog, table, rain</p></div>
+         <div class="definition-card"><h3>idea</h3><p>freedom, hope, justice</p></div>
+       </div>
+       <p>In <strong>The dog barked</strong>, <em>dog</em> is the noun.</p>`)}
+
+    ${primerStep(5,"Pronouns stand in for nouns.",
+      `${primerTerm("PRONOUN","A word used in place of a noun when the listener already knows who or what you mean.")}
+       <p><strong>Maria arrived. Maria sat down.</strong> works, but English normally says <strong>Maria arrived. She sat down.</strong></p>
+       <p><em>She, he, it, they, we, I, you</em> are pronouns.</p>`)}
+
+    ${primerStep(6,"Verbs tell us what happens—or what is.",
+      `${primerTerm("VERB","A word that expresses an action, an event, a state, or being.")}
+       <p><strong>The dog barked.</strong> Barked is the verb: it tells us what happened.</p>
+       <p>But verbs are not only actions. In <strong>The dog is old</strong>, <em>is</em> is also a verb. It states a condition.</p>
+       <div class="primer-chain"><span>dog = noun</span><b>+</b><span>barked = verb</span><b>→</b><span>The dog barked.</span></div>`)}
+
+    ${primerStep(7,"The subject is who or what the sentence is about.",
+      `${primerTerm("SUBJECT","The part of a clause that the clause is about—usually the person or thing doing the verb.")}
+       ${primerTerm("PREDICATE","Everything the clause says about the subject, beginning with the verb.")}
+       <div class="compare-grid">
+         <div class="compare-card green"><h3>Subject</h3><p><strong>The old dog</strong></p></div>
+         <div class="compare-card"><h3>Predicate</h3><p><strong>ate the sandwich.</strong></p></div>
+       </div>
+       <p>The whole sentence is: <strong>The old dog ate the sandwich.</strong></p>`)}
+
+    ${primerStep(8,"An object is what the action lands on.",
+      `${primerTerm("OBJECT","A noun or noun phrase affected by the verb.")}
+       ${primerTerm("DIRECT OBJECT","The thing that directly receives the action.")}
+       <p><strong>The dog ate the sandwich.</strong> Ask: <em>ate what?</em> The sandwich. That is the direct object.</p>
+       ${primerTerm("INDIRECT OBJECT","The person or thing that receives the direct object.")}
+       <p><strong>She gave me a book.</strong> The book is the thing given. <em>Me</em> is the person who received it.</p>`)}
+
+    ${primerStep(9,"Some words describe other words.",
+      `${primerTerm("ADJECTIVE","A word that describes a noun.")}
+       <p><strong>old dog · blue car · difficult problem</strong></p>
+       ${primerTerm("ADVERB","A word that describes a verb, an adjective, or another adverb.")}
+       <p><strong>ran quickly · very old · surprisingly well</strong></p>
+       <div class="memory"><strong>Adjective:</strong> describes a thing. <strong>Adverb:</strong> usually tells how, when, where, or how much.</div>`)}
+
+    ${primerStep(10,"Small words point, locate, and connect.",
+      `${primerTerm("DETERMINER","A word placed with a noun to show which one, whose, or how many.")}
+       <p><em>this book · my coat · several people</em></p>
+       ${primerTerm("ARTICLE","A kind of determiner: a, an, or the.")}
+       ${primerTerm("PREPOSITION","A word showing a relationship in space, time, or logic.")}
+       <p><em>under the table · after lunch · despite the rain</em></p>
+       ${primerTerm("CONJUNCTION","A word that joins words, phrases, or clauses.")}
+       <p><em>and · but · because · although</em></p>`)}
+
+    ${primerStep(11,"Now we can build groups of words.",
+      `${primerTerm("PHRASE","A group of words working as one unit but without its own complete subject-and-finite-verb structure.")}
+       <p><strong>under the table</strong> is a phrase.</p>
+       ${primerTerm("CLAUSE","A group of words containing its own subject and verb.")}
+       <p><strong>the dog barked</strong> is a clause: <em>dog</em> is the subject and <em>barked</em> is the verb.</p>
+       ${primerTerm("INDEPENDENT CLAUSE","A clause that can stand by itself as a complete sentence.")}
+       ${primerTerm("DEPENDENT CLAUSE","A clause that has a subject and verb but cannot stand alone.")}
+       <div class="compare-grid">
+         <div class="compare-card green"><h3>Independent</h3><p>The dog barked.</p></div>
+         <div class="compare-card"><h3>Dependent</h3><p>because the dog barked</p></div>
+       </div>`)}
+
+    ${primerStep(12,"Verbs place events in time.",
+      `${primerTerm("TENSE","The grammatical way a language locates an event relative to time.")}
+       <p>English most clearly marks <strong>present</strong> and <strong>past</strong> on the verb itself. Future meaning is usually built with helper words such as <em>will</em>.</p>
+       ${primerTerm("ASPECT","The way a speaker views the shape of an event in time: simply, as ongoing, as completed relative to another point, or as ongoing up to another point.")}
+       <div class="table-scroll"><table><thead><tr><th></th><th>Past</th><th>Present</th><th>Future construction</th></tr></thead><tbody>
+       <tr><td>Simple</td><td>I ate</td><td>I eat</td><td>I will eat</td></tr>
+       <tr><td>Progressive</td><td>I was eating</td><td>I am eating</td><td>I will be eating</td></tr>
+       <tr><td>Perfect</td><td>I had eaten</td><td>I have eaten</td><td>I will have eaten</td></tr>
+       <tr><td>Perfect progressive</td><td>I had been eating</td><td>I have been eating</td><td>I will have been eating</td></tr>
+       </tbody></table></div>`)}
+
+    ${primerStep(13,"The pluperfect is a past inside the past.",
+      `${primerTerm("PLUPERFECT","Another name for the past perfect: had + past participle. It marks an event already completed before another past event.")}
+       <div class="primer-chain"><span>had eaten</span><b>→</b><span>she arrived</span><b>→</b><span>NOW</span></div>
+       <p><strong>I had eaten before she arrived.</strong> Both events are past, but the eating is earlier.</p>`)}
+
+    ${primerStep(14,"Mood tells us how the speaker presents the event.",
+      `${primerTerm("MOOD","A grammatical way of presenting an action as fact, command, wish, demand, or hypothetical situation.")}
+       <div class="definition-grid">
+        <div class="definition-card"><h3>Indicative</h3><p>Ordinary statements and questions: <em>She is here.</em></p></div>
+        <div class="definition-card"><h3>Imperative</h3><p>Commands and requests: <em>Come here.</em></p></div>
+        <div class="definition-card"><h3>Subjunctive</h3><p>Wishes, demands, and unreal situations: <em>If I were you…</em></p></div>
+       </div>
+       <p><strong>Tense asks when. Mood asks how the event is being presented.</strong></p>`)}
+
+    ${primerStep(15,"Voice changes the viewpoint.",
+      `${primerTerm("VOICE","The grammatical choice between focusing on the doer of an action or on the thing receiving the action.")}
+       <div class="compare-grid">
+        <div class="compare-card green"><h3>Active voice</h3><p><strong>Maria wrote the letter.</strong><br>Maria does the action.</p></div>
+        <div class="compare-card"><h3>Passive voice</h3><p><strong>The letter was written by Maria.</strong><br>The letter becomes the subject.</p></div>
+       </div>`)}
+
+    ${primerStep(16,"A verb can change shape and do a different job.",
+      `${primerTerm("FINITE VERB","A verb form that anchors a clause by carrying tense or working with the clause's subject.")}
+       ${primerTerm("NON-FINITE VERB","A verb form that does not carry the clause's tense by itself.")}
+       ${primerTerm("INFINITIVE","The base verb form, often introduced by to: to run, to think, to leave.")}
+       ${primerTerm("PARTICIPLE","A verb form used to build compound verb forms or to act like an adjective.")}
+       ${primerTerm("GERUND","An -ing verb form doing a noun's job.")}
+       <div class="compare-grid">
+        <div class="compare-card green"><h3>Gerund</h3><p><strong>Swimming</strong> is fun.<br><em>Swimming</em> is the subject, so it is doing a noun's job.</p></div>
+        <div class="compare-card"><h3>Present participle</h3><p>John is <strong>swimming</strong>.<br><em>Swimming</em> is part of the verb phrase.</p></div>
+       </div>`)}
+
+    ${primerStep(17,"English decides whether nouns are countable.",
+      `${primerTerm("COUNTABLE NOUN","A noun English treats as separate units: one chair, two chairs.")}
+       ${primerTerm("UNCOUNTABLE NOUN","A noun English treats as a mass or quantity rather than separate units.")}
+       <p><strong>advice, information, furniture, equipment, traffic</strong> are normally uncountable.</p>
+       <div class="compare-grid">
+        <div class="compare-card green"><h3>Natural</h3><p>some advice<br>two pieces of advice</p></div>
+        <div class="compare-card grammar-wrong"><h3>Not standard</h3><p>an advice<br>two advices</p></div>
+       </div>`)}
+
+    ${primerStep(18,"Words themselves are built from meaningful pieces.",
+      `${primerTerm("MORPHEME","The smallest part of a word that still carries meaning or grammatical information.")}
+       ${primerTerm("ROOT","The central morpheme carrying the main meaning.")}
+       ${primerTerm("AFFIX","A morpheme attached to a root.")}
+       <div class="morph-row"><span class="morph-part"><strong>un</strong><small>prefix</small></span><b class="morph-plus">+</b><span class="morph-part"><strong>happy</strong><small>root</small></span><b class="morph-plus">+</b><span class="morph-part"><strong>ness</strong><small>suffix</small></span></div>
+       ${primerTerm("PREFIX","An affix placed before the root.")}
+       ${primerTerm("SUFFIX","An affix placed after the root.")}
+       ${primerTerm("INFIX","An affix inserted inside a root. Ordinary English grammar has very few true infixes.")}
+       ${primerTerm("CIRCUMFIX","An affix whose two parts wrap around a root. German ge-…-t in forms such as gespielt is a familiar example.")}
+       <p>This is <strong>morphology</strong>: the study of how words are built from meaningful pieces.</p>`)}
+
+    ${primerStep(19,"Put the whole machine together.",
+      `<div class="primer-sentence"><span class="pword"><b>The</b><small>article</small></span><span class="pword"><b>old</b><small>adjective</small></span><span class="pword"><b>dog</b><small>noun · subject</small></span><span class="pword"><b>quickly</b><small>adverb</small></span><span class="pword"><b>ate</b><small>verb</small></span><span class="pword"><b>the</b><small>article</small></span><span class="pword"><b>sandwich.</b><small>noun · object</small></span></div>
+       <p>You can now describe the sentence at several levels: individual word jobs, subject and predicate, verb and object, phrase and clause structure, and the verb's time and viewpoint.</p>
+       <div class="memory"><strong>The point of the terminology:</strong> each new name gives you a handle for one part of a system you already use every day.</div>`)}
+
+    <section class="primer-finish">
+      <p class="kicker">You now have the map</p>
+      <h3>Use the oak index for the close-up view.</h3>
+      <p>The entries at left expand each of these ideas with examples, tables, practice questions, and quizzes.</p>
+    </section>
+  </div>`;
+}
+
+function languagesPrimer(){
+  return `
+  <div class="entry-inner primer">
+    <header class="primer-hero">
+      <p class="kicker">Start here · baby steps</p>
+      <h2>How English, French, and German came to be</h2>
+      <p class="lede">We will start before any of the three languages existed. Every new historical or linguistic term is defined before we use it.</p>
+      <div class="primer-chain"><span>older speech</span><b>→</b><span>small changes</span><b>→</b><span>dialects</span><b>→</b><span>new languages</span></div>
+    </header>
+
+    ${primerStep(1,"Languages change because people keep speaking them.",
+      `<p>No committee has to decide that a language will change. Pronunciation, vocabulary, and grammar drift as one generation learns from another.</p>
+       ${primerTerm("DIALECT","A variety of a language used by a particular region or group. Dialects can differ in pronunciation, vocabulary, and grammar.")}
+       <p>If dialects remain separated for long enough, they can become different enough to count as separate languages.</p>`)}
+
+    ${primerStep(2,"Languages can be related like members of a family.",
+      `${primerTerm("LANGUAGE FAMILY","A group of languages descended from a shared earlier language.")}
+       ${primerTerm("ANCESTOR LANGUAGE","An earlier language from which later languages developed.")}
+       ${primerTerm("DESCENDANT LANGUAGE","A later language that developed from an ancestor language.")}
+       <p>This is historical descent, not borrowing. English can borrow a French word without becoming a descendant of French.</p>`)}
+
+    ${primerStep(3,"Sometimes the ancestor was never written down.",
+      `${primerTerm("PROTO-","A prefix meaning first, earliest, or ancestral. In historical linguistics it usually marks a reconstructed ancestral language.")}
+       ${primerTerm("RECONSTRUCTED LANGUAGE","An earlier language inferred by systematically comparing related later languages, rather than known from a complete written record.")}
+       <p><strong>Proto-Germanic</strong> therefore means the reconstructed ancestor of the Germanic languages. It does not mean “primitive German.”</p>`)}
+
+    ${primerStep(4,"Go back far enough and all three enter one enormous family.",
+      `${primerTerm("PROTO-INDO-EUROPEAN","The reconstructed ancestral language of the Indo-European language family.")}
+       ${primerTerm("INDO-EUROPEAN","A very large language family including Germanic, Romance, Celtic, Slavic, Greek, Indo-Iranian, and several other branches.")}
+       <div class="primer-tree">
+         <div class="primer-tree-root">Proto-Indo-European</div>
+         <div class="primer-tree-branches">
+           <div><strong>Germanic branch</strong><span>→ English and German</span></div>
+           <div><strong>Italic branch</strong><span>→ Latin → French</span></div>
+         </div>
+       </div>
+       <p>English and German are therefore closer relatives to each other than either is to French. French is related too, but through a different branch.</p>`)}
+
+    ${primerStep(5,"The Germanic road begins with Proto-Germanic.",
+      `${primerTerm("GERMANIC","The branch of Indo-European that contains English, German, Dutch, the Scandinavian languages, and several extinct languages.")}
+       ${primerTerm("PROTO-GERMANIC","The reconstructed common ancestor of all Germanic languages.")}
+       <p>Proto-Germanic changed into several regional varieties. One major group is called <strong>West Germanic</strong>.</p>
+       ${primerTerm("WEST GERMANIC","The Germanic branch from which English, German, Dutch, Frisian, and related varieties developed.")}
+       <div class="primer-chain"><span>Proto-Indo-European</span><b>→</b><span>Proto-Germanic</span><b>→</b><span>West Germanic</span></div>`)}
+
+    ${primerStep(6,"English begins when West Germanic speech reaches Britain.",
+      `<p>From roughly the fifth century AD onward, Germanic-speaking groups traditionally called <strong>Angles, Saxons, and Jutes</strong> settled in Britain.</p>
+       <p>Their related West Germanic dialects developed in Britain into what we call <strong>Old English</strong>.</p>
+       ${primerTerm("OLD ENGLISH","The form of English used roughly from the fifth century to the Norman Conquest of 1066.")}
+       <p>Old English is not merely modern English with old spelling. Its grammar and vocabulary are different enough that an untrained modern reader usually cannot understand it.</p>`)}
+
+    ${primerStep(7,"Old English had more endings than modern English.",
+      `${primerTerm("INFLECTION","A change in a word's form that shows grammatical information such as number, case, tense, or comparison.")}
+       <p>Old English used many endings to show what job a noun or adjective was doing. Modern English has lost most of those endings and relies more heavily on word order.</p>
+       <div class="memory"><strong>Earlier English:</strong> more endings. <strong>Modern English:</strong> fewer endings, stricter word order.</div>`)}
+
+    ${primerStep(8,"Viking settlement adds a second Germanic layer.",
+      `<p>Speakers of <strong>Old Norse</strong>, another Germanic language, settled in parts of Britain during the Viking Age.</p>
+       ${primerTerm("BORROWING","Taking a word or expression from another language and using it in your own.")}
+       <p>English borrowed many Norse words, including <strong>sky, egg, skin, they, them, their</strong>.</p>
+       <p>Because Old English and Old Norse were related languages, their contact also helped reshape everyday English.</p>`)}
+
+    ${primerStep(9,"1066 brings an enormous French layer into English.",
+      `<p>In 1066, William the Conqueror and his Norman forces took control of England. The ruling class used varieties of French.</p>
+       <p>English remained the language of most of the population, but thousands of French words entered it, especially in government, law, war, food, fashion, and culture.</p>
+       <div class="primer-chain"><span>Old English</span><b>+</b><span>Old Norse</span><b>+</b><span>Norman French</span><b>→</b><span>Middle English</span></div>`)}
+
+    ${primerStep(10,"Middle English is recognizably on the way to modern English.",
+      `${primerTerm("MIDDLE ENGLISH","The form of English used from about 1066 to around 1500.")}
+       <p>During this period many old grammatical endings disappeared. French vocabulary became deeply embedded. By the time of Chaucer in the late 1300s, the language looks strange to us but is no longer wholly alien.</p>
+       <div class="example"><strong>Whan that Aprille with his shoures soote</strong><br><span class="example-note">Chaucer: roughly, “When April with its sweet showers…”</span></div>`)}
+
+    ${primerStep(11,"Printing and a great sound change help create Early Modern English.",
+      `${primerTerm("EARLY MODERN ENGLISH","The form of English used roughly from 1500 to 1700—the language of Shakespeare and the King James Bible.")}
+       ${primerTerm("GREAT VOWEL SHIFT","A major series of pronunciation changes affecting the long vowels of English, beginning in the late Middle English period and continuing into Early Modern English.")}
+       <p>Printing encouraged spelling to become more fixed while pronunciation kept changing. That is one reason English spelling often preserves an older pronunciation.</p>`)}
+
+    ${primerStep(12,"Modern English keeps adding layers.",
+      `${primerTerm("MODERN ENGLISH","English from roughly 1700 to the present.")}
+       <p>English spread around the world, producing many standard national and regional varieties. Science, trade, empire, migration, and popular culture continuously added vocabulary.</p>
+       <p>Its family identity did not change: <strong>English remains a Germanic language even though a very large share of its learned vocabulary came from French, Latin, and Greek.</strong></p>`)}
+
+    ${primerStep(13,"Now take the road that leads to French.",
+      `${primerTerm("LATIN","The language of ancient Rome and the Roman world.")}
+       <p>French did not grow out of the polished literary Latin of Cicero's books alone. It developed from the everyday Latin spoken across the Roman Empire.</p>
+       ${primerTerm("VULGAR LATIN","A convenient name for the everyday spoken varieties of Latin. Here vulgar means common or ordinary, not obscene.")}
+       ${primerTerm("ROMANCE LANGUAGES","The languages descended from spoken Latin, including French, Spanish, Portuguese, Italian, Romanian, and others.")}
+       <div class="primer-chain"><span>Proto-Indo-European</span><b>→</b><span>Italic</span><b>→</b><span>Latin</span><b>→</b><span>Romance languages</span></div>`)}
+
+    ${primerStep(14,"Before French, there was Roman Gaul.",
+      `${primerTerm("GAUL","The Roman name for a large region covering most of modern France and nearby areas.")}
+       <p>Before Roman rule, much of Gaul spoke Celtic languages. Roman conquest spread Latin. Over centuries, local spoken Latin changed in its own regional direction.</p>
+       ${primerTerm("GALLO-ROMANCE","The group of Romance varieties that developed in ancient Gaul and nearby regions.")}
+       <p>French grew from northern Gallo-Romance speech.</p>`)}
+
+    ${primerStep(15,"The Franks leave a Germanic imprint on developing French.",
+      `${primerTerm("FRANKS","A Germanic-speaking people who became politically dominant in much of former Roman Gaul after the Western Roman Empire weakened.")}
+       <p>The population continued speaking forms of Latin that were becoming Romance languages, but Frankish contact contributed words, names, and some sound patterns.</p>
+       <p>The result was still a <strong>Romance</strong> language, because its basic historical descent remained from Latin.</p>`)}
+
+    ${primerStep(16,"Old French becomes a recognizable language.",
+      `${primerTerm("OLD FRENCH","The group of northern French Romance varieties used roughly from the 9th through the 13th centuries.")}
+       <p>One of the earliest famous Romance texts, the <strong>Oaths of Strasbourg</strong> of 842, shows speech already far removed from Classical Latin.</p>
+       <p>Northern varieties are often called the <strong>langues d'oïl</strong>, after their word for “yes.” Southern varieties developed differently and included Occitan.</p>`)}
+
+    ${primerStep(17,"Middle French moves toward the modern language.",
+      `${primerTerm("MIDDLE FRENCH","French of roughly the 14th through 16th centuries, between Old French and the modern standard.")}
+       <p>Many old noun endings had already disappeared. Spelling, vocabulary, and grammar continued to change. The expanding royal administration and printing helped promote more uniform written forms.</p>
+       <p>By the 1600s, the language enters the period normally called <strong>Modern French</strong>.</p>`)}
+
+    ${primerStep(18,"French changed farther from Latin than some Romance relatives did.",
+      `<p>Sound changes shortened and reshaped many inherited Latin words.</p>
+       <div class="table-scroll"><table><thead><tr><th>Latin source</th><th>French</th><th>Meaning</th></tr></thead><tbody>
+       <tr><td>aquam</td><td>eau</td><td>water</td></tr>
+       <tr><td>noctem</td><td>nuit</td><td>night</td></tr>
+       <tr><td>caballum</td><td>cheval</td><td>horse</td></tr>
+       <tr><td>festam</td><td>fête</td><td>feast / celebration</td></tr>
+       </tbody></table></div>
+       <p>These are not random replacements. They are the results of long chains of regular sound change.</p>`)}
+
+    ${primerStep(19,"German takes the other West Germanic road.",
+      `<p>English and German share the West Germanic ancestor, but the speech varieties that became German remained on the European continent.</p>
+       ${primerTerm("OLD HIGH GERMAN","A group of early continental West Germanic varieties, conventionally dated roughly AD 750–1050, ancestral to later High German varieties.")}
+       ${primerTerm("HIGH GERMAN","German varieties from the central and southern uplands. High refers historically to elevation, not prestige.")}
+       <p>One major set of consonant changes in these southern and central varieties helped separate German from relatives such as English and Dutch.</p>`)}
+
+    ${primerStep(20,"A sound shift helps explain English–German pairs.",
+      `${primerTerm("HIGH GERMAN CONSONANT SHIFT","A historical set of consonant changes that affected the ancestors of High German but not English in the same way.")}
+       <div class="table-scroll"><table><thead><tr><th>English</th><th>German</th><th>What you can notice</th></tr></thead><tbody>
+       <tr><td>apple</td><td>Apfel</td><td>p → pf in German</td></tr>
+       <tr><td>two</td><td>zwei</td><td>t → ts sound, written z</td></tr>
+       <tr><td>make</td><td>machen</td><td>k → ch in this environment</td></tr>
+       </tbody></table></div>
+       <p>The details vary by position and dialect, but the larger lesson is simple: systematic sound changes can turn one ancestral vocabulary into visibly different daughter languages.</p>`)}
+
+    ${primerStep(21,"Middle High German is the language of the medieval period.",
+      `${primerTerm("MIDDLE HIGH GERMAN","The High German varieties conventionally dated about 1050–1350.")}
+       <p>This is the language of much medieval German literature, including the <em>Nibelungenlied</em> and courtly poetry.</p>
+       <p>There was not yet one single spoken German used everywhere. Regional varieties remained strong.</p>`)}
+
+    ${primerStep(22,"Early New High German brings the language closer to today's standard.",
+      `${primerTerm("EARLY NEW HIGH GERMAN","A conventional name for German from roughly 1350 to 1650, during the transition toward modern written German.")}
+       <p>Printing increased the circulation of written forms. Martin Luther's 16th-century Bible translation was especially influential because it reached a huge audience, but he did not single-handedly invent Standard German.</p>
+       <p>Writers and printers increasingly selected forms that could be understood across regional boundaries.</p>`)}
+
+    ${primerStep(23,"Modern German is a standard language sitting above many dialects.",
+      `${primerTerm("STANDARD GERMAN","The widely taught and written standard form of German, used across Germany, Austria, Switzerland, and elsewhere with national variation.")}
+       <p>Regional German dialects did not vanish. Some differ considerably from the standard and from one another.</p>
+       <p>Modern Standard German belongs to the High German side of the dialect landscape, while Low German varieties did not undergo the High German consonant shift to the same extent.</p>`)}
+
+    ${primerStep(24,"Now put the three histories next to each other.",
+      `<div class="language-road-grid">
+       <div class="language-road"><h3>English</h3><p>Proto-Indo-European</p><b>↓</b><p>Proto-Germanic</p><b>↓</b><p>West Germanic</p><b>↓</b><p>Old English</p><b>↓</b><p>Middle English</p><b>↓</b><p>Modern English</p></div>
+       <div class="language-road"><h3>German</h3><p>Proto-Indo-European</p><b>↓</b><p>Proto-Germanic</p><b>↓</b><p>West Germanic</p><b>↓</b><p>Old High German</p><b>↓</b><p>Middle High German</p><b>↓</b><p>Modern German</p></div>
+       <div class="language-road"><h3>French</h3><p>Proto-Indo-European</p><b>↓</b><p>Italic</p><b>↓</b><p>Latin</p><b>↓</b><p>Gallo-Romance</p><b>↓</b><p>Old French</p><b>↓</b><p>Modern French</p></div>
+       </div>
+       <div class="memory"><strong>The central fact:</strong> English and German are Germanic siblings. French is a Romance language descended from Latin. English later borrowed enormously from French and Latin, but borrowing vocabulary did not change its Germanic family ancestry.</div>`)}
+
+    ${primerStep(25,"One last idea: related words can preserve the family tree.",
+      `${primerTerm("COGNATE","A word related to a word in another language because both descend from the same older word.")}
+       <div class="table-scroll"><table><thead><tr><th>English</th><th>German</th><th>Relationship</th></tr></thead><tbody>
+       <tr><td>father</td><td>Vater</td><td>Germanic cognates</td></tr>
+       <tr><td>water</td><td>Wasser</td><td>Germanic cognates</td></tr>
+       <tr><td>house</td><td>Haus</td><td>Germanic cognates</td></tr>
+       <tr><td>name</td><td>Name</td><td>Germanic cognates</td></tr>
+       </tbody></table></div>
+       <p>A cognate is not merely a word that looks similar. The similarity has to come from shared historical ancestry.</p>`)}
+
+    <section class="primer-finish">
+      <p class="kicker">You now have the family tree</p>
+      <h3>Use the oak index to zoom in.</h3>
+      <p>The Languages entries at left contain the English and Latin timelines, French diacritics, phonetics, Germanic versus Teutonic, collocation, and other close-up topics.</p>
+    </section>
+  </div>`;
+}
+
 function resetPanel(){
   const config=sectionConfig[activeSection];
+  if(activeSection==="Grammar"){
+    panelEl.innerHTML=grammarPrimer();
+    return;
+  }
+  if(activeSection==="Languages"){
+    panelEl.innerHTML=languagesPrimer();
+    return;
+  }
   panelEl.innerHTML=`
     <div class="empty-state">
-      <div class="empty-monogram" aria-hidden="true">${activeSection==="Languages" ? "L" : "G"}</div>
+      <div class="empty-monogram" aria-hidden="true">G</div>
       <p class="kicker">${escapeHtml(activeSection)} cabinet</p>
       <h2>${escapeHtml(config.emptyTitle)}</h2>
       <p>${escapeHtml(config.emptyText)}</p>
