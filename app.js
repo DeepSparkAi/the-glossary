@@ -91,15 +91,39 @@ const entries = [
   },
   {
     slug:"germanic-teutonic", title:"Germanic vs. Teutonic", category:"Language & History",
-    short:"Germanic is the normal modern family term; Teutonic is an older term plus several specific historical uses.",
-    keywords:"German Germany English language Indo-European Teutones Teutonic Knights",
+    short:"Historically, Teutonic was used as an older name for Germanic; in precise modern usage, Germanic is the umbrella term and Teutonic is narrower or historical.",
+    keywords:"German Germany English language Indo-European Proto proto reconstructed ancestor Teutones Teutonic Knights Germanicus Germani etymology semantic change",
     body:`
-      <section class="entry-section"><h3>The simplest distinction</h3><p><strong>Germanic</strong> is the normal modern term for the peoples and language family. <strong>Teutonic</strong> is an older historical term and also survives in specific names such as the Teutonic Knights.</p></section>
-      <section class="entry-section"><h3>Germanic</h3><p><strong>Peoples:</strong> ancient peoples of northern and central Europe whose cultures and languages belonged to the Germanic family.</p><p><strong>Languages:</strong> the Germanic branch of the Indo-European language family. Germanic does not simply mean “German.” English is a Germanic language.</p>
+      <section class="entry-section"><h3>Do Teutonic and Germanic mean the same thing?</h3>
+        <div class="compare-grid">
+          <div class="compare-card green"><h3>In older usage: often yes</h3><p>Older English writers, especially in linguistics and anthropology, used <strong>Teutonic</strong> as a broad label for what is now normally called <strong>Germanic</strong>: the Germanic peoples, the Germanic languages, or their ancestral language.</p></div>
+          <div class="compare-card"><h3>In modern precise usage: no</h3><p><strong>Germanic</strong> is the standard technical umbrella term. <strong>Teutonic</strong> is now mainly historical: it can refer specifically to the ancient Teutones, to the Teutonic Order/Knights, or appear as an older literary word for German or Germanic things.</p></div>
+        </div>
+      </section>
+      <div class="memory"><strong>Bottom line:</strong> In an older book, <em>Teutonic languages</em> can mean essentially the same language family now called <em>Germanic languages</em>. In modern linguistics, use <strong>Germanic</strong>. Do not treat <strong>Teutonic</strong> as a fully interchangeable modern technical synonym.</div>
+
+      <section class="entry-section"><h3>Why the words are only partly interchangeable</h3>
+        <p><strong>Teutonic started narrower.</strong> It comes from the name of the <strong>Teutones</strong>, a particular ancient people known to Roman writers. English later broadened the word and used it for the larger Germanic family. That broad linguistic use is now largely obsolete.</p>
+        <p><strong>Germanic became the standard umbrella.</strong> It now names the historical and linguistic family that includes English, German, Dutch, Frisian, the Scandinavian languages, and extinct East Germanic languages such as Gothic.</p>
+        <div class="flow"><span>Teutones = one named ancient people</span><b>→ semantic broadening →</b><span>older “Teutonic” = Germanic family</span><b>→ modern terminology →</b><span>Germanic</span></div>
+      </section>
+
+      <section class="entry-section"><h3>What does “proto-” mean?</h3>
+        <p><strong>Proto- means first, earliest, original, or ancestral.</strong> It comes from Greek <em>prōtos</em>, “first.”</p>
+        <p>In historical linguistics, <strong>Proto-X</strong> means the reconstructed ancestral language from which a later language family descended. Linguists infer it by systematically comparing its descendant languages.</p>
+        <div class="definition-grid">
+          <div class="definition-card"><h3>Proto-Germanic</h3><p>The reconstructed common ancestor of the Germanic languages.</p></div>
+          <div class="definition-card"><h3>Proto-Indo-European</h3><p>The reconstructed common ancestor of the Indo-European language family, which includes Germanic and many other branches.</p></div>
+        </div>
+        <p><strong>Important:</strong> “Proto” does not mean primitive or crude. It means <strong>ancestral</strong>.</p>
+      </section>
+
+      <section class="entry-section"><h3>The Germanic language family</h3>
+        <p><strong>Germanic does not mean simply “German.”</strong> Modern German is one member of the much larger Germanic family. English is also Germanic.</p>
         <div class="language-tree">
-          <div class="tree-node root">Proto-Indo-European</div>
+          <div class="tree-node root">Proto-Indo-European<br><small>reconstructed ancestral language</small></div>
           <div>↓</div>
-          <div class="tree-node root">Proto-Germanic</div>
+          <div class="tree-node root">Proto-Germanic<br><small>reconstructed ancestor of the Germanic languages</small></div>
           <div class="tree-row">
             <div class="tree-node"><strong>West Germanic</strong><br>English · German · Dutch · Frisian</div>
             <div class="tree-node"><strong>North Germanic</strong><br>Danish · Swedish · Norwegian · Icelandic · Faroese</div>
@@ -107,9 +131,27 @@ const entries = [
           </div>
         </div>
       </section>
-      <section class="entry-section"><h3>Teutonic</h3><p>From Latin <em>Teutonicus</em>, from <em>Teutones/Teutoni</em>, the name of an ancient people known to Roman writers. In older English linguistic writing, <em>Teutonic</em> was used broadly for what is now normally called <em>Germanic</em>.</p><p>The word also survives prominently in <strong>Teutonic Order / Teutonic Knights</strong>, the medieval German military religious order.</p></section>
-      <section class="entry-section"><h3>Derivation</h3><p><em>Teutonic</em> is linked through ancient forms to an Indo-European root meaning <strong>people, tribe, or nation</strong>. The modern term <em>Germanic</em> comes through Latin <em>Germanicus</em> from <em>Germani</em>, the Roman name for peoples north of the Roman world; the ultimate origin of that name is uncertain.</p></section>
-      <div class="memory"><strong>Memory aid:</strong> Germanic = the big modern linguistic/historical family. Teutonic = an older label plus specific historical meanings.</div>`
+
+      <section class="entry-section"><h3>Derivation of “Germanic”</h3>
+        <p>The English word <strong>Germanic</strong> comes through Latin <em>Germanicus</em>, meaning essentially <strong>“of the Germani”</strong>, from <em>Germani</em>, the Roman name for peoples they grouped under that name.</p>
+        <div class="flow"><span><strong>Germani</strong><br>name of a people/group</span><b>→ noun to adjective, not a meaning reversal →</b><span><strong>Germanicus</strong><br>“of the Germani”</span><b>→ borrowing into English →</b><span><strong>Germanic</strong></span></div>
+        <p>So in that part of the chain, there is <strong>no hidden semantic flip</strong>. <em>Germani</em> names the people; <em>Germanicus</em> is the corresponding adjective, “of the Germani.” The grammatical form changes from a people-name to an adjective, while the reference remains connected to the same named group.</p>
+        <p>A later development <strong>does</strong> need to be called out: English <em>Germanic</em> became a scholarly umbrella term for the wider linguistic and historical family that includes German, English, Dutch, Scandinavian languages, and others. That is a later technical specialization/expansion of the term.</p>
+        <p>The ultimate origin of the ancient name <em>Germani</em> is uncertain.</p>
+      </section>
+
+      <section class="entry-section"><h3>Derivation of “Teutonic”</h3>
+        <p><strong>Teutonic</strong> comes from Latin <em>Teutonicus</em>, “of the Teutones,” from <em>Teutones/Teutoni</em>, the name of an ancient people.</p>
+        <div class="flow"><span><strong>Teutones</strong><br>name of a people</span><b>→</b><span><strong>Teutonicus</strong><br>“of the Teutones”</span><b>→</b><span><strong>Teutonic</strong></span></div>
+        <p>The important semantic change happened later, when English writers <strong>broadened</strong> <em>Teutonic</em> from association with the Teutones to a label for the much larger Germanic family. Modern technical usage then shifted to <em>Germanic</em>.</p>
+        <p>The word also survives prominently in <strong>Teutonic Order / Teutonic Knights</strong>, the medieval German military religious order.</p>
+      </section>
+
+      <section class="entry-section"><h3>How The Glossary shows derivations</h3>
+        <div class="memory"><strong>Derivation convention:</strong> An arrow means <strong>“comes from / is historically derived from.”</strong> It does <strong>not</strong> automatically mean the definition changed. When a documented meaning change matters, The Glossary will label it explicitly — for example <strong>semantic broadening</strong>, <strong>narrowing</strong>, or another change in sense. A grammatical change such as <em>Germani</em> (people-name) → <em>Germanicus</em> (“of the Germani”) is also identified rather than being mistaken for a semantic change.</div>
+      </section>
+
+      <div class="memory"><strong>Memory aid:</strong> Germanic = the modern umbrella. Teutonic = historically overlapped with Germanic, but today is chiefly an older or specific historical term.</div>`
   },
   {
     slug:"sine-cosine", title:"Sine & Cosine", category:"One-Sheet Primers",
