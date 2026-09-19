@@ -1305,3 +1305,26 @@ footer{
   .map-note{font-size:9px}
   .map-label.quadrant{font-size:18px}
 }
+
+
+/* Generated political map */
+.generated-political-map{
+  margin:24px 0;
+  padding:10px;
+  border:1px solid #cbb995;
+  background:#f8f2e7;
+  border-radius:8px;
+}
+.generated-political-map img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:5px;
+}
+.generated-political-map figcaption{
+  margin-top:9px;
+  font-family:Arial,sans-serif;
+  font-size:.73rem;
+  line-height:1.45;
+  color:#6d6558;
+}
