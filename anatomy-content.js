@@ -256,7 +256,7 @@
       slug:"autonomic-nervous-system",
       title:"Autonomic Nervous System",
       category:"Autonomic Nervous System",
-      short:"The pair you were remembering: sympathetic fight-or-flight and parasympathetic rest-and-digest.",
+      short:"Sympathetic fight-or-flight and parasympathetic rest-and-digest: the two major divisions of the autonomic nervous system.",
       keywords:"autonomic nervous system ANS sympathetic parasympathetic fight flight rest digest poop bowel urination heart digestion",
       body:autonomicBody()
     },
