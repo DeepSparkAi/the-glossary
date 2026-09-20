@@ -653,115 +653,245 @@
 
   function scopolamineBody(){
     return `
-      ${step(1,"Start with the 1950s meaning in plain English.",
-        `<p><strong>Scopolamine</strong> was a drug a 1950s medical reader could encounter in several settings. It could reduce some body secretions, be given before anesthesia, help prevent motion sickness, widen the pupil of the eye, and produce drowsiness or impaired memory.</p>
-         <p>Another name for the same drug is <strong>hyoscine</strong>.</p>
+      ${step(1,"Start with one simple sentence.",
+        `<p><strong>Scopolamine is a drug that blocks one kind of nerve signal.</strong></p>
+         <p>That one fact explains most of the page. To understand it, we will learn the pieces one at a time.</p>
+         ${term("DRUG","A chemical substance used because it changes how the body works. A drug may be used as a medicine, but the word <em>drug</em> simply refers to the substance and its effect on the body.")}
          <div class="spelling-strip"><span>S</span><span>C</span><span>O</span><span>P</span><span>O</span><span>L</span><span>A</span><span>M</span><span>I</span><span>N</span><span>E</span></div>`)}
 
-      ${step(2,"Why is it called scopolamine?",
-        `${term("SCOPOLIA","A genus—a named group—of plants in the nightshade family. Scopolamine was isolated from plants of this group and related plants.")}
-         ${term("GIOVANNI ANTONIO SCOPOLI","An 18th-century Italian naturalist. The plant genus <em>Scopolia</em> was named in his honor.")}
-         ${term("AMINE","A family of organic chemicals containing nitrogen. The ending <strong>-amine</strong> appears in many chemical names.")}
-         ${chain(["Scopoli · person's name","Scopolia · plant genus named for him","Scopolia + amine","scopolamine"])}
-         <p>So <strong>scopolamine</strong> is not a word whose first half describes what the drug does. Its name mainly records the <strong>plant name</strong> from which the chemical was historically associated, plus a chemical ending.</p>`)}
+      ${step(2,"What did a 1950s reader use scopolamine for?",
+        `${term("SECRETION","A substance made and released by a part of the body. Saliva in the mouth is one example of a secretion.")}
+         ${term("ANESTHESIA","A medically produced loss of sensation. Depending on the kind of anesthesia, a person may be numb in one area or unconscious for an operation.")}
+         ${term("MOTION SICKNESS","Nausea, dizziness, or vomiting caused by movement, such as riding in a car, ship, or airplane.")}
+         ${term("PUPIL","The dark opening in the center of the eye that lets light enter.")}
+         ${term("MEMORY","The ability to store and later recall information or experiences.")}
+         <p>A 1950s medical reader could encounter scopolamine for <strong>reducing secretions</strong>, <strong>use before anesthesia</strong>, <strong>motion sickness</strong>, <strong>widening the pupil</strong>, and effects involving <strong>drowsiness or memory</strong>.</p>
+         <p>Another name for the same drug is <strong>hyoscine</strong>.</p>`)}
 
-      ${step(3,"Before acetylcholine, learn what a nerve signal is.",
-        `${term("NERVE CELL","A cell specialized for sending and receiving signals. Another name is <strong>neuron</strong>.")}
-         ${term("CHEMICAL MESSENGER","A chemical released by one cell that carries a signal to another cell.")}
-         ${term("NEUROTRANSMITTER","A chemical messenger used by nerve cells. The word breaks into <strong>neuro-</strong>, meaning nerve, and <strong>transmitter</strong>, something that carries or sends a signal.")}
-         ${chain(["neuro- · nerve","transmit · send across","neurotransmitter · a chemical signal sent by nerve cells"])}`)}
+      ${step(3,"Why is it called scopolamine? Start with the person.",
+        `${term("GIOVANNI ANTONIO SCOPOLI","An 18th-century naturalist. A naturalist studies living things and the natural world.")}
+         ${term("NATURALIST","A person who studies plants, animals, minerals, or other parts of nature.")}
+         <p>A plant group was later named in Scopoli's honor.</p>`)}
 
-      ${step(4,"Now take apart ACETYLCHOLINE.",
-        `<p><strong>Acetylcholine</strong> looks like one 13-letter block. It becomes much easier when separated:</p>
+      ${step(4,"Now go from Scopoli to Scopolia.",
+        `${term("GENUS","A named group used in biological classification. A genus contains one or more closely related species.")}
+         ${term("SCOPOLIA","A genus of plants in the nightshade family. The name <em>Scopolia</em> honors Giovanni Antonio Scopoli.")}
+         ${term("NIGHTSHADE FAMILY","A plant family that includes many familiar plants as well as plants containing powerful natural chemicals.")}
+         ${chain(["Scopoli · a person's name","Scopolia · a plant genus named for him"])}
+         <p>Scopolamine was historically associated with plants in this group and related plants.</p>`)}
+
+      ${step(5,"Now learn the ending -amine.",
+        `${term("NITROGEN","A chemical element. Its symbol is N. Nitrogen atoms occur in many substances in living things and in many medicines.")}
+         ${term("AMINE","A type of nitrogen-containing chemical compound. The ending <strong>-amine</strong> appears in many chemical names.")}
+         ${chain(["Scopoli","Scopolia","scopol-","-amine","scopolamine"])}
+         <p>The name mainly records a <strong>plant-name history</strong> plus a <strong>chemical ending</strong>. The word itself does not tell you what the drug does.</p>`)}
+
+      ${step(6,"Before nerve signals, learn what a cell is.",
+        `${term("CELL","One of the basic living units from which the body is built.")}
+         ${term("NERVE CELL","A cell specialized for sending and receiving information. Another name is <strong>neuron</strong>.")}
+         ${term("NEURON","Another word for a nerve cell.")}
+         <p>Your brain and nerves contain enormous numbers of neurons communicating with other cells.</p>`)}
+
+      ${step(7,"What is a signal?",
+        `${term("SIGNAL","Something that carries information and causes or prepares for a response.")}
+         <p>A traffic light is a signal. A nerve signal is a biological signal.</p>
+         <p>Nerve cells use both electrical changes and chemicals to pass information.</p>`)}
+
+      ${step(8,"What is a chemical messenger?",
+        `${term("CHEMICAL","A substance with a particular composition. Water, oxygen, caffeine, and scopolamine are all chemicals.")}
+         ${term("MESSENGER","Something that carries a message from one place to another.")}
+         ${term("CHEMICAL MESSENGER","A chemical released in one place that carries information to another cell.")}
+         <p>Now we can build the longer word <strong>neurotransmitter</strong>.</p>`)}
+
+      ${step(9,"Build the word NEUROTRANSMITTER.",
+        `${term("NEURO-","A word part meaning nerve or nervous system.")}
+         ${term("TRANSMIT","To send or carry something from one place to another.")}
+         ${term("TRANSMITTER","Something that sends or carries a signal.")}
+         ${term("NEUROTRANSMITTER","A chemical messenger released by a nerve cell to carry a signal to another cell.")}
+         ${chain(["neuro- · nerve","transmit · send across","-er · thing that does it","neurotransmitter · a chemical signal sent by a nerve cell"])}`)}
+
+      ${step(10,"Now take apart ACETYLCHOLINE. First: acetyl.",
+        `<p><strong>Acetylcholine</strong> looks like one long block. Break it into two pieces:</p>
          <div class="phenobarbital-word"><span>ACETYL</span><b>|</b><span>CHOLINE</span></div>
+         ${term("VINEGAR","A sour liquid whose characteristic acid is acetic acid.")}
+         ${term("ACETIC ACID","The acid responsible for much of vinegar's sour taste and smell.")}
+         ${term("ACETIC","A chemical word historically connected with vinegar. It ultimately comes from Latin <em>acetum</em>, meaning vinegar.")}
+         ${term("ACETYL","A small group of atoms that can be attached to a larger molecule. Its name belongs to the same chemical naming family as <em>acetic</em>.")}
+         ${chain(["vinegar","acetic acid","acetic","acetyl"])}`)}
 
-         ${term("ACETIC","A chemical word historically connected with vinegar. It comes ultimately from Latin <em>acetum</em>, meaning vinegar. Acetic acid is the acid that gives vinegar much of its sour taste and smell.")}
-         ${term("ACETYL","A particular small group of atoms used as a building piece inside larger molecules. Its name belongs to the same chemical naming family as <strong>acetic</strong> and therefore ultimately carries the old vinegar connection.")}
-         ${term("BILE","A yellow-green digestive fluid made by the liver and stored in the gallbladder. It helps the body handle fats in food.")}
+      ${step(11,"Now learn the second half: choline.",
+        `${term("LIVER","A large organ in the abdomen that performs many chemical jobs for the body.")}
+         ${term("GALLBLADDER","A small organ that stores bile made by the liver.")}
+         ${term("BILE","A yellow-green digestive fluid made by the liver and stored in the gallbladder.")}
          ${term("CHOLĒ","The Greek word for bile.")}
-         ${term("CHOLINE","A chemical first named from its connection with bile. The name comes from Greek <em>cholē</em>, 'bile.' Choline is also an important chemical used by the body and is a building piece of acetylcholine.")}
+         ${term("CHOLINE","A chemical whose name comes from Greek <em>cholē</em>, meaning bile. Choline is used by the body and is one of the building pieces of acetylcholine.")}
+         ${chain(["cholē · Greek for bile","choline · a chemical named from that root"])}`)}
 
-         ${chain(["acetyl · a small chemical group","choline · a chemical whose name comes from Greek for bile","acetyl + choline","acetylcholine"])}
-         <p><strong>Why the name?</strong> Chemically, acetylcholine is made from <strong>choline</strong> with an <strong>acetyl group</strong> attached. The name tells you exactly those two pieces.</p>`)}
+      ${step(12,"Put ACETYL and CHOLINE together.",
+        `${chain(["acetyl · one chemical piece","choline · another chemical piece","acetyl + choline","acetylcholine"])}
+         ${term("ACETYLCHOLINE","A chemical made from choline with an acetyl group attached. It also serves as a neurotransmitter in the body.")}
+         <p>The name tells you something about the molecule's <strong>chemical construction</strong>. The word <strong>neurotransmitter</strong> tells you one of its <strong>jobs</strong>.</p>`)}
 
-      ${step(5,"What does acetylcholine actually do?",
-        `${term("ACETYLCHOLINE","A neurotransmitter—a chemical messenger released by nerve cells. It carries signals in the brain and in many nerves throughout the body, including nerves controlling muscles and many automatic organ functions.")}
-         ${term("AUTOMATIC ORGAN FUNCTION","A body function that normally operates without conscious command, such as changes in heart activity, digestion, gland secretion, or pupil size.")}
-         <p>So the word has both a <strong>chemical history</strong> and a <strong>job</strong>: acetyl + choline describes what the molecule is made from; neurotransmitter describes what the molecule does in the nervous system.</p>`)}
+      ${step(13,"Where does acetylcholine work?",
+        `${term("BRAIN","The organ inside the skull that is central to thought, memory, sensation, movement, and many body controls.")}
+         ${term("MUSCLE","Body tissue that contracts and produces movement.")}
+         ${term("GLAND","A body structure that makes and releases a substance, such as saliva or sweat.")}
+         ${term("AUTOMATIC","Happening without a person having to consciously command it.")}
+         ${term("AUTOMATIC ORGAN FUNCTION","A body function that normally operates without conscious command, such as digestion, gland secretion, or changes in pupil size.")}
+         <p>Acetylcholine carries signals in the brain and in many nerves throughout the body. It is involved in <strong>muscles</strong>, <strong>glands</strong>, and many <strong>automatic organ functions</strong>.</p>`)}
 
-      ${step(6,"What is a receptor?",
-        `${term("RECEPTOR","A protein on or in a cell that responds to a particular chemical signal.")}
-         <p>Think of acetylcholine as a chemical message. A receptor is part of the receiving machinery that can recognize that message and cause the cell to respond.</p>
-         ${chain(["nerve cell releases acetylcholine","acetylcholine reaches another cell","receptor recognizes the signal","the receiving cell changes what it is doing"])}`)}
+      ${step(14,"What is a receptor? Start with receiving.",
+        `${term("RECEIVE","To take in or accept something that has been sent.")}
+         ${term("RECEPTOR","A part of a cell, usually a protein, that recognizes a particular chemical signal and helps the cell respond to it.")}
+         ${term("PROTEIN","A large biological molecule built from smaller units called amino acids. Proteins perform many jobs in cells.")}
+         <p>The important idea is simple: <strong>the messenger is sent; the receptor receives the message.</strong></p>
+         ${chain(["nerve cell releases acetylcholine","acetylcholine travels a tiny distance","acetylcholine reaches a receptor","the receptor responds","the receiving cell changes what it is doing"])}`)}
 
-      ${step(7,"Now take apart CHOLINERGIC and ANTICHOLINERGIC.",
-        `${term("CHOLIN-","The word part pointing back to <strong>choline</strong> and, in this context, to acetylcholine signaling.")}
-         ${term("-ERGIC","A scientific ending connected with the idea of working or acting. It comes ultimately from Greek <em>ergon</em>, 'work.'")}
-         ${term("CHOLINERGIC","Working through, activated by, releasing, or otherwise involving acetylcholine.")}
-         ${term("ANTI-","Against, opposing, or blocking.")}
-         ${term("ANTICHOLINERGIC","A drug that blocks some effects of acetylcholine.")}
-         ${chain(["anti- · against/blocking","cholin- · acetylcholine/choline","-ergic · working or acting","anticholinergic · blocking acetylcholine-related action"])}
-         <p>That is why 1950s books could call scopolamine an <strong>anticholinergic</strong>: it blocked some actions produced by acetylcholine.</p>`)}
+      ${step(15,"Now build CHOLINERGIC.",
+        `${term("CHOLIN-","A word part pointing back to choline and, in this setting, acetylcholine.")}
+         ${term("-ERGIC","A scientific ending connected with working or acting. It comes from Greek <em>ergon</em>, meaning work.")}
+         ${term("CHOLINERGIC","Working through, releasing, responding to, or otherwise involving acetylcholine.")}
+         ${chain(["cholin- · acetylcholine/choline","-ergic · working or acting","cholinergic · involving acetylcholine action"])}`)}
 
-      ${step(8,"Why does the more precise word MUSCARINIC involve a mushroom?",
-        `${term("MUSCARINE","A poisonous chemical first isolated from the mushroom <em>Amanita muscaria</em>, the fly agaric.")}
-         ${term("MUSCA","Latin for <strong>fly</strong>. The mushroom name <em>muscaria</em> is connected with flies; fly agaric was historically associated with use against flies.")}
-         ${term("MUSCARINIC RECEPTOR","A receptor for acetylcholine that was named 'muscarinic' because the mushroom chemical muscarine can activate this type of receptor.")}
-         ${term("ANTI-","Against or blocking.")}
-         ${term("ANTIMUSCARINIC","Blocking acetylcholine at muscarinic receptors.")}
-         ${chain(["musca · fly","muscaria · the fly-agaric mushroom","muscarine · chemical named from the mushroom","muscarinic · responding like the muscarine-sensitive receptor","antimuscarinic · blocking that receptor system"])}
-         <p><strong>Scopolamine is antimuscarinic.</strong> This is a more precise statement than the broader word <em>anticholinergic</em>.</p>`)}
+      ${step(16,"Now add ANTI-.",
+        `${term("ANTI-","Against, opposing, or blocking.")}
+         ${term("ANTICHOLINERGIC","Blocking some actions of acetylcholine.")}
+         ${chain(["anti- · blocking","cholin- · acetylcholine","-ergic · action","anticholinergic · blocking acetylcholine-related action"])}
+         <p>Scopolamine was described as <strong>anticholinergic</strong> because it blocks some acetylcholine signaling.</p>`)}
 
-      ${step(9,"Why can blocking that system widen the pupil?",
+      ${step(17,"But acetylcholine has more than one receptor type.",
+        `<p>This is the next important baby step: <strong>acetylcholine does not act through only one kind of receptor.</strong></p>
+         ${term("RECEPTOR TYPE","A particular kind of receptor. Different receptor types can respond to the same messenger in different places or in different ways.")}
+         <p>Scopolamine does not simply block every acetylcholine receptor. Its main action is at the receptor type called <strong>muscarinic</strong>.</p>`)}
+
+      ${step(18,"Why is the word MUSCARINIC connected to a mushroom?",
+        `${term("MUSHROOM","The visible reproductive structure made by certain fungi.")}
+         ${term("AMANITA MUSCARIA","The scientific name of the fly-agaric mushroom, recognizable for its red cap with pale spots.")}
+         ${term("MUSCA","Latin for <strong>fly</strong>.")}
+         ${term("MUSCARINE","A poisonous chemical named from the fly-agaric mushroom.")}
+         ${term("MUSCARINIC","A name given to one acetylcholine receptor family because the chemical muscarine activates receptors of this type.")}
+         ${chain(["musca · fly","Amanita muscaria · fly agaric","muscarine · mushroom-related chemical","muscarinic receptor · receptor type activated by muscarine"])}`)}
+
+      ${step(19,"Now build ANTIMUSCARINIC.",
+        `${term("ANTIMUSCARINIC","Blocking the muscarinic type of acetylcholine receptor.")}
+         ${chain(["anti- · blocking","muscarinic · the receptor type","antimuscarinic · blocking that receptor type"])}
+         <p><strong>Scopolamine is antimuscarinic.</strong></p>
+         <p>This is more precise than merely saying <strong>anticholinergic</strong>: it tells you which acetylcholine receptor family is being blocked.</p>`)}
+
+      ${step(20,"How does blocking a receptor change the body?",
+        `<p>A receptor is part of a signaling pathway. If a drug occupies or blocks that receptor, the usual chemical message has less effect.</p>
+         ${chain(["acetylcholine carries a message","muscarinic receptor normally receives it","scopolamine blocks that receptor","the message has less effect","the organ behaves differently"])}
+         <p>This one chain explains why the same drug can affect the <strong>mouth</strong>, <strong>eye</strong>, <strong>stomach</strong>, <strong>brain</strong>, and other organs.</p>`)}
+
+      ${step(21,"Example one: why secretions decrease.",
+        `${term("SALIVA","The watery fluid made by glands in the mouth.")}
+         ${term("SALIVARY GLAND","A gland that makes saliva.")}
+         <p>Acetylcholine acting at muscarinic receptors helps stimulate several body secretions.</p>
+         ${chain(["acetylcholine signal","muscarinic receptor on a gland","gland releases secretion","scopolamine blocks the receptor","less secretion"])}
+         <p>That is why scopolamine could be used before anesthesia to reduce saliva and other secretions.</p>`)}
+
+      ${step(22,"Example two: why the pupil widens.",
         `${term("PUPIL","The dark opening in the center of the eye that lets light enter.")}
+         ${term("IRIS","The colored ring of the eye surrounding the pupil.")}
          ${term("DILATE","To become wider or larger.")}
          ${term("MYDRIASIS","The medical word for widening of the pupil.")}
-         ${term("FOCUSING","Changing the eye's optical power so near or distant objects can appear sharp.")}
-         ${term("CYCLOPLEGIA","Temporary paralysis of the eye's focusing mechanism.")}
-         ${term("OPHTHALMIC","Having to do with the eye.")}
-         <p>Acetylcholine normally participates in controlling muscles inside the eye. Blocking muscarinic acetylcholine signals can therefore widen the pupil and interfere with focusing.</p>
-         <p>That produces <strong>mydriasis</strong> and <strong>cycloplegia</strong>. This is the pupil-dilator use you were remembering.</p>`)}
+         <p>Muscles in the iris help control pupil size. Acetylcholine normally helps one of those muscle systems make the pupil smaller.</p>
+         ${chain(["acetylcholine signal","muscarinic receptor in the eye","pupil-constricting action","scopolamine blocks the signal","pupil becomes wider"])}
+         <p>The result is called <strong>mydriasis</strong>.</p>`)}
 
-      ${step(10,"Why can the same drug cause drowsiness and memory problems?",
-        `${term("SEDATION","Reduced alertness or responsiveness.")}
+      ${step(23,"Example three: why focusing can be affected.",
+        `${term("FOCUS","To adjust the eye so an image becomes sharp.")}
+         ${term("LENS","A clear structure inside the eye that changes shape to help focus light.")}
+         ${term("CILIARY MUSCLE","A small muscle inside the eye that helps change the shape of the lens for focusing.")}
+         ${term("PARALYSIS","Loss of the ability of a muscle to move or act normally.")}
+         ${term("CYCLOPLEGIA","Temporary paralysis of the eye's focusing mechanism.")}
+         ${chain(["muscarinic signal helps control focusing","scopolamine blocks the signal","ciliary muscle cannot perform its normal focusing action","near focusing is impaired","cycloplegia"])}`)}
+
+      ${step(24,"Example four: why motion sickness improves.",
+        `${term("INNER EAR","The deepest part of the ear. It contains structures involved in hearing and balance.")}
+         ${term("BALANCE SYSTEM","The inner-ear system that detects head movement and helps the brain know how the body is moving.")}
+         ${term("NAUSEA","The unpleasant feeling that you are about to vomit.")}
+         <p>Motion sickness involves signals from the balance system and the brain. Muscarinic acetylcholine signaling is part of the pathway.</p>
+         ${chain(["movement","inner-ear balance signals","brain pathways involved in nausea","scopolamine blocks part of the muscarinic signaling","motion-sickness symptoms are reduced"])}`)}
+
+      ${step(25,"How does a body drug affect the brain?",
+        `${term("BLOOD","The fluid that circulates through blood vessels and carries oxygen, nutrients, drugs, and many other substances.")}
+         ${term("BLOOD-BRAIN BARRIER","A protective filtering system formed by cells around brain blood vessels. It limits which substances move easily from the blood into brain tissue.")}
+         <p>Scopolamine is able to enter the brain. Once there, it can block muscarinic acetylcholine signaling in brain circuits as well as in organs outside the brain.</p>`)}
+
+      ${step(26,"Why can it cause drowsiness, confusion, and memory problems?",
+        `${term("ALERTNESS","The state of being awake and ready to notice or respond.")}
+         ${term("SEDATION","Reduced alertness or responsiveness.")}
+         ${term("CONFUSION","Difficulty thinking clearly, understanding what is happening, or keeping information organized.")}
          ${term("AMNESIA","Loss of memory for some events or information.")}
          ${term("AMNESTIC","Producing or contributing to amnesia.")}
-         <p>Scopolamine can enter the brain, where acetylcholine participates in attention, memory, and other functions. Blocking some of that signaling can produce drowsiness, sedation, confusion, and impaired memory.</p>`)}
+         <p>Acetylcholine participates in brain systems involved in attention and memory. Blocking muscarinic signaling there can reduce alertness and interfere with memory.</p>
+         ${chain(["scopolamine enters brain","muscarinic receptors are blocked","acetylcholine signaling is reduced","attention or memory is disturbed","drowsiness, confusion, or amnesia can result"])}`)}
 
-      ${step(11,"The older history behind its reputation.",
+      ${step(27,"What was 'twilight sleep'?",
         `${term("MORPHINE","A powerful pain-relieving drug in the opioid family.")}
-         ${term("TWILIGHT SLEEP","An early-20th-century childbirth practice combining scopolamine with morphine in an attempt to reduce pain and especially memory of labor.")}
-         ${term("TRUTH SERUM","A popular historical label for drugs claimed to make a person reveal truthful information while sedated or mentally altered.")}
-         <p>Both “twilight sleep” and early “truth serum” stories contributed to scopolamine's reputation before and around mid-century.</p>
-         <p><strong>The name 'truth serum' does not mean the drug reliably produces truth.</strong> Confusion, suggestion, memory errors, and invented statements can occur.</p>`)}
+         ${term("OPIOID","A family of drugs related by their effects at opioid receptors, especially pain relief.")}
+         ${term("TWILIGHT SLEEP","An early-20th-century childbirth practice using scopolamine together with morphine. The aim included reducing pain and especially reducing memory of labor.")}
+         <p>The phrase <strong>twilight sleep</strong> did not mean ordinary natural sleep. It referred to a drug-produced state involving sedation and memory impairment.</p>`)}
 
-      ${step(12,"What can happen when the drug effect becomes toxic?",
-        `${term("TOXIC","Harmful or poisonous to the body.")}
+      ${step(28,"What did 'truth serum' mean?",
+        `${term("SERUM","In medicine, serum usually means the clear liquid portion of blood after clotting. In the phrase <em>truth serum</em>, the word was used loosely as a dramatic label for a drug.")}
+         ${term("TRUTH SERUM","A popular historical label for drugs claimed to make a person reveal truthful information while sedated or mentally altered.")}
+         <p>Scopolamine became associated with this idea because it can alter attention, memory, and judgment.</p>
+         <p><strong>The drug does not reliably force truth.</strong> A confused or suggestible person can also give incorrect, distorted, or invented statements.</p>`)}
+
+      ${step(29,"What happens when the effect becomes toxic?",
+        `${term("DOSE","The amount of a drug given or taken.")}
+         ${term("TOXIC","Harmful or poisonous to the body.")}
          ${term("DELIRIUM","A sudden confused state with disturbed attention and awareness.")}
          ${term("HALLUCINATION","A perception-like experience without the corresponding outside source being present.")}
+         ${term("AGITATION","A state of marked restlessness or disturbed activity.")}
          ${term("PARANOIA","Strong suspiciousness or fear of harmful intentions not adequately supported by evidence.")}
-         <p>At sufficiently high exposure, scopolamine can produce agitation, delirium, hallucinations, paranoia, and other severe changes in thought and behavior.</p>`)}
+         <p>At sufficiently high exposure, scopolamine's receptor-blocking effect can become toxic and produce severe mental and physical changes.</p>
+         ${chain(["too much antimuscarinic effect","normal signaling is disrupted too strongly","confusion and agitation increase","delirium, hallucinations, or paranoia can appear"])}`)}
 
-      ${step(13,"What changed after the 1950s?",
-        `${term("TRANSDERMAL","Delivered through the skin. <strong>Trans-</strong> means across; <strong>dermal</strong> means relating to skin.")}
-         ${term("MOTION SICKNESS","Nausea, dizziness, and related symptoms caused when information about movement from the eyes and balance organs does not agree well.")}
-         ${term("POSTOPERATIVE","Occurring after an operation. <strong>Post-</strong> means after; <strong>operative</strong> refers to surgery or an operation.")}
-         <p>The transdermal scopolamine patch made the drug especially familiar for preventing motion sickness and nausea and vomiting after surgery.</p>`)}
+      ${step(30,"What is a transdermal patch?",
+        `${term("TRANS-","Across or through.")}
+         ${term("DERMAL","Having to do with the skin.")}
+         ${term("TRANSDERMAL","Delivered through the skin.")}
+         ${term("PATCH","A small adhesive device placed on the skin to release a drug gradually.")}
+         ${chain(["trans- · across","dermal · skin","transdermal · through the skin"])}
+         <p>A scopolamine patch releases the drug through the skin over time.</p>`)}
 
-      ${step(14,"Why the eye warning still matters.",
-        `${term("GLAUCOMA","A group of eye diseases involving damage to the optic nerve, often associated with abnormal pressure inside the eye.")}
-         ${term("OPTIC NERVE","The nerve that carries visual information from the eye to the brain.")}
-         ${term("ANGLE-CLOSURE GLAUCOMA","A form of glaucoma in which the drainage angle inside the eye closes and eye pressure can rise rapidly.")}
-         <p>Because scopolamine can widen the pupil, it can be hazardous for a person susceptible to angle-closure glaucoma.</p>`)}
+      ${step(31,"Why is the patch used?",
+        `${term("PREVENT","To act before something happens so it is less likely to happen.")}
+         ${term("POST-","After.")}
+         ${term("OPERATIVE","Relating to an operation or surgery.")}
+         ${term("POSTOPERATIVE","Occurring after an operation.")}
+         ${term("POSTOPERATIVE NAUSEA","Nausea occurring after surgery or anesthesia.")}
+         <p>The transdermal patch became especially familiar for <strong>preventing motion sickness</strong> and for helping prevent <strong>nausea and vomiting after surgery</strong>.</p>`)}
 
-      ${step(15,"Now the long words should be readable.",
+      ${step(32,"Why the eye warning matters.",
+        `${term("OPTIC NERVE","The nerve carrying visual information from the eye to the brain.")}
+         ${term("EYE PRESSURE","Pressure created by fluid inside the eye.")}
+         ${term("DRAINAGE ANGLE","The part of the front of the eye through which internal eye fluid normally drains.")}
+         ${term("GLAUCOMA","A group of eye diseases involving damage to the optic nerve, commonly associated with abnormal eye pressure.")}
+         ${term("ANGLE-CLOSURE GLAUCOMA","A form of glaucoma in which the eye's drainage angle becomes blocked and pressure can rise rapidly.")}
+         <p>Because scopolamine can widen the pupil, it can create a problem in a person whose eye anatomy makes the drainage angle vulnerable to closing.</p>`)}
+
+      ${step(33,"Now rebuild the whole story from the beginning.",
         `<div class="history-summary-chain">
-          <div><b>scopolamine</b><span>Scopolia plant name + chemical ending; the plant genus honors Scopoli</span></div>
-          <div><b>acetylcholine</b><span>acetyl + choline; choline's name comes from Greek for bile</span></div>
-          <div><b>cholinergic</b><span>working through or involving acetylcholine</span></div>
-          <div><b>anticholinergic</b><span>blocking some acetylcholine effects</span></div>
-          <div><b>muscarinic</b><span>the acetylcholine receptor type named through muscarine and the fly-agaric mushroom</span></div>
-          <div><b>antimuscarinic</b><span>blocking that muscarinic receptor system</span></div>
+          <div><b>scopolamine</b><span>a drug whose name comes through the plant genus Scopolia, named for Scopoli</span></div>
+          <div><b>acetylcholine</b><span>a neurotransmitter: a chemical message used by nerve cells</span></div>
+          <div><b>receptor</b><span>part of a cell that receives a chemical signal</span></div>
+          <div><b>cholinergic</b><span>involving acetylcholine action</span></div>
+          <div><b>anticholinergic</b><span>blocking some acetylcholine action</span></div>
+          <div><b>muscarinic receptor</b><span>one receptor family used by acetylcholine</span></div>
+          <div><b>antimuscarinic</b><span>blocking that receptor family</span></div>
+          <div><b>scopolamine's main action</b><span>antimuscarinic receptor blockade</span></div>
+          <div><b>result</b><span>less muscarinic signaling in glands, eyes, motion-sickness pathways, and the brain</span></div>
+         </div>`)}
+
+      ${step(34,"The shortest memory version.",
+        `<div class="memory">
+           <strong>Scopolamine → blocks muscarinic acetylcholine receptors.</strong><br><br>
+           Less muscarinic signaling explains the major effects:<br>
+           <strong>less secretion · wider pupils · impaired near focusing · less motion sickness · drowsiness/memory effects.</strong>
          </div>`)}
 
       ${shift(
@@ -775,7 +905,6 @@
         '<a href="https://pubmed.ncbi.nlm.nih.gov/29741535/" target="_blank" rel="noopener">PubMed — muscarine, acetylcholine, and muscarinic receptor history</a>'
       ])}`;
   }
-
   function phenobarbitalBody(){
     return `
       <section class="entry-section period-anchor">
