@@ -267,7 +267,7 @@
       short:"The fight-or-flight side of the autonomic nervous system.",
       keywords:"sympathetic nervous system SNS fight flight stress heart pupils digestion",
       body:`${term("SYMPATHETIC NERVOUS SYSTEM","The autonomic division that mobilizes the body for demanding action—the classic fight-or-flight response.")}
-        <figure class="anatomy-diagram">
+        <figure class="anatomy-diagram anatomy-diagram-medium">
           <img src="assets/anatomy/sympathetic-nervous-system.webp" alt="Diagram of the sympathetic nervous system showing the brain and spinal cord, pupils widening, airways widening, heart rate rising, energy mobilization, and reduced digestion." loading="lazy">
           <figcaption>Sympathetic nervous system: the action-oriented, fight-or-flight division of the autonomic nervous system.</figcaption>
         </figure>
