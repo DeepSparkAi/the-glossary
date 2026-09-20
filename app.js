@@ -384,6 +384,12 @@ if(window.PSYCHIATRY_CONTENT?.entries){
 if(window.ANATOMY_CONTENT?.entries){
   entries.push(...window.ANATOMY_CONTENT.entries);
 }
+if(window.CATHOLICISM_CONTENT?.entries){
+  entries.push(...window.CATHOLICISM_CONTENT.entries);
+}
+if(window.FEDERAL_RESERVE_CONTENT?.entries){
+  entries.push(...window.FEDERAL_RESERVE_CONTENT.entries);
+}
 
 
 entries.push({
@@ -711,6 +717,20 @@ const sectionConfig = {
     emptyTitle: "Choose an anatomy topic.",
     emptyText: "Open a baby-step guide to brain anatomy, historical brain-surgery terms, or the autonomic nervous system.",
     searchPlaceholder: "Try “prefrontal cortex,” “leucotomy,” “white matter,” or “parasympathetic”…"
+  },
+  Catholicism: {
+    categories: ["All","Catholicism & Mass"],
+    indexTitle: "Catholicism Topics",
+    emptyTitle: "Choose a Catholicism topic.",
+    emptyText: "Open a baby-step guide to Catholicism, the Mass, church vocabulary, or a first visit.",
+    searchPlaceholder: "Try “Mass,” “Eucharist,” “Pope,” “altar,” or “Communion”…"
+  },
+  "Federal Reserve": {
+    categories: ["All","Monetary Policy"],
+    indexTitle: "Federal Reserve Topics",
+    emptyTitle: "Choose a Federal Reserve topic.",
+    emptyText: "Open a baby-step guide to money, bank reserves, interest rates, inflation, employment, or the Fed balance sheet.",
+    searchPlaceholder: "Try “IORB,” “inflation,” “reserves,” “QE,” or “federal funds”…"
   }
 };
 
@@ -721,6 +741,8 @@ const economicIsmCategories = new Set(["Economic Systems & Ideologies"]);
 const geographyCategories = new Set(["Political Geography","Cities & Maps"]);
 const psychiatryCategories = new Set(["Fields","Psychosis Terms","Sedation & Sleep Terms","Drug Terms & History"]);
 const anatomyCategories = new Set(["Brain","Historical Brain Surgery","Autonomic Nervous System"]);
+const catholicismCategories = new Set(["Catholicism & Mass"]);
+const federalReserveCategories = new Set(["Monetary Policy"]);
 
 const listEl = document.querySelector("#term-list");
 const panelEl = document.querySelector("#entry-panel");
@@ -746,6 +768,8 @@ function sectionForEntry(entry){
   if(geographyCategories.has(entry.category)) return "Geography";
   if(psychiatryCategories.has(entry.category)) return "Psychiatry Terms";
   if(anatomyCategories.has(entry.category)) return "Anatomy";
+  if(catholicismCategories.has(entry.category)) return "Catholicism";
+  if(federalReserveCategories.has(entry.category)) return "Federal Reserve";
   return "Glossary";
 }
 
@@ -1769,6 +1793,14 @@ function resetPanel(){
   }
   if(activeSection==="Anatomy"){
     panelEl.innerHTML=window.ANATOMY_CONTENT?.defaultBody || '<div class="empty-state"><h2>Anatomy</h2></div>';
+    return;
+  }
+  if(activeSection==="Catholicism"){
+    panelEl.innerHTML=window.CATHOLICISM_CONTENT?.defaultBody || '<div class="empty-state"><h2>Catholicism</h2></div>';
+    return;
+  }
+  if(activeSection==="Federal Reserve"){
+    panelEl.innerHTML=window.FEDERAL_RESERVE_CONTENT?.defaultBody || '<div class="empty-state"><h2>Federal Reserve</h2></div>';
     return;
   }
   panelEl.innerHTML=`
