@@ -22,7 +22,7 @@
            <div class="compare-card green"><h3>Stable prices</h3><p>The FOMC defines its longer-run inflation goal numerically: <strong>2%</strong>, measured with the PCE price index.</p></div>
            <div class="compare-card"><h3>Maximum employment</h3><p>There is <strong>no fixed unemployment-rate target</strong>. The sustainable maximum changes with the economy and is estimated from many labor-market indicators.</p></div>
          </div>
-         <div class="memory"><strong>Important correction:</strong> the rule is not “2% inflation and 4% unemployment.” The 2% number is an explicit goal. The Fed deliberately does not set a permanent unemployment percentage as the matching target.</div>`)}
+`)}
 
       ${step(4,"Inflation means a broad rise in prices, not one expensive item.",
         `${term("INFLATION","A sustained increase in the general level of prices, which means a dollar buys less than before.")}
