@@ -104,14 +104,45 @@
       <section class="entry-section"><h3>Definition</h3><p><strong>Schizophrenia</strong> is a psychiatric diagnosis involving persistent disturbances that can include delusions, hallucinations, disorganized speech or thought, disorganized or catatonic behavior, and so-called negative symptoms such as reduced emotional expression or motivation.</p></section>
       ${term("DELUSION","A fixed belief judged in clinical context to be false or not grounded in shared reality, and not simply an ordinary error or culturally shared belief.")}
       ${term("HALLUCINATION","A perception-like experience occurring without the corresponding external sensory stimulus.")}
+      <section class="entry-section"><h3>What does the word literally mean?</h3>
+        <p><strong>Schizophrenia</strong> was coined by Swiss psychiatrist Eugen Bleuler in 1908 from Greek-derived elements meaning roughly <strong>“splitting of the mind.”</strong></p>
+        <div class="flow"><span><strong>schizein</strong><br>to split</span><b>+</b><span><strong>phrēn / phrenos</strong><br>mind</span><b>→</b><span><strong>schizophrenia</strong><br>“splitting of the mind”</span></div>
+        <p>But Bleuler was not naming <strong>two separate personalities</strong>. He was describing what he regarded as a splitting, loosening, or disconnection among mental functions—especially associations, thought, emotion, and behavior.</p>
+      </section>
       ${shift(
-        "DSM-I (1952) called the category “schizophrenic reactions.” Definitions were broad and less operationalized, and U.S. clinicians often used schizophrenia more expansively for severe psychotic conditions than later manuals did. DSM-II (1968) dropped “reaction” but retained relatively brief descriptions.",
-        "DSM-III (1980) introduced more explicit criteria and narrowed U.S. diagnostic practice. DSM-5/DSM-5-TR no longer use the old paranoid, catatonic, disorganized, residual, and undifferentiated schizophrenia subtypes as separate diagnostic subtypes."
+        "DSM-I (1952) called the category “schizophrenic reactions.” Definitions were broad and less operationalized, and U.S. clinicians often used schizophrenia more expansively for severe psychotic conditions than later manuals did. At the same time, ordinary and professional English increasingly used “schizophrenic” metaphorically for something split, contradictory, divided, or 'of two minds.' That usage helped create the familiar 'split personality' association.",
+        "DSM-III (1980) introduced more explicit criteria and narrowed U.S. diagnostic practice. Current diagnostic usage does not define schizophrenia as multiple personality or as literally having two minds. DSM-5/DSM-5-TR also dropped the older paranoid, catatonic, disorganized, residual, and undifferentiated subtypes as separate diagnostic subtypes."
       )}
-      <section class="entry-section"><h3>A common misunderstanding</h3><p><strong>Schizophrenia does not mean “split personality.”</strong> The name was coined by Eugen Bleuler from Greek roots meaning roughly “split” and “mind,” referring to what he saw as splitting or disconnection among mental functions, not multiple personalities.</p></section>
+      <section class="entry-section"><h3>So was “split personality” ever part of the word's history?</h3>
+        <p><strong>Yes, as an informal and metaphorical interpretation.</strong> By the mid-20th century, English speakers—including some professional writers—were using <em>schizophrenic</em> to mean divided, contradictory, or split in personality. That usage is historically real.</p>
+        <p><strong>But it is not the modern diagnostic meaning.</strong> A condition involving distinct identity states is classified separately under <strong>dissociative identity disorder</strong>.</p>
+      </section>
+      ${sourceBox([
+        '<a href="https://dictionary.apa.org/schizophrenia" target="_blank" rel="noopener">APA Dictionary — schizophrenia and Bleuler\'s “splitting of the mind”</a>',
+        '<a href="https://pubmed.ncbi.nlm.nih.gov/17205539/" target="_blank" rel="noopener">Journal of the History of the Behavioral Sciences — the “split personality” usage</a>',
+        '<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3080676/" target="_blank" rel="noopener">PMC — Bleuler and the original concept of splitting</a>'
+      ])}`;
+  }
+
+  function schizophrenicBody(){
+    return `
+      <section class="entry-section"><h3>Definition</h3><p><strong>Schizophrenic</strong> is the adjective meaning <strong>of, relating to, or characterized by schizophrenia</strong>.</p></section>
+      <div class="definition-grid">
+        <div class="definition-card"><h3>schizophrenic symptoms</h3><p>Symptoms occurring in schizophrenia.</p></div>
+        <div class="definition-card"><h3>schizophrenic disorder</h3><p>An older style of phrasing for a disorder in the schizophrenia group.</p></div>
+      </div>
+      ${shift(
+        "Mid-century writing commonly used “schizophrenic” both as an adjective and as a noun for a person. Outside strict diagnosis, it also acquired a figurative meaning: divided, internally contradictory, 'of two minds,' or having a 'split personality.' That figurative sense is documented by the 1950s.",
+        "Current clinical writing generally uses “schizophrenic” as an adjective, if at all, and more often says “a person with schizophrenia” rather than using the noun 'a schizophrenic.' The figurative sense 'split personality' survives in ordinary language but is not the diagnostic definition."
+      )}
+      <section class="entry-section"><h3>Why “of two minds” feels plausible</h3>
+        <p>The literal roots really do point toward <strong>split + mind</strong>, and older English usage extended that idea metaphorically to <strong>divided, contradictory, or of two minds</strong>.</p>
+        <p>What does <strong>not</strong> follow is that schizophrenia medically means a person has two separate personalities. That is a later popular interpretation of the word, not the current diagnostic concept.</p>
+      </section>
       ${sourceBox([
         '<a href="https://dictionary.apa.org/schizophrenia" target="_blank" rel="noopener">APA Dictionary — schizophrenia</a>',
-        '<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3181662/" target="_blank" rel="noopener">NCBI — evolution of diagnostic criteria in psychoses</a>'
+        '<a href="https://www.etymonline.com/word/schizophrenic" target="_blank" rel="noopener">Etymonline — schizophrenic, including the 1950s figurative sense</a>',
+        '<a href="https://pubmed.ncbi.nlm.nih.gov/17205539/" target="_blank" rel="noopener">PubMed — history of the split-personality interpretation</a>'
       ])}`;
   }
 
@@ -414,7 +445,8 @@
     {slug:"psychiatry",title:"Psychiatry",category:"Fields",short:"The medical specialty concerned with mental and behavioral disorders, with a major shift in U.S. practice since the mid-20th century.",keywords:"psychiatry psychiatrist mid century psychoanalysis DSM medical specialty",body:psychiatryBody()},
     {slug:"psychology",title:"Psychology",category:"Fields",short:"The systematic study of behavior and mental processes, with academic and professional branches.",keywords:"psychology psychologist behavior cognition mid century behaviorism psychoanalysis",body:psychologyBody()},
     {slug:"sociology",title:"Sociology",category:"Fields",short:"The systematic study of social groups, institutions, relationships, and societies.",keywords:"sociology society institutions social science mid century structural functionalism",body:sociologyBody()},
-    {slug:"schizophrenia",title:"Schizophrenia",category:"Psychosis Terms",short:"A specific psychiatric diagnosis involving persistent disturbances that can include psychotic symptoms.",keywords:"schizophrenia schizophrenic reaction DSM I DSM II psychosis hallucination delusion",body:schizophreniaBody()},
+    {slug:"schizophrenia",title:"Schizophrenia",category:"Psychosis Terms",short:"A specific psychiatric diagnosis involving persistent disturbances that can include psychotic symptoms.",keywords:"schizophrenia schizophrenic reaction split mind split personality two minds DSM I DSM II psychosis hallucination delusion",body:schizophreniaBody()},
+    {slug:"schizophrenic",title:"Schizophrenic",category:"Psychosis Terms",short:"The adjective derived from schizophrenia; historically it also acquired figurative 'divided' or 'of two minds' meanings.",keywords:"schizophrenic adjective split mind split personality two minds divided contradictory mid century",body:schizophrenicBody()},
     {slug:"psychosis",title:"Psychosis",category:"Psychosis Terms",short:"A state or syndrome involving substantial impairment in reality testing.",keywords:"psychosis reality testing hallucination delusion psychotic mid century neurosis",body:psychosisBody()},
     {slug:"psychotic",title:"Psychotic",category:"Psychosis Terms",short:"The adjective for something involving psychosis; not a synonym for schizophrenia or violence.",keywords:"psychotic adjective psychosis schizophrenia mid century terminology",body:psychoticBody()},
     {slug:"sedative",title:"Sedative",category:"Sedation & Sleep Terms",short:"A drug or substance that reduces nervous-system activity or arousal; sleep is not required.",keywords:"sedative sedation calming drowsiness barbiturate hypnotic",body:sedativeBody()},
