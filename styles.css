@@ -1494,3 +1494,27 @@ footer{
   .time-shift-grid{grid-template-columns:1fr}
   .spelling-strip span{width:30px;height:34px}
 }
+
+
+/* Anatomy diagrams */
+.anatomy-diagram{
+  margin:18px 0 22px;
+  padding:10px;
+  background:#f7f0df;
+  border:1px solid #d2c09f;
+  border-radius:7px;
+  box-shadow:0 6px 18px rgba(55,38,23,.09);
+}
+.anatomy-diagram img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:4px;
+}
+.anatomy-diagram figcaption{
+  margin-top:8px;
+  color:var(--muted);
+  font-size:.88rem;
+  line-height:1.45;
+  text-align:center;
+}
