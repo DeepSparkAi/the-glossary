@@ -5,7 +5,7 @@
   const esc = (s) => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[c]));
   const step = (n,title,body) => `<section class="primer-step"><div class="primer-step-number">Step ${String(n).padStart(2,"0")}</div><h3>${title}</h3><div class="primer-step-body">${body}</div></section>`;
   const term = (word,text) => `<div class="primer-term"><p class="primer-label">A new word</p><h3>${word}</h3><p>${text}</p></div>`;
-  const shift = (mid,now) => `<div class="time-shift-grid"><div class="time-shift-card"><p class="time-label">Mid-century use · roughly 1945–1970</p><p>${mid}</p></div><div class="time-shift-card"><p class="time-label">Current use</p><p>${now}</p></div></div>`;
+  const shift = (mid,now) => `<div class="time-shift-grid"><div class="time-shift-card"><p class="time-label">1950s meaning / use</p><p>${mid}</p></div><div class="time-shift-card"><p class="time-label">What changed later</p><p>${now}</p></div></div>`;
   const chain = (items) => `<div class="primer-chain">${items.map((x,i)=>`${i?"<b>→</b>":""}<span>${x}</span>`).join("")}</div>`;
   const sourceBox = (links) => `<section class="entry-section history-sources"><h3>Sources and further reading</h3><p>${links.join("<br>")}</p></section>`;
 
@@ -13,571 +13,508 @@
     return `
       <div class="entry-inner primer">
         <header class="primer-hero">
-          <p class="kicker">Start here · baby steps</p>
+          <p class="kicker">1950s first · baby steps</p>
           <h2>Psychiatry terms</h2>
-          <p class="lede">Start with ordinary meanings. Add the technical names only after the underlying idea is clear.</p>
-          <div class="primer-chain"><span>fields</span><b>→</b><span>symptoms</span><b>→</b><span>diagnoses</span><b>→</b><span>sleep words</span><b>→</b><span>drug history</span></div>
+          <p class="lede">This cabinet starts with what each word meant in professional use in the 1950s. Only after that does it explain how the meaning, diagnostic system, or usual drug use changed.</p>
+          <div class="primer-chain"><span>1950s meaning</span><b>→</b><span>define every word</span><b>→</b><span>later change</span><b>→</b><span>current usage</span></div>
         </header>
 
-        ${step(1,"Four basic words before we begin.",
-          `${term("FIELD","An area of study or professional work.")}
-           ${term("SYMPTOM","Something a person experiences or shows that may indicate a condition—for example, pain, confusion, or hearing a voice that is not coming from an outside speaker.")}
-           ${term("DIAGNOSIS","A name a clinician gives to a condition after deciding that a defined set of features is present.")}
-           ${term("DISORDER","A medical or psychological category used for a pattern of symptoms or impairment. The word is a classification term; by itself it does not explain the cause.")}`)}
+        ${step(1,"Why start in the 1950s?",
+          `<p>Words in psychiatry and psychology did not always mean exactly what they mean today. A modern definition can therefore hide what an older book, doctor, movie, newspaper, or conversation meant by the same word.</p>
+           ${term("MID-CENTURY","Here, the period centered on the 1950s—especially about 1950 through 1959.")}
+           ${term("USAGE","The way a word is actually used and understood in a particular time and setting.")}
+           <div class="memory"><strong>Rule for this section:</strong> 1950s meaning first. Later changes second.</div>`)}
 
-        ${step(2,"Now separate the three fields.",
-          `${term("PSYCHIATRY","A branch of medicine dealing with mental and behavioral disorders. A psychiatrist is a physician—a medical doctor—who works in this specialty.")}
-           ${term("PSYCHOLOGY","The study of behavior and mental processes. A mental process is something the mind does, such as remembering, perceiving, deciding, or paying attention.")}
-           ${term("SOCIOLOGY","The study of people in groups and societies: families, institutions, organizations, social relationships, and large social patterns.")}
-           ${term("SOCIAL INSTITUTION","A durable organized part of social life, such as family, education, law, religion, government, or markets.")}
-           <p>The three fields can examine some of the same people or behavior, but they approach them from different traditions.</p>`)}
+        ${step(2,"Three fields as a 1950s reader would meet them.",
+          `${term("PSYCHIATRY — 1950s","A branch of medicine dealing with mental illness and serious disturbances of thought, emotion, and behavior. Psychiatrists were medical doctors. U.S. psychiatry of the period was strongly influenced by psychoanalytic and psychodynamic ideas.")}
+           ${term("PSYCHOLOGY — 1950s","The scientific study of behavior and mental life. In American academic psychology, observable behavior, learning, testing, and measurement were especially prominent.")}
+           ${term("SOCIOLOGY — 1950s","The study of society, social groups, institutions, roles, and relationships among people.")}
+           <p>The basic field names survive, but the theories and methods emphasized inside each field changed considerably afterward.</p>`)}
 
-        ${step(3,"Psychosis first, then schizophrenia.",
-          `<p>Before using the word <strong>psychosis</strong>, start with a simpler idea: a person can have serious difficulty deciding whether an experience, perception, or belief matches the shared outside world.</p>
-           ${term("REALITY TESTING","The ability to compare what you think or perceive with outside evidence and with what other people can observe.")}
-           ${term("DELUSION","A firmly held belief that remains fixed despite strong evidence against it, judged in the person's cultural and clinical context.")}
-           ${term("HALLUCINATION","A perception-like experience—such as hearing a voice or seeing an image—without the corresponding outside source being present.")}
-           ${term("PSYCHOSIS","A condition or state in which reality testing is seriously disturbed. Delusions, hallucinations, or severely disorganized thought or behavior may occur.")}
-           ${term("PSYCHOTIC","The adjective form: involving psychosis.")}
-           ${term("SCHIZOPHRENIA","A specific psychiatric diagnosis in which psychotic symptoms can occur, together with other changes in thinking, behavior, motivation, or emotional expression.")}
-           <div class="memory"><strong>Psychosis is not the same thing as schizophrenia.</strong> Psychosis is a type of disturbance. Schizophrenia is one diagnosis in which that disturbance may occur.</div>`)}
+        ${step(3,"Psychosis and schizophrenia in 1950s American psychiatry.",
+          `${term("REALITY TESTING","The ability to judge whether an idea or perception matches outside reality.")}
+           ${term("PSYCHOSIS — 1950s","A broad category for severe mental disturbance marked especially by major failure of reality testing, serious disruption of personality functioning, and difficulty relating effectively to people or work.")}
+           ${term("PSYCHOTIC — 1950s","Describing a person, symptom, reaction, or disorder classed as psychotic. Older writing also used the noun 'a psychotic' for a person.")}
+           ${term("SCHIZOPHRENIC REACTION — 1950s","DSM-I's 1952 name for a group of psychotic reactions involving major disturbances in a person's relationship to reality, thought and concept formation, emotion, and behavior.")}
+           <p>The modern words <strong>psychosis</strong>, <strong>psychotic</strong>, and <strong>schizophrenia</strong> remain, but the diagnostic framework changed substantially after the 1950s.</p>`)}
 
-        ${step(4,"Now separate the sleep-and-calming words.",
-          `${term("NERVOUS SYSTEM","The brain, spinal cord, and nerves—the body's information and control network.")}
-           ${term("SEDATIVE","A drug or substance that reduces alertness, agitation, or nervous-system activity. It may cause drowsiness, but it does not have to produce sleep.")}
-           ${term("SOPORIFIC","Something that tends to produce sleep or strong drowsiness. In ordinary speech it can also mean extremely boring.")}
-           ${term("HYPNOTIC DRUG","In medicine, a drug used to produce or maintain sleep.")}
-           ${term("HYPNOSIS","A procedure involving focused attention and responsiveness to suggestion.")}
-           ${term("SUGGESTION","A communication intended to influence an experience, perception, thought, feeling, or action.")}
-           <p><strong>Hypnotic</strong> therefore has two different uses: <em>sleep-producing</em> when talking about a drug, and <em>related to hypnosis</em> when talking about suggestion or attention.</p>`)}
+        ${step(4,"Sedative, soporific, and hypnotic in the 1950s.",
+          `${term("SEDATIVE — 1950s","A drug used to calm, reduce nervous excitement, or produce drowsiness.")}
+           ${term("SOPORIFIC — 1950s","Something that produces sleep or strong sleepiness.")}
+           ${term("HYPNOTIC DRUG — 1950s","A drug used to cause sleep. Barbiturates were among the main drugs meant by this word.")}
+           ${term("HYPNOSIS — 1950s","A condition or procedure commonly described in terms of trance, focused attention, and increased responsiveness to suggestion. Theories of what caused it differed.")}
+           <p>These words overlapped, but they were not identical: a <strong>sedative</strong> could calm without causing sleep; a <strong>hypnotic</strong> was specifically sleep-producing.</p>`)}
 
-        ${step(5,"Two very different drug histories.",
-          `<p><strong>Scopolamine</strong> and <strong>barbiturates</strong> can both cause drowsiness, but they belong to different drug families and work in different ways.</p>
-           ${term("SCOPOLAMINE","A drug, also called hyoscine, that blocks some effects of the chemical messenger acetylcholine. It has been used for motion sickness, before anesthesia, and historically for pupil dilation and sedative or memory-impairing effects.")}
-           ${term("ACETYLCHOLINE","A chemical messenger used by nerve cells to send certain signals.")}
-           ${term("BARBITURATE","A member of an older drug family that slows activity in the brain and nervous system. Depending on the drug and amount, barbiturates have been used for calming, sleep, seizure control, or anesthesia.")}
-           <p>The shared effect—drowsiness—does <strong>not</strong> mean the two drug families are chemically or pharmacologically the same.</p>
+        ${step(5,"Two drug histories as a 1950s reader would recognize them.",
+          `${term("SCOPOLAMINE — 1950s","A drug also called hyoscine, used for effects such as reducing secretions, preanesthetic medication, motion-sickness control, pupil dilation, and sedation or memory impairment.")}
+           ${term("BARBITURATE — 1950s","A major class of sedative and hypnotic drugs. Different barbiturates were also used for seizures and anesthesia.")}
+           <p>They could both cause drowsiness, but they were different chemical families and worked differently.</p>
            <button type="button" class="primer-open-link" onclick="openEntry('scopolamine-primer')">Open the Scopolamine primer →</button>
            <button type="button" class="primer-open-link" onclick="openEntry('barbiturates')">Open the Barbiturate primer →</button>`)}
 
-        ${step(6,"The full Phenobarbital journey is preserved here.",
-          `<p>The original Phenobarbital teaching app is included as a complete 18-step primer. It begins with matter, atoms, and molecules before introducing benzene, phenyl, barbituric acid, and the history inside the name.</p>
+        ${step(6,"Phenobarbital gets its own complete history.",
+          `<p>Phenobarbital was already an established barbiturate by the 1950s, used particularly as a sedative and as a drug for controlling seizures. Its complete 18-step chemistry-and-name primer is preserved here.</p>
            <button type="button" class="primer-open-link" onclick="openEntry('phenobarbital-full-primer')">Open the complete Phenobarbital primer →</button>`)}
 
         <section class="primer-finish">
-          <p class="kicker">Standing rule</p>
-          <h3>No unexplained jargon.</h3>
-          <p>If a technical word is needed, the page defines it before depending on it.</p>
+          <p class="kicker">Reading rule</p>
+          <h3>Do not silently translate the 1950s into today's vocabulary.</h3>
+          <p>Each entry begins in its period, then tells you what changed.</p>
         </section>
       </div>`;
   }
 
   function psychiatryBody(){
     return `
-      ${step(1,"Start with medicine.",
+      ${step(1,"1950s core meaning.",
         `${term("PHYSICIAN","A medical doctor.")}
-         ${term("MEDICAL SPECIALTY","A branch of medicine in which a physician receives focused training.")}
-         <p><strong>Psychiatry</strong> is the medical specialty concerned with mental and behavioral disorders.</p>
-         ${term("PSYCHIATRIST","A physician whose medical specialty is psychiatry.")}`)}
+         ${term("PSYCHIATRY — 1950s","The medical specialty dealing with mental illness and serious disturbances of thought, emotion, personality, and behavior.")}
+         ${term("PSYCHIATRIST — 1950s","A physician specializing in psychiatry.")}
+         <p>That basic distinction mattered then just as it does now: <strong>psychiatry was a branch of medicine</strong>.</p>`)}
 
-      ${step(2,"What does a psychiatrist do with a diagnosis?",
-        `${term("DIAGNOSIS","A name given to a condition after deciding that a defined pattern of features is present.")}
-         ${term("CLASSIFICATION","Putting conditions into named groups so clinicians and researchers can refer to the same categories.")}
-         <p>Psychiatry describes, classifies, diagnoses, and treats conditions that fall within its medical categories. Those activities are not the same thing: naming a category is different from explaining its cause.</p>`)}
+      ${step(2,"The 1950s American framework.",
+        `${term("PSYCHOANALYSIS","A theory and treatment tradition associated with Sigmund Freud and later writers, emphasizing unconscious mental processes and conflicts.")}
+         ${term("PSYCHODYNAMIC","A broader family of ideas explaining behavior partly through interacting motives, conflicts, emotions, and mental processes outside immediate awareness.")}
+         ${term("DSM-I","The first edition of the American Psychiatric Association's Diagnostic and Statistical Manual of Mental Disorders, published in 1952.")}
+         ${term("REACTION","A word DSM-I frequently used to describe a mental disorder as a person's reaction to psychological, social, or biological pressures.")}
+         <p>American psychiatry in the 1950s was strongly influenced by psychoanalytic and psychodynamic thinking. DSM-I commonly named disorders as <strong>reactions</strong>, including <em>schizophrenic reaction</em> and <em>depressive reaction</em>.</p>`)}
 
-      ${step(3,"Mid-century psychiatry used a different vocabulary.",
+      ${step(3,"Hospital and office practice.",
         `${term("INPATIENT","A person staying in a hospital for care.")}
          ${term("OUTPATIENT","A person receiving care without staying overnight in a hospital.")}
-         ${term("PSYCHOANALYSIS","A school of theory and treatment associated with Sigmund Freud and later writers, emphasizing unconscious mental processes and conflicts.")}
-         ${term("PSYCHODYNAMIC","A broader family of ideas that explains behavior partly through interacting mental forces, conflicts, motives, and processes outside immediate awareness.")}
-         ${term("DSM","Short for Diagnostic and Statistical Manual of Mental Disorders, a U.S. psychiatric classification manual.")}
-         <p>In the United States after World War II, psychiatry included large state hospitals, expanding outpatient work, and strong psychoanalytic and psychodynamic influence. DSM-I appeared in 1952 and used broad categories such as “reactions.”</p>`)}
+         <p>Large state psychiatric hospitals remained a major part of 1950s psychiatry, while outpatient psychiatric practice was also expanding.</p>`)}
 
-      ${step(4,"What changed after mid-century?",
+      ${step(4,"What changed later?",
         `${term("DIAGNOSTIC CRITERIA","A written list of features used to decide whether a diagnosis applies.")}
-         ${term("OPERATIONALIZED","Written in a more explicit way so different clinicians can apply the same rule more consistently.")}
+         ${term("OPERATIONALIZED","Written as explicit rules so different clinicians can apply the same definition more consistently.")}
          ${term("PSYCHOPHARMACOLOGY","The study and use of drugs that affect mood, thought, perception, or behavior.")}
-         ${term("NEUROSCIENCE","The study of the brain, spinal cord, nerves, and the cells and signals that make up the nervous system.")}
-         <p>Beginning especially with DSM-III in 1980, U.S. psychiatry placed more emphasis on explicit diagnostic criteria and standardized categories. Drug treatment and neuroscience also became more prominent parts of the field. Older psychoanalytic and social approaches did not disappear.</p>`)}
+         ${term("NEUROSCIENCE","The study of the brain, spinal cord, nerves, and their cells and signals.")}
+         <p>DSM-III in 1980 moved U.S. psychiatry toward more explicit diagnostic criteria and away from DSM-I's reaction language. Drug treatment and neuroscience also became more prominent parts of the specialty.</p>`)}
 
       ${shift(
-        "Mid-century U.S. psychiatry used broader diagnostic descriptions, large state-hospital systems, and strong psychoanalytic and psychodynamic frameworks.",
-        "Current U.S. psychiatry uses more explicit diagnostic criteria and a larger role for drug treatment and neuroscience, while retaining multiple competing approaches."
+        "A medical specialty strongly shaped in the United States by psychodynamic ideas, broad diagnostic categories, reaction terminology, state hospitals, and the psychosis–neurosis distinction.",
+        "The specialty remained medical, but its diagnostic language became more rule-based and standardized, while psychopharmacology and neuroscience gained greater prominence."
       )}
 
-      <section class="entry-section"><h3>Word history</h3><p><em>Psychiatry</em> uses Greek-derived word parts meaning roughly <strong>mind/soul</strong> and <strong>medical treatment or healing</strong>.</p></section>
-      ${sourceBox([
-        '<a href="https://pubmed.ncbi.nlm.nih.gov/8434655/" target="_blank" rel="noopener">PubMed — DSM-III and the transformation of American psychiatry</a>',
-        '<a href="https://pubmed.ncbi.nlm.nih.gov/21879574/" target="_blank" rel="noopener">PubMed — U.S. mental-health fields, 1940–1970</a>'
-      ])}`;
+      <section class="entry-section"><h3>Word history</h3><p><em>Psychiatry</em> is built from Greek-derived elements referring roughly to <strong>mind or soul</strong> and <strong>medical treatment or healing</strong>.</p></section>`;
   }
 
   function psychologyBody(){
     return `
-      ${step(1,"Start with behavior and mental processes.",
+      ${step(1,"1950s core meaning.",
         `${term("BEHAVIOR","What a person or animal does—the actions that can be observed or recorded.")}
-         ${term("MENTAL PROCESS","An activity of the mind, such as perceiving, remembering, paying attention, thinking, deciding, or feeling.")}
-         <p><strong>Psychology</strong> is the systematic study of behavior and mental processes.</p>
-         ${term("PSYCHOLOGIST","A person professionally trained in psychology. The exact training and legal role depend on the job and jurisdiction.")}`)}
+         ${term("MENTAL PROCESS","An activity such as remembering, perceiving, thinking, feeling, or paying attention.")}
+         ${term("PSYCHOLOGY — 1950s","The scientific study of behavior and mental life. In American academic psychology of the 1950s, observable behavior, learning, testing, and measurement were especially prominent.")}
+         ${term("PSYCHOLOGIST — 1950s","A person trained in psychology. Some worked in research or testing; others worked in schools, industry, hospitals, or clinical practice.")}`)}
 
-      ${step(2,"Psychology contains many branches.",
-        `<div class="definition-grid">
-           <div class="definition-card"><h3>experimental</h3><p>uses controlled studies to test questions</p></div>
-           <div class="definition-card"><h3>cognitive</h3><p>studies thinking, memory, attention, language, and related processes</p></div>
-           <div class="definition-card"><h3>developmental</h3><p>studies change across the lifespan</p></div>
-           <div class="definition-card"><h3>social</h3><p>studies how people affect and respond to other people</p></div>
-           <div class="definition-card"><h3>clinical</h3><p>applies psychological assessment and intervention to mental or behavioral problems</p></div>
-           <div class="definition-card"><h3>industrial / organizational</h3><p>studies behavior in workplaces and organizations</p></div>
-         </div>`)}
+      ${step(2,"A major 1950s influence: behaviorism.",
+        `${term("BEHAVIORISM","An approach that concentrated heavily on observable behavior and learning rather than making private mental events the main object of explanation.")}
+         ${term("LEARNING","A relatively lasting change in behavior or knowledge resulting from experience.")}
+         <p>Behaviorism had enormous influence on American experimental psychology in the 1950s.</p>`)}
 
-      ${step(3,"Mid-century psychology had its own dominant terms.",
-        `${term("BEHAVIORISM","An approach that concentrated heavily on observable behavior and learning rather than treating private mental events as the main object of explanation.")}
-         ${term("PSYCHOMETRICS","The measurement of psychological characteristics through tests, scales, and statistical methods.")}
-         ${term("PSYCHOANALYTIC","Related to psychoanalysis, the Freud-associated tradition emphasizing unconscious processes and conflicts.")}
-         <p>Mid-century American academic psychology was strongly influenced by behaviorism, experimental learning research, testing, and psychometrics. Clinical psychology expanded after World War II, while psychoanalytic ideas remained influential in many clinical settings.</p>`)}
+      ${step(3,"Testing and measurement were also central.",
+        `${term("PSYCHOMETRICS","The measurement of psychological characteristics using tests, scales, and statistical methods.")}
+         ${term("CLINICAL PSYCHOLOGY","The branch of psychology concerned with assessing and working with psychological and behavioral problems.")}
+         <p>Psychological testing and clinical psychology expanded greatly during and after World War II.</p>`)}
 
-      ${step(4,"The field later became broader.",
-        `${term("COGNITIVE SCIENCE","The study of thinking, memory, language, perception, and related information-processing abilities.")}
-         ${term("NEUROSCIENCE","The study of the nervous system, especially the brain and its cells and signals.")}
-         ${term("QUANTITATIVE METHOD","A method that analyzes measurements or numbers.")}
-         ${term("QUALITATIVE METHOD","A method that analyzes non-numerical material such as interviews, observations, or texts.")}
-         <p>Current psychology uses many approaches at once: behavioral, cognitive, biological, developmental, social, quantitative, qualitative, and others.</p>`)}
+      ${step(4,"What changed later?",
+        `${term("COGNITIVE","Having to do with thinking, memory, attention, language, perception, and related mental processes.")}
+         ${term("COGNITIVE SCIENCE","The study of mental processes such as thinking, memory, language, and perception, often using ideas from psychology, neuroscience, linguistics, and computing.")}
+         ${term("NEUROSCIENCE","The study of the brain and nervous system.")}
+         <p>From the late 1950s onward, cognitive approaches grew rapidly. Modern psychology uses behavioral, cognitive, biological, social, developmental, quantitative, qualitative, and other approaches rather than being dominated by one mid-century school.</p>`)}
 
       ${shift(
-        "Mid-century U.S. psychology placed especially heavy emphasis on behaviorism, learning experiments, testing, and psychometrics, while psychoanalytic ideas influenced many clinical settings.",
-        "Current psychology contains a broader mixture of behavioral, cognitive, biological, social, developmental, statistical, and qualitative approaches."
-      )}
-
-      <section class="entry-section"><h3>Not the same as psychiatry</h3><p>Psychology is not, by definition, a branch of medicine. Psychiatry is a medical specialty. The two fields can overlap in research and clinical settings.</p></section>`;
+        "A science of behavior and mental life in which behaviorism, learning research, testing, and psychometrics were especially prominent in the United States.",
+        "The word still names the study of behavior and mental processes, but cognitive science, neuroscience, and many additional methods and theories became much more prominent."
+      )}`;
   }
 
   function sociologyBody(){
     return `
-      ${step(1,"Start with social life.",
+      ${step(1,"1950s core meaning.",
         `${term("SOCIAL","Having to do with people living, acting, or organizing in relation to other people.")}
-         <p><strong>Sociology</strong> is the systematic study of social life: groups, institutions, organizations, relationships, and societies.</p>`)}
+         ${term("SOCIOLOGY — 1950s","The systematic study of society, social groups, institutions, roles, and relationships among people.")}
+         <p>The core meaning is close to today's meaning.</p>`)}
 
-      ${step(2,"Define the pieces.",
+      ${step(2,"Words a 1950s sociology text might emphasize.",
         `${term("SOCIAL INSTITUTION","A durable organized pattern of social life, such as family, education, law, religion, government, or markets.")}
-         ${term("SOCIAL INEQUALITY","Unequal access to money, power, status, rights, opportunities, or other resources among people or groups.")}
-         ${term("CULTURE","Shared practices, meanings, beliefs, symbols, habits, and ways of life learned within groups.")}
-         ${term("POPULATION","A defined group of people being studied—for example, everyone living in a city at a particular time.")}`)}
+         ${term("SOCIAL ROLE","A pattern of behavior and expectations connected with a social position—for example, teacher, parent, judge, or employee.")}
+         ${term("SOCIAL STRUCTURE","The relatively durable arrangement of groups, institutions, positions, and relationships in a society.")}
+         ${term("STRUCTURAL FUNCTIONALISM","A theory that treats society as a system of connected parts and asks what functions those parts perform in the larger social order.")}
+         <p>Structural functionalism was especially influential in mid-century American sociology.</p>`)}
 
-      ${step(3,"A mid-century term that needs unpacking.",
-        `${term("STRUCTURAL FUNCTIONALISM","A theory that looks at society as a system of connected parts and asks what roles those parts play in maintaining or changing the larger social system.")}
-         <p>Mid-century U.S. sociology gave major attention to institutions, social roles, organizations, cities, family, class, race, population, survey research, and broad theories such as structural functionalism.</p>`)}
-
-      ${step(4,"Current sociology uses many methods.",
-        `${term("QUANTITATIVE","Using numbers or measurements.")}
-         ${term("QUALITATIVE","Using material such as interviews, observations, documents, or detailed descriptions.")}
-         ${term("COMPUTATIONAL","Using computer-based methods to analyze data or model social patterns.")}
-         <p>Current sociology combines quantitative, qualitative, historical, comparative, network, and computational methods. No single theory defines the whole field.</p>`)}
+      ${step(3,"What changed later?",
+        `${term("QUANTITATIVE","Using numbers and measurements.")}
+         ${term("QUALITATIVE","Using non-numerical material such as interviews, observation, documents, or detailed descriptions.")}
+         ${term("COMPUTATIONAL","Using computer-based methods to analyze data or model patterns.")}
+         <p>The basic definition of sociology changed less than the dominant theories and tools. Later sociology expanded its range of theories and methods, including historical, comparative, network, computational, quantitative, and qualitative work.</p>`)}
 
       ${shift(
-        "The basic meaning was already close to today's meaning, but mid-century U.S. sociology had especially influential large theories of social order such as structural functionalism.",
-        "The word still means the study of social life and societies, but the field now uses a wider mixture of methods and competing theories."
-      )}
-
-      <section class="entry-section"><h3>Not a diagnosis field</h3><p>Sociology studies social patterns and institutions. It does not, by itself, diagnose an individual person's psychiatric condition.</p></section>`;
+        "The study of society, groups, social institutions, roles, and relationships; mid-century American sociology often emphasized broad theories of social structure and function.",
+        "The core word changed little, but the field became more theoretically diverse and expanded its research methods."
+      )}`;
   }
 
   function schizophreniaBody(){
     return `
-      ${step(1,"Start with the simplest definition.",
-        `<p><strong>Schizophrenia</strong> is the name of a psychiatric diagnosis. It can involve serious disturbances in perception, belief, thought, speech, behavior, motivation, and emotional expression.</p>
-         <p>The diagnosis is not defined by one symptom alone.</p>`)}
+      ${step(1,"1950s core term: 'schizophrenic reaction.'",
+        `${term("DSM-I","The first American Psychiatric Association diagnostic manual, published in 1952.")}
+         ${term("REACTION","DSM-I's way of describing many mental disorders as reactions of the person to internal and external pressures.")}
+         <p>In DSM-I, the principal 1950s term was <strong>schizophrenic reaction</strong>, not simply the modern diagnosis label <em>schizophrenia</em>.</p>
+         ${term("SCHIZOPHRENIC REACTION — 1950s","A group of psychotic reactions marked by major disturbances in a person's relationship to reality, formation of ideas and concepts, emotional life, behavior, and flow of thought.")}`)}
 
-      ${step(2,"Define the symptom words before using them.",
-        `${term("DELUSION","A firmly held belief that remains fixed despite strong evidence against it, judged in the person's cultural and clinical context.")}
-         ${term("HALLUCINATION","A perception-like experience—such as hearing a voice—without the corresponding outside source being present.")}
-         ${term("DISORGANIZED SPEECH","Speech that is difficult to follow because ideas are connected in a severely confused or fragmented way.")}
-         ${term("CATATONIA","A marked disturbance of movement and responsiveness. It can include very little movement or response, unusual fixed postures, or sometimes excessive purposeless movement.")}
-         ${term("NEGATIVE SYMPTOM","A reduction or loss of an ordinary function, such as reduced emotional expression, reduced speech, or reduced motivation. “Negative” here means something is diminished; it does not mean morally bad.")}`)}
+      ${step(2,"Define the 1950s phrase 'psychotic reaction.'",
+        `${term("PSYCHOTIC REACTION — 1950s","A severe mental disturbance in which personality functioning and the ability to test external reality were seriously disrupted.")}
+         ${term("REALITY TESTING","The ability to judge whether an idea or perception matches outside reality.")}
+         <p>DSM-I described psychotic disorders in terms that included major personality disorganization, failure to evaluate external reality correctly, and severe difficulty functioning in relationships or work.</p>`)}
 
-      ${step(3,"Why is it called schizophrenia?",
-        `<p>Swiss psychiatrist <strong>Eugen Bleuler</strong> introduced the term in 1908 and developed it in his 1911 book.</p>
+      ${step(3,"Symptoms described then.",
+        `${term("DELUSION","A firmly held belief that remains fixed despite strong evidence against it, judged in cultural and clinical context.")}
+         ${term("HALLUCINATION","A perception-like experience without the corresponding outside source being present.")}
+         ${term("DISORGANIZED THOUGHT","Thought whose ordinary connections become severely confused, fragmented, or difficult to follow.")}
+         <p>1950s descriptions could include withdrawal from reality, unusual behavior, disturbances in thought, delusions, hallucinations, and major changes in emotional expression and relationships.</p>`)}
+
+      ${step(4,"Why was it called schizophrenia?",
+        `<p>Eugen Bleuler introduced the term decades before the 1950s.</p>
          <div class="flow"><span><strong>schizein</strong><br>to split</span><b>+</b><span><strong>phrēn / phrenos</strong><br>mind</span><b>→</b><span><strong>schizophrenia</strong><br>roughly “splitting of the mind”</span></div>
-         <p>Bleuler was describing what he regarded as a splitting or loss of unity among mental functions. He was <strong>not</strong> simply naming two separate personalities.</p>`)}
+         <p>Bleuler's “split” referred to a loss of integration among mental functions. It did not simply mean two separate personalities.</p>`)}
 
-      ${step(4,"Why did 'split personality' become associated with the word?",
-        `${term("FIGURATIVE","Using a word as a comparison or metaphor rather than in its strict technical meaning.")}
-         <p>By the mid-20th century, <em>schizophrenic</em> was also being used figuratively for something divided, contradictory, or “of two minds.” That helped create the popular “split personality” association.</p>
-         ${term("DISSOCIATIVE IDENTITY DISORDER","A different diagnosis involving two or more distinct identity states together with significant disruptions of memory and identity. It is not schizophrenia.")}`)}
+      ${step(5,"But 'split personality' really did enter mid-century usage.",
+        `${term("FIGURATIVE","Using a word as a metaphor rather than in its strict technical meaning.")}
+         <p>By the 1950s, <em>schizophrenic</em> was also used figuratively to mean <strong>divided, contradictory, split, or “of two minds.”</strong> That usage helped reinforce the popular phrase <strong>split personality</strong>.</p>`)}
 
-      ${step(5,"The diagnostic manuals changed.",
-        `${term("DSM","The Diagnostic and Statistical Manual of Mental Disorders, a U.S. classification manual used in psychiatry and related fields.")}
-         ${term("DIAGNOSTIC CRITERIA","Written features used to decide whether a diagnosis applies.")}
+      ${step(6,"What changed later?",
+        `${term("DIAGNOSTIC CRITERIA","A written set of features used to decide whether a diagnosis applies.")}
          ${term("SUBTYPE","A smaller named category inside a larger diagnosis.")}
-         <p>DSM-I in 1952 used the phrase <strong>schizophrenic reactions</strong>. DSM-III in 1980 introduced much more explicit criteria. Later manuals also removed the older paranoid, catatonic, disorganized, residual, and undifferentiated schizophrenia subtypes as separate subtypes.</p>`)}
+         <p>DSM-II in 1968 dropped the word <em>reaction</em>. DSM-III in 1980 introduced much more explicit criteria and narrowed American diagnostic practice. Later DSM editions also removed the old paranoid, catatonic, disorganized, residual, and undifferentiated schizophrenia subtypes as separate subtypes.</p>
+         ${term("DISSOCIATIVE IDENTITY DISORDER","A separate diagnosis involving distinct identity states and major disruptions of memory and identity. It is not schizophrenia.")}`)}
 
       ${shift(
-        "Mid-century U.S. practice used broader descriptions such as “schizophrenic reaction,” and the adjective “schizophrenic” also spread into figurative language meaning divided or contradictory.",
-        "Current diagnostic usage does not define schizophrenia as multiple personality or literally 'two minds.' The diagnosis is made using explicit symptom and duration criteria."
-      )}
-
-      ${sourceBox([
-        '<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3080676/" target="_blank" rel="noopener">PMC — Bleuler and the original concept of splitting</a>',
-        '<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3339235/" target="_blank" rel="noopener">PMC — origin of the term schizophrenia</a>'
-      ])}`;
+        "DSM-I's 'schizophrenic reaction' was a broad psychotic category described in terms of disturbed reality relationships, thought, emotion, behavior, and personality integration.",
+        "The word 'reaction' disappeared, diagnostic criteria became more explicit, and modern schizophrenia is not defined as multiple personality or literally being 'of two minds.'"
+      )}`;
   }
 
   function schizophrenicBody(){
     return `
-      ${step(1,"First: what kind of word is it?",
+      ${step(1,"1950s core meaning.",
         `${term("ADJECTIVE","A word that describes or modifies another word.")}
-         <p><strong>Schizophrenic</strong> is the adjective formed from <strong>schizophrenia</strong>. In strict clinical use, it means <strong>relating to schizophrenia</strong>.</p>
-         <div class="example"><strong>schizophrenic symptoms</strong><br><span class="example-note">symptoms discussed in relation to schizophrenia</span></div>`)}
+         <p><strong>Schizophrenic</strong> was the adjective used for something relating to the 1950s diagnostic category <strong>schizophrenic reaction</strong>.</p>
+         <div class="example"><strong>schizophrenic reaction</strong><br><span class="example-note">the DSM-I diagnostic phrase</span></div>
+         <p>Older medical writing also commonly used <strong>schizophrenic</strong> as a noun for a person.</p>`)}
 
-      ${step(2,"Mid-century English also gave it a figurative meaning.",
-        `${term("FIGURATIVE","Using a word as a metaphor rather than in its strict literal or technical sense.")}
-         <p>By the 1950s, writers were also using <em>schizophrenic</em> figuratively to mean <strong>divided, contradictory, split, or “of two minds.”</strong></p>
-         <p>That figurative use helps explain why many people came to associate schizophrenia with a “split personality.”</p>`)}
+      ${step(2,"A second 1950s meaning: divided or 'of two minds.'",
+        `${term("FIGURATIVE","Using a word as a metaphor rather than in its strict medical meaning.")}
+         <p>By the 1950s, <em>schizophrenic</em> also had a figurative English meaning: <strong>divided, contradictory, split, or “of two minds.”</strong></p>
+         <p>That was not merely today's misunderstanding projected backward; it was an actual mid-century figurative use of the word.</p>`)}
 
-      ${step(3,"That is not the modern diagnostic definition.",
-        `<p>Schizophrenia does not medically mean that one person contains two separate personalities.</p>
-         ${term("DISSOCIATIVE IDENTITY DISORDER","A separate diagnosis involving distinct identity states and significant disruptions of memory and identity.")}
-         <p>The two diagnoses are not interchangeable.</p>`)}
+      ${step(3,"Where did the 'split' idea come from?",
+        `<p>The word <strong>schizophrenia</strong> was built from Greek-derived roots meaning roughly <strong>split + mind</strong>. Bleuler used “split” for a loss of unity among mental functions, not simply for two complete personalities occupying one person.</p>`)}
+
+      ${step(4,"What changed later?",
+        `<p>The figurative sense survives, but current clinical writing generally avoids using <strong>a schizophrenic</strong> as a noun for a person. It more often says <strong>a person with schizophrenia</strong>.</p>
+         ${term("DISSOCIATIVE IDENTITY DISORDER","A different diagnosis involving distinct identity states and major disruptions of memory and identity.")}
+         <p>Modern schizophrenia and dissociative identity disorder are not interchangeable diagnoses.</p>`)}
 
       ${shift(
-        "Mid-century writing commonly used “schizophrenic” as an adjective, sometimes as a noun for a person, and also figuratively for something divided or contradictory.",
-        "Current clinical writing generally avoids using 'a schizophrenic' as a noun and more often says 'a person with schizophrenia.' The figurative 'split' meaning still exists in ordinary language but is not the diagnostic meaning."
+        "An adjective for schizophrenic reaction, also often a noun for a person; by the 1950s it additionally had a figurative sense meaning divided, contradictory, or 'of two minds.'",
+        "Clinical usage became more specific and person-first language became more common. The figurative 'split' meaning remains in ordinary English but is not the diagnostic definition."
       )}`;
   }
 
   function psychosisBody(){
     return `
-      ${step(1,"Start with a group of symptoms.",
-        `${term("SYNDROME","A group of signs or symptoms that occur together. A syndrome describes a pattern; it does not necessarily tell you the cause.")}
-         <p><strong>Psychosis</strong> is a state or syndrome in which a person's ability to judge what is happening in shared external reality is seriously disturbed.</p>`)}
+      ${step(1,"1950s core meaning.",
+        `${term("PSYCHOSIS — 1950s","A broad term for severe mental disturbance in which personality functioning and the ability to test external reality were seriously impaired.")}
+         ${term("REALITY TESTING","The ability to judge whether an idea or perception matches outside reality.")}
+         <p>In DSM-I-era American psychiatry, psychosis was not merely a list of isolated symptoms. It was also a broad severity and diagnostic-category concept.</p>`)}
 
-      ${step(2,"Now define reality testing.",
-        `${term("REALITY TESTING","The ability to compare an idea, belief, or perception with outside evidence and with what other people can observe.")}
+      ${step(2,"What did DSM-I emphasize?",
+        `${term("PERSONALITY DISINTEGRATION","A 1950s phrase for severe breakdown in the usual organization and functioning of the person's thoughts, emotions, behavior, and relationships.")}
+         ${term("FUNCTIONING","A person's ability to manage ordinary life tasks, work, relationships, and self-care.")}
+         <p>DSM-I descriptions emphasized serious disruption of personality, failure to judge external reality correctly, and inability to relate effectively to people or work.</p>`)}
+
+      ${step(3,"Psychosis versus neurosis.",
+        `${term("NEUROSIS — 1950s","A broad term for psychological disturbance in which reality testing was generally considered much more intact than in psychosis.")}
+         <p>The <strong>psychosis–neurosis</strong> contrast was a major organizing distinction in mid-century psychiatry.</p>`)}
+
+      ${step(4,"What changed later?",
+        `${term("SYMPTOM-FOCUSED","Describing a condition mainly by the particular experiences or behaviors present rather than by one broad severity category.")}
+         <p>Later diagnostic systems moved away from psychosis versus neurosis as the master division. Modern use of <strong>psychosis</strong> is more symptom-focused and commonly refers to disturbances such as delusions, hallucinations, or severely disorganized thought or behavior.</p>
          ${term("DELUSION","A firmly held belief that remains fixed despite strong evidence against it, judged in cultural and clinical context.")}
-         ${term("HALLUCINATION","A perception-like experience without the corresponding outside source being present.")}
-         ${term("DISORGANIZED","So confused or poorly connected that ordinary structure is difficult to follow.")}
-         <p>Psychosis can therefore include delusions, hallucinations, or severely disorganized thought, speech, or behavior.</p>`)}
-
-      ${step(3,"Psychosis does not identify one cause.",
-        `${term("MOOD DISORDER","A diagnosis in which a major disturbance of mood—such as depression or unusually elevated or irritable mood—is central.")}
-         ${term("SUBSTANCE-INDUCED","Caused or triggered by a drug, medication, alcohol, toxin, or withdrawal from a substance.")}
-         ${term("NEUROLOGICAL","Having to do with the brain, spinal cord, or nerves.")}
-         <p>Psychosis can occur in schizophrenia, some mood disorders, substance-induced conditions, and some neurological or other medical conditions.</p>`)}
-
-      ${step(4,"The mid-century contrast: psychosis versus neurosis.",
-        `${term("NEUROSIS","An older broad term for emotional or psychological problems in which reality testing was generally considered intact. The word is no longer a main formal DSM category.")}
-         <p>Mid-century writing often contrasted <strong>psychosis</strong> with <strong>neurosis</strong>: psychosis implied a more severe disturbance of reality testing, while neurosis did not.</p>`)}
+         ${term("HALLUCINATION","A perception-like experience without the corresponding outside source being present.")}`)}
 
       ${shift(
-        "Psychosis was often used as a broad umbrella for severe mental disorders and was commonly contrasted with the older category 'neurosis.'",
-        "Current usage is more symptom-focused. Psychosis describes a type of disturbance and does not, by itself, specify the diagnosis or cause."
-      )}
-
-      <div class="memory"><strong>Psychosis is not one single disease.</strong> It is a type of disturbance that can occur for different reasons.</div>`;
+        "A broad category of severe mental disturbance defined partly by major failure of reality testing, personality disorganization, and impaired social or occupational functioning.",
+        "The word became more symptom-focused. It now describes a type of disturbance that can occur in several different diagnoses or medical conditions rather than one single broad disease class."
+      )}`;
   }
 
   function psychoticBody(){
     return `
-      ${step(1,"The word is mainly an adjective.",
+      ${step(1,"1950s core meaning.",
         `${term("ADJECTIVE","A word that describes or modifies another word.")}
-         <p><strong>Psychotic</strong> means <strong>involving psychosis</strong> or <strong>showing symptoms of psychosis</strong>.</p>`)}
+         <p><strong>Psychotic</strong> meant <strong>having to do with psychosis</strong> or belonging to the broad class of severe mental disorders then called psychoses.</p>
+         <p>1950s medical writing also used <strong>a psychotic</strong> as a noun for a person considered psychotic.</p>`)}
 
-      ${step(2,"Three common phrases.",
+      ${step(2,"What did 'psychotic' imply then?",
+        `${term("REALITY TESTING","The ability to judge whether an idea or perception matches outside reality.")}
+         <p>The label generally implied a severe disturbance involving major impairment of reality testing, personality functioning, or ability to manage ordinary relationships and work.</p>`)}
+
+      ${step(3,"Common 1950s-style phrases.",
         `<div class="definition-grid">
-          <div class="definition-card"><h3>psychotic symptom</h3><p>a symptom such as a delusion or hallucination occurring as part of psychosis</p></div>
-          <div class="definition-card"><h3>psychotic episode</h3><p>a period of time during which psychotic symptoms are present</p></div>
-          <div class="definition-card"><h3>psychotic disorder</h3><p>a diagnostic category in which psychosis is a defining or major feature</p></div>
+          <div class="definition-card"><h3>psychotic reaction</h3><p>a severe psychiatric reaction meeting the period's idea of psychosis</p></div>
+          <div class="definition-card"><h3>psychotic depression</h3><p>a severe depressive condition classed as psychotic</p></div>
+          <div class="definition-card"><h3>psychotic disorder</h3><p>a disorder placed in the broad psychosis group</p></div>
         </div>`)}
 
-      ${step(3,"What it does not mean by itself.",
-        `<p><strong>Psychotic</strong> is not a synonym for schizophrenia. It also does not, by itself, mean violent, dangerous, unintelligent, irrational in every respect, or merely eccentric.</p>`)}
+      ${step(4,"What changed later?",
+        `<p>Modern professional usage more often keeps <strong>psychotic</strong> as an adjective in phrases such as <em>psychotic symptom</em> or <em>psychotic episode</em>, and avoids using it as a noun for a person.</p>
+         <p>It also does <strong>not</strong> by itself mean schizophrenia, violence, dangerousness, low intelligence, or eccentricity.</p>`)}
 
       ${shift(
-        "Mid-century psychiatric writing used 'psychotic' more broadly as a severity or category label and sometimes used the noun 'a psychotic' for a person.",
-        "Current professional writing more often uses the adjective in phrases such as 'psychotic symptoms' or 'psychotic episode,' and tends to avoid using the noun as a label for a person."
+        "A broad severity/category adjective for severe disorders involving major impairment of reality testing; 'a psychotic' was also ordinary professional wording.",
+        "The adjective is now used more narrowly around psychotic symptoms or episodes, and noun-labeling of people is generally avoided."
       )}`;
   }
 
   function sedativeBody(){
     return `
-      ${step(1,"Start with the nervous system.",
+      ${step(1,"1950s core meaning.",
         `${term("NERVOUS SYSTEM","The brain, spinal cord, and nerves—the body's information and control network.")}
-         ${term("AROUSAL","How awake, alert, and responsive a person is.")}
-         <p>A <strong>sedative</strong> is a drug or other substance that reduces arousal or nervous-system activity. Drowsiness may result, but sleep is not required.</p>
-         ${term("SEDATION","A state of reduced alertness or responsiveness produced by a drug or other intervention.")}`)}
+         ${term("SEDATIVE — 1950s","A drug used to calm, reduce nervous excitement, or lower alertness and activity. It could cause drowsiness without necessarily producing sleep.")}
+         ${term("SEDATION","The resulting state of reduced alertness, agitation, or responsiveness.")}`)}
 
-      ${step(2,"Sedative and hypnotic are related but not identical.",
-        `${term("HYPNOTIC DRUG","A drug used to produce or maintain sleep.")}
-         <p>A drug can be <strong>sedating</strong> without being used mainly as a sleeping drug. Some drugs have both calming and sleep-producing effects, depending partly on the amount and the person.</p>`)}
+      ${step(2,"How was that different from 'hypnotic'?",
+        `${term("HYPNOTIC DRUG — 1950s","A drug used specifically to cause sleep.")}
+         <p>A single drug could have a <strong>sedative</strong> effect at one level and a <strong>hypnotic</strong> or sleep-producing effect at a stronger level. That is why the combined phrase <strong>sedative-hypnotic</strong> was common.</p>`)}
 
-      ${step(3,"Some older names you may meet.",
-        `${term("BARBITURATE","A member of an older drug family that slows brain and nervous-system activity.")}
-         ${term("BROMIDE","A chemical salt containing bromide. Bromide preparations were historically used as calming and seizure-control drugs before newer medicines displaced them.")}
-         ${term("CHLORAL HYDRATE","An older drug used to cause sleep or sedation.")}
-         <p>Mid-century writing commonly grouped drugs such as barbiturates, bromides, and chloral hydrate under sedative or hypnotic headings.</p>`)}
+      ${step(3,"What drugs did a 1950s reader have in mind?",
+        `${term("BARBITURATE","One of the major 1950s drug families used for calming and sleep.")}
+         ${term("BROMIDE","A bromide-containing preparation; bromides had older use as calming and seizure-control drugs.")}
+         ${term("CHLORAL HYDRATE","An older drug used to produce sedation or sleep.")}
+         <p>Barbiturates were especially important mid-century sedatives and hypnotics.</p>`)}
 
-      ${step(4,"A later drug family displaced many barbiturate uses.",
-        `${term("BENZODIAZEPINE","A later drug family that slows activity in the brain and is used in various settings for anxiety, sedation, sleep, seizures, or muscle relaxation.")}
-         ${term("ADVERSE EFFECT","An unwanted or harmful effect of a drug.")}
-         <p>Beginning in the 1960s, benzodiazepines displaced barbiturates for many routine sedative and sleeping-pill uses. In modern medicine, sedation may be either the intended effect or an unwanted adverse effect.</p>`)}
+      ${step(4,"What changed later?",
+        `${term("BENZODIAZEPINE","A later drug family used for effects including anxiety reduction, sedation, sleep, seizure control, and muscle relaxation.")}
+         <p>Benzodiazepines, introduced around the end of the 1950s and early 1960s, displaced barbiturates for many routine sedative and sleeping-pill uses.</p>`)}
 
       ${shift(
-        "Sedative commonly referred to calming or drowsiness-producing drugs such as barbiturates, bromides, and chloral hydrate. Sedative and hypnotic were often discussed together.",
-        "The basic meaning is similar, but the drug classes in common use changed. Sedation can be an intended effect or an unwanted side effect."
+        "A calming or nervous-system-depressing drug; barbiturates were among the major drugs meant by the term.",
+        "The basic meaning survived, but the common drug classes changed substantially and sedation is now often described as an intended effect or an unwanted side effect."
       )}`;
   }
 
   function soporificBody(){
     return `
-      ${step(1,"The ordinary meaning is simple.",
-        `<p><strong>Soporific</strong> means <strong>causing sleep or strong drowsiness</strong>.</p>
-         ${term("ADJECTIVE","A describing word. In 'a soporific drug,' soporific is an adjective.")}
-         ${term("NOUN","A naming word. Older writing can use 'a soporific' to mean a sleep-producing substance.")}`)}
+      ${step(1,"1950s core meaning.",
+        `<p><strong>Soporific</strong> meant <strong>sleep-producing</strong> or <strong>causing marked drowsiness</strong>.</p>
+         ${term("ADJECTIVE","A describing word. 'A soporific drug' means a sleep-producing drug.")}
+         ${term("NOUN","A naming word. 'A soporific' can mean a substance that produces sleep.")}`)}
 
-      ${step(2,"The word itself contains the clue.",
-        `<p>The word comes through Latin roots connected with <em>sopor</em>, meaning <strong>deep sleep</strong>, plus a root meaning <strong>to make or produce</strong>.</p>
+      ${step(2,"The word itself explains the meaning.",
+        `<p>It comes through Latin roots connected with <em>sopor</em>, meaning <strong>deep sleep</strong>, plus a root meaning <strong>to make or produce</strong>.</p>
          ${chain(["sopor · deep sleep","-fic · making","soporific · sleep-making"])}`)}
 
-      ${step(3,"Medical and figurative uses.",
+      ${step(3,"What changed later?",
         `${term("FIGURATIVE","Using a word as a metaphor rather than in its literal sense.")}
-         <p>In older medical writing, <strong>soporific</strong> could straightforwardly describe a sleep-producing preparation. In ordinary modern speech, it is often figurative: <em>a soporific lecture</em> means a lecture so dull that it makes people sleepy.</p>`)}
+         <p>The medical meaning remains understandable, but <strong>hypnotic</strong> and <strong>sedative-hypnotic</strong> became more standard technical terms. In ordinary modern English, <em>soporific</em> is often figurative: a soporific speech is one that is so dull it makes people sleepy.</p>`)}
 
       ${shift(
-        "Medical and general writing used soporific more often as a direct word for a sleep-producing drug or preparation.",
-        "The word remains understandable medically, but 'hypnotic' and 'sedative-hypnotic' are more common technical terms. Figurative 'extremely boring' use is common."
+        "A straightforward medical and ordinary-English word for something that produces sleep or strong drowsiness.",
+        "The literal meaning remains, but the word is less central in drug classification and is frequently used figuratively to mean boring or sleep-inducing."
       )}`;
   }
 
   function hypnoticDrugBody(){
     return `
-      ${step(1,"One word, two meanings.",
-        `<p><strong>Hypnotic</strong> can refer either to <strong>sleep-producing drugs</strong> or to <strong>hypnosis</strong>. The surrounding words tell you which meaning is intended.</p>`)}
+      ${step(1,"1950s core meaning.",
+        `${term("HYPNOTIC DRUG — 1950s","A drug used to cause sleep.")}
+         ${term("HYPNOSIS","A procedure or condition involving focused attention and responsiveness to suggestion.")}
+         <p>In a 1950s medical text, <strong>a hypnotic</strong> usually meant <strong>a sleeping drug</strong>, not a drug that hypnotized someone.</p>`)}
 
-      ${step(2,"Meaning one: a sleeping drug.",
-        `${term("PHARMACOLOGY","The study of drugs: what they do to the body and what the body does to them.")}
-         ${term("HYPNOTIC DRUG","In pharmacology, a drug used to produce or maintain sleep.")}
-         ${term("SEDATIVE","A drug that reduces alertness, agitation, or nervous-system activity without necessarily producing sleep.")}
-         ${term("SEDATIVE-HYPNOTIC","A drug described as having both calming and sleep-producing effects.")}`)}
+      ${step(2,"Sedative versus hypnotic.",
+        `${term("SEDATIVE — 1950s","A drug used to calm or reduce nervous excitement and alertness.")}
+         ${term("SEDATIVE-HYPNOTIC","A drug capable of producing calming at one level and sleep at a stronger level.")}
+         <p>The two terms overlapped because many of the same drugs could be used for either purpose.</p>`)}
 
-      ${step(3,"Meaning two: related to hypnosis.",
-        `${term("HYPNOSIS","A procedure involving focused attention and responsiveness to suggestion.")}
-         ${term("HYPNOTIC SUGGESTION","A suggestion given in the context of hypnosis.")}
-         ${term("HYPNOTIC INDUCTION","The procedure used to begin a hypnosis session and establish focused attention and responsiveness to suggestion.")}
-         <p>A <strong>hypnotic drug</strong> does not mean a drug that performs hypnosis. In medicine, it normally means a sleep-producing drug.</p>`)}
+      ${step(3,"What drugs were prominent then?",
+        `${term("BARBITURATE","A major mid-century drug family used for sedation and sleep, as well as some seizure and anesthesia uses.")}
+         <p>From the 1920s into the mid-1950s, barbiturates were among the dominant sedative and hypnotic drugs.</p>`)}
 
-      ${step(4,"Why sedative and hypnotic often appear together.",
-        `${term("DOSE","The amount of a drug given or taken.")}
-         <p>Some older drugs could produce mild calming at one dose and sleep at a stronger dose. That is why older medical writing often used the combined expression <strong>sedative-hypnotic</strong>.</p>`)}
-
-      ${step(5,"The drug families changed.",
-        `${term("BARBITURATE","An older drug family used for sedation, sleep, seizure control, and anesthesia.")}
-         ${term("BENZODIAZEPINE","A later drug family used in various settings for anxiety, sedation, sleep, seizures, and muscle relaxation.")}
-         <p>Mid-century hypnotic drugs prominently included barbiturates and chloral-type drugs. Later, benzodiazepines and newer sleeping drugs displaced barbiturates for much routine sleep treatment.</p>`)}
+      ${step(4,"What changed later?",
+        `${term("BENZODIAZEPINE","A later drug family introduced around the end of the 1950s and early 1960s that took over many sedative and sleeping-pill uses.")}
+         <p>The pharmacological meaning of <strong>hypnotic</strong> did not disappear: it still means sleep-producing. What changed most was which drugs were commonly used.</p>
+         <p>The adjective <strong>hypnotic</strong> also continues to have its other meaning: related to hypnosis.</p>`)}
 
       ${shift(
-        "Hypnotic commonly meant a sleep-producing drug, often a barbiturate or another older sedative-hypnotic.",
-        "The pharmacological meaning remains, but the commonly used drug families have changed. The separate adjective 'hypnotic' still also means related to hypnosis."
+        "A sleep-producing drug; barbiturates were among the main hypnotics a 1950s reader would have encountered.",
+        "The definition remained broadly stable, but benzodiazepines and newer sleeping drugs replaced barbiturates for much routine use."
       )}`;
   }
 
   function hypnosisBody(){
     return `
-      ${step(1,"Start with attention and suggestion.",
-        `${term("ATTENTION","The process of concentrating awareness on some information rather than everything available at once.")}
-         ${term("SUGGESTION","A communication intended to influence an experience, perception, thought, feeling, or action.")}
-         <p><strong>Hypnosis</strong> is a procedure involving focused attention and responsiveness to suggestion.</p>`)}
+      ${step(1,"1950s core meaning.",
+        `${term("SUGGESTION","A communication intended to influence an experience, perception, thought, feeling, or action.")}
+         ${term("TRANCE","A traditional word for a condition of unusually absorbed or altered attention.")}
+         ${term("HYPNOSIS — 1950s","A condition or procedure commonly described as involving trance or unusually focused attention together with increased responsiveness to suggestion.")}
+         <p>Not every mid-century writer explained hypnosis the same way, but <strong>trance</strong> and <strong>suggestibility</strong> were common parts of the vocabulary.</p>`)}
 
-      ${step(2,"A hypnosis session has a beginning procedure.",
-        `${term("HYPNOTIC INDUCTION","The procedure used to begin hypnosis—for example, instructions intended to focus attention and prepare the person for suggestions.")}
-         <p>The word <strong>induction</strong> here simply means the procedure used to begin the hypnotic situation.</p>`)}
+      ${step(2,"How was hypnosis produced?",
+        `${term("HYPNOTIC INDUCTION","The procedure used to begin hypnosis—for example, instructions intended to narrow or focus attention and prepare the person for suggestions.")}
+         <p><strong>Induction</strong> here simply means the procedure used to begin the hypnotic situation.</p>`)}
 
-      ${step(3,"Older theories used several additional words.",
-        `${term("TRANCE","A traditional word for an altered or highly absorbed state of attention. Different theories disagree about whether hypnosis requires a distinct trance state.")}
-         ${term("DISSOCIATION","A separation or reduced connection among mental processes that are ordinarily experienced together.")}
-         ${term("UNCONSCIOUS PROCESS","A mental process that occurs without the person being directly aware of it.")}
-         <p>By the mid-20th century, writers disagreed about whether hypnosis should be explained mainly by trance, dissociation, suggestion, unconscious processes, social expectations, or combinations of these ideas.</p>`)}
+      ${step(3,"Competing explanations already existed.",
+        `${term("DISSOCIATION","A separation or reduced connection among mental processes that are ordinarily experienced together.")}
+         ${term("UNCONSCIOUS PROCESS","A mental process occurring without direct awareness.")}
+         <p>Mid-century theories variously emphasized trance, dissociation, unconscious processes, suggestion, expectation, or interpersonal influence.</p>`)}
 
-      ${step(4,"Modern definitions try not to settle the theory in the definition.",
-        `<p>Modern research definitions tend to describe what is done—focused attention and suggestion—without requiring one particular explanation of the mechanism.</p>
-         ${term("MECHANISM","The process by which something produces an effect.")}
-         <p>Researchers continue to disagree about exactly which mechanisms explain hypnotic responses.</p>`)}
+      ${step(4,"What changed later?",
+        `${term("THEORY-NEUTRAL","Worded so the definition does not assume that one disputed explanation must be correct.")}
+         <p>Modern research definitions are often more theory-neutral. They tend to define hypnosis by the procedure—focused attention and suggestion—without requiring a distinct trance state as part of the definition.</p>`)}
 
-      ${step(5,"Hypnosis is not a hypnotic drug.",
-        `<p>The shared word comes from an old association with sleep.</p>
-         <div class="compare-grid">
-           <div class="compare-card"><h3>hypnosis</h3><p>a procedure involving attention and suggestion</p></div>
-           <div class="compare-card"><h3>hypnotic drug</h3><p>a drug used to produce or maintain sleep</p></div>
+      ${step(5,"Do not confuse hypnosis with a hypnotic drug.",
+        `<div class="compare-grid">
+          <div class="compare-card"><h3>hypnosis</h3><p>a procedure involving attention and suggestion</p></div>
+          <div class="compare-card"><h3>hypnotic drug</h3><p>a sleep-producing drug</p></div>
          </div>`)}
 
       ${shift(
-        "Mid-century discussions included competing theories involving trance, dissociation, suggestion, unconscious processes, and social influence.",
-        "Modern definitions are often deliberately theory-neutral: they define the procedure and response without declaring one mechanism to be the complete explanation."
-      )}
-
-      ${sourceBox([
-        '<a href="https://pubmed.ncbi.nlm.nih.gov/25365125/" target="_blank" rel="noopener">PubMed — revised definition of hypnosis</a>'
-      ])}`;
+        "Commonly described as a trance-like condition or procedure involving concentrated attention and increased suggestibility.",
+        "Definitions became more cautious about claiming a special trance state and often describe focused attention and response to suggestion without committing to one theory."
+      )}`;
   }
 
   function barbituratesBody(){
     return `
-      ${step(1,"First: spell the word.",
+      ${step(1,"1950s core meaning.",
         `<p><strong>Barbiturate</strong> · plural <strong>barbiturates</strong>.</p>
-         <p>Common misspellings include <em>barbituate</em>, <em>barbituates</em>, and <em>barbibturate</em>.</p>
-         <div class="spelling-strip"><span>B</span><span>A</span><span>R</span><span>B</span><span>I</span><span>T</span><span>U</span><span>R</span><span>A</span><span>T</span><span>E</span></div>`)}
+         <div class="spelling-strip"><span>B</span><span>A</span><span>R</span><span>B</span><span>I</span><span>T</span><span>U</span><span>R</span><span>A</span><span>T</span><span>E</span></div>
+         ${term("BARBITURATE — 1950s","A member of one of the main drug families then used to calm patients or produce sleep. Different barbiturates were also used to control seizures and to produce anesthesia.")}
+         <p>In the 1950s, <strong>sedative</strong> and <strong>hypnotic</strong> were central words for this drug class.</p>`)}
 
-      ${step(2,"Start with the nervous system.",
-        `${term("NERVOUS SYSTEM","The brain, spinal cord, and nerves—the body's information and control network.")}
-         ${term("CENTRAL NERVOUS SYSTEM","The brain and spinal cord. It is often shortened to CNS.")}
-         <p>A <strong>barbiturate</strong> is a member of a drug family that can slow activity in the central nervous system.</p>`)}
+      ${step(2,"Define those two 1950s words.",
+        `${term("SEDATIVE","A drug used to calm, reduce nervous excitement, or lower alertness.")}
+         ${term("HYPNOTIC DRUG","A drug used to cause sleep.")}
+         <p>The same barbiturate could have a calming effect at one amount and a stronger sleep-producing effect at a larger amount.</p>`)}
 
-      ${step(3,"Barbituric acid and barbiturates are not the same thing.",
-        `${term("CHEMICAL FRAMEWORK","A central arrangement of atoms that chemists can modify by attaching other groups of atoms.")}
-         <p><strong>Barbituric acid</strong> supplied the chemical framework. Barbituric acid itself does not have the strong brain-depressing effects of the later barbiturate drugs.</p>
-         <p>Later chemists attached different groups to that framework. Some of the resulting compounds became pharmacologically active barbiturates.</p>
-         ${term("PHARMACOLOGICALLY ACTIVE","Able to produce a measurable drug effect in the body.")}`)}
-
-      ${step(4,"The same drug family had several uses.",
-        `${term("SEDATIVE","A drug that reduces alertness, agitation, or nervous-system activity.")}
-         ${term("HYPNOTIC DRUG","A drug used to produce or maintain sleep.")}
+      ${step(3,"Other 1950s uses.",
+        `${term("SEIZURE","A sudden burst of abnormal electrical activity in the brain that can change movement, sensation, awareness, or behavior.")}
          ${term("ANTICONVULSANT","A drug used to prevent or control seizures.")}
-         ${term("SEIZURE","A sudden burst of abnormal electrical activity in the brain that can alter movement, sensation, awareness, or behavior.")}
          ${term("ANESTHETIC","A drug used to prevent sensation, awareness, or pain during a procedure.")}
-         <p>Depending on the particular barbiturate and the amount used, the class has been used for sedation, sleep, seizure control, and anesthesia.</p>`)}
+         <p><strong>Phenobarbital</strong> had an established role in seizure control. Other barbiturates were used in anesthesia.</p>`)}
 
-      ${step(5,"How can a barbiturate slow the brain?",
-        `${term("NERVE CELL","A cell specialized for sending and receiving signals in the nervous system. Another name is neuron.")}
-         ${term("CHEMICAL MESSENGER","A chemical released by cells to carry a signal. In the nervous system, this kind of messenger is often called a neurotransmitter.")}
-         ${term("GABA","Short for gamma-aminobutyric acid. GABA is a chemical messenger that usually makes many nerve cells less likely to send a signal.")}
-         ${term("RECEPTOR","A protein on or in a cell that responds to a particular chemical signal.")}
-         ${term("GABA-A RECEPTOR","One type of receptor that responds to GABA and helps produce GABA's braking effect on nerve-cell activity.")}
-         <p>Barbiturates strengthen or prolong GABA's braking effect at GABA-A receptors. The result is less activity in many nerve cells.</p>`)}
+      ${step(4,"Barbituric acid is not the same thing as a barbiturate drug.",
+        `${term("CHEMICAL FRAMEWORK","A central arrangement of atoms that chemists can alter by attaching other groups of atoms.")}
+         <p><strong>Barbituric acid</strong> supplied the chemical framework. Barbituric acid itself did not have the strong sedative-hypnotic effects of the later substituted barbiturates.</p>
+         ${term("SUBSTITUTED COMPOUND","A molecule made by replacing or attaching particular groups of atoms at positions on a chemical framework.")}`)}
 
-      ${step(6,"Why did the class become dangerous in overdose?",
-        `${term("RESPIRATORY DEPRESSION","Breathing becoming abnormally slow, shallow, or ineffective.")}
-         ${term("OVERDOSE","Exposure to an amount of a drug large enough to cause serious poisoning.")}
-         ${term("DEPENDENCE","A state in which the body adapts to repeated drug exposure and withdrawal symptoms can occur when the drug is stopped.")}
-         <p>Barbiturates can suppress brain functions needed for breathing. Their risks include dependence, severe poisoning, coma, respiratory depression, and death in overdose.</p>`)}
+      ${step(5,"A 1950s psychiatric use you may encounter.",
+        `${term("NARCOANALYSIS","A historical practice in which a sedating drug was given while a clinician questioned a person, based on the idea that lowered alertness might make speech or memories more accessible.")}
+         ${term("SLEEP CURE","A historical treatment in which drugs were used to keep a patient asleep or heavily sedated for long periods.")}
+         <p>Barbiturates appeared in both narcoanalysis and drug-induced sleep treatments. Neither practice means the drugs could chemically force reliable truth.</p>`)}
 
-      ${step(7,"The mid-century picture.",
-        `<p>Barbiturates were major mid-century sedative and sleeping drugs. They were also used for seizure control and anesthesia.</p>
-         ${term("NARCOANALYSIS","A historical practice in which a sedating drug was used while a clinician questioned a person, in the belief that lowered alertness might make memories or speech more accessible.")}
-         ${term("SLEEP CURE","A historical treatment approach in which drugs were used to keep a patient asleep or heavily sedated for long periods.")}
-         <p>Some barbiturates also appeared in psychiatric narcoanalysis and drug-induced sleep treatments. These historical practices should not be confused with proof that a drug reliably produces truthful statements.</p>`)}
+      ${step(6,"Risks were already part of the 1950s story.",
+        `${term("DEPENDENCE","A state in which the body adapts to repeated drug exposure and withdrawal symptoms can occur when the drug is stopped.")}
+         ${term("OVERDOSE","An amount of a drug large enough to cause serious poisoning.")}
+         ${term("RESPIRATORY DEPRESSION","Breathing becoming abnormally slow, shallow, or ineffective.")}
+         <p>By the 1950s, medical literature recognized barbiturate dependence, poisoning, respiratory depression, and fatal overdose as serious problems.</p>`)}
 
-      ${step(8,"What displaced many routine barbiturate uses?",
-        `${term("BENZODIAZEPINE","A later drug family that also increases GABA-A signaling and has been used for anxiety, sedation, sleep, seizures, and muscle relaxation.")}
-         <p>Beginning in the 1960s, benzodiazepines displaced barbiturates for many routine sedative and sleeping-pill uses.</p>`)}
+      ${step(7,"What changed after the 1950s?",
+        `${term("BENZODIAZEPINE","A later drug family used for effects including anxiety reduction, sedation, sleep, seizure control, and muscle relaxation.")}
+         <p>Benzodiazepines entered use around the end of the 1950s and early 1960s and displaced barbiturates for many routine sedative and sleeping-pill uses.</p>`)}
+
+      ${step(8,"Modern mechanism language came to the foreground.",
+        `${term("GABA","Short for gamma-aminobutyric acid, a chemical messenger that usually makes many nerve cells less likely to send a signal.")}
+         ${term("RECEPTOR","A protein on or in a cell that responds to a chemical signal.")}
+         ${term("GABA-A RECEPTOR","One type of receptor through which GABA produces a braking effect on nerve-cell activity.")}
+         <p>Modern pharmacology commonly explains barbiturates as drugs that strengthen or prolong inhibitory signaling through GABA-A receptors.</p>`)}
 
       ${step(9,"What remains today?",
-        `<p>Barbiturates still have selected medical uses. <strong>Phenobarbital</strong> remains an antiseizure drug. Some other barbiturates have specialized roles in anesthesia and critical care.</p>
-         ${term("CRITICAL CARE","Hospital care for people with severe, life-threatening illness or injury who need close monitoring and support.")}
-         ${chain(["barbituric acid framework","barbital and other barbiturates","phenobarbital"])}`)}
+        `<p>Barbiturates are no longer ordinary sleeping pills in the way they were mid-century. <strong>Phenobarbital</strong> still has seizure-control uses, and some barbiturates retain specialized roles in anesthesia and critical care.</p>
+         ${term("CRITICAL CARE","Hospital care for people with severe, life-threatening illness or injury who need close monitoring and support.")}`)}
 
       ${shift(
-        "Barbiturates were common sedatives and sleeping drugs and also had roles in seizure treatment, anesthesia, narcoanalysis, and drug-induced sleep treatments.",
-        "They are no longer routine sleeping drugs in the way they once were, but selected barbiturates still have medical uses, including seizure treatment and anesthesia."
-      )}
-
-      ${sourceBox([
-        '<a href="https://www.ncbi.nlm.nih.gov/books/NBK539731/" target="_blank" rel="noopener">NCBI Bookshelf — Barbiturates</a>'
-      ])}`;
+        "One of the major sedative-hypnotic drug families; widely used for calming, sleep, seizures, and anesthesia, with dependence and overdose risks already recognized.",
+        "Routine sedative and sleeping-pill use fell sharply after benzodiazepines arrived. Selected barbiturates remain in seizure treatment, anesthesia, and other specialized uses."
+      )}`;
   }
 
   function scopolamineBody(){
     return `
-      ${step(1,"First: the spelling.",
-        `<p>The drug is spelled <strong>scopolamine</strong>.</p>
+      ${step(1,"1950s core meaning.",
+        `<p>The drug is spelled <strong>scopolamine</strong>. Another name is <strong>hyoscine</strong>.</p>
          <div class="spelling-strip"><span>S</span><span>C</span><span>O</span><span>P</span><span>O</span><span>L</span><span>A</span><span>M</span><span>I</span><span>N</span><span>E</span></div>
-         <p>Another name for the same drug is <strong>hyoscine</strong>.</p>`)}
+         ${term("SCOPOLAMINE — 1950s","A drug used for several anticholinergic effects, including reducing secretions, use before anesthesia, motion-sickness control, pupil dilation, and sedation or memory impairment.")}
+         <p>A 1950s reader could therefore encounter scopolamine in anesthesia, eye medicine, or discussions of sedation—not only in connection with motion sickness.</p>`)}
 
-      ${step(2,"Before 'antimuscarinic,' learn four smaller ideas.",
-        `${term("NERVOUS SYSTEM","The brain, spinal cord, and nerves—the body's information and control network.")}
-         ${term("NERVE CELL","A cell specialized for sending and receiving signals in the nervous system. Another name is neuron.")}
+      ${step(2,"What did 'anticholinergic' mean?",
+        `${term("NERVE CELL","A cell specialized for sending and receiving signals in the nervous system.")}
          ${term("CHEMICAL MESSENGER","A chemical used by cells to carry a signal.")}
-         ${term("ACETYLCHOLINE","A chemical messenger used by nerve cells in the brain and in many nerves throughout the body.")}`)}
+         ${term("ACETYLCHOLINE","A chemical messenger used by nerve cells in the brain and throughout the body.")}
+         ${term("RECEPTOR","A protein on or in a cell that responds to a chemical signal.")}
+         ${term("ANTICHOLINERGIC","A drug that blocks some effects of the chemical messenger acetylcholine.")}
+         <p>Scopolamine was and still is described as an anticholinergic drug.</p>`)}
 
-      ${step(3,"Now define receptor, muscarinic, and antimuscarinic.",
-        `${term("RECEPTOR","A protein on or in a cell that responds to a particular chemical signal.")}
-         ${term("MUSCARINIC RECEPTOR","One group of receptors that respond to acetylcholine. They are found in the brain and in many organs.")}
-         ${term("ANTIMUSCARINIC","A drug that blocks acetylcholine from producing some of its effects at muscarinic receptors.")}
-         ${term("ANTICHOLINERGIC","A broader word for a drug that blocks effects of acetylcholine. Scopolamine is commonly described as both antimuscarinic and anticholinergic.")}
-         <p>Scopolamine is therefore <strong>not</strong> a barbiturate. It belongs to a different drug family and works through a different signaling system.</p>`)}
+      ${step(3,"More precise modern word: antimuscarinic.",
+        `${term("MUSCARINIC RECEPTOR","One group of receptors that respond to acetylcholine. They occur in the brain and in many organs.")}
+         ${term("ANTIMUSCARINIC","A drug that blocks acetylcholine at muscarinic receptors.")}
+         <p><strong>Antimuscarinic</strong> is the more precise modern description of scopolamine's main receptor action.</p>`)}
 
-      ${step(4,"Why can it dilate the pupil?",
+      ${step(4,"The eye use.",
         `${term("PUPIL","The dark opening in the center of the eye that lets light enter.")}
-         ${term("DILATE","To become wider or larger.")}
-         ${term("MYDRIASIS","The medical word for widening of the pupil.")}
-         ${term("FOCUSING","Changing the eye's optical power so near or far objects can appear sharp.")}
+         ${term("MYDRIASIS","Widening or dilation of the pupil.")}
          ${term("CYCLOPLEGIA","Temporary paralysis of the eye's focusing mechanism.")}
          ${term("OPHTHALMIC","Having to do with the eye.")}
-         <p>By blocking muscarinic signaling in the eye, scopolamine can cause <strong>mydriasis</strong> and <strong>cycloplegia</strong>. That is the pupil-dilator use you were remembering.</p>`)}
+         <p>Scopolamine can cause pupil dilation and interfere temporarily with focusing. That is the pupil-dilator use you were remembering.</p>`)}
 
-      ${step(5,"Why can it also cause drowsiness and memory problems?",
+      ${step(5,"The sedative and memory effects.",
         `${term("SEDATION","Reduced alertness or responsiveness.")}
          ${term("AMNESIA","Loss of memory for some events or information.")}
          ${term("AMNESTIC","Producing or contributing to amnesia.")}
-         <p>Scopolamine can enter the brain. Its effects there can include drowsiness, sedation, and impaired memory.</p>
-         ${term("DELIRIUM","A sudden confused state with disturbed attention and awareness.")}
+         <p>Scopolamine enters the brain and can produce drowsiness, sedation, confusion, and memory impairment.</p>`)}
+
+      ${step(6,"The older history behind the 1950s reputation.",
+        `${term("TWILIGHT SLEEP","An early-20th-century childbirth practice combining scopolamine with morphine in an attempt to reduce pain and especially memory of labor.")}
+         ${term("TRUTH SERUM","A popular historical label for drugs claimed to make a person reveal truthful information while sedated or mentally altered.")}
+         <p>Both “twilight sleep” and early “truth serum” stories contributed to scopolamine's historical reputation before the 1950s. A drug does not provide a reliable chemical test of truth.</p>`)}
+
+      ${step(7,"What could happen at toxic exposure?",
+        `${term("DELIRIUM","A sudden confused state with disturbed attention and awareness.")}
          ${term("HALLUCINATION","A perception-like experience without the corresponding outside source being present.")}
-         ${term("PARANOIA","Strong suspiciousness or fear of harmful intentions that is not adequately supported by evidence.")}
-         <p>At toxic exposure, scopolamine can produce agitation, delirium, hallucinations, paranoia, and other severe mental changes.</p>`)}
+         ${term("PARANOIA","Strong suspiciousness or fear of harmful intentions not adequately supported by evidence.")}
+         <p>Too much scopolamine can produce agitation, delirium, hallucinations, paranoia, and other severe mental changes.</p>`)}
 
-      ${step(6,"The historical 'twilight sleep' use.",
-        `${term("MORPHINE","A powerful opioid pain-relieving drug.")}
-         ${term("OPIOID","A drug family that acts on opioid receptors and can reduce pain; opioids can also cause drowsiness and suppress breathing.")}
-         <p>In the early 20th century, scopolamine was combined with morphine during childbirth in a practice called <strong>twilight sleep</strong> or <em>Dämmerschlaf</em>.</p>
-         ${term("TWILIGHT SLEEP","A historical scopolamine-morphine childbirth regimen intended to reduce pain and especially memory of labor.")}
-         <p>The practice became widely discussed in the 1910s and later fell out of routine use.</p>`)}
-
-      ${step(7,"The 'truth serum' history.",
-        `${term("TRUTH SERUM","A historical popular label for drugs claimed to make a person reveal truthful information while sedated or mentally altered.")}
-         <p>Scopolamine was one of several drugs associated with early 20th-century “truth serum” claims. Barbiturates such as amobarbital and thiopental were also used in later narcoanalysis and interrogation experiments.</p>
-         <p><strong>A drug does not provide a reliable chemical test of truth.</strong> Sedation, confusion, suggestibility, memory error, and fabrication can all occur.</p>`)}
-
-      ${step(8,"The mid-century picture.",
-        `${term("PREANESTHETIC","Given before anesthesia or before a procedure involving anesthesia.")}
-         ${term("SECRETION","A substance released by a gland, such as saliva.")}
-         <p>By mid-century, scopolamine appeared in medical writing as an anticholinergic drug used before anesthesia, to reduce some gland secretions, for sedative or memory-impairing effects, for motion sickness, and in eye medicine.</p>`)}
-
-      ${step(9,"The modern patch.",
+      ${step(8,"What changed later?",
         `${term("TRANSDERMAL","Delivered through the skin.")}
-         ${term("MOTION SICKNESS","Nausea, dizziness, and related symptoms triggered when signals about movement from the eyes and balance organs do not match well.")}
+         ${term("MOTION SICKNESS","Nausea, dizziness, and related symptoms triggered when movement signals from the eyes and balance organs do not agree well.")}
          ${term("POSTOPERATIVE","Occurring after an operation or surgery.")}
-         ${term("NAUSEA","The unpleasant feeling that you may vomit.")}
-         <p>Current U.S. scopolamine patches are labeled for preventing nausea and vomiting from motion sickness and for postoperative nausea and vomiting in adults.</p>`)}
+         <p>The modern scopolamine patch made the drug especially familiar for preventing motion sickness and postoperative nausea and vomiting.</p>`)}
 
-      ${step(10,"Why can one drug affect the eye, glands, gut, and brain?",
-        `${term("SMOOTH MUSCLE","Muscle in organs such as the stomach, intestines, bladder, and blood vessels that works without conscious control.")}
-         ${term("COGNITION","Mental processes such as attention, memory, thinking, and understanding.")}
-         <p>Muscarinic receptors occur in many parts of the body. Blocking them can change gland secretions and smooth-muscle activity, widen the pupil, alter focusing, reduce motion-sickness signaling, and affect attention and memory.</p>
-         <p>One receptor system is spread across many organs, so one drug can produce a scattered-looking list of effects.</p>`)}
+      ${step(9,"The eye warning remains important.",
+        `${term("GLAUCOMA","A group of eye diseases involving damage to the optic nerve, often associated with abnormal pressure inside the eye.")}
+         ${term("ANGLE-CLOSURE GLAUCOMA","A form of glaucoma in which the drainage angle inside the eye closes and pressure can rise rapidly.")}
+         <p>Because scopolamine can dilate the pupil, it can be hazardous in people susceptible to angle-closure glaucoma.</p>`)}
 
-      ${step(11,"Why the eye warning matters.",
-        `${term("GLAUCOMA","A group of eye diseases in which damage to the optic nerve is often associated with pressure inside the eye.")}
-         ${term("OPTIC NERVE","The nerve carrying visual information from the eye to the brain.")}
-         ${term("ANGLE-CLOSURE GLAUCOMA","A form of glaucoma in which the drainage angle inside the eye closes, causing eye pressure to rise rapidly.")}
-         <p>Because scopolamine can dilate the pupil, it can contribute to an acute angle-closure glaucoma attack in a susceptible eye.</p>
-         <p>This page explains terminology and history; it is not instructions for using the drug.</p>`)}
-
-      ${step(12,"Shortest version.",
-        `<div class="history-summary-chain">
-          <div><b>Scopolamine</b><span>also called hyoscine</span></div>
-          <div><b>Main drug action</b><span>blocks muscarinic acetylcholine receptors</span></div>
-          <div><b>Eye effects</b><span>pupil widening and temporary loss of focusing</span></div>
-          <div><b>Brain effects</b><span>drowsiness and memory impairment; toxic exposure can cause severe confusion and hallucinations</span></div>
-          <div><b>Historical uses</b><span>eye medicine, preanesthetic use, “twilight sleep,” and “truth serum” claims</span></div>
-          <div><b>Current prominent use</b><span>motion-sickness and postoperative nausea/vomiting prevention</span></div>
-         </div>`)}
-
-      ${sourceBox([
-        '<a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=51289d8b-f7e3-a3e0-e063-6294a90add43" target="_blank" rel="noopener">DailyMed — current U.S. scopolamine labeling</a>',
-        '<a href="https://pubmed.ncbi.nlm.nih.gov/2647095/" target="_blank" rel="noopener">PubMed — history of scopolamine in anesthesia</a>',
-        '<a href="https://pubmed.ncbi.nlm.nih.gov/16184018/" target="_blank" rel="noopener">PubMed — history of “truth serum”</a>'
-      ])}`;
+      ${shift(
+        "A multipurpose anticholinergic drug encountered in anesthesia, secretion control, motion sickness, eye medicine, and sedation or amnesia.",
+        "The drug remains antimuscarinic, but the transdermal motion-sickness and postoperative-nausea patch became one of its most familiar modern uses; ophthalmic and routine preanesthetic use became less central."
+      )}`;
   }
 
   function phenobarbitalBody(){
     return `
+      <section class="entry-section period-anchor">
+        <p class="kicker">1950s reference point</p>
+        <h3>What “phenobarbital” meant in the 1950s</h3>
+        <p><strong>Phenobarbital</strong> was an established member of the barbiturate drug family. A 1950s medical reader would recognize it particularly as a <strong>sedative</strong> and as a drug used to control <strong>seizures</strong>.</p>
+        ${term("BARBITURATE","A major mid-century drug family used for calming and sleep; some members also had seizure-control or anesthesia uses.")}
+        ${term("SEDATIVE","A drug used to calm or reduce nervous-system activity and alertness.")}
+        ${term("SEIZURE","A sudden burst of abnormal electrical activity in the brain that can change movement, sensation, awareness, or behavior.")}
+        <p><strong>Later change:</strong> barbiturates largely disappeared from routine sleeping-pill use after newer drug families arrived, but phenobarbital continued to have seizure-control uses.</p>
+      </section>
+
       <div class="phenobarbital-port-note">
         <strong>Imported from your original Phenobarbital teaching app.</strong>
         <span>The interaction has been converted into a continuous Glossary primer, but the full conceptual journey is retained.</span>
@@ -721,19 +658,19 @@
   }
 
   const entries = [
-    {slug:"psychiatry",title:"Psychiatry",category:"Fields",short:"The medical specialty concerned with mental and behavioral disorders, with a major shift in U.S. practice since the mid-20th century.",keywords:"psychiatry psychiatrist mid century psychoanalysis DSM medical specialty",body:psychiatryBody()},
-    {slug:"psychology",title:"Psychology",category:"Fields",short:"The study of behavior and activities of the mind, such as memory, attention, thought, and perception.",keywords:"psychology psychologist behavior cognition mid century behaviorism psychoanalysis",body:psychologyBody()},
-    {slug:"sociology",title:"Sociology",category:"Fields",short:"The systematic study of social groups, institutions, relationships, and societies.",keywords:"sociology society institutions social science mid century structural functionalism",body:sociologyBody()},
-    {slug:"schizophrenia",title:"Schizophrenia",category:"Psychosis Terms",short:"A psychiatric diagnosis that can involve hallucinations, delusions, disorganized thought, and other persistent changes.",keywords:"schizophrenia schizophrenic reaction split mind split personality two minds DSM I DSM II psychosis hallucination delusion",body:schizophreniaBody()},
+    {slug:"psychiatry",title:"Psychiatry",category:"Fields",short:"In the 1950s: the medical specialty dealing with mental illness and disturbances of thought, emotion, personality, and behavior; later diagnostic language changed substantially.",keywords:"psychiatry psychiatrist mid century psychoanalysis DSM medical specialty",body:psychiatryBody()},
+    {slug:"psychology",title:"Psychology",category:"Fields",short:"In the 1950s: the scientific study of behavior and mental life, with behaviorism, learning, testing, and measurement especially prominent in U.S. psychology.",keywords:"psychology psychologist behavior cognition mid century behaviorism psychoanalysis",body:psychologyBody()},
+    {slug:"sociology",title:"Sociology",category:"Fields",short:"In the 1950s: the systematic study of society, social groups, institutions, roles, and relationships.",keywords:"sociology society institutions social science mid century structural functionalism",body:sociologyBody()},
+    {slug:"schizophrenia",title:"Schizophrenia",category:"Psychosis Terms",short:"In DSM-I (1952): 'schizophrenic reaction,' a broad psychotic category involving major disturbances of reality relationships, thought, emotion, and behavior.",keywords:"schizophrenia schizophrenic reaction split mind split personality two minds DSM I DSM II psychosis hallucination delusion",body:schizophreniaBody()},
     {slug:"schizophrenic",title:"Schizophrenic",category:"Psychosis Terms",short:"The adjective derived from schizophrenia; historically it also acquired figurative 'divided' or 'of two minds' meanings.",keywords:"schizophrenic adjective split mind split personality two minds divided contradictory mid century",body:schizophrenicBody()},
-    {slug:"psychosis",title:"Psychosis",category:"Psychosis Terms",short:"A state in which a person has serious difficulty judging whether some perceptions or beliefs match shared external reality.",keywords:"psychosis reality testing hallucination delusion psychotic mid century neurosis",body:psychosisBody()},
-    {slug:"psychotic",title:"Psychotic",category:"Psychosis Terms",short:"The adjective for something involving psychosis; not a synonym for schizophrenia or violence.",keywords:"psychotic adjective psychosis schizophrenia mid century terminology",body:psychoticBody()},
-    {slug:"sedative",title:"Sedative",category:"Sedation & Sleep Terms",short:"A drug or substance that reduces nervous-system activity or arousal; sleep is not required.",keywords:"sedative sedation calming drowsiness barbiturate hypnotic",body:sedativeBody()},
-    {slug:"soporific",title:"Soporific",category:"Sedation & Sleep Terms",short:"Sleep-producing or strongly drowsiness-producing; also figuratively, extremely boring.",keywords:"soporific sleep drowsy sedative boring sopor",body:soporificBody()},
-    {slug:"hypnotic-drug",title:"Hypnotic Drug",category:"Sedation & Sleep Terms",short:"In pharmacology, a sleep-inducing drug; distinct from hypnosis.",keywords:"hypnotic drug sedative hypnotic sleeping pill sleep barbiturate",body:hypnoticDrugBody()},
-    {slug:"hypnosis",title:"Hypnosis",category:"Sedation & Sleep Terms",short:"A procedure or condition involving focused attention and responsiveness to suggestion.",keywords:"hypnosis hypnotic induction suggestion mesmerism mid century",body:hypnosisBody()},
-    {slug:"barbiturates",title:"Barbiturate / Barbiturates",category:"Drug Terms & History",short:"An older drug family used for calming, sleep, seizure control, or anesthesia, depending on the drug and amount.",keywords:"barbiturate barbiturates barbituate barbituates barbibturate barbibturates sedative hypnotic phenobarbital",body:barbituratesBody()},
-    {slug:"scopolamine-primer",title:"Scopolamine — Primer",category:"Drug Terms & History",short:"A drug that blocks some acetylcholine signals; historically used for pupil dilation and sedation, and now familiar as a motion-sickness patch.",keywords:"scopolamine hyoscine pupil dilator mydriasis cycloplegia sedative amnestic twilight sleep motion sickness antimuscarinic",body:scopolamineBody()},
+    {slug:"psychosis",title:"Psychosis",category:"Psychosis Terms",short:"In the 1950s: a broad severe-mental-disorder concept centered on major failure of reality testing and serious disruption of personality functioning.",keywords:"psychosis reality testing hallucination delusion psychotic mid century neurosis",body:psychosisBody()},
+    {slug:"psychotic",title:"Psychotic",category:"Psychosis Terms",short:"In the 1950s: describing a person, symptom, reaction, or disorder classed as psychotic; the noun 'a psychotic' was also common.",keywords:"psychotic adjective psychosis schizophrenia mid century terminology",body:psychoticBody()},
+    {slug:"sedative",title:"Sedative",category:"Sedation & Sleep Terms",short:"In the 1950s: a calming or nervous-system-depressing drug; barbiturates were among the major examples.",keywords:"sedative sedation calming drowsiness barbiturate hypnotic",body:sedativeBody()},
+    {slug:"soporific",title:"Soporific",category:"Sedation & Sleep Terms",short:"In the 1950s: sleep-producing or strongly drowsiness-producing; later the figurative 'boring' use became especially familiar.",keywords:"soporific sleep drowsy sedative boring sopor",body:soporificBody()},
+    {slug:"hypnotic-drug",title:"Hypnotic Drug",category:"Sedation & Sleep Terms",short:"In 1950s medicine: a sleep-producing drug, often a barbiturate; distinct from hypnosis.",keywords:"hypnotic drug sedative hypnotic sleeping pill sleep barbiturate",body:hypnoticDrugBody()},
+    {slug:"hypnosis",title:"Hypnosis",category:"Sedation & Sleep Terms",short:"In the 1950s: commonly described as a trance-like condition or procedure involving focused attention and increased suggestibility.",keywords:"hypnosis hypnotic induction suggestion mesmerism mid century",body:hypnosisBody()},
+    {slug:"barbiturates",title:"Barbiturate / Barbiturates",category:"Drug Terms & History",short:"In the 1950s: one of the major sedative-hypnotic drug families, also used for seizures and anesthesia.",keywords:"barbiturate barbiturates barbituate barbituates barbibturate barbibturates sedative hypnotic phenobarbital",body:barbituratesBody()},
+    {slug:"scopolamine-primer",title:"Scopolamine — Primer",category:"Drug Terms & History",short:"In the 1950s: an anticholinergic drug used in anesthesia, secretion control, motion sickness, eye medicine, and for sedative or memory effects.",keywords:"scopolamine hyoscine pupil dilator mydriasis cycloplegia sedative amnestic twilight sleep motion sickness antimuscarinic",body:scopolamineBody()},
     {slug:"phenobarbital-full-primer",title:"Phenobarbital — Complete Primer",category:"Drug Terms & History",short:"The complete beginner journey from matter and benzene to phenyl, barbituric acid, Baeyer, Barbara, and the full drug name.",keywords:"phenobarbital phenobarbitol barbiturate benzene gasoline benzoin perfume phenyl pheno barbital Baeyer Barbara urea",body:phenobarbitalBody()}
   ];
 
