@@ -32,8 +32,8 @@
            <p>The basic field names survive, but the theories and methods emphasized inside each field changed considerably afterward.</p>`)}
 
         ${step(3,"Psychosis and schizophrenia in 1950s American psychiatry.",
-          `${term("REALITY TESTING","The ability to judge whether an idea or perception matches outside reality.")}
-           ${term("PSYCHOSIS — 1950s","A broad category for severe mental disturbance marked especially by major failure of reality testing, serious disruption of personality functioning, and difficulty relating effectively to people or work.")}
+          `
+           ${term("PSYCHOSIS — 1950s","A broad category for severe mental disturbance in which a person could fail to test and evaluate external reality correctly, together with serious disruption of personality functioning and difficulty relating effectively to people or work.")}
            ${term("PSYCHOTIC — 1950s","Describing a person, symptom, reaction, or disorder classed as psychotic. Older writing also used the noun 'a psychotic' for a person.")}
            ${term("SCHIZOPHRENIC REACTION — 1950s","DSM-I's 1952 name for a group of psychotic reactions involving major disturbances in a person's relationship to reality, thought and concept formation, emotion, and behavior.")}
            <p>The modern words <strong>psychosis</strong>, <strong>psychotic</strong>, and <strong>schizophrenia</strong> remain, but the diagnostic framework changed substantially after the 1950s.</p>`)}
@@ -158,9 +158,8 @@
          ${term("SCHIZOPHRENIC REACTION — 1950s","A group of psychotic reactions marked by major disturbances in a person's relationship to reality, formation of ideas and concepts, emotional life, behavior, and flow of thought.")}`)}
 
       ${step(2,"Define the 1950s phrase 'psychotic reaction.'",
-        `${term("PSYCHOTIC REACTION — 1950s","A severe mental disturbance in which personality functioning and the ability to test external reality were seriously disrupted.")}
-         ${term("REALITY TESTING","The ability to judge whether an idea or perception matches outside reality.")}
-         <p>DSM-I described psychotic disorders in terms that included major personality disorganization, failure to evaluate external reality correctly, and severe difficulty functioning in relationships or work.</p>`)}
+        `${term("PSYCHOTIC REACTION — 1950s","A severe mental disturbance involving serious disruption of personality functioning and serious difficulty judging external reality correctly.")}
+         <p>DSM-I described psychotic disorders as involving personality disorganization and a failure to <strong>test and evaluate external reality correctly</strong>.</p><div class="history-note"><strong>Period wording:</strong> The technical expression <em>reality testing</em> did exist in psychiatric and psychoanalytic writing in the 1950s. DSM-I itself used the longer wording about testing and evaluating external reality, so this page uses that wording as the core 1950s definition.</div>`)}
 
       ${step(3,"Symptoms described then.",
         `${term("DELUSION","A firmly held belief that remains fixed despite strong evidence against it, judged in cultural and clinical context.")}
@@ -219,8 +218,7 @@
   function psychosisBody(){
     return `
       ${step(1,"1950s core meaning.",
-        `${term("PSYCHOSIS — 1950s","A broad term for severe mental disturbance in which personality functioning and the ability to test external reality were seriously impaired.")}
-         ${term("REALITY TESTING","The ability to judge whether an idea or perception matches outside reality.")}
+        `${term("PSYCHOSIS — 1950s","A broad term for severe mental disturbance involving personality disorganization and failure to test and evaluate external reality correctly.")}
          <p>In DSM-I-era American psychiatry, psychosis was not merely a list of isolated symptoms. It was also a broad severity and diagnostic-category concept.</p>`)}
 
       ${step(2,"What did DSM-I emphasize?",
@@ -229,7 +227,7 @@
          <p>DSM-I descriptions emphasized serious disruption of personality, failure to judge external reality correctly, and inability to relate effectively to people or work.</p>`)}
 
       ${step(3,"Psychosis versus neurosis.",
-        `${term("NEUROSIS — 1950s","A broad term for psychological disturbance in which reality testing was generally considered much more intact than in psychosis.")}
+        `${term("NEUROSIS — 1950s","A broad term for psychological disturbance in which the person was not considered to show the gross distortion or falsification of external reality associated with psychosis.")}
          <p>The <strong>psychosis–neurosis</strong> contrast was a major organizing distinction in mid-century psychiatry.</p>`)}
 
       ${step(4,"What changed later?",
@@ -239,7 +237,7 @@
          ${term("HALLUCINATION","A perception-like experience without the corresponding outside source being present.")}`)}
 
       ${shift(
-        "A broad category of severe mental disturbance defined partly by major failure of reality testing, personality disorganization, and impaired social or occupational functioning.",
+        "A broad category of severe mental disturbance defined partly by failure to test and evaluate external reality correctly, personality disorganization, and impaired social or occupational functioning.",
         "The word became more symptom-focused. It now describes a type of disturbance that can occur in several different diagnoses or medical conditions rather than one single broad disease class."
       )}`;
   }
@@ -252,8 +250,8 @@
          <p>1950s medical writing also used <strong>a psychotic</strong> as a noun for a person considered psychotic.</p>`)}
 
       ${step(2,"What did 'psychotic' imply then?",
-        `${term("REALITY TESTING","The ability to judge whether an idea or perception matches outside reality.")}
-         <p>The label generally implied a severe disturbance involving major impairment of reality testing, personality functioning, or ability to manage ordinary relationships and work.</p>`)}
+        `
+         <p>The label generally implied a severe disturbance involving failure to judge external reality correctly, serious disruption of personality functioning, or major difficulty managing ordinary relationships and work.</p>`)}
 
       ${step(3,"Common 1950s-style phrases.",
         `<div class="definition-grid">
@@ -267,7 +265,7 @@
          <p>It also does <strong>not</strong> by itself mean schizophrenia, violence, dangerousness, low intelligence, or eccentricity.</p>`)}
 
       ${shift(
-        "A broad severity/category adjective for severe disorders involving major impairment of reality testing; 'a psychotic' was also ordinary professional wording.",
+        "A broad severity/category adjective for severe disorders involving serious disturbance in judging external reality and in personality functioning; 'a psychotic' was also ordinary professional wording.",
         "The adjective is now used more narrowly around psychotic symptoms or episodes, and noun-labeling of people is generally avoided."
       )}`;
   }
@@ -657,7 +655,7 @@
     {slug:"sociology",title:"Sociology",category:"Fields",short:"In the 1950s: the systematic study of society, social groups, institutions, roles, and relationships.",keywords:"sociology society institutions social science mid century structural functionalism",body:sociologyBody()},
     {slug:"schizophrenia",title:"Schizophrenia",category:"Psychosis Terms",short:"In DSM-I (1952): 'schizophrenic reaction,' a broad psychotic category involving major disturbances of reality relationships, thought, emotion, and behavior.",keywords:"schizophrenia schizophrenic reaction split mind split personality two minds DSM I DSM II psychosis hallucination delusion",body:schizophreniaBody()},
     {slug:"schizophrenic",title:"Schizophrenic",category:"Psychosis Terms",short:"In the 1950s: the adjective for the DSM-I category 'schizophrenic reaction,' also used as a noun and figuratively for something divided or 'of two minds.'",keywords:"schizophrenic adjective split mind split personality two minds divided contradictory mid century",body:schizophrenicBody()},
-    {slug:"psychosis",title:"Psychosis",category:"Psychosis Terms",short:"In the 1950s: a broad severe-mental-disorder concept centered on major failure of reality testing and serious disruption of personality functioning.",keywords:"psychosis reality testing hallucination delusion psychotic mid century neurosis",body:psychosisBody()},
+    {slug:"psychosis",title:"Psychosis",category:"Psychosis Terms",short:"In the 1950s: a broad severe-mental-disorder concept involving failure to test and evaluate external reality correctly and serious disruption of personality functioning.",keywords:"psychosis reality testing hallucination delusion psychotic mid century neurosis",body:psychosisBody()},
     {slug:"psychotic",title:"Psychotic",category:"Psychosis Terms",short:"In the 1950s: describing a person, symptom, reaction, or disorder classed as psychotic; the noun 'a psychotic' was also common.",keywords:"psychotic adjective psychosis schizophrenia mid century terminology",body:psychoticBody()},
     {slug:"sedative",title:"Sedative",category:"Sedation & Sleep Terms",short:"In the 1950s: a calming or nervous-system-depressing drug; barbiturates were among the major examples.",keywords:"sedative sedation calming drowsiness barbiturate hypnotic",body:sedativeBody()},
     {slug:"soporific",title:"Soporific",category:"Sedation & Sleep Terms",short:"In the 1950s: sleep-producing or strongly drowsiness-producing; later the figurative 'boring' use became especially familiar.",keywords:"soporific sleep drowsy sedative boring sopor",body:soporificBody()},
