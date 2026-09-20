@@ -167,18 +167,35 @@
   function prefrontalBody(){
     return `
       ${step(1,"Build the word.",`
-        ${term("PRE-","In front of or before.")}
-        ${term("FRONTAL","Having to do with the frontal lobe, the front portion of the cerebrum.")}
-        ${term("CORTEX","An outer layer; Latin for bark.")}
-        ${chain(["pre-","frontal","cortex","frontmost frontal cortex"])}`)}
-      ${step(2,"Where it is.",`
-        <p>The <strong>prefrontal cortex</strong> is the frontmost portion of the cerebral cortex in the frontal lobes, directly behind the forehead.</p>
-        ${term("CEREBRAL CORTEX","The folded outer layer of the cerebrum.")}
-        ${term("WHITE MATTER","Bundles of connecting nerve fibers lying beneath and between areas of cortex.")}`)}
-      ${step(3,"What it participates in.",`
-        ${term("EXECUTIVE FUNCTION","Planning, keeping goals in mind, controlling attention, comparing choices, and regulating behavior.")}
-        <p>The prefrontal cortex participates heavily in working memory, planning, decision-making, inhibition, behavioral regulation, and social cognition.</p>`)}
-      <div class="memory"><strong>Memory aid:</strong> PRE = front · FRONTAL = frontal lobe · CORTEX = outer layer.</div>`;
+        ${term("PRE-","A prefix meaning in front of or before.")}
+        ${term("FRONTAL","Having to do with the frontal lobe, the large front region of each cerebral hemisphere.")}
+        ${term("CORTEX","An outer layer. In the brain, cortex means the folded gray-matter surface on the outside of the cerebrum.")}
+        ${chain(["pre- = in front","frontal = frontal lobe","cortex = outer layer","prefrontal cortex = frontmost frontal cortex"])}`)}
+
+      ${step(2,"First separate three similar-sounding terms.",`
+        ${term("FRONTAL LOBE","The whole large front region of each cerebral hemisphere. It includes the outer cortex and the white matter beneath it.")}
+        ${term("FRONTAL CORTEX","The outer gray-matter surface of the frontal lobe. It is part of the frontal lobe, not another name for the whole lobe.")}
+        ${term("PREFRONTAL CORTEX","The frontmost part of the frontal cortex. It lies directly behind the forehead.")}
+        ${chain(["frontal lobe = whole front region","frontal cortex = outer surface of that region","prefrontal cortex = frontmost part of that surface"])}
+        <div class="memory"><strong>Key distinction:</strong> The frontal lobe is larger than the prefrontal cortex. The prefrontal cortex is one part of the frontal cortex, and the frontal cortex is the outer surface of the frontal lobe.</div>`)}
+
+      ${step(3,"See the nesting.",`
+        ${chain(["brain","cerebrum","frontal lobe","frontal cortex","prefrontal cortex"])}
+        <p>Each item in that chain sits inside the one before it. The <strong>prefrontal cortex</strong> is therefore not the whole frontal lobe. It is the <strong>front edge of the cortex covering that lobe</strong>.</p>
+        ${term("CEREBRAL CORTEX","The folded outer gray-matter layer covering the cerebrum. The frontal cortex is the portion of this cortex that lies over the frontal lobe.")}
+        ${term("WHITE MATTER","Bundles of connecting nerve fibers that lie beneath the cortex and connect one brain region with another.")}`)}
+
+      ${step(4,"Where the prefrontal cortex is.",`
+        <p>The prefrontal cortex sits at the very front of the frontal lobes, immediately behind the forehead.</p>
+        <p>The frontal lobe continues much farther back than the prefrontal cortex. Farther-back frontal areas include motor-related cortex and other frontal regions.</p>
+        <div class="memory"><strong>Picture it this way:</strong> frontal lobe = the whole front neighborhood · frontal cortex = the outer surface of that neighborhood · prefrontal cortex = the front edge of that outer surface.</div>`)}
+
+      ${step(5,"What the prefrontal cortex participates in.",`
+        ${term("WORKING MEMORY","Information you hold in mind briefly while using it—for example, remembering a number long enough to enter it.")}
+        ${term("INHIBITION","Holding back or suppressing an immediate response.")}
+        ${term("EXECUTIVE FUNCTION","A group of higher-level mental processes used to plan, keep goals in mind, control attention, compare options, and regulate behavior.")}
+        <p>The prefrontal cortex participates heavily in <strong>working memory, planning, decision-making, inhibition, behavioral regulation, social judgment, and executive function.</strong></p>`)}
+    `;
   }
 
   function lobotomyBody(){
@@ -245,9 +262,14 @@
       slug:"prefrontal-cortex",
       title:"Prefrontal Cortex",
       category:"Brain",
-      short:"What prefrontal cortex means, where it is, and what kinds of mental functions depend heavily on it.",
-      keywords:"prefrontal cortex pre frontal PFC frontal lobe executive function planning decision working memory inhibition",
-      body:prefrontalBody()
+      short:"How the prefrontal cortex fits inside the frontal cortex and frontal lobe, where it sits, and what it does.",
+      keywords:"prefrontal cortex pre frontal PFC frontal lobe frontal cortex cerebral cortex executive function planning decision working memory inhibition",
+      body:`
+        <figure class="anatomy-diagram anatomy-diagram-medium">
+          <img src="assets/anatomy/pfcortex.png" alt="Prefrontal cortex diagram showing the nested relationship between the frontal lobe, frontal cortex, and prefrontal cortex directly behind the forehead." loading="lazy">
+          <figcaption>Prefrontal cortex: the frontmost part of the frontal cortex, within the larger frontal lobe.</figcaption>
+        </figure>
+        ${prefrontalBody()}`
     },
     {
       slug:"lobotomy-leucotomy-transorbital",
