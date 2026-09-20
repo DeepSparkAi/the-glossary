@@ -378,6 +378,9 @@ function buildGrammarEntries(){
 }
 
 entries.push(...buildGrammarEntries());
+if(window.PSYCHIATRY_CONTENT?.entries){
+  entries.push(...window.PSYCHIATRY_CONTENT.entries);
+}
 
 
 entries.push({
@@ -691,6 +694,13 @@ const sectionConfig = {
     emptyTitle: "Choose a geography topic.",
     emptyText: "Open a baby-step primer on political geography, regions, or city layouts.",
     searchPlaceholder: "Try “Great Britain,” “Ireland,” “Sussex,” or “Washington”…"
+  },
+  "Psychiatry Terms": {
+    categories: ["All","Fields","Psychosis Terms","Sedation & Sleep Terms","Drug Terms & History"],
+    indexTitle: "Psychiatry Terms",
+    emptyTitle: "Choose a term.",
+    emptyText: "Open a neutral definition, historical usage note, or drug-history primer.",
+    searchPlaceholder: "Try “psychosis,” “schizophrenia,” “scopolamine,” or “barbiturate”…"
   }
 };
 
@@ -699,6 +709,7 @@ const languageCategories = new Set(["Language & History","Sounds & Phonetics","F
 const historyCategories = new Set(["Modern History"]);
 const economicIsmCategories = new Set(["Economic Systems & Ideologies"]);
 const geographyCategories = new Set(["Political Geography","Cities & Maps"]);
+const psychiatryCategories = new Set(["Fields","Psychosis Terms","Sedation & Sleep Terms","Drug Terms & History"]);
 
 const listEl = document.querySelector("#term-list");
 const panelEl = document.querySelector("#entry-panel");
@@ -722,6 +733,7 @@ function sectionForEntry(entry){
   if(historyCategories.has(entry.category)) return "History";
   if(economicIsmCategories.has(entry.category)) return "Economic Isms";
   if(geographyCategories.has(entry.category)) return "Geography";
+  if(psychiatryCategories.has(entry.category)) return "Psychiatry Terms";
   return "Glossary";
 }
 
@@ -1737,6 +1749,10 @@ function resetPanel(){
       </div>`;
     activeSlug=slug;
     renderTerms();
+    return;
+  }
+  if(activeSection==="Psychiatry Terms"){
+    panelEl.innerHTML=window.PSYCHIATRY_CONTENT?.defaultBody || '<div class="empty-state"><h2>Psychiatry Terms</h2></div>';
     return;
   }
   panelEl.innerHTML=`
