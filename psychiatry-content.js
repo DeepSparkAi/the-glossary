@@ -41,6 +41,9 @@
 
            ${term("PSYCHOSIS — 1950s","A broad name for severe mental disturbance in which a person could fail to test and evaluate the outside world correctly, together with serious disruption of thought, emotion, behavior, or ordinary functioning. The word literally points to a condition of the mind: psych- + -osis.")}
 
+           ${term("NEUROSIS — 1950s","A broad name for psychological disturbance—especially involving anxiety and maladjustment—in which the person was not considered to show the gross falsification of external reality or gross personality disorganization associated with psychosis. Neuro- means nerve; -osis means condition.")}
+           <div class="flow"><span><strong>neuro-</strong><br>nerve</span><b>+</b><span><strong>-osis</strong><br>condition</span><b>→</b><span><strong>neurosis</strong><br>originally 'a nervous condition'</span></div>
+
            ${term("-IC","A common word ending meaning 'relating to' or 'having to do with.'")}
            <div class="flow"><span><strong>psychosis</strong><br>the condition</span><b>→</b><span><strong>psychotic</strong><br>relating to that kind of severe mental condition</span></div>
 
@@ -254,21 +257,30 @@
          ${term("EXTERNAL REALITY","The outside world—the people, events, objects, and circumstances that exist independently of a person's private thoughts or perceptions.")}
          <p>So the 1950s meaning was not merely “a mental condition.” It was a category for severe disturbance in how the person functioned and dealt with the outside world.</p>`)}
 
-      ${step(3,"Why the adjective is 'psychotic.'",
-        `${term("-IC","A word ending meaning 'relating to' or 'having to do with.'")}
-         <p>The adjective formed from <strong>psychosis</strong> is <strong>psychotic</strong>.</p>
-         ${chain(["psychosis · the condition","psychotic · relating to that condition"])}
-         <p>English changes the ending rather than simply attaching <em>-ic</em> to the complete spelling <em>psychosis</em>. The important idea is grammatical: <strong>psychosis</strong> names the condition; <strong>psychotic</strong> describes something related to it.</p>`)}
+      ${step(3,"The 1950s contrast with neurosis.",
+        `<div class="compare-grid">
+          <div class="compare-card">
+            <h3>Neurosis</h3>
+            <p>The person could have anxiety, fears, compulsions, depression, or other serious psychological difficulties, but was <strong>not considered grossly detached from external reality</strong> and did not show gross disorganization of personality.</p>
+          </div>
+          <div class="compare-card">
+            <h3>Psychosis</h3>
+            <p>The disturbance had crossed into <strong>gross distortion of external reality, serious personality disorganization, or major breakdown in ordinary social or work functioning</strong>.</p>
+          </div>
+         </div>
+         <div class="memory"><strong>Useful 1950s memory aid:</strong> neurosis = psychologically troubled but basically still operating inside the shared world; psychosis = the disturbance can seriously disrupt the person's grip on that shared world and the organization of ordinary life.</div>
+         <p>That memory aid is deliberately simpler than the old manuals. It does <strong>not</strong> mean every person with neurosis functioned well, or that every person with psychosis neglected all self-care.</p>`)}
 
       ${step(4,"What did DSM-I emphasize?",
         `${term("PERSONALITY DISINTEGRATION","A 1950s phrase for severe breakdown in the usual organization and functioning of the person's thoughts, emotions, behavior, and relationships.")}
          ${term("FUNCTIONING","A person's ability to manage ordinary life tasks, work, relationships, and self-care.")}
-         <p>DSM-I descriptions emphasized serious disruption of personality, failure to judge external reality correctly, and inability to relate effectively to people or work.</p>
-         <div class="history-note"><strong>Period wording:</strong> The technical expression <em>reality testing</em> did exist in 1950s psychiatric writing, but DSM-I used the longer wording about testing and evaluating external reality. That is why this page uses the longer phrase first.</div>`)}
+         <p>DSM-I described psychotic disorders as involving personality disintegration, failure to test and evaluate external reality correctly, and inability to relate effectively to people or work.</p>
+         <p>This is why your intuition about <strong>life no longer being managed normally</strong> is close to the historical distinction. But <strong>being a burden on other people</strong> was not itself the diagnostic dividing line.</p>`)}
 
-      ${step(5,"Psychosis versus neurosis.",
-        `${term("NEUROSIS — 1950s","A broad term for psychological disturbance in which the person was not considered to show the gross distortion or falsification of external reality associated with psychosis.")}
-         <p>The <strong>psychosis–neurosis</strong> contrast was a major organizing distinction in mid-century psychiatry.</p>`)}
+      ${step(5,"Why the adjective is 'psychotic.'",
+        `${term("-IC","A word ending meaning 'relating to' or 'having to do with.'")}
+         ${chain(["psychosis · the condition","psychotic · relating to that condition"])}
+         <p><strong>Psychosis</strong> is the noun. <strong>Psychotic</strong> is the adjective formed from it.</p>`)}
 
       ${step(6,"What changed later?",
         `${term("SYMPTOM-FOCUSED","Describing a condition mainly by the particular experiences or behaviors present rather than by one broad severity category.")}
@@ -282,40 +294,114 @@
       )}`;
   }
 
+  function neurosisBody(){
+    return `
+      ${step(1,"Start with the word itself.",
+        `${term("NEURO-","A word part meaning nerve or nervous system. It comes from Greek <em>neuron</em>, originally meaning a sinew, cord, or nerve.")}
+         ${term("-OSIS","A medical word ending meaning a state or condition, often an abnormal condition.")}
+         ${chain(["neuro- · nerve","-osis · condition","neurosis · a nervous condition"])}
+         <p>Scottish physician <strong>William Cullen</strong> coined <em>neurosis</em> in the 18th century for disorders he thought arose from the nervous system without an obvious local injury. The meaning changed substantially before the 1950s.</p>`)}
+
+      ${step(2,"What did neurosis mean in the 1950s?",
+        `${term("PSYCHONEUROTIC DISORDER — DSM-I","DSM-I's broad category for disorders in which anxiety was considered a chief feature, either felt directly or handled through psychological defenses.")}
+         ${term("ANXIETY","A state of apprehension, fear, tension, or expectation of danger. In DSM-I, anxiety was treated as central to the psychoneurotic disorders.")}
+         <p>In 1950s American psychiatry, <strong>neurosis</strong> referred broadly to psychological disturbance involving anxiety, fears, compulsions, depressive reactions, conversion symptoms, or similar problems <strong>without the gross distortion of external reality or gross personality disorganization associated with psychosis</strong>.</p>`)}
+
+      ${step(3,"Your 'still able to live your life' idea is useful—but needs one correction.",
+        `<p>A person described as neurotic in the 1950s could be distressed, preoccupied, fearful, compulsive, depressed, or poorly adjusted. The symptoms could interfere substantially with work or relationships.</p>
+         <p>But the person was generally understood as remaining <strong>inside the shared external world</strong>: not grossly falsifying reality through delusions or hallucinations and not showing the gross personality disorganization used to define psychosis.</p>
+         <div class="memory"><strong>Good shorthand:</strong> neurosis = life may be difficult, anxious, constricted, or maladjusted, but the person is basically still oriented to the same external world as everyone else.</div>`)}
+
+      ${step(4,"Now contrast it with psychosis.",
+        `<div class="compare-grid">
+          <div class="compare-card">
+            <h3>Neurosis — 1950s</h3>
+            <p>Psychological dysfunction and maladjustment, commonly organized around anxiety, but without gross falsification of external reality and without gross disorganization of personality.</p>
+          </div>
+          <div class="compare-card">
+            <h3>Psychosis — 1950s</h3>
+            <p>Severe disturbance involving personality disintegration, failure to test and evaluate external reality correctly, or inability to relate effectively to people or work.</p>
+          </div>
+         </div>
+         <p>Your phrase <strong>“still able to live your life”</strong> points toward a real part of the distinction: preservation of ordinary reality contact and personality organization. But it should not be read as “a neurotic person always functions well.”</p>
+         <p>Likewise, <strong>“becoming a burden on others”</strong> can happen in severe illness, but it is a consequence, not the definition of psychosis.</p>`)}
+
+      ${step(5,"Why 'neurotic'?",
+        `${term("-IC","A word ending meaning 'relating to' or 'having to do with.'")}
+         ${term("NEUROTIC","The adjective meaning relating to neurosis or showing features then described as neurotic. Older writing also used <em>a neurotic</em> as a noun for a person.")}
+         ${chain(["neurosis · the condition","neurotic · relating to that condition"])}
+         <p>The same grammar distinction appears here as with <em>psychotic</em>: <strong>he is neurotic</strong> uses an adjective; <strong>he is a neurotic</strong> turns the adjective into a noun-label for the person.</p>`)}
+
+      ${step(6,"What happened to the term later?",
+        `<p>The broad neurosis-versus-psychosis division weakened during the 1960s and 1970s. DSM-III in 1980 reorganized the old neurotic conditions into more specific categories and largely abandoned <strong>neurosis</strong> as an official organizing diagnosis.</p>
+         <p>Conditions previously grouped under neurosis were redistributed into categories such as anxiety disorders, depressive disorders, obsessive-compulsive conditions, dissociative disorders, and somatic-symptom-related diagnoses.</p>
+         <p>The words <strong>neurosis</strong> and <strong>neurotic</strong> still survive in historical writing, psychoanalytic traditions, personality language, and ordinary speech.</p>`)}
+
+      ${shift(
+        "A broad family of psychological disturbances, especially involving anxiety and maladjustment, without the gross falsification of external reality or gross personality disorganization associated with psychosis.",
+        "The broad diagnostic category was largely dismantled in DSM-III. More specific diagnoses replaced it, although the words neurosis and neurotic remain in historical and ordinary language."
+      )}
+
+      ${sourceBox([
+        '<a href="https://cpcglobal.org/publications/dsm-1952.pdf" target="_blank" rel="noopener">DSM-I (1952) — Psychoneurotic Disorders</a>',
+        '<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2632489/" target="_blank" rel="noopener">PMC — history of the psychosis/neurosis distinction</a>',
+        '<a href="https://www.etymonline.com/word/neurosis" target="_blank" rel="noopener">Etymonline — origin of neurosis</a>'
+      ])}`;
+  }
+
   function psychoticBody(){
     return `
-      ${step(1,"First: do not define a word with itself.",
+      ${step(1,"1950s core meaning.",
         `${term("ADJECTIVE","A word that describes or modifies another word.")}
-         <p><strong>Psychotic</strong> is an adjective. In 1950s psychiatric use, it described a symptom, reaction, disorder, or person showing a <strong>severe disturbance in judging external reality and in ordinary mental or personality functioning</strong>.</p>
-         <p>That definition tells you what the word pointed to without using the word <em>psychotic</em> again.</p>`)}
+         <p><strong>Psychotic</strong> was an adjective for a severe mental disturbance involving major difficulty judging the outside world correctly, major disruption of ordinary personality functioning, or both.</p>
+         <p>That gives the meaning without defining the word by itself.</p>`)}
 
-      ${step(2,"Now take the word apart.",
+      ${step(2,"Take the word apart.",
         `${term("PSYCHE","Greek <em>psychē</em>: mind, soul, or life. The word part <strong>psych-</strong> points toward the mind or mental life.")}
-         ${term("-OSIS","A word ending used in medicine for a state or condition.")}
+         ${term("-OSIS","A medical word ending meaning a state or condition.")}
          ${term("PSYCHOSIS","The noun: in 1950s use, a broad category of severe mental disturbance.")}
          ${term("-IC","A word ending meaning 'relating to' or 'having to do with.'")}
          ${chain(["psych- · mind","-osis · condition","psychosis · the condition","psychotic · relating to that condition"])}
-         <p><strong>Psychosis</strong> is the noun. <strong>Psychotic</strong> is the adjective made from it.</p>`)}
+         <p><strong>Psychosis</strong> names the condition. <strong>Psychotic</strong> describes something as belonging to, showing, or involving that kind of condition.</p>`)}
 
-      ${step(3,"Why did the word carry such a strong meaning in the 1950s?",
+      ${step(3,"'He is psychotic' and 'He is a psychotic' are not the same grammar.",
+        `${term("PREDICATE ADJECTIVE","An adjective placed after a linking verb such as <em>is</em>, describing the subject.")}
+         <div class="compare-grid">
+           <div class="compare-card">
+             <h3>He is psychotic.</h3>
+             <p><strong>Psychotic is an adjective.</strong> It describes him as presently having or showing the kind of severe disturbance called psychosis.</p>
+             <p>Grammatically, the sentence says something <strong>about him</strong>. It does not turn the adjective into his name or class.</p>
+           </div>
+           <div class="compare-card">
+             <h3>He is a psychotic.</h3>
+             <p><strong>Psychotic is being used as a noun.</strong> The word <em>a</em> tells you that the sentence is placing him into a class of people called “psychotics.”</p>
+             <p>This noun use was ordinary in older psychiatric writing.</p>
+           </div>
+         </div>
+         ${term("NOMINALIZE","To turn a word that normally has another job—such as an adjective—into a noun or noun-like label.")}
+         <p>So <strong>he is psychotic</strong> describes a condition or quality. <strong>He is a psychotic</strong> nominalizes the adjective and labels the person as a member of a category.</p>
+         <p>The adjective does <strong>not</strong> automatically mean the condition is temporary; grammar alone does not tell you how long it lasts. The difference is description versus classification of the person.</p>`)}
+
+      ${step(4,"Why did the word carry such a strong meaning in the 1950s?",
         `${term("EXTERNAL REALITY","The outside world—the people, events, objects, and circumstances outside a person's private thoughts or perceptions.")}
          <p>Mid-century psychiatry used the psychosis category for severe disturbances involving failure to judge external reality correctly, major disruption of personality organization, or serious difficulty functioning in relationships and work.</p>
-         <p>So calling a condition <strong>psychotic</strong> located it in that severe category.</p>`)}
+         <p>So calling a symptom, reaction, or disorder <strong>psychotic</strong> placed it in that severe category.</p>`)}
 
-      ${step(4,"Common 1950s-style phrases.",
+      ${step(5,"Common 1950s-style phrases.",
         `<div class="definition-grid">
           <div class="definition-card"><h3>psychotic reaction</h3><p>a severe psychiatric reaction placed in the period's psychosis category</p></div>
           <div class="definition-card"><h3>psychotic depression</h3><p>a severe depressive condition placed in the psychosis category</p></div>
-          <div class="definition-card"><h3>a psychotic</h3><p>an older noun use for a person considered to have a psychotic disorder</p></div>
+          <div class="definition-card"><h3>a psychotic</h3><p>the older noun use for a person placed in the psychosis category</p></div>
         </div>`)}
 
-      ${step(5,"What changed later?",
-        `<p>Modern professional usage more often keeps <strong>psychotic</strong> as an adjective in phrases such as <em>psychotic symptom</em> or <em>psychotic episode</em>, and generally avoids using <em>a psychotic</em> as a noun for a person.</p>
-         <p>The word does <strong>not</strong> by itself mean schizophrenia, violence, dangerousness, low intelligence, or eccentricity.</p>`)}
+      ${step(6,"What changed later?",
+        `<p>Modern professional writing more often keeps <strong>psychotic</strong> as an adjective in phrases such as <em>psychotic symptom</em>, <em>psychotic episode</em>, or <em>person experiencing psychosis</em>.</p>
+         <p>The older noun phrase <strong>a psychotic</strong> has become much less favored because it uses the diagnosis as the person's category label.</p>
+         <p>The word <strong>psychotic</strong> also does not by itself mean schizophrenia, violence, dangerousness, low intelligence, or eccentricity.</p>`)}
 
       ${shift(
-        "An adjective for severe mental disturbance involving major problems judging external reality or maintaining ordinary personality functioning; it was also used as a noun for a person.",
-        "The adjective is now used more specifically around psychotic symptoms or episodes, and noun-labeling of people is generally avoided."
+        "An adjective for severe mental disturbance involving major problems judging external reality or maintaining ordinary personality functioning; 'a psychotic' was also ordinary noun usage.",
+        "The adjective remains in use, but noun-labeling of a person as 'a psychotic' is generally avoided in professional writing."
       )}`;
   }
 
@@ -768,7 +854,8 @@
     {slug:"schizophrenia",title:"Schizophrenia",category:"Psychosis Terms",short:"In DSM-I (1952): 'schizophrenic reaction,' a broad psychotic category involving major disturbances of reality relationships, thought, emotion, and behavior.",keywords:"schizophrenia schizophrenic reaction split mind split personality two minds DSM I DSM II psychosis hallucination delusion",body:schizophreniaBody()},
     {slug:"schizophrenic",title:"Schizophrenic",category:"Psychosis Terms",short:"In the 1950s: the adjective for the DSM-I category 'schizophrenic reaction,' also used as a noun and figuratively for something divided or 'of two minds.'",keywords:"schizophrenic adjective split mind split personality two minds divided contradictory mid century",body:schizophrenicBody()},
     {slug:"psychosis",title:"Psychosis",category:"Psychosis Terms",short:"In the 1950s: a broad severe-mental-disorder concept involving failure to test and evaluate external reality correctly and serious disruption of personality functioning.",keywords:"psychosis reality testing hallucination delusion psychotic mid century neurosis",body:psychosisBody()},
-    {slug:"psychotic",title:"Psychotic",category:"Psychosis Terms",short:"In the 1950s: describing severe mental disturbance involving major difficulty judging external reality or maintaining ordinary personality functioning; it was also used as a noun for a person.",keywords:"psychotic adjective psychosis schizophrenia mid century terminology",body:psychoticBody()},
+    {slug:"neurosis",title:"Neurosis",category:"Psychosis Terms",short:"In the 1950s: psychological disturbance, especially involving anxiety and maladjustment, without the gross falsification of external reality or gross personality disorganization associated with psychosis.",keywords:"neurosis neurotic psychoneurotic anxiety psychosis DSM I mid century 1950s",body:neurosisBody()},
+    {slug:"psychotic",title:"Psychotic",category:"Psychosis Terms",short:"In the 1950s: describing severe mental disturbance involving major difficulty judging external reality or maintaining ordinary personality functioning; it was also used as a noun for a person.",keywords:"psychotic adjective noun a psychotic psychosis schizophrenia mid century terminology",body:psychoticBody()},
     {slug:"sedative",title:"Sedative",category:"Sedation & Sleep Terms",short:"In the 1950s: a calming or nervous-system-depressing drug; barbiturates were among the major examples.",keywords:"sedative sedation calming drowsiness barbiturate hypnotic",body:sedativeBody()},
     {slug:"soporific",title:"Soporific",category:"Sedation & Sleep Terms",short:"In the 1950s: sleep-producing or strongly drowsiness-producing; later the figurative 'boring' use became especially familiar.",keywords:"soporific sleep drowsy sedative boring sopor",body:soporificBody()},
     {slug:"hypnotic-drug",title:"Hypnotic Drug",category:"Sedation & Sleep Terms",short:"In 1950s medicine: a sleep-producing drug, often a barbiturate; distinct from hypnosis.",keywords:"hypnotic drug sedative hypnotic sleeping pill sleep barbiturate",body:hypnoticDrugBody()},
