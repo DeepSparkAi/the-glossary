@@ -249,7 +249,7 @@
       title:"Lobotomy, Leucotomy & Transorbital Leucotomy",
       category:"Historical Brain Surgery",
       short:"The words broken apart: lobe, -tomy, leuco-, orbit, trans-, and the historical operations they named.",
-      keywords:"lobotomy labotomy prefrontal lobotomy prefrontal labotomy leucotomy leukotomy transorbital leucotomy transorbital lobotomy ice pick ice-pick orbitoclast Egas Moniz Walter Freeman James Watts Almeida Lima white matter psychosurgery",
+      keywords:"lobotomy prefrontal lobotomy leucotomy leukotomy transorbital leucotomy transorbital lobotomy ice pick ice-pick orbitoclast Egas Moniz Walter Freeman James Watts Almeida Lima white matter psychosurgery",
       body:lobotomyBody()
     },
     {
