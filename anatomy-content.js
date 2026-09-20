@@ -105,7 +105,7 @@
          ${chain(["trans- = through","orbit = eye socket","transorbital = through the eye socket"])}
          <p>The route was beside and behind the eye through the upper eye socket, not through the eyeball itself.</p>`)}
 
-      ${step(14,"Transorbital leucotomy is the 'ice-pick' operation you are thinking of.",
+      ${step(14,"Transorbital leucotomy: through the eye socket.",
         `${term("TRANSORBITAL LEUCOTOMY","A historical form of frontal psychosurgery in which an instrument was passed through the upper eye socket and through the thin roof of the orbit into frontal white matter, then moved to sever white-matter fiber tracts.")}
          ${term("ORBITOCLAST","The purpose-built instrument Walter Freeman later used for the transorbital operation. It resembled a long, narrow ice pick.")}
          <p>Walter Freeman introduced the transorbital technique in the United States in <strong>1946</strong>. It became popularly known as the <strong>“ice-pick lobotomy.”</strong></p>
@@ -115,7 +115,7 @@
         `${chain(["prefrontal cortex","white matter underneath","white-matter connections","leucotomy / lobotomy","transorbital route"])}
          <div class="memory"><strong>Shortest memory rule:</strong> A prefrontal lobotomy or leucotomy was not “cutting the thinking surface off.” It was primarily an attempt to <strong>cut the white-matter connections running from the prefrontal region to other parts of the brain.</strong></div>`)}
 
-      ${step(16,"Now the other pair you were remembering: sympathetic and parasympathetic.",
+      ${step(16,"The autonomic nervous system has two major divisions.",
         `${term("AUTONOMIC NERVOUS SYSTEM","The part of the nervous system that automatically regulates many internal body functions, including heart activity, digestion, sweating, urination, and bowel activity.")}
          ${term("AUTONOMIC","Self-governing or automatic. The word is built from Greek roots meaning roughly <em>self</em> + <em>law</em>.")}
          <p>The <strong>autonomic nervous system</strong> has two major divisions:</p>
