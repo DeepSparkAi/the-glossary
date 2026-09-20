@@ -15,15 +15,15 @@
         <header class="primer-hero">
           <p class="kicker">1950s first · baby steps</p>
           <h2>Psychiatry terms</h2>
-          <p class="lede">This cabinet starts with what each word meant in professional use in the 1950s. Only after that does it explain how the meaning, diagnostic system, or usual drug use changed.</p>
-          <div class="primer-chain"><span>1950s meaning</span><b>→</b><span>define every word</span><b>→</b><span>later change</span><b>→</b><span>current usage</span></div>
+          <p class="lede">This cabinet starts with what each word meant in professional use in the 1950s. It also explains why the word has that meaning and where its pieces came from.</p>
+          <div class="primer-chain"><span>1950s meaning</span><b>→</b><span>word parts</span><b>→</b><span>why the name fits</span><b>→</b><span>later change</span></div>
         </header>
 
         ${step(1,"Why start in the 1950s?",
           `<p>Words in psychiatry and psychology did not always mean exactly what they mean today. A modern definition can therefore hide what an older book, doctor, movie, newspaper, or conversation meant by the same word.</p>
            ${term("MID-CENTURY","Here, the period centered on the 1950s—especially about 1950 through 1959.")}
            ${term("USAGE","The way a word is actually used and understood in a particular time and setting.")}
-           <div class="memory"><strong>Rule for this section:</strong> 1950s meaning first. Later changes second.</div>`)}
+           <p>For the important words, this page also takes the word apart. Knowing the pieces makes a technical word easier to remember and easier to recognize elsewhere.</p>`)}
 
         ${step(2,"Three fields as a 1950s reader would meet them.",
           `${term("PSYCHIATRY — 1950s","A branch of medicine dealing with mental illness and serious disturbances of thought, emotion, and behavior. Psychiatrists were medical doctors. U.S. psychiatry of the period was strongly influenced by psychoanalytic ideas.")}
@@ -31,12 +31,33 @@
            ${term("SOCIOLOGY — 1950s","The study of society, social groups, institutions, roles, and relationships among people.")}
            <p>The basic field names survive, but the theories and methods emphasized inside each field changed considerably afterward.</p>`)}
 
-        ${step(3,"Psychosis and schizophrenia in 1950s American psychiatry.",
-          `
-           ${term("PSYCHOSIS — 1950s","A broad category for severe mental disturbance in which a person could fail to test and evaluate external reality correctly, together with serious disruption of personality functioning and difficulty relating effectively to people or work.")}
-           ${term("PSYCHOTIC — 1950s","Describing a person, symptom, reaction, or disorder classed as psychotic. Older writing also used the noun 'a psychotic' for a person.")}
-           ${term("SCHIZOPHRENIC REACTION — 1950s","DSM-I's 1952 name for a group of psychotic reactions involving major disturbances in a person's relationship to reality, thought and concept formation, emotion, and behavior.")}
-           <p>The modern words <strong>psychosis</strong>, <strong>psychotic</strong>, and <strong>schizophrenia</strong> remain, but the diagnostic framework changed substantially after the 1950s.</p>`)}
+        ${step(3,"Psychosis, psychotic, and schizophrenia: what the words mean and why.",
+          `<p>These three words are related, but they are not synonyms. Start by taking them apart.</p>
+
+           ${term("PSYCHE","From Greek <em>psychē</em>: mind, soul, or life. In modern words such as psychology and psychosis, <strong>psych-</strong> points toward the mind or mental life.")}
+           ${term("-OSIS","A word ending used in medicine for a state or condition, often an abnormal or diseased condition.")}
+
+           <div class="flow"><span><strong>psych-</strong><br>mind</span><b>+</b><span><strong>-osis</strong><br>condition</span><b>→</b><span><strong>psychosis</strong><br>a mental condition</span></div>
+
+           ${term("PSYCHOSIS — 1950s","A broad name for severe mental disturbance in which a person could fail to test and evaluate the outside world correctly, together with serious disruption of thought, emotion, behavior, or ordinary functioning. The word literally points to a condition of the mind: psych- + -osis.")}
+
+           ${term("-IC","A common word ending meaning 'relating to' or 'having to do with.'")}
+           <div class="flow"><span><strong>psychosis</strong><br>the condition</span><b>→</b><span><strong>psychotic</strong><br>relating to that kind of severe mental condition</span></div>
+
+           ${term("PSYCHOTIC — 1950s","An adjective applied to a symptom, reaction, disorder, or person when the disturbance was severe enough to involve major failure in judging external reality or major disruption of personality functioning. Older medical writing also used <em>a psychotic</em> as a noun for a person.")}
+
+           ${term("SCHIZO-","From Greek <em>schizein</em>, 'to split.' The word part <strong>schizo-</strong> therefore carries the idea of splitting or division.")}
+           ${term("PHREN-","From Greek <em>phrēn</em> or <em>phrenos</em>. In older Greek usage it could refer to the diaphragm or inner organs, but it also developed meanings connected with the mind, understanding, or mental faculties.")}
+           ${term("-IA","A word ending used to form nouns naming a state or condition.")}
+
+           <div class="flow"><span><strong>schizo-</strong><br>split</span><b>+</b><span><strong>phren-</strong><br>mind</span><b>+</b><span><strong>-ia</strong><br>condition</span><b>→</b><span><strong>schizophrenia</strong><br>roughly “a condition of splitting of the mind”</span></div>
+
+           <p>Eugen Bleuler introduced <strong>schizophrenia</strong> decades before the 1950s. His word was meant to describe what he regarded as a loss of unity or splitting among mental functions—not simply two complete personalities.</p>
+
+           ${term("REACTION — DSM-I","A response or way of reacting. DSM-I often used the word <strong>reaction</strong> because the manual described many disorders as ways a person reacted to psychological, social, or biological pressures.")}
+           ${term("SCHIZOPHRENIC REACTION — 1950s","DSM-I's 1952 name for a group of severe disorders in the schizophrenia family. The phrase literally combines <strong>schizophrenic</strong>—relating to schizophrenia—with <strong>reaction</strong>—the person's pathological response or pattern of disturbance.")}
+
+           <p>After the 1950s the diagnostic system changed, but these word histories explain why the older terms look and sound the way they do.</p>`)}
 
         ${step(4,"Sedative, soporific, and hypnotic in the 1950s.",
           `${term("SEDATIVE — 1950s","A drug used to calm, reduce nervous excitement, or produce drowsiness.")}
@@ -46,7 +67,7 @@
            <p>These words overlapped, but they were not identical: a <strong>sedative</strong> could calm without causing sleep; a <strong>hypnotic</strong> was specifically sleep-producing.</p>`)}
 
         ${step(5,"Two drug histories as a 1950s reader would recognize them.",
-          `${term("SCOPOLAMINE — 1950s","A drug also called hyoscine, used for effects such as reducing secretions, preanesthetic medication, motion-sickness control, pupil dilation, and sedation or memory impairment.")}
+          `${term("SCOPOLAMINE — 1950s","A drug also called hyoscine, used for reducing secretions, use before anesthesia, motion-sickness control, pupil dilation, and sedative or memory-impairing effects. Its name comes from the plant genus <em>Scopolia</em>, which was named for naturalist Giovanni Antonio Scopoli.")}
            ${term("BARBITURATE — 1950s","A major class of sedative and hypnotic drugs. Different barbiturates were also used for seizures and anesthesia.")}
            <p>They could both cause drowsiness, but they were different chemical families and worked differently.</p>
            <button type="button" class="primer-open-link" onclick="openEntry('scopolamine-primer')">Open the Scopolamine primer →</button>
@@ -151,30 +172,35 @@
 
   function schizophreniaBody(){
     return `
-      ${step(1,"1950s core term: 'schizophrenic reaction.'",
+      ${step(1,"Start with the word before the diagnosis.",
+        `${term("SCHIZO-","From Greek <em>schizein</em>: to split.")}
+         ${term("PHREN-","From Greek <em>phrēn</em> or <em>phrenos</em>. The word had older bodily meanings, but it also came to refer to mind, understanding, or mental faculties.")}
+         ${term("-IA","A word ending used to name a state or condition.")}
+         ${chain(["schizo- · split","phren- · mind","-ia · condition","schizophrenia · roughly 'a condition of splitting of the mind'"])}
+         <p>Eugen Bleuler introduced the term in the early 20th century. His idea of <strong>splitting</strong> concerned a loss of integration among mental functions. He was not simply naming two complete personalities.</p>`)}
+
+      ${step(2,"1950s core term: 'schizophrenic reaction.'",
         `${term("DSM-I","The first American Psychiatric Association diagnostic manual, published in 1952.")}
-         ${term("REACTION","DSM-I's way of describing many mental disorders as reactions of the person to internal and external pressures.")}
-         <p>In DSM-I, the principal 1950s term was <strong>schizophrenic reaction</strong>, not simply the modern diagnosis label <em>schizophrenia</em>.</p>
-         ${term("SCHIZOPHRENIC REACTION — 1950s","A group of psychotic reactions marked by major disturbances in a person's relationship to reality, formation of ideas and concepts, emotional life, behavior, and flow of thought.")}`)}
+         ${term("REACTION","A response or way of reacting. DSM-I frequently described disorders as reactions of the person to internal and external pressures.")}
+         ${term("SCHIZOPHRENIC","The adjective formed from schizophrenia: relating to schizophrenia or to the schizophrenia family of disturbances.")}
+         ${term("SCHIZOPHRENIC REACTION — 1950s","DSM-I's name for a group of severe disorders involving major disturbances in the person's relationship to the outside world, formation of ideas, emotional life, behavior, and flow of thought.")}
+         <p>The phrase can therefore be read literally as <strong>a reaction belonging to the schizophrenia group</strong>.</p>`)}
 
-      ${step(2,"Define the 1950s phrase 'psychotic reaction.'",
-        `${term("PSYCHOTIC REACTION — 1950s","A severe mental disturbance involving serious disruption of personality functioning and serious difficulty judging external reality correctly.")}
-         <p>DSM-I described psychotic disorders as involving personality disorganization and a failure to <strong>test and evaluate external reality correctly</strong>.</p><div class="history-note"><strong>Period wording:</strong> The technical expression <em>reality testing</em> did exist in psychiatric and psychoanalytic writing in the 1950s. DSM-I itself used the longer wording about testing and evaluating external reality, so this page uses that wording as the core 1950s definition.</div>`)}
+      ${step(3,"Define 'psychotic reaction' without circular wording.",
+        `${term("PSYCHOTIC REACTION — 1950s","A severe mental disturbance in which the person's usual organization of thought, emotion, behavior, or personality was seriously disrupted and the person could fail to judge the outside world correctly.")}
+         ${term("EXTERNAL REALITY","The outside world—the people, events, objects, and circumstances outside a person's private thoughts or perceptions.")}
+         <p>DSM-I described these severe disorders as involving personality disorganization and failure to <strong>test and evaluate external reality correctly</strong>.</p>`)}
 
-      ${step(3,"Symptoms described then.",
+      ${step(4,"Symptoms described then.",
         `${term("DELUSION","A firmly held belief that remains fixed despite strong evidence against it, judged in cultural and clinical context.")}
          ${term("HALLUCINATION","A perception-like experience without the corresponding outside source being present.")}
          ${term("DISORGANIZED THOUGHT","Thought whose ordinary connections become severely confused, fragmented, or difficult to follow.")}
-         <p>1950s descriptions could include withdrawal from reality, unusual behavior, disturbances in thought, delusions, hallucinations, and major changes in emotional expression and relationships.</p>`)}
+         <p>1950s descriptions could include withdrawal from the outside world, unusual behavior, disturbances in thought, delusions, hallucinations, and major changes in emotional expression and relationships.</p>`)}
 
-      ${step(4,"Why was it called schizophrenia?",
-        `<p>Eugen Bleuler introduced the term decades before the 1950s.</p>
-         <div class="flow"><span><strong>schizein</strong><br>to split</span><b>+</b><span><strong>phrēn / phrenos</strong><br>mind</span><b>→</b><span><strong>schizophrenia</strong><br>roughly “splitting of the mind”</span></div>
-         <p>Bleuler's “split” referred to a loss of integration among mental functions. It did not simply mean two separate personalities.</p>`)}
-
-      ${step(5,"But 'split personality' really did enter mid-century usage.",
+      ${step(5,"Why did 'split personality' become associated with the word?",
         `${term("FIGURATIVE","Using a word as a metaphor rather than in its strict technical meaning.")}
-         <p>By the 1950s, <em>schizophrenic</em> was also used figuratively to mean <strong>divided, contradictory, split, or “of two minds.”</strong> That usage helped reinforce the popular phrase <strong>split personality</strong>.</p>`)}
+         <p>The literal parts of <strong>schizophrenia</strong> really do contain the idea <strong>split + mind</strong>. By the 1950s, <em>schizophrenic</em> was also being used figuratively to mean <strong>divided, contradictory, split, or “of two minds.”</strong></p>
+         <p>That figurative usage helped reinforce the popular phrase <strong>split personality</strong>, even though that was not Bleuler's simple diagnostic definition.</p>`)}
 
       ${step(6,"What changed later?",
         `${term("DIAGNOSTIC CRITERIA","A written set of features used to decide whether a diagnosis applies.")}
@@ -183,7 +209,7 @@
          ${term("DISSOCIATIVE IDENTITY DISORDER","A separate diagnosis involving distinct identity states and major disruptions of memory and identity. It is not schizophrenia.")}`)}
 
       ${shift(
-        "DSM-I's 'schizophrenic reaction' was a broad psychotic category described in terms of disturbed reality relationships, thought, emotion, behavior, and personality integration.",
+        "DSM-I's 'schizophrenic reaction' was a broad severe-disorder category described in terms of disturbed relationships to reality, thought, emotion, behavior, and personality integration.",
         "The word 'reaction' disappeared, diagnostic criteria became more explicit, and modern schizophrenia is not defined as multiple personality or literally being 'of two minds.'"
       )}`;
   }
@@ -217,20 +243,34 @@
 
   function psychosisBody(){
     return `
-      ${step(1,"1950s core meaning.",
-        `${term("PSYCHOSIS — 1950s","A broad term for severe mental disturbance involving personality disorganization and failure to test and evaluate external reality correctly.")}
-         <p>In DSM-I-era American psychiatry, psychosis was not merely a list of isolated symptoms. It was also a broad severity and diagnostic-category concept.</p>`)}
+      ${step(1,"Start with the word itself.",
+        `${term("PSYCHE","From Greek <em>psychē</em>: mind, soul, or life. In modern mental-health vocabulary, <strong>psych-</strong> points toward the mind or mental life.")}
+         ${term("-OSIS","A medical word ending meaning a state or condition, often an abnormal condition.")}
+         ${chain(["psych- · mind","-osis · condition","psychosis · a condition of the mind"])}
+         <p>The word <strong>psychosis</strong> entered medical vocabulary in the 19th century. By the 1950s it had acquired a broad psychiatric meaning much more specific than the literal word parts alone.</p>`)}
 
-      ${step(2,"What did DSM-I emphasize?",
+      ${step(2,"1950s core meaning.",
+        `${term("PSYCHOSIS — 1950s","A broad term for severe mental disturbance involving serious breakdown in the usual organization of thought, emotion, behavior, or personality, together with failure to test and evaluate external reality correctly.")}
+         ${term("EXTERNAL REALITY","The outside world—the people, events, objects, and circumstances that exist independently of a person's private thoughts or perceptions.")}
+         <p>So the 1950s meaning was not merely “a mental condition.” It was a category for severe disturbance in how the person functioned and dealt with the outside world.</p>`)}
+
+      ${step(3,"Why the adjective is 'psychotic.'",
+        `${term("-IC","A word ending meaning 'relating to' or 'having to do with.'")}
+         <p>The adjective formed from <strong>psychosis</strong> is <strong>psychotic</strong>.</p>
+         ${chain(["psychosis · the condition","psychotic · relating to that condition"])}
+         <p>English changes the ending rather than simply attaching <em>-ic</em> to the complete spelling <em>psychosis</em>. The important idea is grammatical: <strong>psychosis</strong> names the condition; <strong>psychotic</strong> describes something related to it.</p>`)}
+
+      ${step(4,"What did DSM-I emphasize?",
         `${term("PERSONALITY DISINTEGRATION","A 1950s phrase for severe breakdown in the usual organization and functioning of the person's thoughts, emotions, behavior, and relationships.")}
          ${term("FUNCTIONING","A person's ability to manage ordinary life tasks, work, relationships, and self-care.")}
-         <p>DSM-I descriptions emphasized serious disruption of personality, failure to judge external reality correctly, and inability to relate effectively to people or work.</p>`)}
+         <p>DSM-I descriptions emphasized serious disruption of personality, failure to judge external reality correctly, and inability to relate effectively to people or work.</p>
+         <div class="history-note"><strong>Period wording:</strong> The technical expression <em>reality testing</em> did exist in 1950s psychiatric writing, but DSM-I used the longer wording about testing and evaluating external reality. That is why this page uses the longer phrase first.</div>`)}
 
-      ${step(3,"Psychosis versus neurosis.",
+      ${step(5,"Psychosis versus neurosis.",
         `${term("NEUROSIS — 1950s","A broad term for psychological disturbance in which the person was not considered to show the gross distortion or falsification of external reality associated with psychosis.")}
          <p>The <strong>psychosis–neurosis</strong> contrast was a major organizing distinction in mid-century psychiatry.</p>`)}
 
-      ${step(4,"What changed later?",
+      ${step(6,"What changed later?",
         `${term("SYMPTOM-FOCUSED","Describing a condition mainly by the particular experiences or behaviors present rather than by one broad severity category.")}
          <p>Later diagnostic systems moved away from psychosis versus neurosis as the master division. Modern use of <strong>psychosis</strong> is more symptom-focused and commonly refers to disturbances such as delusions, hallucinations, or severely disorganized thought or behavior.</p>
          ${term("DELUSION","A firmly held belief that remains fixed despite strong evidence against it, judged in cultural and clinical context.")}
@@ -244,29 +284,38 @@
 
   function psychoticBody(){
     return `
-      ${step(1,"1950s core meaning.",
+      ${step(1,"First: do not define a word with itself.",
         `${term("ADJECTIVE","A word that describes or modifies another word.")}
-         <p><strong>Psychotic</strong> meant <strong>having to do with psychosis</strong> or belonging to the broad class of severe mental disorders then called psychoses.</p>
-         <p>1950s medical writing also used <strong>a psychotic</strong> as a noun for a person considered psychotic.</p>`)}
+         <p><strong>Psychotic</strong> is an adjective. In 1950s psychiatric use, it described a symptom, reaction, disorder, or person showing a <strong>severe disturbance in judging external reality and in ordinary mental or personality functioning</strong>.</p>
+         <p>That definition tells you what the word pointed to without using the word <em>psychotic</em> again.</p>`)}
 
-      ${step(2,"What did 'psychotic' imply then?",
-        `
-         <p>The label generally implied a severe disturbance involving failure to judge external reality correctly, serious disruption of personality functioning, or major difficulty managing ordinary relationships and work.</p>`)}
+      ${step(2,"Now take the word apart.",
+        `${term("PSYCHE","Greek <em>psychē</em>: mind, soul, or life. The word part <strong>psych-</strong> points toward the mind or mental life.")}
+         ${term("-OSIS","A word ending used in medicine for a state or condition.")}
+         ${term("PSYCHOSIS","The noun: in 1950s use, a broad category of severe mental disturbance.")}
+         ${term("-IC","A word ending meaning 'relating to' or 'having to do with.'")}
+         ${chain(["psych- · mind","-osis · condition","psychosis · the condition","psychotic · relating to that condition"])}
+         <p><strong>Psychosis</strong> is the noun. <strong>Psychotic</strong> is the adjective made from it.</p>`)}
 
-      ${step(3,"Common 1950s-style phrases.",
+      ${step(3,"Why did the word carry such a strong meaning in the 1950s?",
+        `${term("EXTERNAL REALITY","The outside world—the people, events, objects, and circumstances outside a person's private thoughts or perceptions.")}
+         <p>Mid-century psychiatry used the psychosis category for severe disturbances involving failure to judge external reality correctly, major disruption of personality organization, or serious difficulty functioning in relationships and work.</p>
+         <p>So calling a condition <strong>psychotic</strong> located it in that severe category.</p>`)}
+
+      ${step(4,"Common 1950s-style phrases.",
         `<div class="definition-grid">
-          <div class="definition-card"><h3>psychotic reaction</h3><p>a severe psychiatric reaction meeting the period's idea of psychosis</p></div>
-          <div class="definition-card"><h3>psychotic depression</h3><p>a severe depressive condition classed as psychotic</p></div>
-          <div class="definition-card"><h3>psychotic disorder</h3><p>a disorder placed in the broad psychosis group</p></div>
+          <div class="definition-card"><h3>psychotic reaction</h3><p>a severe psychiatric reaction placed in the period's psychosis category</p></div>
+          <div class="definition-card"><h3>psychotic depression</h3><p>a severe depressive condition placed in the psychosis category</p></div>
+          <div class="definition-card"><h3>a psychotic</h3><p>an older noun use for a person considered to have a psychotic disorder</p></div>
         </div>`)}
 
-      ${step(4,"What changed later?",
-        `<p>Modern professional usage more often keeps <strong>psychotic</strong> as an adjective in phrases such as <em>psychotic symptom</em> or <em>psychotic episode</em>, and avoids using it as a noun for a person.</p>
-         <p>It also does <strong>not</strong> by itself mean schizophrenia, violence, dangerousness, low intelligence, or eccentricity.</p>`)}
+      ${step(5,"What changed later?",
+        `<p>Modern professional usage more often keeps <strong>psychotic</strong> as an adjective in phrases such as <em>psychotic symptom</em> or <em>psychotic episode</em>, and generally avoids using <em>a psychotic</em> as a noun for a person.</p>
+         <p>The word does <strong>not</strong> by itself mean schizophrenia, violence, dangerousness, low intelligence, or eccentricity.</p>`)}
 
       ${shift(
-        "A broad severity/category adjective for severe disorders involving serious disturbance in judging external reality and in personality functioning; 'a psychotic' was also ordinary professional wording.",
-        "The adjective is now used more narrowly around psychotic symptoms or episodes, and noun-labeling of people is generally avoided."
+        "An adjective for severe mental disturbance involving major problems judging external reality or maintaining ordinary personality functioning; it was also used as a noun for a person.",
+        "The adjective is now used more specifically around psychotic symptoms or episodes, and noun-labeling of people is generally avoided."
       )}`;
   }
 
@@ -435,64 +484,127 @@
 
   function scopolamineBody(){
     return `
-      ${step(1,"1950s core meaning.",
-        `<p>The drug is spelled <strong>scopolamine</strong>. Another name is <strong>hyoscine</strong>.</p>
-         <div class="spelling-strip"><span>S</span><span>C</span><span>O</span><span>P</span><span>O</span><span>L</span><span>A</span><span>M</span><span>I</span><span>N</span><span>E</span></div>
-         ${term("SCOPOLAMINE — 1950s","A drug used for several anticholinergic effects, including reducing secretions, use before anesthesia, motion-sickness control, pupil dilation, and sedation or memory impairment.")}
-         <p>A 1950s reader could therefore encounter scopolamine in anesthesia, eye medicine, or discussions of sedation—not only in connection with motion sickness.</p>`)}
+      ${step(1,"Start with the 1950s meaning in plain English.",
+        `<p><strong>Scopolamine</strong> was a drug a 1950s medical reader could encounter in several settings. It could reduce some body secretions, be given before anesthesia, help prevent motion sickness, widen the pupil of the eye, and produce drowsiness or impaired memory.</p>
+         <p>Another name for the same drug is <strong>hyoscine</strong>.</p>
+         <div class="spelling-strip"><span>S</span><span>C</span><span>O</span><span>P</span><span>O</span><span>L</span><span>A</span><span>M</span><span>I</span><span>N</span><span>E</span></div>`)}
 
-      ${step(2,"What did 'anticholinergic' mean?",
-        `${term("NERVE CELL","A cell specialized for sending and receiving signals in the nervous system.")}
-         ${term("CHEMICAL MESSENGER","A chemical used by cells to carry a signal.")}
-         ${term("ACETYLCHOLINE","A chemical messenger used by nerve cells in the brain and throughout the body.")}
-         ${term("RECEPTOR","A protein on or in a cell that responds to a chemical signal.")}
-         ${term("ANTICHOLINERGIC","A drug that blocks some effects of the chemical messenger acetylcholine.")}
-         <p>Scopolamine was and still is described as an anticholinergic drug.</p>`)}
+      ${step(2,"Why is it called scopolamine?",
+        `${term("SCOPOLIA","A genus—a named group—of plants in the nightshade family. Scopolamine was isolated from plants of this group and related plants.")}
+         ${term("GIOVANNI ANTONIO SCOPOLI","An 18th-century Italian naturalist. The plant genus <em>Scopolia</em> was named in his honor.")}
+         ${term("AMINE","A family of organic chemicals containing nitrogen. The ending <strong>-amine</strong> appears in many chemical names.")}
+         ${chain(["Scopoli · person's name","Scopolia · plant genus named for him","Scopolia + amine","scopolamine"])}
+         <p>So <strong>scopolamine</strong> is not a word whose first half describes what the drug does. Its name mainly records the <strong>plant name</strong> from which the chemical was historically associated, plus a chemical ending.</p>`)}
 
-      ${step(3,"More precise modern word: antimuscarinic.",
-        `${term("MUSCARINIC RECEPTOR","One group of receptors that respond to acetylcholine. They occur in the brain and in many organs.")}
-         ${term("ANTIMUSCARINIC","A drug that blocks acetylcholine at muscarinic receptors.")}
-         <p><strong>Antimuscarinic</strong> is the more precise modern description of scopolamine's main receptor action.</p>`)}
+      ${step(3,"Before acetylcholine, learn what a nerve signal is.",
+        `${term("NERVE CELL","A cell specialized for sending and receiving signals. Another name is <strong>neuron</strong>.")}
+         ${term("CHEMICAL MESSENGER","A chemical released by one cell that carries a signal to another cell.")}
+         ${term("NEUROTRANSMITTER","A chemical messenger used by nerve cells. The word breaks into <strong>neuro-</strong>, meaning nerve, and <strong>transmitter</strong>, something that carries or sends a signal.")}
+         ${chain(["neuro- · nerve","transmit · send across","neurotransmitter · a chemical signal sent by nerve cells"])}`)}
 
-      ${step(4,"The eye use.",
+      ${step(4,"Now take apart ACETYLCHOLINE.",
+        `<p><strong>Acetylcholine</strong> looks like one 13-letter block. It becomes much easier when separated:</p>
+         <div class="phenobarbital-word"><span>ACETYL</span><b>|</b><span>CHOLINE</span></div>
+
+         ${term("ACETIC","A chemical word historically connected with vinegar. It comes ultimately from Latin <em>acetum</em>, meaning vinegar. Acetic acid is the acid that gives vinegar much of its sour taste and smell.")}
+         ${term("ACETYL","A particular small group of atoms used as a building piece inside larger molecules. Its name belongs to the same chemical naming family as <strong>acetic</strong> and therefore ultimately carries the old vinegar connection.")}
+         ${term("BILE","A yellow-green digestive fluid made by the liver and stored in the gallbladder. It helps the body handle fats in food.")}
+         ${term("CHOLĒ","The Greek word for bile.")}
+         ${term("CHOLINE","A chemical first named from its connection with bile. The name comes from Greek <em>cholē</em>, 'bile.' Choline is also an important chemical used by the body and is a building piece of acetylcholine.")}
+
+         ${chain(["acetyl · a small chemical group","choline · a chemical whose name comes from Greek for bile","acetyl + choline","acetylcholine"])}
+         <p><strong>Why the name?</strong> Chemically, acetylcholine is made from <strong>choline</strong> with an <strong>acetyl group</strong> attached. The name tells you exactly those two pieces.</p>`)}
+
+      ${step(5,"What does acetylcholine actually do?",
+        `${term("ACETYLCHOLINE","A neurotransmitter—a chemical messenger released by nerve cells. It carries signals in the brain and in many nerves throughout the body, including nerves controlling muscles and many automatic organ functions.")}
+         ${term("AUTOMATIC ORGAN FUNCTION","A body function that normally operates without conscious command, such as changes in heart activity, digestion, gland secretion, or pupil size.")}
+         <p>So the word has both a <strong>chemical history</strong> and a <strong>job</strong>: acetyl + choline describes what the molecule is made from; neurotransmitter describes what the molecule does in the nervous system.</p>`)}
+
+      ${step(6,"What is a receptor?",
+        `${term("RECEPTOR","A protein on or in a cell that responds to a particular chemical signal.")}
+         <p>Think of acetylcholine as a chemical message. A receptor is part of the receiving machinery that can recognize that message and cause the cell to respond.</p>
+         ${chain(["nerve cell releases acetylcholine","acetylcholine reaches another cell","receptor recognizes the signal","the receiving cell changes what it is doing"])}`)}
+
+      ${step(7,"Now take apart CHOLINERGIC and ANTICHOLINERGIC.",
+        `${term("CHOLIN-","The word part pointing back to <strong>choline</strong> and, in this context, to acetylcholine signaling.")}
+         ${term("-ERGIC","A scientific ending connected with the idea of working or acting. It comes ultimately from Greek <em>ergon</em>, 'work.'")}
+         ${term("CHOLINERGIC","Working through, activated by, releasing, or otherwise involving acetylcholine.")}
+         ${term("ANTI-","Against, opposing, or blocking.")}
+         ${term("ANTICHOLINERGIC","A drug that blocks some effects of acetylcholine.")}
+         ${chain(["anti- · against/blocking","cholin- · acetylcholine/choline","-ergic · working or acting","anticholinergic · blocking acetylcholine-related action"])}
+         <p>That is why 1950s books could call scopolamine an <strong>anticholinergic</strong>: it blocked some actions produced by acetylcholine.</p>`)}
+
+      ${step(8,"Why does the more precise word MUSCARINIC involve a mushroom?",
+        `${term("MUSCARINE","A poisonous chemical first isolated from the mushroom <em>Amanita muscaria</em>, the fly agaric.")}
+         ${term("MUSCA","Latin for <strong>fly</strong>. The mushroom name <em>muscaria</em> is connected with flies; fly agaric was historically associated with use against flies.")}
+         ${term("MUSCARINIC RECEPTOR","A receptor for acetylcholine that was named 'muscarinic' because the mushroom chemical muscarine can activate this type of receptor.")}
+         ${term("ANTI-","Against or blocking.")}
+         ${term("ANTIMUSCARINIC","Blocking acetylcholine at muscarinic receptors.")}
+         ${chain(["musca · fly","muscaria · the fly-agaric mushroom","muscarine · chemical named from the mushroom","muscarinic · responding like the muscarine-sensitive receptor","antimuscarinic · blocking that receptor system"])}
+         <p><strong>Scopolamine is antimuscarinic.</strong> This is a more precise statement than the broader word <em>anticholinergic</em>.</p>`)}
+
+      ${step(9,"Why can blocking that system widen the pupil?",
         `${term("PUPIL","The dark opening in the center of the eye that lets light enter.")}
-         ${term("MYDRIASIS","Widening or dilation of the pupil.")}
+         ${term("DILATE","To become wider or larger.")}
+         ${term("MYDRIASIS","The medical word for widening of the pupil.")}
+         ${term("FOCUSING","Changing the eye's optical power so near or distant objects can appear sharp.")}
          ${term("CYCLOPLEGIA","Temporary paralysis of the eye's focusing mechanism.")}
          ${term("OPHTHALMIC","Having to do with the eye.")}
-         <p>Scopolamine can cause pupil dilation and interfere temporarily with focusing. That is the pupil-dilator use you were remembering.</p>`)}
+         <p>Acetylcholine normally participates in controlling muscles inside the eye. Blocking muscarinic acetylcholine signals can therefore widen the pupil and interfere with focusing.</p>
+         <p>That produces <strong>mydriasis</strong> and <strong>cycloplegia</strong>. This is the pupil-dilator use you were remembering.</p>`)}
 
-      ${step(5,"The sedative and memory effects.",
+      ${step(10,"Why can the same drug cause drowsiness and memory problems?",
         `${term("SEDATION","Reduced alertness or responsiveness.")}
          ${term("AMNESIA","Loss of memory for some events or information.")}
          ${term("AMNESTIC","Producing or contributing to amnesia.")}
-         <p>Scopolamine enters the brain and can produce drowsiness, sedation, confusion, and memory impairment.</p>`)}
+         <p>Scopolamine can enter the brain, where acetylcholine participates in attention, memory, and other functions. Blocking some of that signaling can produce drowsiness, sedation, confusion, and impaired memory.</p>`)}
 
-      ${step(6,"The older history behind the 1950s reputation.",
-        `${term("TWILIGHT SLEEP","An early-20th-century childbirth practice combining scopolamine with morphine in an attempt to reduce pain and especially memory of labor.")}
+      ${step(11,"The older history behind its reputation.",
+        `${term("MORPHINE","A powerful pain-relieving drug in the opioid family.")}
+         ${term("TWILIGHT SLEEP","An early-20th-century childbirth practice combining scopolamine with morphine in an attempt to reduce pain and especially memory of labor.")}
          ${term("TRUTH SERUM","A popular historical label for drugs claimed to make a person reveal truthful information while sedated or mentally altered.")}
-         <p>Both “twilight sleep” and early “truth serum” stories contributed to scopolamine's historical reputation before the 1950s. A drug does not provide a reliable chemical test of truth.</p>`)}
+         <p>Both “twilight sleep” and early “truth serum” stories contributed to scopolamine's reputation before and around mid-century.</p>
+         <p><strong>The name 'truth serum' does not mean the drug reliably produces truth.</strong> Confusion, suggestion, memory errors, and invented statements can occur.</p>`)}
 
-      ${step(7,"What could happen at toxic exposure?",
-        `${term("DELIRIUM","A sudden confused state with disturbed attention and awareness.")}
+      ${step(12,"What can happen when the drug effect becomes toxic?",
+        `${term("TOXIC","Harmful or poisonous to the body.")}
+         ${term("DELIRIUM","A sudden confused state with disturbed attention and awareness.")}
          ${term("HALLUCINATION","A perception-like experience without the corresponding outside source being present.")}
          ${term("PARANOIA","Strong suspiciousness or fear of harmful intentions not adequately supported by evidence.")}
-         <p>Too much scopolamine can produce agitation, delirium, hallucinations, paranoia, and other severe mental changes.</p>`)}
+         <p>At sufficiently high exposure, scopolamine can produce agitation, delirium, hallucinations, paranoia, and other severe changes in thought and behavior.</p>`)}
 
-      ${step(8,"What changed later?",
-        `${term("TRANSDERMAL","Delivered through the skin.")}
-         ${term("MOTION SICKNESS","Nausea, dizziness, and related symptoms triggered when movement signals from the eyes and balance organs do not agree well.")}
-         ${term("POSTOPERATIVE","Occurring after an operation or surgery.")}
-         <p>The modern scopolamine patch made the drug especially familiar for preventing motion sickness and postoperative nausea and vomiting.</p>`)}
+      ${step(13,"What changed after the 1950s?",
+        `${term("TRANSDERMAL","Delivered through the skin. <strong>Trans-</strong> means across; <strong>dermal</strong> means relating to skin.")}
+         ${term("MOTION SICKNESS","Nausea, dizziness, and related symptoms caused when information about movement from the eyes and balance organs does not agree well.")}
+         ${term("POSTOPERATIVE","Occurring after an operation. <strong>Post-</strong> means after; <strong>operative</strong> refers to surgery or an operation.")}
+         <p>The transdermal scopolamine patch made the drug especially familiar for preventing motion sickness and nausea and vomiting after surgery.</p>`)}
 
-      ${step(9,"The eye warning remains important.",
+      ${step(14,"Why the eye warning still matters.",
         `${term("GLAUCOMA","A group of eye diseases involving damage to the optic nerve, often associated with abnormal pressure inside the eye.")}
-         ${term("ANGLE-CLOSURE GLAUCOMA","A form of glaucoma in which the drainage angle inside the eye closes and pressure can rise rapidly.")}
-         <p>Because scopolamine can dilate the pupil, it can be hazardous in people susceptible to angle-closure glaucoma.</p>`)}
+         ${term("OPTIC NERVE","The nerve that carries visual information from the eye to the brain.")}
+         ${term("ANGLE-CLOSURE GLAUCOMA","A form of glaucoma in which the drainage angle inside the eye closes and eye pressure can rise rapidly.")}
+         <p>Because scopolamine can widen the pupil, it can be hazardous for a person susceptible to angle-closure glaucoma.</p>`)}
+
+      ${step(15,"Now the long words should be readable.",
+        `<div class="history-summary-chain">
+          <div><b>scopolamine</b><span>Scopolia plant name + chemical ending; the plant genus honors Scopoli</span></div>
+          <div><b>acetylcholine</b><span>acetyl + choline; choline's name comes from Greek for bile</span></div>
+          <div><b>cholinergic</b><span>working through or involving acetylcholine</span></div>
+          <div><b>anticholinergic</b><span>blocking some acetylcholine effects</span></div>
+          <div><b>muscarinic</b><span>the acetylcholine receptor type named through muscarine and the fly-agaric mushroom</span></div>
+          <div><b>antimuscarinic</b><span>blocking that muscarinic receptor system</span></div>
+         </div>`)}
 
       ${shift(
         "A multipurpose anticholinergic drug encountered in anesthesia, secretion control, motion sickness, eye medicine, and sedation or amnesia.",
-        "The drug remains antimuscarinic, but the transdermal motion-sickness and postoperative-nausea patch became one of its most familiar modern uses; ophthalmic and routine preanesthetic use became less central."
-      )}`;
+        "The underlying drug action remains the same, but the word antimuscarinic is more precise and the transdermal motion-sickness/postoperative-nausea patch became one of the most familiar modern uses."
+      )}
+
+      ${sourceBox([
+        '<a href="https://www.ahdictionary.com/word/search.html?q=scopolamine" target="_blank" rel="noopener">American Heritage Dictionary — scopolamine name and Scopolia</a>',
+        '<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4422379/" target="_blank" rel="noopener">PMC — history of choline and its name from Greek for bile</a>',
+        '<a href="https://pubmed.ncbi.nlm.nih.gov/29741535/" target="_blank" rel="noopener">PubMed — muscarine, acetylcholine, and muscarinic receptor history</a>'
+      ])}`;
   }
 
   function phenobarbitalBody(){
@@ -656,7 +768,7 @@
     {slug:"schizophrenia",title:"Schizophrenia",category:"Psychosis Terms",short:"In DSM-I (1952): 'schizophrenic reaction,' a broad psychotic category involving major disturbances of reality relationships, thought, emotion, and behavior.",keywords:"schizophrenia schizophrenic reaction split mind split personality two minds DSM I DSM II psychosis hallucination delusion",body:schizophreniaBody()},
     {slug:"schizophrenic",title:"Schizophrenic",category:"Psychosis Terms",short:"In the 1950s: the adjective for the DSM-I category 'schizophrenic reaction,' also used as a noun and figuratively for something divided or 'of two minds.'",keywords:"schizophrenic adjective split mind split personality two minds divided contradictory mid century",body:schizophrenicBody()},
     {slug:"psychosis",title:"Psychosis",category:"Psychosis Terms",short:"In the 1950s: a broad severe-mental-disorder concept involving failure to test and evaluate external reality correctly and serious disruption of personality functioning.",keywords:"psychosis reality testing hallucination delusion psychotic mid century neurosis",body:psychosisBody()},
-    {slug:"psychotic",title:"Psychotic",category:"Psychosis Terms",short:"In the 1950s: describing a person, symptom, reaction, or disorder classed as psychotic; the noun 'a psychotic' was also common.",keywords:"psychotic adjective psychosis schizophrenia mid century terminology",body:psychoticBody()},
+    {slug:"psychotic",title:"Psychotic",category:"Psychosis Terms",short:"In the 1950s: describing severe mental disturbance involving major difficulty judging external reality or maintaining ordinary personality functioning; it was also used as a noun for a person.",keywords:"psychotic adjective psychosis schizophrenia mid century terminology",body:psychoticBody()},
     {slug:"sedative",title:"Sedative",category:"Sedation & Sleep Terms",short:"In the 1950s: a calming or nervous-system-depressing drug; barbiturates were among the major examples.",keywords:"sedative sedation calming drowsiness barbiturate hypnotic",body:sedativeBody()},
     {slug:"soporific",title:"Soporific",category:"Sedation & Sleep Terms",short:"In the 1950s: sleep-producing or strongly drowsiness-producing; later the figurative 'boring' use became especially familiar.",keywords:"soporific sleep drowsy sedative boring sopor",body:soporificBody()},
     {slug:"hypnotic-drug",title:"Hypnotic Drug",category:"Sedation & Sleep Terms",short:"In 1950s medicine: a sleep-producing drug, often a barbiturate; distinct from hypnosis.",keywords:"hypnotic drug sedative hypnotic sleeping pill sleep barbiturate",body:hypnoticDrugBody()},
