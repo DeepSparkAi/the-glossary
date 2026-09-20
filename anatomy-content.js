@@ -263,7 +263,12 @@
       category:"Autonomic Nervous System",
       short:"Sympathetic fight-or-flight and parasympathetic rest-and-digest: the two major divisions of the autonomic nervous system.",
       keywords:"autonomic nervous system ANS sympathetic parasympathetic fight flight rest digest poop bowel urination heart digestion",
-      body:autonomicBody()
+      body:`
+        <figure class="anatomy-diagram anatomy-diagram-medium">
+          <img src="assets/anatomy/autonomic.png" alt="Autonomic nervous system diagram showing the brain, spinal cord, internal organs, and the sympathetic and parasympathetic divisions." loading="lazy">
+          <figcaption>Autonomic nervous system: automatic regulation of internal organs through sympathetic and parasympathetic pathways.</figcaption>
+        </figure>
+        ${autonomicBody()}`
     },
     {
       slug:"sympathetic-nervous-system",
@@ -286,6 +291,10 @@
       short:"The rest-and-digest side of the autonomic nervous system.",
       keywords:"parasympathetic nervous system PNS rest digest poop bowel urination saliva digestion",
       body:`${term("PARASYMPATHETIC NERVOUS SYSTEM","The autonomic division associated with quiet maintenance functions—the classic rest-and-digest response.")}
+        <figure class="anatomy-diagram anatomy-diagram-medium">
+          <img src="assets/anatomy/parasympathetic.png" alt="Parasympathetic nervous system diagram showing the brain and cranial nerves, pupils constricting, slower heart rate, increased digestion, and bladder and bowel support." loading="lazy">
+          <figcaption>Parasympathetic nervous system: the rest-and-digest division that supports recovery and internal maintenance.</figcaption>
+        </figure>
         <section class="entry-section"><h3>What it does</h3><p>Heart rate slows, saliva and digestive activity increase, and bladder and bowel emptying functions are supported.</p></section>
         <div class="memory"><strong>Memory aid:</strong> parasympathetic = rest, digest, pee, poop.</div>`
     }
