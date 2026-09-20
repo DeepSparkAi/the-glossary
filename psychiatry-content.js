@@ -666,7 +666,13 @@
          ${term("PUPIL","The dark opening in the center of the eye that lets light enter.")}
          ${term("MEMORY","The ability to store and later recall information or experiences.")}
          <p>A 1950s medical reader could encounter scopolamine for <strong>reducing secretions</strong>, <strong>use before anesthesia</strong>, <strong>motion sickness</strong>, <strong>widening the pupil</strong>, and effects involving <strong>drowsiness or memory</strong>.</p>
-         <p>Another name for the same drug is <strong>hyoscine</strong>.</p>`)}
+         <p>Another name for the same drug is <strong>hyoscine</strong>.</p>
+         ${term("HYOSCINE","Another name for scopolamine. The word comes from <strong>Hyoscyamus</strong>, the plant genus that includes henbane, plus the chemical ending <strong>-ine</strong>.")}
+         ${term("HYOSCYAMUS","The botanical genus name for henbane. It comes from Greek <em>hyoskyamos</em>: <strong>hys / hyos</strong>, 'pig' or 'hog,' + <strong>kyamos</strong>, 'bean.' Literally: <strong>pig-bean</strong> or <strong>hog-bean</strong>.")}
+         ${term("HENBANE","A poisonous plant in the genus <em>Hyoscyamus</em>. Hyoscine was historically isolated from henbane.")}
+         ${term("-INE","A common ending in names of chemical substances.")}
+         ${chain(["hys / hyos · pig or hog","kyamos · bean","Hyoscyamus · hog-bean plant genus","Hyoscyamus + -ine","hyoscine"])}
+         <p>So the drug has <strong>two plant-history names</strong>: <strong>scopolamine</strong> points to <em>Scopolia</em>; <strong>hyoscine</strong> points to <em>Hyoscyamus</em>.</p>`)}
 
       ${step(3,"Why is it called scopolamine? Start with the person.",
         `${term("GIOVANNI ANTONIO SCOPOLI","An 18th-century naturalist. A naturalist studies living things and the natural world.")}
@@ -675,9 +681,11 @@
 
       ${step(4,"Now go from Scopoli to Scopolia.",
         `${term("GENUS","A named group used in biological classification. A genus contains one or more closely related species.")}
-         ${term("SCOPOLIA","A genus of plants in the nightshade family. The name <em>Scopolia</em> honors Giovanni Antonio Scopoli.")}
+         ${term("SCOPOLIA","A genus of plants in the nightshade family. The word is an eponym: a name made from a person's name. <strong>Scopol-</strong> comes from the surname <strong>Scopoli</strong>. The ending <strong>-ia</strong> is a common New-Latin ending used in genus names, especially genera named for people. So: Scopoli + -ia → Scopolia.")}
+         ${term("EPONYM","A word or name formed from the name of a person. <em>Scopolia</em> is an eponym because it was named for Scopoli.")}
+         ${term("-IA","A common New-Latin ending used to form scientific genus names, including many genera named in honor of people.")}
          ${term("NIGHTSHADE FAMILY","A plant family that includes many familiar plants as well as plants containing powerful natural chemicals.")}
-         ${chain(["Scopoli · a person's name","Scopolia · a plant genus named for him"])}
+         ${chain(["Scopoli · the naturalist's surname","Scopol- · the name-stem","-ia · genus-name ending","Scopolia · the plant genus"])}
          <p>Scopolamine was historically associated with plants in this group and related plants.</p>`)}
 
       ${step(5,"Now learn the ending -amine.",
@@ -722,7 +730,8 @@
       ${step(11,"Now learn the second half: choline.",
         `${term("LIVER","A large organ in the abdomen that performs many chemical jobs for the body.")}
          ${term("GALLBLADDER","A small organ that stores bile made by the liver.")}
-         ${term("BILE","A yellow-green digestive fluid made by the liver and stored in the gallbladder.")}
+         ${term("BILE","A yellow-green digestive fluid made by the liver and stored in the gallbladder. The English word <strong>bile</strong> came through French <em>bile</em>, from Latin <em>bilis</em>, meaning bile or gall. The deeper origin of the Latin word is uncertain.")}
+         ${chain(["Latin bilis · bile/gall","French bile","English bile"])}
          ${term("CHOLĒ","The Greek word for bile.")}
          ${term("CHOLINE","A chemical whose name comes from Greek <em>cholē</em>, meaning bile. Choline is used by the body and is one of the building pieces of acetylcholine.")}
          ${chain(["cholē · Greek for bile","choline · a chemical named from that root"])}`)}
@@ -902,7 +911,10 @@
       ${sourceBox([
         '<a href="https://www.ahdictionary.com/word/search.html?q=scopolamine" target="_blank" rel="noopener">American Heritage Dictionary — scopolamine name and Scopolia</a>',
         '<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4422379/" target="_blank" rel="noopener">PMC — history of choline and its name from Greek for bile</a>',
-        '<a href="https://pubmed.ncbi.nlm.nih.gov/29741535/" target="_blank" rel="noopener">PubMed — muscarine, acetylcholine, and muscarinic receptor history</a>'
+        '<a href="https://pubmed.ncbi.nlm.nih.gov/29741535/" target="_blank" rel="noopener">PubMed — muscarine, acetylcholine, and muscarinic receptor history</a>',
+        '<a href="https://pubmed.ncbi.nlm.nih.gov/2647095/" target="_blank" rel="noopener">PubMed — history and naming of scopolamine / Scopolia</a>',
+        '<a href="https://www.etymonline.com/word/bile" target="_blank" rel="noopener">Online Etymology Dictionary — bile: French bile from Latin bilis</a>',
+        '<a href="https://www.dictionary.com/browse/hyoscine" target="_blank" rel="noopener">Dictionary.com — hyoscine from Hyoscyamus + -ine</a>'
       ])}`;
   }
   function phenobarbitalBody(){
@@ -1073,7 +1085,7 @@
     {slug:"hypnotic-drug",title:"Hypnotic Drug",category:"Sedation & Sleep Terms",short:"In 1950s medicine: a sleep-producing drug, often a barbiturate; distinct from hypnosis.",keywords:"hypnotic drug sedative hypnotic sleeping pill sleep barbiturate",body:hypnoticDrugBody()},
     {slug:"hypnosis",title:"Hypnosis",category:"Sedation & Sleep Terms",short:"In the 1950s: commonly described as a trance-like condition or procedure involving focused attention and increased suggestibility.",keywords:"hypnosis hypnotic induction suggestion mesmerism mid century",body:hypnosisBody()},
     {slug:"barbiturates",title:"Barbiturate / Barbiturates",category:"Drug Terms & History",short:"In the 1950s: one of the major sedative-hypnotic drug families, also used for seizures and anesthesia.",keywords:"barbiturate barbiturates barbituate barbituates barbibturate barbibturates sedative hypnotic phenobarbital",body:barbituratesBody()},
-    {slug:"scopolamine-primer",title:"Scopolamine — Primer",category:"Drug Terms & History",short:"In the 1950s: an anticholinergic drug used in anesthesia, secretion control, motion sickness, eye medicine, and for sedative or memory effects.",keywords:"scopolamine hyoscine pupil dilator mydriasis cycloplegia sedative amnestic twilight sleep motion sickness antimuscarinic",body:scopolamineBody()},
+    {slug:"scopolamine-primer",title:"Scopolamine — Primer",category:"Drug Terms & History",short:"In the 1950s: a drug used before anesthesia, to reduce body secretions, help prevent motion sickness, widen the pupil, and produce drowsiness or memory effects. This primer builds its nerve-blocking action from the ground up.",keywords:"scopolamine hyoscine pupil dilator mydriasis cycloplegia sedative amnestic twilight sleep motion sickness antimuscarinic",body:scopolamineBody()},
     {slug:"phenobarbital-full-primer",title:"Phenobarbital — Complete Primer",category:"Drug Terms & History",short:"In the 1950s: an established barbiturate used particularly for sedation and seizure control; the complete primer then traces the chemistry and history inside its name.",keywords:"phenobarbital phenobarbitol barbiturate benzene gasoline benzoin perfume phenyl pheno barbital Baeyer Barbara urea",body:phenobarbitalBody()}
   ];
 
