@@ -88,7 +88,7 @@
         `${term("LEUCO- / LEUKO-","A word part meaning white. It comes from Greek <em>leukos</em>, white.")}
          ${term("LEUCOTOMY / LEUKOTOMY","Literally, a cutting of white matter. In the historical brain operation, white-matter pathways in the frontal region were cut or disrupted.")}
          ${chain(["leuco- = white","-tomy = cutting","leucotomy = cutting white matter"])}
-         <p><strong>Your “white part of the brain” idea is essentially right.</strong> The precise anatomical term is <strong>white matter</strong>, meaning the bundles of connecting nerve fibers beneath the cortex.</p>`)}
+         <p>The precise anatomical term is <strong>white matter</strong>: bundles of connecting nerve fibers beneath the cortex.</p>`)}
 
       ${step(12,"Leucotomy and lobotomy overlap, but the words emphasize different things.",
         `<div class="compare-grid">
@@ -118,7 +118,7 @@
       ${step(16,"Now the other pair you were remembering: sympathetic and parasympathetic.",
         `${term("AUTONOMIC NERVOUS SYSTEM","The part of the nervous system that automatically regulates many internal body functions, including heart activity, digestion, sweating, urination, and bowel activity.")}
          ${term("AUTONOMIC","Self-governing or automatic. The word is built from Greek roots meaning roughly <em>self</em> + <em>law</em>.")}
-         <p>The pair you are thinking of lives inside the <strong>autonomic nervous system</strong>:</p>
+         <p>The <strong>autonomic nervous system</strong> has two major divisions:</p>
          <div class="compare-grid">
            <div class="compare-card"><h3>Sympathetic</h3><p><strong>Fight or flight.</strong> Mobilize the body for action.</p></div>
            <div class="compare-card green"><h3>Parasympathetic</h3><p><strong>Rest and digest.</strong> Support digestion, recovery, urination, and bowel activity.</p></div>
@@ -199,7 +199,7 @@
         ${term("ORBIT","The bony eye socket.")}
         ${term("TRANSORBITAL","Through the eye socket.")}
         ${term("TRANSORBITAL LEUCOTOMY","A historical operation in which an ice-pick-like instrument was passed through the upper eye socket and orbital roof into frontal white matter, then moved to sever fiber tracts.")}
-        <p><strong>Yes: this is the operation you were remembering.</strong> “Through the eye socket with an ice pick to cut the white part of the brain” is a good rough memory. The precise version is: <strong>through the orbit with an ice-pick-like instrument to sever white-matter connections in the frontal lobes.</strong></p>`)}
+        <p>The route was <strong>through the orbit with an ice-pick-like instrument to sever white-matter connections in the frontal lobes.</strong></p>`)}
       ${step(5,"The 1935–1946 sequence.",`
         ${chain(["1935 · Moniz + Lima · prefrontal leucotomy","1930s · Freeman + Watts · prefrontal lobotomy","1946 · Freeman · transorbital technique"])}
         ${term("ORBITOCLAST","The purpose-built ice-pick-like instrument Freeman later used for the transorbital procedure.")}`)}
@@ -211,7 +211,7 @@
       ${step(1,"Start with autonomic.",`
         ${term("AUTONOMIC","Self-governing or automatic; from roots meaning self + law.")}
         ${term("AUTONOMIC NERVOUS SYSTEM","The nervous-system pathways that automatically regulate many internal organs and body functions.")}`)}
-      ${step(2,"The pair you were thinking of.",`
+      ${step(2,"The two major autonomic divisions.",`
         <div class="compare-grid">
           <div class="compare-card"><h3>Sympathetic</h3><p><strong>Fight or flight.</strong> Heart faster, pupils wider, digestion reduced.</p></div>
           <div class="compare-card green"><h3>Parasympathetic</h3><p><strong>Rest and digest.</strong> Heart slower, digestion increased, bowel and bladder emptying supported.</p></div>
@@ -267,6 +267,10 @@
       short:"The fight-or-flight side of the autonomic nervous system.",
       keywords:"sympathetic nervous system SNS fight flight stress heart pupils digestion",
       body:`${term("SYMPATHETIC NERVOUS SYSTEM","The autonomic division that mobilizes the body for demanding action—the classic fight-or-flight response.")}
+        <figure class="anatomy-diagram">
+          <img src="assets/anatomy/sympathetic-nervous-system.webp" alt="Diagram of the sympathetic nervous system showing the brain and spinal cord, pupils widening, airways widening, heart rate rising, energy mobilization, and reduced digestion." loading="lazy">
+          <figcaption>Sympathetic nervous system: the action-oriented, fight-or-flight division of the autonomic nervous system.</figcaption>
+        </figure>
         <section class="entry-section"><h3>What it does</h3><p>Heart rate rises, pupils widen, airways widen, energy is mobilized, and digestive movement is reduced.</p></section>
         <div class="memory"><strong>Memory aid:</strong> sympathetic = ready to fight, flee, or exert yourself.</div>`
     },
