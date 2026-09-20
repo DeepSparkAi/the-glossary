@@ -381,6 +381,9 @@ entries.push(...buildGrammarEntries());
 if(window.PSYCHIATRY_CONTENT?.entries){
   entries.push(...window.PSYCHIATRY_CONTENT.entries);
 }
+if(window.ANATOMY_CONTENT?.entries){
+  entries.push(...window.ANATOMY_CONTENT.entries);
+}
 
 
 entries.push({
@@ -701,6 +704,13 @@ const sectionConfig = {
     emptyTitle: "Choose a term.",
     emptyText: "Open a neutral definition, historical usage note, or drug-history primer.",
     searchPlaceholder: "Try “psychosis,” “schizophrenia,” “scopolamine,” or “barbiturate”…"
+  },
+  Anatomy: {
+    categories: ["All","Brain","Historical Brain Surgery","Autonomic Nervous System"],
+    indexTitle: "Anatomy Topics",
+    emptyTitle: "Choose an anatomy topic.",
+    emptyText: "Open a baby-step guide to brain anatomy, historical brain-surgery terms, or the autonomic nervous system.",
+    searchPlaceholder: "Try “prefrontal cortex,” “leucotomy,” “white matter,” or “parasympathetic”…"
   }
 };
 
@@ -710,6 +720,7 @@ const historyCategories = new Set(["Modern History"]);
 const economicIsmCategories = new Set(["Economic Systems & Ideologies"]);
 const geographyCategories = new Set(["Political Geography","Cities & Maps"]);
 const psychiatryCategories = new Set(["Fields","Psychosis Terms","Sedation & Sleep Terms","Drug Terms & History"]);
+const anatomyCategories = new Set(["Brain","Historical Brain Surgery","Autonomic Nervous System"]);
 
 const listEl = document.querySelector("#term-list");
 const panelEl = document.querySelector("#entry-panel");
@@ -734,6 +745,7 @@ function sectionForEntry(entry){
   if(economicIsmCategories.has(entry.category)) return "Economic Isms";
   if(geographyCategories.has(entry.category)) return "Geography";
   if(psychiatryCategories.has(entry.category)) return "Psychiatry Terms";
+  if(anatomyCategories.has(entry.category)) return "Anatomy";
   return "Glossary";
 }
 
@@ -1753,6 +1765,10 @@ function resetPanel(){
   }
   if(activeSection==="Psychiatry Terms"){
     panelEl.innerHTML=window.PSYCHIATRY_CONTENT?.defaultBody || '<div class="empty-state"><h2>Psychiatry Terms</h2></div>';
+    return;
+  }
+  if(activeSection==="Anatomy"){
+    panelEl.innerHTML=window.ANATOMY_CONTENT?.defaultBody || '<div class="empty-state"><h2>Anatomy</h2></div>';
     return;
   }
   panelEl.innerHTML=`
