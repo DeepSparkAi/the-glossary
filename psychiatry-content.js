@@ -26,7 +26,7 @@
            <div class="memory"><strong>Rule for this section:</strong> 1950s meaning first. Later changes second.</div>`)}
 
         ${step(2,"Three fields as a 1950s reader would meet them.",
-          `${term("PSYCHIATRY — 1950s","A branch of medicine dealing with mental illness and serious disturbances of thought, emotion, and behavior. Psychiatrists were medical doctors. U.S. psychiatry of the period was strongly influenced by psychoanalytic and psychodynamic ideas.")}
+          `${term("PSYCHIATRY — 1950s","A branch of medicine dealing with mental illness and serious disturbances of thought, emotion, and behavior. Psychiatrists were medical doctors. U.S. psychiatry of the period was strongly influenced by psychoanalytic ideas.")}
            ${term("PSYCHOLOGY — 1950s","The scientific study of behavior and mental life. In American academic psychology, observable behavior, learning, testing, and measurement were especially prominent.")}
            ${term("SOCIOLOGY — 1950s","The study of society, social groups, institutions, roles, and relationships among people.")}
            <p>The basic field names survive, but the theories and methods emphasized inside each field changed considerably afterward.</p>`)}
@@ -56,11 +56,6 @@
           `<p>Phenobarbital was already an established barbiturate by the 1950s, used particularly as a sedative and as a drug for controlling seizures. Its complete 18-step chemistry-and-name primer is preserved here.</p>
            <button type="button" class="primer-open-link" onclick="openEntry('phenobarbital-full-primer')">Open the complete Phenobarbital primer →</button>`)}
 
-        <section class="primer-finish">
-          <p class="kicker">Reading rule</p>
-          <h3>Do not silently translate the 1950s into today's vocabulary.</h3>
-          <p>Each entry begins in its period, then tells you what changed.</p>
-        </section>
       </div>`;
   }
 
@@ -74,10 +69,9 @@
 
       ${step(2,"The 1950s American framework.",
         `${term("PSYCHOANALYSIS","A theory and treatment tradition associated with Sigmund Freud and later writers, emphasizing unconscious mental processes and conflicts.")}
-         ${term("PSYCHODYNAMIC","A broader family of ideas explaining behavior partly through interacting motives, conflicts, emotions, and mental processes outside immediate awareness.")}
          ${term("DSM-I","The first edition of the American Psychiatric Association's Diagnostic and Statistical Manual of Mental Disorders, published in 1952.")}
          ${term("REACTION","A word DSM-I frequently used to describe a mental disorder as a person's reaction to psychological, social, or biological pressures.")}
-         <p>American psychiatry in the 1950s was strongly influenced by psychoanalytic and psychodynamic thinking. DSM-I commonly named disorders as <strong>reactions</strong>, including <em>schizophrenic reaction</em> and <em>depressive reaction</em>.</p>`)}
+         <p>American psychiatry in the 1950s was strongly influenced by psychoanalytic thinking. DSM-I commonly named disorders as <strong>reactions</strong>, including <em>schizophrenic reaction</em> and <em>depressive reaction</em>.</p>`)}
 
       ${step(3,"Hospital and office practice.",
         `${term("INPATIENT","A person staying in a hospital for care.")}
@@ -92,7 +86,7 @@
          <p>DSM-III in 1980 moved U.S. psychiatry toward more explicit diagnostic criteria and away from DSM-I's reaction language. Drug treatment and neuroscience also became more prominent parts of the specialty.</p>`)}
 
       ${shift(
-        "A medical specialty strongly shaped in the United States by psychodynamic ideas, broad diagnostic categories, reaction terminology, state hospitals, and the psychosis–neurosis distinction.",
+        "A medical specialty strongly shaped in the United States by psychoanalytic ideas, broad diagnostic categories, reaction terminology, state hospitals, and the psychosis–neurosis distinction.",
         "The specialty remained medical, but its diagnostic language became more rule-based and standardized, while psychopharmacology and neuroscience gained greater prominence."
       )}
 
