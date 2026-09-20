@@ -62,12 +62,48 @@
 
            <p>After the 1950s the diagnostic system changed, but these word histories explain why the older terms look and sound the way they do.</p>`)}
 
-        ${step(4,"Sedative, soporific, and hypnotic in the 1950s.",
-          `${term("SEDATIVE — 1950s","A drug used to calm, reduce nervous excitement, or produce drowsiness.")}
-           ${term("SOPORIFIC — 1950s","Something that produces sleep or strong sleepiness.")}
-           ${term("HYPNOTIC DRUG — 1950s","A drug used to cause sleep. Barbiturates were among the main drugs meant by this word.")}
-           ${term("HYPNOSIS — 1950s","A condition or procedure commonly described in terms of trance, focused attention, and increased responsiveness to suggestion. Theories of what caused it differed.")}
-           <p>These words overlapped, but they were not identical: a <strong>sedative</strong> could calm without causing sleep; a <strong>hypnotic</strong> was specifically sleep-producing.</p>`)}
+        ${step(4,"Sedative, soporific, hypnotic drug, and hypnosis—one word at a time.",
+          `<p>These four words sit close together because all of them touch the ideas of <strong>calming</strong>, <strong>sleepiness</strong>, <strong>sleep</strong>, or a <strong>sleep-like state</strong>. But they do not mean the same thing.</p>
+
+           ${term("CALM","Less excited, agitated, or active. A drug can calm a person without making the person fall asleep.")}
+           ${term("DROWSY","Sleepy: still awake, but feeling ready to fall asleep.")}
+           ${term("SLEEP","The ordinary state in which a person is not awake and responds less to the surroundings.")}
+
+           <p><strong>Now build the first word.</strong></p>
+           ${term("SEDATE","To calm or quiet, especially by using a drug. The word comes from Latin <em>sedare</em>, meaning to calm or settle.")}
+           ${term("-IVE","A common ending meaning roughly 'having the nature of,' 'tending to,' or 'doing the job of.'")}
+           <div class="flow"><span><strong>sedate</strong><br>calm or quiet</span><b>+</b><span><strong>-ive</strong><br>having that action</span><b>→</b><span><strong>sedative</strong><br>something used to calm</span></div>
+           ${term("SEDATIVE — 1950s","A drug used to calm a person, reduce nervous excitement, lower alertness, or produce drowsiness. A sedative did not have to make the person fully asleep.")}
+
+           <p><strong>Now build the second word.</strong></p>
+           ${term("SOPOR","A Latin word meaning deep sleep. English kept this old sleep-root in words such as <em>soporific</em>.")}
+           ${term("-FIC","A word part meaning making or producing. It comes from the Latin idea of making or doing.")}
+           <div class="flow"><span><strong>sopor</strong><br>deep sleep</span><b>+</b><span><strong>-fic</strong><br>making</span><b>→</b><span><strong>soporific</strong><br>sleep-making</span></div>
+           ${term("SOPORIFIC — 1950s","Something that produces sleep or strong sleepiness. A drug could be called soporific if it made a person very sleepy or caused sleep.")}
+
+           <p><strong>Now build the third word.</strong></p>
+           ${term("HYPNOS","The Greek word for sleep. The word family <strong>hypn- / hypno-</strong> carries the idea of sleep.")}
+           ${term("-IC","A common ending meaning 'relating to' or 'having to do with.'")}
+           <div class="flow"><span><strong>hypn-</strong><br>sleep</span><b>+</b><span><strong>-ic</strong><br>relating to</span><b>→</b><span><strong>hypnotic</strong><br>sleep-related or sleep-producing</span></div>
+           ${term("HYPNOTIC DRUG — 1950s","A drug used specifically to cause sleep. Barbiturates were among the main drugs a 1950s medical reader would have understood by the term <em>hypnotic</em>.")}
+
+           <p><strong>Now use the same sleep-root in a different word.</strong></p>
+           ${term("-OSIS","A word ending used for a state, condition, or process. You already saw it in <em>psychosis</em> and <em>neurosis</em>.")}
+           <div class="flow"><span><strong>hypn-</strong><br>sleep</span><b>+</b><span><strong>-osis</strong><br>state or condition</span><b>→</b><span><strong>hypnosis</strong><br>a name built around the idea of a sleep-like state</span></div>
+           ${term("TRANCE","A traditional word for an unusually absorbed state in which attention is narrowed or strongly focused.")}
+           ${term("ATTENTION","What the mind is concentrating on.")}
+           ${term("SUGGESTION","A statement or instruction intended to influence what a person notices, feels, imagines, or does.")}
+           ${term("RESPONSIVE","Likely to notice and react to something.")}
+           ${term("HYPNOSIS — 1950s","A condition or procedure commonly described as involving trance or strongly focused attention together with increased responsiveness to suggestion. The word was historically built from the Greek sleep-root, but hypnosis was not simply ordinary sleep.")}
+
+           <div class="compare-grid">
+             <div class="compare-card"><h3>Sedative</h3><p>calms; sleep is not required</p></div>
+             <div class="compare-card"><h3>Soporific</h3><p>makes a person very sleepy or asleep</p></div>
+             <div class="compare-card"><h3>Hypnotic drug</h3><p>a drug specifically used to cause sleep</p></div>
+             <div class="compare-card"><h3>Hypnosis</h3><p>a procedure or condition involving focused attention and suggestion—not a sleeping drug</p></div>
+           </div>
+
+           <p>The shortest memory rule is: <strong>sedative = calm</strong>; <strong>soporific = sleep-making</strong>; <strong>hypnotic drug = sleep-producing drug</strong>; <strong>hypnosis = focused-attention/suggestion procedure or condition</strong>.</p>`)}
 
         ${step(5,"Two drug histories as a 1950s reader would recognize them.",
           `${term("SCOPOLAMINE — 1950s","A drug also called hyoscine, used for reducing secretions, use before anesthesia, motion-sickness control, pupil dilation, and sedative or memory-impairing effects. Its name comes from the plant genus <em>Scopolia</em>, which was named for naturalist Giovanni Antonio Scopoli.")}
@@ -416,22 +452,30 @@
 
   function sedativeBody(){
     return `
-      ${step(1,"1950s core meaning.",
-        `${term("NERVOUS SYSTEM","The brain, spinal cord, and nerves—the body's information and control network.")}
-         ${term("SEDATIVE — 1950s","A drug used to calm, reduce nervous excitement, or lower alertness and activity. It could cause drowsiness without necessarily producing sleep.")}
-         ${term("SEDATION","The resulting state of reduced alertness, agitation, or responsiveness.")}`)}
+      ${step(1,"Start with the ordinary idea: calm.",
+        `${term("CALM","Less excited, agitated, or active.")}
+         ${term("DROWSY","Sleepy: still awake, but feeling ready to fall asleep.")}
+         <p>A medicine does not have to make a person sleep in order to be a sedative. The central idea is <strong>calming or lowering activity and alertness</strong>.</p>`)}
 
-      ${step(2,"How was that different from 'hypnotic'?",
+      ${step(2,"Build the word 'sedative.'",
+        `${term("SEDATE","To calm or quiet, especially with a drug. English gets the word from Latin <em>sedare</em>, meaning to calm or settle.")}
+         ${term("-IVE","A common ending meaning roughly 'having the nature of,' 'tending to,' or 'doing the job of.'")}
+         ${chain(["sedate · calm or quiet","-ive · having that action","sedative · something used to calm"])}
+         ${term("SEDATIVE — 1950s","A drug used to calm, reduce nervous excitement, lower alertness or activity, or produce drowsiness. It could cause drowsiness without necessarily producing full sleep.")}
+         ${term("SEDATION","The state produced when alertness, agitation, or responsiveness has been reduced.")}`)}
+
+      ${step(3,"How was that different from 'hypnotic'?",
         `${term("HYPNOTIC DRUG — 1950s","A drug used specifically to cause sleep.")}
-         <p>A single drug could have a <strong>sedative</strong> effect at one level and a <strong>hypnotic</strong> or sleep-producing effect at a stronger level. That is why the combined phrase <strong>sedative-hypnotic</strong> was common.</p>`)}
+         ${term("SEDATIVE-HYPNOTIC","A drug that could calm at one dose or level of effect and produce sleep at a stronger one.")}
+         <p>So the distinction is simple: <strong>sedative</strong> points first to calming; <strong>hypnotic</strong> points first to sleep.</p>`)}
 
-      ${step(3,"What drugs did a 1950s reader have in mind?",
+      ${step(4,"What drugs did a 1950s reader have in mind?",
         `${term("BARBITURATE","One of the major 1950s drug families used for calming and sleep.")}
          ${term("BROMIDE","A bromide-containing preparation; bromides had older use as calming and seizure-control drugs.")}
          ${term("CHLORAL HYDRATE","An older drug used to produce sedation or sleep.")}
          <p>Barbiturates were especially important mid-century sedatives and hypnotics.</p>`)}
 
-      ${step(4,"What changed later?",
+      ${step(5,"What changed later?",
         `${term("BENZODIAZEPINE","A later drug family used for effects including anxiety reduction, sedation, sleep, seizure control, and muscle relaxation.")}
          <p>Benzodiazepines, introduced around the end of the 1950s and early 1960s, displaced barbiturates for many routine sedative and sleeping-pill uses.</p>`)}
 
@@ -440,88 +484,118 @@
         "The basic meaning survived, but the common drug classes changed substantially and sedation is now often described as an intended effect or an unwanted side effect."
       )}`;
   }
-
   function soporificBody(){
     return `
-      ${step(1,"1950s core meaning.",
-        `<p><strong>Soporific</strong> meant <strong>sleep-producing</strong> or <strong>causing marked drowsiness</strong>.</p>
-         ${term("ADJECTIVE","A describing word. 'A soporific drug' means a sleep-producing drug.")}
-         ${term("NOUN","A naming word. 'A soporific' can mean a substance that produces sleep.")}`)}
+      ${step(1,"Start with the ordinary idea: sleep.",
+        `${term("SLEEPY","Feeling ready or likely to fall asleep.")}
+         ${term("SLEEP-PRODUCING","Causing sleep to begin.")}
+         <p><strong>Soporific</strong> is an old word whose pieces almost give you the definition by themselves.</p>`)}
 
-      ${step(2,"The word itself explains the meaning.",
-        `<p>It comes through Latin roots connected with <em>sopor</em>, meaning <strong>deep sleep</strong>, plus a root meaning <strong>to make or produce</strong>.</p>
-         ${chain(["sopor · deep sleep","-fic · making","soporific · sleep-making"])}`)}
+      ${step(2,"Build the word 'soporific.'",
+        `${term("SOPOR","A Latin word meaning deep sleep.")}
+         ${term("-FIC","A word part meaning making or producing. It comes from the Latin idea of making or doing.")}
+         ${chain(["sopor · deep sleep","-fic · making","soporific · sleep-making"])}
+         ${term("SOPORIFIC — 1950s","Something that produces sleep or strong sleepiness. A soporific drug is therefore a drug that makes a person very sleepy or causes sleep.")}`)}
 
-      ${step(3,"What changed later?",
-        `${term("FIGURATIVE","Using a word as a metaphor rather than in its literal sense.")}
-         <p>The medical meaning remains understandable, but <strong>hypnotic</strong> and <strong>sedative-hypnotic</strong> became more standard technical terms. In ordinary modern English, <em>soporific</em> is often figurative: a soporific speech is one that is so dull it makes people sleepy.</p>`)}
+      ${step(3,"Adjective and noun.",
+        `${term("ADJECTIVE","A describing word. In 'a soporific drug,' the word <em>soporific</em> describes the drug.")}
+         ${term("NOUN","A naming word. In 'the doctor gave a soporific,' the word <em>soporific</em> names the sleep-producing substance itself.")}
+         <p>The same word could therefore describe a thing or name the thing.</p>`)}
+
+      ${step(4,"How is it related to sedative and hypnotic?",
+        `${term("SEDATIVE","Something used to calm. It does not have to cause sleep.")}
+         ${term("HYPNOTIC DRUG","A drug used specifically to cause sleep.")}
+         <p><strong>Soporific</strong> and <strong>hypnotic</strong> overlap around sleep. <strong>Sedative</strong> is broader because calming can happen while the person remains awake.</p>`)}
+
+      ${step(5,"What changed later?",
+        `${term("FIGURATIVE","Using a word beyond its literal meaning.")}
+         <p>The literal sleep-producing meaning remains understandable. In ordinary modern English, <em>soporific</em> is also familiar as a joking or critical word for something so dull that it seems to make people sleepy: a <em>soporific speech</em>.</p>`)}
 
       ${shift(
         "A straightforward medical and ordinary-English word for something that produces sleep or strong drowsiness.",
         "The literal meaning remains, but the word is less central in drug classification and is frequently used figuratively to mean boring or sleep-inducing."
       )}`;
   }
-
   function hypnoticDrugBody(){
     return `
-      ${step(1,"1950s core meaning.",
-        `${term("HYPNOTIC DRUG — 1950s","A drug used to cause sleep.")}
-         ${term("HYPNOSIS","A procedure or condition involving focused attention and responsiveness to suggestion.")}
-         <p>In a 1950s medical text, <strong>a hypnotic</strong> usually meant <strong>a sleeping drug</strong>, not a drug that hypnotized someone.</p>`)}
+      ${step(1,"Start with the root: sleep.",
+        `${term("HYPNOS","The Greek word for sleep. English words beginning with <strong>hypn-</strong> or <strong>hypno-</strong> belong to this sleep word-family.")}
+         ${term("-IC","A common ending meaning 'relating to' or 'having to do with.'")}
+         ${chain(["hypn- · sleep","-ic · relating to","hypnotic · sleep-related or sleep-producing"])}`)}
 
-      ${step(2,"Sedative versus hypnotic.",
+      ${step(2,"What did 'hypnotic drug' mean in the 1950s?",
+        `${term("HYPNOTIC DRUG — 1950s","A drug used specifically to cause sleep.")}
+         ${term("SLEEP-PRODUCING","Causing a person to pass from wakefulness into sleep.")}
+         <p>In a 1950s medical text, <strong>a hypnotic</strong> usually meant <strong>a sleeping drug</strong>. It did not mean a drug that performed hypnosis on somebody.</p>`)}
+
+      ${step(3,"Sedative versus hypnotic.",
         `${term("SEDATIVE — 1950s","A drug used to calm or reduce nervous excitement and alertness.")}
-         ${term("SEDATIVE-HYPNOTIC","A drug capable of producing calming at one level and sleep at a stronger level.")}
-         <p>The two terms overlapped because many of the same drugs could be used for either purpose.</p>`)}
+         ${term("SEDATIVE-HYPNOTIC","A drug capable of producing calming at one level of effect and sleep at a stronger level.")}
+         <p>The shortest distinction is: <strong>sedative = calm</strong>; <strong>hypnotic = sleep</strong>. The same drug could do both at different strengths or doses.</p>`)}
 
-      ${step(3,"What drugs were prominent then?",
+      ${step(4,"Why does 'hypnotic' also sound like 'hypnosis'?",
+        `${term("HYPNOSIS","A condition or procedure involving focused attention and responsiveness to suggestion.")}
+         <p>The two words share the old Greek sleep-root <strong>hypn-</strong>. Historically, hypnosis was named with a sleep-like idea in mind. But in medical drug language, <strong>hypnotic</strong> meant sleep-producing.</p>`)}
+
+      ${step(5,"What drugs were prominent then?",
         `${term("BARBITURATE","A major mid-century drug family used for sedation and sleep, as well as some seizure and anesthesia uses.")}
          <p>From the 1920s into the mid-1950s, barbiturates were among the dominant sedative and hypnotic drugs.</p>`)}
 
-      ${step(4,"What changed later?",
+      ${step(6,"What changed later?",
         `${term("BENZODIAZEPINE","A later drug family introduced around the end of the 1950s and early 1960s that took over many sedative and sleeping-pill uses.")}
-         <p>The pharmacological meaning of <strong>hypnotic</strong> did not disappear: it still means sleep-producing. What changed most was which drugs were commonly used.</p>
-         <p>The adjective <strong>hypnotic</strong> also continues to have its other meaning: related to hypnosis.</p>`)}
+         <p>The pharmacological meaning of <strong>hypnotic</strong> remained sleep-producing. What changed most was which drugs were commonly used.</p>`)}
 
       ${shift(
         "A sleep-producing drug; barbiturates were among the main hypnotics a 1950s reader would have encountered.",
         "The definition remained broadly stable, but benzodiazepines and newer sleeping drugs replaced barbiturates for much routine use."
       )}`;
   }
-
   function hypnosisBody(){
     return `
-      ${step(1,"1950s core meaning.",
-        `${term("SUGGESTION","A communication intended to influence an experience, perception, thought, feeling, or action.")}
-         ${term("TRANCE","A traditional word for a condition of unusually absorbed or altered attention.")}
-         ${term("HYPNOSIS — 1950s","A condition or procedure commonly described as involving trance or unusually focused attention together with increased responsiveness to suggestion.")}
-         <p>Not every mid-century writer explained hypnosis the same way, but <strong>trance</strong> and <strong>suggestibility</strong> were common parts of the vocabulary.</p>`)}
+      ${step(1,"Start with the name.",
+        `${term("HYPNOS","The Greek word for sleep.")}
+         ${term("-OSIS","A word ending used for a state, condition, or process. You also see it in words such as <em>psychosis</em> and <em>neurosis</em>.")}
+         ${chain(["hypn- · sleep","-osis · state or condition","hypnosis · a name built around a sleep-like state"])}
+         <p>The name is historical. <strong>Hypnosis is not simply ordinary sleep.</strong></p>`)}
 
-      ${step(2,"How was hypnosis produced?",
-        `${term("HYPNOTIC INDUCTION","The procedure used to begin hypnosis—for example, instructions intended to narrow or focus attention and prepare the person for suggestions.")}
-         <p><strong>Induction</strong> here simply means the procedure used to begin the hypnotic situation.</p>`)}
+      ${step(2,"Learn the four small ideas inside the 1950s definition.",
+        `${term("TRANCE","A traditional word for an unusually absorbed state in which attention is narrowed or strongly focused.")}
+         ${term("ATTENTION","What the mind is concentrating on.")}
+         ${term("SUGGESTION","A statement or instruction intended to influence what a person notices, feels, imagines, or does.")}
+         ${term("RESPONSIVE","Likely to notice and react to something.")}
+         <p>Put those pieces together and the longer definition becomes readable.</p>`)}
 
-      ${step(3,"Competing explanations already existed.",
+      ${step(3,"1950s core meaning.",
+        `${term("HYPNOSIS — 1950s","A condition or procedure commonly described as involving trance or unusually focused attention together with increased responsiveness to suggestion.")}
+         ${term("SUGGESTIBILITY","The tendency or readiness to respond to suggestion.")}
+         <p>Not every mid-century writer explained hypnosis the same way, but <strong>trance</strong>, <strong>attention</strong>, and <strong>suggestion</strong> were common parts of the vocabulary.</p>`)}
+
+      ${step(4,"How was hypnosis begun?",
+        `${term("INDUCTION","A procedure used to bring about or begin a particular state or activity.")}
+         ${term("HYPNOTIC INDUCTION","The procedure used to begin hypnosis—for example, instructions intended to narrow or focus attention and prepare the person for suggestions.")}
+         <p>Here, <strong>induction</strong> simply means the procedure used to begin the hypnotic situation.</p>`)}
+
+      ${step(5,"Competing explanations already existed.",
         `${term("DISSOCIATION","A separation or reduced connection among mental processes that are ordinarily experienced together.")}
          ${term("UNCONSCIOUS PROCESS","A mental process occurring without direct awareness.")}
          <p>Mid-century theories variously emphasized trance, dissociation, unconscious processes, suggestion, expectation, or interpersonal influence.</p>`)}
 
-      ${step(4,"What changed later?",
-        `${term("THEORY-NEUTRAL","Worded so the definition does not assume that one disputed explanation must be correct.")}
-         <p>Modern research definitions are often more theory-neutral. They tend to define hypnosis by the procedure—focused attention and suggestion—without requiring a distinct trance state as part of the definition.</p>`)}
-
-      ${step(5,"Do not confuse hypnosis with a hypnotic drug.",
+      ${step(6,"Do not confuse hypnosis with a hypnotic drug.",
         `<div class="compare-grid">
-          <div class="compare-card"><h3>hypnosis</h3><p>a procedure involving attention and suggestion</p></div>
-          <div class="compare-card"><h3>hypnotic drug</h3><p>a sleep-producing drug</p></div>
-         </div>`)}
+          <div class="compare-card"><h3>hypnosis</h3><p>a procedure or condition involving focused attention and suggestion</p></div>
+          <div class="compare-card"><h3>hypnotic drug</h3><p>a drug used to produce sleep</p></div>
+         </div>
+         <p>They share the same historical sleep-root, but they name different things.</p>`)}
+
+      ${step(7,"What changed later?",
+        `${term("THEORY-NEUTRAL","Worded so the definition does not assume that one disputed explanation must be correct.")}
+         <p>Modern research definitions tend to describe hypnosis by the procedure—focused attention and suggestion—without requiring a distinct trance state as part of the definition.</p>`)}
 
       ${shift(
         "Commonly described as a trance-like condition or procedure involving concentrated attention and increased suggestibility.",
         "Definitions became more cautious about claiming a special trance state and often describe focused attention and response to suggestion without committing to one theory."
       )}`;
   }
-
   function barbituratesBody(){
     return `
       ${step(1,"1950s core meaning.",
