@@ -41,7 +41,7 @@
 
            ${term("PSYCHOSIS — 1950s","A broad name for severe mental disturbance in which a person could fail to test and evaluate the outside world correctly, together with serious disruption of thought, emotion, behavior, or ordinary functioning. The word literally points to a condition of the mind: psych- + -osis.")}
 
-           ${term("NEUROSIS — 1950s","A broad name for psychological disturbance—especially involving anxiety and maladjustment—in which the person was not considered to show the gross falsification of external reality or gross personality disorganization associated with psychosis. Neuro- means nerve; -osis means condition.")}
+           ${term("NEUROSIS — 1950s","A broad name for psychological disturbance—especially involving anxiety and difficulty adjusting to ordinary life—in which the person was not considered to show the gross falsification of external reality or gross personality disorganization associated with psychosis. Neuro- means nerve; -osis means condition.")}
            <div class="flow"><span><strong>neuro-</strong><br>nerve</span><b>+</b><span><strong>-osis</strong><br>condition</span><b>→</b><span><strong>neurosis</strong><br>originally 'a nervous condition'</span></div>
 
            ${term("-IC","A common word ending meaning 'relating to' or 'having to do with.'")}
@@ -307,16 +307,25 @@
          ${term("ANXIETY","A state of apprehension, fear, tension, or expectation of danger. In DSM-I, anxiety was treated as central to the psychoneurotic disorders.")}
          <p>In 1950s American psychiatry, <strong>neurosis</strong> referred broadly to psychological disturbance involving anxiety, fears, compulsions, depressive reactions, conversion symptoms, or similar problems <strong>without the gross distortion of external reality or gross personality disorganization associated with psychosis</strong>.</p>`)}
 
-      ${step(3,"Your 'still able to live your life' idea is useful—but needs one correction.",
+      ${step(3,"What does 'maladjustment' mean?",
+        `${term("MAL-","A word part meaning bad, badly, or poorly. It comes through Latin and appears in words such as malfunction and malpractice.")}
+         ${term("ADJUST","To change or adapt so that something fits its circumstances better. A person adjusts when he changes how he acts, thinks, or organizes his life in response to circumstances.")}
+         ${term("-MENT","A word ending that can name the state, result, or process of doing something.")}
+         ${chain(["mal- · poorly","adjust · adapt to circumstances","-ment · state or result","maladjustment · poor adjustment"])}
+         ${term("MALADJUSTMENT — 1950s","Poor adjustment to the demands or circumstances of ordinary life. A person might be described as maladjusted if fears, habits, emotions, or patterns of behavior repeatedly made work, school, family life, or relationships harder to manage.")}
+         <p><strong>Maladjustment did not automatically mean psychosis.</strong> A person could be seriously maladjusted and still know where he was, who other people were, what was happening around him, and what ordinary reality required.</p>
+         <div class="example"><strong>Example</strong><br><span class="example-note">A man has such severe anxiety that he repeatedly refuses promotions, avoids travel, and develops stomach distress before ordinary obligations. A mid-century writer might call that neurotic maladjustment. His life is being impaired, but he has not necessarily lost his grasp of the outside world.</span></div>`)}
+
+      ${step(4,"Your 'still able to live your life' idea is useful—but needs one correction.",
         `<p>A person described as neurotic in the 1950s could be distressed, preoccupied, fearful, compulsive, depressed, or poorly adjusted. The symptoms could interfere substantially with work or relationships.</p>
          <p>But the person was generally understood as remaining <strong>inside the shared external world</strong>: not grossly falsifying reality through delusions or hallucinations and not showing the gross personality disorganization used to define psychosis.</p>
-         <div class="memory"><strong>Good shorthand:</strong> neurosis = life may be difficult, anxious, constricted, or maladjusted, but the person is basically still oriented to the same external world as everyone else.</div>`)}
+         <div class="memory"><strong>Good shorthand:</strong> neurosis = life may be difficult, anxious, constricted, or poorly adjusted, but the person is basically still oriented to the same external world as everyone else.</div>`)}
 
-      ${step(4,"Now contrast it with psychosis.",
+      ${step(5,"Now contrast it with psychosis.",
         `<div class="compare-grid">
           <div class="compare-card">
             <h3>Neurosis — 1950s</h3>
-            <p>Psychological dysfunction and maladjustment, commonly organized around anxiety, but without gross falsification of external reality and without gross disorganization of personality.</p>
+            <p>Psychological dysfunction and poor adjustment to ordinary life, commonly organized around anxiety, but without gross falsification of external reality and without gross disorganization of personality.</p>
           </div>
           <div class="compare-card">
             <h3>Psychosis — 1950s</h3>
@@ -326,19 +335,19 @@
          <p>Your phrase <strong>“still able to live your life”</strong> points toward a real part of the distinction: preservation of ordinary reality contact and personality organization. But it should not be read as “a neurotic person always functions well.”</p>
          <p>Likewise, <strong>“becoming a burden on others”</strong> can happen in severe illness, but it is a consequence, not the definition of psychosis.</p>`)}
 
-      ${step(5,"Why 'neurotic'?",
+      ${step(6,"Why 'neurotic'?",
         `${term("-IC","A word ending meaning 'relating to' or 'having to do with.'")}
          ${term("NEUROTIC","The adjective meaning relating to neurosis or showing features then described as neurotic. Older writing also used <em>a neurotic</em> as a noun for a person.")}
          ${chain(["neurosis · the condition","neurotic · relating to that condition"])}
          <p>The same grammar distinction appears here as with <em>psychotic</em>: <strong>he is neurotic</strong> uses an adjective; <strong>he is a neurotic</strong> turns the adjective into a noun-label for the person.</p>`)}
 
-      ${step(6,"What happened to the term later?",
+      ${step(7,"What happened to the term later?",
         `<p>The broad neurosis-versus-psychosis division weakened during the 1960s and 1970s. DSM-III in 1980 reorganized the old neurotic conditions into more specific categories and largely abandoned <strong>neurosis</strong> as an official organizing diagnosis.</p>
          <p>Conditions previously grouped under neurosis were redistributed into categories such as anxiety disorders, depressive disorders, obsessive-compulsive conditions, dissociative disorders, and somatic-symptom-related diagnoses.</p>
          <p>The words <strong>neurosis</strong> and <strong>neurotic</strong> still survive in historical writing, psychoanalytic traditions, personality language, and ordinary speech.</p>`)}
 
       ${shift(
-        "A broad family of psychological disturbances, especially involving anxiety and maladjustment, without the gross falsification of external reality or gross personality disorganization associated with psychosis.",
+        "A broad family of psychological disturbances, especially involving anxiety and poor adjustment to ordinary life, without the gross falsification of external reality or gross personality disorganization associated with psychosis.",
         "The broad diagnostic category was largely dismantled in DSM-III. More specific diagnoses replaced it, although the words neurosis and neurotic remain in historical and ordinary language."
       )}
 
@@ -854,7 +863,7 @@
     {slug:"schizophrenia",title:"Schizophrenia",category:"Psychosis Terms",short:"In DSM-I (1952): 'schizophrenic reaction,' a broad psychotic category involving major disturbances of reality relationships, thought, emotion, and behavior.",keywords:"schizophrenia schizophrenic reaction split mind split personality two minds DSM I DSM II psychosis hallucination delusion",body:schizophreniaBody()},
     {slug:"schizophrenic",title:"Schizophrenic",category:"Psychosis Terms",short:"In the 1950s: the adjective for the DSM-I category 'schizophrenic reaction,' also used as a noun and figuratively for something divided or 'of two minds.'",keywords:"schizophrenic adjective split mind split personality two minds divided contradictory mid century",body:schizophrenicBody()},
     {slug:"psychosis",title:"Psychosis",category:"Psychosis Terms",short:"In the 1950s: a broad severe-mental-disorder concept involving failure to test and evaluate external reality correctly and serious disruption of personality functioning.",keywords:"psychosis reality testing hallucination delusion psychotic mid century neurosis",body:psychosisBody()},
-    {slug:"neurosis",title:"Neurosis",category:"Psychosis Terms",short:"In the 1950s: psychological disturbance, especially involving anxiety and maladjustment, without the gross falsification of external reality or gross personality disorganization associated with psychosis.",keywords:"neurosis neurotic psychoneurotic anxiety psychosis DSM I mid century 1950s",body:neurosisBody()},
+    {slug:"neurosis",title:"Neurosis",category:"Psychosis Terms",short:"In the 1950s: psychological disturbance, especially involving anxiety and poor adjustment to ordinary life, without the gross falsification of external reality or gross personality disorganization associated with psychosis.",keywords:"neurosis neurotic psychoneurotic anxiety psychosis DSM I mid century 1950s",body:neurosisBody()},
     {slug:"psychotic",title:"Psychotic",category:"Psychosis Terms",short:"In the 1950s: describing severe mental disturbance involving major difficulty judging external reality or maintaining ordinary personality functioning; it was also used as a noun for a person.",keywords:"psychotic adjective noun a psychotic psychosis schizophrenia mid century terminology",body:psychoticBody()},
     {slug:"sedative",title:"Sedative",category:"Sedation & Sleep Terms",short:"In the 1950s: a calming or nervous-system-depressing drug; barbiturates were among the major examples.",keywords:"sedative sedation calming drowsiness barbiturate hypnotic",body:sedativeBody()},
     {slug:"soporific",title:"Soporific",category:"Sedation & Sleep Terms",short:"In the 1950s: sleep-producing or strongly drowsiness-producing; later the figurative 'boring' use became especially familiar.",keywords:"soporific sleep drowsy sedative boring sopor",body:soporificBody()},
