@@ -1328,3 +1328,169 @@ footer{
   line-height:1.45;
   color:#6d6558;
 }
+
+
+/* Psychiatry Terms */
+.time-shift-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  margin:20px 0 26px;
+}
+.time-shift-card{
+  padding:16px 17px;
+  border:1px solid #d2c1a2;
+  background:#faf5e9;
+  border-radius:6px;
+}
+.time-shift-card:nth-child(2){
+  background:#edf1e8;
+  border-color:#bdc9b8;
+}
+.time-label{
+  margin:0 0 8px!important;
+  font-family:Arial,sans-serif;
+  font-size:.68rem!important;
+  font-weight:800;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+  color:var(--forest-dark);
+}
+.time-shift-card p:last-child{margin-bottom:0}
+.primer-open-link{
+  cursor:pointer;
+  display:inline-block;
+  margin-top:12px;
+  padding:11px 15px;
+  border:1px solid #63472f;
+  border-radius:5px;
+  background:var(--forest-dark);
+  color:#fff9e8;
+  font-family:Arial,sans-serif;
+  font-size:.83rem;
+  font-weight:800;
+}
+.primer-open-link:hover{filter:brightness(1.08)}
+.spelling-strip{
+  display:flex;
+  flex-wrap:wrap;
+  gap:4px;
+  margin:18px 0;
+}
+.spelling-strip span{
+  display:grid;
+  place-items:center;
+  width:34px;
+  height:38px;
+  border:1px solid #c9b38e;
+  background:#fffaf0;
+  border-radius:4px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:800;
+  color:#3f3429;
+}
+.phenobarbital-port-note{
+  display:grid;
+  gap:4px;
+  margin-bottom:22px;
+  padding:13px 15px;
+  border:1px solid #c9b18a;
+  background:#f4ead7;
+  border-radius:6px;
+}
+.phenobarbital-port-note strong{color:#5b442e}
+.phenobarbital-port-note span{font-size:.85rem;color:#665d50}
+.phenobarbital-word{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  margin:24px 0;
+  padding:22px 12px;
+  border-top:1px solid #8d7657;
+  border-bottom:1px solid #8d7657;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(1.9rem,5vw,3.5rem);
+  font-weight:800;
+  letter-spacing:.02em;
+}
+.phenobarbital-word span:first-child{color:#8b6234}
+.phenobarbital-word b{color:#8d806b}
+.phenobarbital-word .muted-piece{color:#aaa08d}
+.chem-atom{
+  display:grid;
+  place-items:center;
+  width:112px;
+  height:112px;
+  margin:22px auto;
+  border:2px solid #4d4337;
+  border-radius:50%;
+  background:#fffaf0;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:1.45rem;
+  font-weight:800;
+}
+.chem-formula{
+  margin:20px 0;
+  padding:18px;
+  border:1px solid #cbb895;
+  background:#faf5e9;
+  text-align:center;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(1.5rem,4vw,2.6rem);
+  font-weight:800;
+  color:#473b2d;
+  overflow-wrap:anywhere;
+}
+.chem-formula.long{font-size:clamp(1.3rem,3vw,2.2rem)}
+.benzene-diagram{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:22px 0;
+}
+.benzene-diagram span{
+  display:grid;
+  place-items:center;
+  width:46px;
+  height:46px;
+  border:1px solid #9e8562;
+  border-radius:50%;
+  background:#f7eedf;
+  font-weight:800;
+}
+.chem-hexagon{
+  width:150px;
+  height:130px;
+  margin:24px auto;
+  background:#5a4a38;
+  clip-path:polygon(25% 6.7%,75% 6.7%,100% 50%,75% 93.3%,25% 93.3%,0 50%);
+  position:relative;
+}
+.chem-hexagon:after{
+  content:"";
+  position:absolute;
+  inset:5px;
+  background:#fbf7ee;
+  clip-path:inherit;
+}
+.myth-check{
+  margin:22px 0;
+  padding:18px 20px;
+  border:2px solid #6a5137;
+  background:#f5ead6;
+  border-radius:6px;
+}
+.myth-check strong{
+  display:block;
+  margin-bottom:7px;
+  color:#5d3f2b;
+}
+.myth-check p:last-child{margin-bottom:0}
+
+@media (max-width:650px){
+  .time-shift-grid{grid-template-columns:1fr}
+  .spelling-strip span{width:30px;height:34px}
+}
