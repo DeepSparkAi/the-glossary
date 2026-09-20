@@ -234,7 +234,12 @@
       category:"Brain",
       short:"A baby-step map from brain and lobe to cortex, gray matter, white matter, and prefrontal cortex.",
       keywords:"brain anatomy cerebrum hemisphere lobe frontal parietal temporal occipital cortex gray matter white matter neuron axon myelin prefrontal cortex",
-      body:brainPrimer()
+      body:`
+        <figure class="anatomy-diagram anatomy-diagram-medium">
+          <img src="assets/anatomy/brain%202.png" alt="Brain anatomy diagram showing the major lobes, cerebral cortex, white matter, neuron, axon, and myelin." loading="lazy">
+          <figcaption>Brain anatomy: major regions, cortex, white matter, and basic nerve-cell structure.</figcaption>
+        </figure>
+        ${brainPrimer()}`
     },
     {
       slug:"prefrontal-cortex",
@@ -268,7 +273,7 @@
       keywords:"sympathetic nervous system SNS fight flight stress heart pupils digestion",
       body:`${term("SYMPATHETIC NERVOUS SYSTEM","The autonomic division that mobilizes the body for demanding action—the classic fight-or-flight response.")}
         <figure class="anatomy-diagram anatomy-diagram-medium">
-          <img src="assets/anatomy/sympathetic-nervous-system.webp" alt="Diagram of the sympathetic nervous system showing the brain and spinal cord, pupils widening, airways widening, heart rate rising, energy mobilization, and reduced digestion." loading="lazy">
+          <img src="assets/anatomy/symp%202.png" alt="Diagram of the sympathetic nervous system showing the brain and spinal cord, pupils widening, airways widening, heart rate rising, energy mobilization, and reduced digestion." loading="lazy">
           <figcaption>Sympathetic nervous system: the action-oriented, fight-or-flight division of the autonomic nervous system.</figcaption>
         </figure>
         <section class="entry-section"><h3>What it does</h3><p>Heart rate rises, pupils widen, airways widen, energy is mobilized, and digestive movement is reduced.</p></section>
